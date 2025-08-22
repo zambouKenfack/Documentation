@@ -1,0 +1,478 @@
+---
+import '../styles/global1.css';
+---
+
+
+    <div class="container">
+        <header class="header">
+            <h1>Gestion des Contacts dans Movelys</h1>
+        </header>
+
+        <section id="introduction" class="section">
+            <h2>Introduction</h2>
+            <p>
+                La gestion des contacts est une composante essentielle de tout système de gestion d'entreprise performant. Dans Movelys, cette fonctionnalité a été conçue pour permettre un suivi précis, structuré et centralisé de l'ensemble des relations d'affaires de l'entreprise, qu'il s'agisse de clients, de fournisseurs, de prospects ou de partenaires.
+            </p>
+            <p>
+                Grâce à une interface intuitive et flexible, les utilisateurs peuvent enregistrer, consulter et mettre à jour des fiches contacts complètes, incluant des informations clés telles que les coordonnées, les données fiscales, les conditions de paiement, les soldes dus, ou encore l'historique des transactions. Movelys permet également de catégoriser les contacts selon des groupes spécifiques et d'automatiser certaines actions, comme l'envoi de notifications ou de factures.
+            </p>
+            <p>
+                Cette gestion structurée des contacts favorise une meilleure communication, une prise de décision plus rapide et une meilleure relation client/fournisseur. Elle constitue ainsi un socle solide pour optimiser la performance commerciale, comptable et opérationnelle de l'entreprise.
+            </p>
+        </section>
+
+        <section class="section">
+            <h2>1. Gestion des fournisseurs</h2>
+
+            <article class="article">
+                <h3>1.1 Fonction générale</h3>
+                <p>
+                    La section fournisseurs permet à l'utilisateur de créer, modifier et suivre les données des partenaires commerciaux qui fournissent des biens ou services à l'entreprise. Cette section est structurée sous forme de tableau et comprend toutes les fonctionnalités nécessaires à une administration efficace de cette catégorie d'acteurs.
+                </p>
+            </article>
+
+            <article class="article">
+                <h3>1.2 Structure de l'interface</h3>
+                <p>Cette interface est constituée de deux sections :</p>
+                <ul>
+                    <li>Une zone de filtre de recherche</li>
+                    <li>Un tableau qui liste les fournisseurs</li>
+                </ul>
+
+                <h4>1.2.1 Filtres de recherche</h4>
+                <p>Cette section permet de filtrer les fournisseurs selon différents critères :</p>
+                
+                <h5>Cases à cocher :</h5>
+                <ul>
+                    <li><strong>Achat dû</strong>: Filtrer les fournisseurs avec des achats en attente de paiement.</li>
+                    <li><strong>Retour d'achat</strong>: Fournisseurs liés à des retours de produits.</li>
+                    <li><strong>Solde anticipé</strong>: Fournisseurs avec des paiements anticipés.</li>
+                    <li><strong>Solde d'ouverture</strong>: Fournisseurs avec des soldes initiaux.</li>
+                </ul>
+
+                <h5>Menus déroulants :</h5>
+                <ul>
+                    <li><strong>Attribué à</strong>: permet de Sélectionner un utilisateur ou service interne à qui le fournisseur est assigné.</li>
+                    <li><strong>Statut</strong>: Filtrer selon le statut du fournisseur (actif, inactif, etc.).</li>
+                </ul>
+            </article>
+
+            <article class="article">
+                <h3>1.2.2 Tableau principal</h3>
+                <p>Ce tableau affiche les fournisseurs enregistrés dans le système avec les colonnes suivantes :</p>
+                
+                <table class="component-table">
+                    <thead>
+                        <tr>
+                            <th>Colonne</th>
+                            <th>Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Action</td>
+                            <td>Bouton Actions pour modifier, supprimer ou consulter les détails.</td>
+                        </tr>
+                        <tr>
+                            <td>Contact ID</td>
+                            <td>Identifiant unique du fournisseur.</td>
+                        </tr>
+                        <tr>
+                            <td>Nom de l'entreprise</td>
+                            <td>Nom commercial ou raison sociale de l'entreprise.</td>
+                        </tr>
+                        <tr>
+                            <td>Nom</td>
+                            <td>Le nom de la personne associée.</td>
+                        </tr>
+                        <tr>
+                            <td>Messagerie électronique</td>
+                            <td>Adresse email du fournisseur.</td>
+                        </tr>
+                        <tr>
+                            <td>Numéro d'identification fiscale</td>
+                            <td>Sert à l'identification légale/fiscale du fournisseur.</td>
+                        </tr>
+                        <tr>
+                            <td>Durée de la paie</td>
+                            <td>Délai de paiement accordé.</td>
+                        </tr>
+                        <tr>
+                            <td>Solde d'ouverture</td>
+                            <td>Solde initial au moment de l'intégration.</td>
+                        </tr>
+                        <tr>
+                            <td>Solde anticipé</td>
+                            <td>Montant payé par avance.</td>
+                        </tr>
+                        <tr>
+                            <td>Ajouté</td>
+                            <td>Date d'ajout du fournisseur au système.</td>
+                        </tr>
+                        <tr>
+                            <td>Adresse</td>
+                            <td>Contient les adresses physiques ou électroniques.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </article>
+
+            <article class="article">
+                <h3>1.3 Fonctionnalité principale</h3>
+                <ul>
+                    <li><strong>Export CSV / Excel / PDF</strong>: permet de générer des rapports sur les utilisateurs au format souhaité.</li>
+                    <li><strong>Impression directe</strong>: un bouton d'impression est disponible pour produire une version papier de la liste.</li>
+                    <li><strong>Visibilité des colonnes</strong>: permet de masquer ou d'afficher certaines colonnes selon les préférences.</li>
+                    <li><strong>Recherche dynamique</strong>: un champ de recherche rapide facilite la localisation d'un utilisateur spécifique.</li>
+                    <li><strong>Pagination & nombre d'entrées par page</strong>: l'utilisateur peut naviguer entre les pages et choisir combien d'enregistrements afficher par page (par exemple : 10, 25, 50, etc.).</li>
+                </ul>
+
+                <div class="image-placeholder">
+                    <p>Illustration de cette interface</p>
+                </div>
+            </article>
+
+            <article class="article">
+                <h3>1.4 Ajouter un fournisseur</h3>
+                <p>En cliquant sur le bouton "Ajouter", une fenêtre modale s'ouvre avec les champs suivants :</p>
+                
+                <h4>Type de contact</h4>
+                <p>Elle sert à classer la nature de la relation que vous avez avec la personne ou l'entreprise.</p>
+                <h5>Exemples courants :</h5>
+                <ul>
+                    <li><strong>Fournisseur</strong>: Une personne ou entreprise qui vous fournit des biens ou services.</li>
+                    <li><strong>Client</strong>: Une personne ou entreprise à qui vous vendez des biens ou services.</li>
+                </ul>
+
+                <h4>ID du contact</h4>
+                <p>C'est un identifiant unique attribué automatiquement ou manuellement à chaque contact dans le système.</p>
+
+                <h4>Numéro de téléphone</h4>
+                <p>C'est le numéro de téléphone principal du contact. Celui-ci est utilisé pour joindre une personne plus rapidement.</p>
+
+                <h4>Numéro de contact alternatif</h4>
+                <p>C'est un deuxième numéro de téléphone que vous pouvez utiliser si le premier ne répond pas.</p>
+
+                <h4>Ligne fixe</h4>
+                <p>C'est le numéro de téléphone fixe du contact, généralement celui du bureau ou du siège social.</p>
+
+                <h4>Email</h4>
+                <p>C'est l'adresse électronique du contact.</p>
+
+                <h4>Attribute à</h4>
+                <p>Ce champ indique à quel utilisateur interne (employé) est rattaché ce contact.</p>
+
+                <p>L'utilisateur saisit les informations, puis clique sur "Enregistrer" pour ajouter le fournisseur à la base de données.</p>
+
+                <p>Cette fonctionnalité permet d'intégrer facilement un nouveau partenaire sans sortir de la page principale.</p>
+            </article>
+
+            <article class="article">
+                <h3>Détail supplémentaire : "Plus d'informations"</h3>
+                <p>Elle permet d'afficher des champs supplémentaires qu'on pourra remplir afin d'enregistrer un fournisseur avec tous ces informations possibles.</p>
+                
+                <div class="image-placeholder">
+                    <p>Illustration de cette interface</p>
+                </div>
+            </article>
+        </section>
+
+        <section class="section">
+            <h2>2. Gestion de la clientèle</h2>
+
+            <article class="article">
+                <h3>2.1 Fonction générale</h3>
+                <p>
+                    La gestion de la clientèle dans Movelys permet de référencer, d'organiser et de consulter tous les clients d'une entreprise. Cela peut inclure des particuliers, des entreprises, ou tout autre type de client avec lequel des transactions commerciales sont effectuées.
+                </p>
+            </article>
+
+            <article class="article">
+                <h3>2.2 Structure de l'interface</h3>
+                <p>Cette est constitué de deux sections :</p>
+                <ul>
+                    <li>Une zone de filtre de recherche</li>
+                    <li>Un tableau qui liste les clients</li>
+                </ul>
+
+                <h4>2.2.1 Une zone de filtre de recherche</h4>
+                <p>Cette section permet de filtrer les clients selon différents critères :</p>
+                
+                <h5>Cases à cocher (options de filtrage supplémentaires) :</h5>
+                <ul>
+                    <li><strong>Vendre à échéance</strong>: Affiche les clients à qui l'on vend avec un délai de paiement.</li>
+                    <li><strong>Vendre Retour</strong>: Affiche les clients qui sont associés à des retours produits.</li>
+                    <li><strong>Solde anticipé</strong>: Clients qui paient d'avance ou ont un crédit prépayé.</li>
+                    <li><strong>Solde d'ouverture</strong>: Filtre selon le solde d'ouverture comptable du client.</li>
+                </ul>
+
+                <h5>Listes déroulantes :</h5>
+                <ul>
+                    <li><strong>N'a pas vendu de</strong>: Permet de filtrer les clients à qui aucune vente n'a été faite depuis un certain temps.</li>
+                    <li><strong>Groupe de clients</strong>: Permet de filtrer par segment de clients (ex : particuliers, entreprises, etc.).</li>
+                    <li><strong>Attribué à</strong>: Permet de filtrer selon l'agent commercial ou responsable à qui le client est assigné.</li>
+                    <li><strong>Statut</strong>: Filtrage selon le statut du client (actif, inactif, suspendu, etc.).</li>
+                </ul>
+            </article>
+
+            <article class="article">
+                <h3>2.2.2 tableau de la liste des clients</h3>
+                <p>Chaque ligne représente un client. Voici les colonnes affichées :</p>
+                
+                <table class="component-table">
+                    <thead>
+                        <tr>
+                            <th>Colonne</th>
+                            <th>Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Action</td>
+                            <td>Un bouton Actions qui permet de modifier ou supprimer un client.</td>
+                        </tr>
+                        <tr>
+                            <td>Contact ID</td>
+                            <td>Identifiant unique du client dans la base de données.</td>
+                        </tr>
+                        <tr>
+                            <td>Nom de l'entreprise</td>
+                            <td>Nom de la société du client.</td>
+                        </tr>
+                        <tr>
+                            <td>Nom</td>
+                            <td>Nom du client ou de la personne de contact.</td>
+                        </tr>
+                        <tr>
+                            <td>Messagerie électronique</td>
+                            <td>Adresse email du client.</td>
+                        </tr>
+                        <tr>
+                            <td>Numéro d'identification fiscale</td>
+                            <td>Numéro utilisé à des fins fiscales</td>
+                        </tr>
+                        <tr>
+                            <td>Limite de crédit</td>
+                            <td>Montant maximal de crédit accordé au client.</td>
+                        </tr>
+                        <tr>
+                            <td>Durée de la paie</td>
+                            <td>Délai de paiement accordé au client.</td>
+                        </tr>
+                        <tr>
+                            <td>Solde d'ouverture</td>
+                            <td>Solde initial du client (ex. : lors de l'importation de données).</td>
+                        </tr>
+                        <tr>
+                            <td>Solde anticipé</td>
+                            <td>Montant disponible si le client a payé à l'avance.</td>
+                        </tr>
+                        <tr>
+                            <td>Ajouté</td>
+                            <td>Date d'ajout du client dans la base.</td>
+                        </tr>
+                        <tr>
+                            <td>Groupe de clients</td>
+                            <td>Catégorie ou segment du client (ex. : revendeurs, VIP, etc.).</td>
+                        </tr>
+                        <tr>
+                            <td>Adresse</td>
+                            <td>Adresse physique du client.</td>
+                        </tr>
+                        <tr>
+                            <td>Mobile</td>
+                            <td>Numéro de téléphone mobile du client.</td>
+                        </tr>
+                        <tr>
+                            <td>Total de la vente due</td>
+                            <td>Montant total encore dû par le client.</td>
+                        </tr>
+                        <tr>
+                            <td>Rendement total de la vente dû</td>
+                            <td>Somme totale des ventes non encore payées.</td>
+                        </tr>
+                        <tr>
+                            <td>Champ personnalisé 1 à 10</td>
+                            <td>Champ libre pour informations spécifiques selon les besoins de l'entreprise.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </article>
+
+            <article class="article">
+                <h3>2.3 fonctionnalité principale :</h3>
+                <ul>
+                    <li><strong>Export CSV / Excel / PDF</strong>: permet de générer des rapports sur les utilisateurs au format souhaité.</li>
+                    <li><strong>Impression directe</strong>: un bouton d'impression est disponible pour produire une version papier de la liste.</li>
+                    <li><strong>Visibilité des colonnes</strong>: permet de masquer ou d'afficher certaines colonnes selon les préférences.</li>
+                    <li><strong>Recherche dynamique</strong>: un champ de recherche rapide facilite la localisation d'un utilisateur spécifique.</li>
+                    <li><strong>Pagination & nombre d'entrées par page</strong>: l'utilisateur peut naviguer entre les pages et choisir combien d'enregistrements afficher par page (par exemple : 10, 25, 50, etc.).</li>
+                </ul>
+
+                <div class="image-placeholder">
+                    <p>Illustration de cette interface</p>
+                </div>
+            </article>
+
+            <article class="article">
+                <h3>2.4 Ajouter un client</h3>
+                <p>L'ajout se fait par un formulaire modal avec les champs :</p>
+                
+                <h4>Type de contact</h4>
+                <p>Elle sert à classer la nature de la relation que vous avez avec la personne ou l'entreprise.</p>
+                <h5>Exemples courants :</h5>
+                <ul>
+                    <li><strong>Fournisseur</strong>: Une personne ou entreprise qui vous fournit des biens ou services.</li>
+                    <li><strong>Client</strong>: Une personne ou entreprise à qui vous vendez des biens ou services.</li>
+                </ul>
+
+                <h4>ID du contact</h4>
+                <p>C'est un identifiant unique attribué automatiquement ou manuellement à chaque contact dans le système.</p>
+
+                <h4>Numéro de téléphone</h4>
+                <p>C'est le numéro de téléphone principal du contact. Celui-ci est utilisé pour joindre une personne plus rapidement.</p>
+
+                <h4>Numéro de contact alternatif</h4>
+                <p>C'est un deuxième numéro de téléphone que vous pouvez utiliser si le premier ne répond pas.</p>
+
+                <h4>Ligne fixe</h4>
+                <p>C'est le numéro de téléphone fixe du contact, généralement celui du bureau ou du siège social.</p>
+
+                <h4>Email</h4>
+                <p>C'est l'adresse électronique du contact.</p>
+
+                <h4>Attribue à</h4>
+                <p>Ce champ indique à quel utilisateur interne (employé) est rattaché ce contact.</p>
+
+                <h4>Groupe de clients</h4>
+                <p>C'est une catégorie personnalisée permettant de regrouper plusieurs clients ayant des caractéristiques communes.</p>
+
+                <p>Après validation, l'enregistrement est visible dans la liste avec les autres clients.</p>
+            </article>
+
+            <article class="article">
+                <h3>Plus d'informations sur un client</h3>
+                <p>L'option "Plus d'informations" permet d'afficher des champs supplémentaires qu'on pourra remplir afin d'enregistrer un client avec tous ces informations possibles.</p>
+                
+                <div class="image-placeholder">
+                    <p>Illustration de l'interface</p>
+                </div>
+            </article>
+        </section>
+
+        <section class="section">
+            <h2>3. Gestion des groupes de clients</h2>
+
+            <article class="article">
+                <h3>3.1 Fonction générale</h3>
+                <p>
+                    La fonctionnalité <strong>Groupes de clients</strong> permet de classer les clients dans des catégories logiques pour faciliter leur gestion. Cela permet d'appliquer des politiques commerciales différentes, d'envoyer des offres ciblées ou de filtrer les rapports plus rapidement.
+                </p>
+            </article>
+
+            <article class="article">
+                <h3>3.2 Interface</h3>
+                <p>Cette section présente un tableau simple avec :</p>
+                <ul>
+                    <li>Un tableau interactif listant les groupes clients enregistrés, elle est composée des champs suivants :
+                        <ul>
+                            <li><strong>Le nom du groupe de clients</strong>: C'est le nom donné à un groupe spécifique de clients qui partagent des caractéristiques, des comportements d'achat ou des conditions commerciales communes.</li>
+                            <li><strong>Calcul de pourcentage (%)</strong>: Elle est utilisé pour appliquer <strong>des remises, marges ou commissions</strong> selon les groupes de clients ou les politiques commerciales.</li>
+                            <li><strong>Groupe de prix de vente</strong>: C'est une catégorie tarifaire qui peut être associée à un ou plusieurs clients selon leur groupe.</li>
+                            <li><strong>Des actions d'édition ou suppression</strong>: Ce sont les <strong>fonctions accessibles via le bouton "Actions" pour modifier ou supprimer</strong> les informations d'un client ou groupe de clients.</li>
+                        </ul>
+                    </li>
+                    <li>De boutons d'<strong>actions rapides</strong>:
+                        <ul>
+                            <li><strong>Export CSV / Excel / PDF</strong>: permet de générer des rapports sur les utilisateurs au format souhaité.</li>
+                            <li><strong>Impression directe</strong>: un bouton d'impression est disponible pour produire une version papier de la liste.</li>
+                            <li><strong>Visibilité des colonnes</strong>: permet de masquer ou d'afficher certaines colonnes selon les préférences.</li>
+                            <li><strong>Recherche dynamique</strong>: un champ de recherche rapide facilite la localisation d'un utilisateur spécifique.</li>
+                            <li><strong>Pagination & nombre d'entrées par page</strong>: l'utilisateur peut naviguer entre les pages et choisir combien d'enregistrements afficher par page (par exemple : 10, 25, 50, etc.).</li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <div class="image-placeholder">
+                    <p>Illustration de cette interface</p>
+                </div>
+            </article>
+
+            <article class="article">
+                <h3>3.3 Ajouter un groupe</h3>
+                <p>Lorsque l'utilisateur clique sur <strong>"Ajouter", un formulaire minimaliste apparaît :</strong></p>
+                <ul>
+                    <li><strong>Nom du groupe de client</strong>: obligatoire (ex. : Clients VIP, Particuliers, Entreprises)</li>
+                    <li><strong>Type de calcul du prix</strong></li>
+                    <li><strong>Pourcentage de calcul (%)</strong></li>
+                </ul>
+                <p>Une fois validé, le groupe est enregistré et peut être utilisé dans les profils clients.</p>
+            </article>
+
+            <article class="article">
+                <h3>3.4 Utilisation des groupes</h3>
+                <p>Les groupes peuvent ensuite être utilisés :</p>
+                <ul>
+                    <li>Pour <strong>filtrer les clients dans les vues</strong></li>
+                    <li>Pour appliquer des conditions tarifaires spécifiques</li>
+                    <li>Pour <strong>segmenter la clientèle lors des campagnes de communication ou d'analyse statistique</strong></li>
+                </ul>
+            </article>
+        </section>
+
+        <section class="section">
+            <h2>4. Importation des contacts</h2>
+
+            <article class="article">
+                <h3>4.1 Objectif de la fonctionnalité</h3>
+                <p>
+                    L'importation de contacts permet d'insérer en masse des données clients ou fournisseurs à partir d'un fichier externe, typiquement un fichier CSV ou Excel. C'est particulièrement utile lors d'une migration de données ou d'une intégration initiale.
+                </p>
+            </article>
+
+            <article class="article">
+                <h3>4.2 Interface</h3>
+                <p>Elle montre une interface simple avec :</p>
+                <ul>
+                    <li>Un bouton "Importer"</li>
+                    <li>Un formulaire de téléversement de fichier</li>
+                    <li>Une interface d'aperçu des données à importer</li>
+                    <li>Des actions de validation</li>
+                </ul>
+
+                <div class="image-placeholder">
+                    <p>Illustration de cette interface</p>
+                </div>
+            </article>
+
+            <article class="article">
+                <h3>4.3 Processus d'importation</h3>
+                <ol>
+                    <li>Téléchargement du fichier modelé</li>
+                    <li><strong>Remplissage du fichier</strong></li>
+                    <li><strong>Sélectionner le fichier à importer</strong></li>
+                    <li><strong>Validation de l'importation en cliquant sur le bouton envoyer</strong></li>
+                    <li>Les contacts sont insérés dans la base, et sont classés automatiquement selon les colonnes disponibles.</li>
+                </ol>
+            </article>
+
+            <article class="article">
+                <h3>4.4 Avantages</h3>
+                <ul>
+                    <li><strong>Gain de temps important</strong></li>
+                    <li><strong>Réduction des erreurs manuelles</strong></li>
+                    <li><strong>Mise à jour massive en un seul clic</strong></li>
+                </ul>
+            </article>
+        </section>
+
+        <section class="section">
+            <h2>Conclusion</h2>
+            <p>
+                En centralisant toutes les données relatives aux partenaires commerciaux dans un module unique et performant, Movelys simplifie considérablement la gestion des contacts. L'entreprise peut ainsi suivre l'évolution de ses relations d'affaires avec efficacité, fiabilité et professionnalisme.
+            </p>
+            <p>
+                Grâce à des outils de recherche puissants, une organisation claire des données et une synchronisation fluide avec les autres modules (ventes, achats, facturation, etc.), Movelys permet de renforcer la qualité du service client et d'améliorer les performances globales de l'entreprise. La gestion des contacts devient ainsi non seulement un outil opérationnel, mais aussi un levier stratégique au service de la croissance.
+            </p>
+        </section>
+    </div>

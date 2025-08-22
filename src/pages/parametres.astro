@@ -1,0 +1,2121 @@
+---
+import '../styles/global1.css';
+---
+
+<div class="container">
+
+     <header class="header">
+        <h1>Gestion des paramètres dans Movelys</h1>
+    </header>
+    <!-- Introduction -->
+    <section class="section">
+        <h1>Introduction</h1>
+        <p>La flexibilité et l'adaptabilité d’une application de gestion reposent en grande partie sur la manière dont ses paramètres peuvent être configurés. Dans cette optique, <strong>Movelys intègre un</strong> module de gestion des paramètres complet, structuré et hautement personnalisable, permettant à chaque entreprise d’adapter l’outil à ses besoins opérationnels, juridiques et commerciaux spécifiques.</p>
+        
+        <p>Le module des paramètres agit comme le <strong>cœur de configuration du système, offrant une</strong> interface centralisée pour définir les règles fondamentales de fonctionnement de l’application. Il permet notamment de configurer les informations générales de l’entreprise (raison sociale, logo, coordonnées, devises, formats de date et heure), les préférences fiscales, les unités de mesure, les modes de paiement, les taux de taxes, les langues, les préférences d’impression, les options de facturation, et bien d’autres éléments essentiels.</p>
+        
+        <p>Grâce à cette configuration fine, Movelys assure une cohérence globale, une conformité réglementaire locale (notamment pour les aspects fiscaux) et une personnalisation poussée de l’expérience utilisateur. Les administrateurs ont ainsi un contrôle total sur les éléments qui structurent l’environnement de travail de leurs collaborateurs, tout en garantissant une meilleure intégration des modules (ventes, achats, produits, stocks, rapports, etc.).</p>
+    </section>
+
+    <!-- 1) Paramètres d'Entreprise -->
+    <section class="section">
+        <h2>1) Paramètres d'Entreprise</h2>
+        
+        <h3>1.1) Fonction générale</h3>
+        <p>L'interface <strong>Paramètres d'entreprise de Movelys permet à l'administrateur de configurer les</strong> paramètres généraux de l'entreprise pour assurer un bon fonctionnement de toutes les fonctionnalités.</p>
+        <p>Ces paramètres influencent l'ensemble du système et doivent être configurés avant toute utilisation sérieuse de la plateforme.</p>
+        
+        <h3>1.2) Navigation</h3>
+        <p>Le menu de gauche affiche les différentes catégories de paramètres :</p>
+        <ul>
+            <li>Affaire</li>
+        </ul>
+        <p>Cette section regroupe les informations principales relatives à l'entreprise. Voici le détail <strong>champ par champ :</strong></p>
+        
+        <table>
+            <tr>
+                <th>Champ</th>
+                <th>Valeur exemple</th>
+                <th>Utilité / Description</th>
+            </tr>
+            <tr>
+                <td>Nom de l'entreprise</td>
+                <td>Senteur & Vitalité</td>
+                <td>Nom affiché sur les interfaces, factures, rapports, mails, etc.</td>
+            </tr>
+            <tr>
+                <td>Date de mise en œuvre</td>
+                <td>01/01/1970</td>
+                <td>Date de démarrage de l'utilisation du système. Sert pour l'historique et les périodes comptables.</td>
+            </tr>
+            <tr>
+                <td>Pourcentage de bénéfice par défaut</td>
+                <td>25.00</td>
+                <td>Marge bénéficiaire par défaut appliquée aux produits (si aucune autre n'est précisée).</td>
+            </tr>
+            <tr>
+                <td>Monnaie</td>
+                <td>Cameroun - Franc CFA (FCFA)</td>
+                <td>Devise principale utilisée dans toutes les transactions.</td>
+            </tr>
+            <tr>
+                <td>Placement du symbole monétaire</td>
+                <td>Avant le montant</td>
+                <td>Personnalisation de l'affichage : « FCFA 1,000 » ou « 1,000 FCFA ».</td>
+            </tr>
+            <tr>
+                <td>Fuseau horaire</td>
+                <td>Europe/Paris</td>
+                <td>Définit l'heure locale pour les opérations, rapports, sauvegardes, etc.</td>
+            </tr>
+            <tr>
+                <td>Télécharger le logo</td>
+                <td>Bouton « Parcourir... »</td>
+                <td>Permet d'ajouter le logo officiel à afficher sur les documents (factures, devis, etc.).</td>
+            </tr>
+            <tr>
+                <td>Mois de début de l'exercice financier</td>
+                <td>Janvier</td>
+                <td>Mois de démarrage de l'année fiscale pour les états comptables.</td>
+            </tr>
+            <tr>
+                <td>Méthode de comptabilisation des stocks</td>
+                <td>FIFO (Premier entré, premier sorti)</td>
+                <td>Détermine l'ordre de sortie des produits du stock. Impacte la valorisation et les rapports.</td>
+            </tr>
+            <tr>
+                <td>Jours d'édition des transactions</td>
+                <td>30</td>
+                <td>Nombre de jours durant lesquels une transaction peut être modifiée.</td>
+            </tr>
+            <tr>
+                <td>Format de date</td>
+                <td>jj/mm/aaaa</td>
+                <td>Définit comment les dates sont affichées dans tout le système.</td>
+            </tr>
+            <tr>
+                <td>Format de l'heure</td>
+                <td>24 heures sur 24</td>
+                <td>Choix entre format 12h (AM/PM) ou 24h (00:00-23:59).</td>
+            </tr>
+            <tr>
+                <td>Précision de la devise</td>
+                <td>2</td>
+                <td>Nombre de décimales après la virgule pour les montants (ex : 1 000,00 FCFA).</td>
+            </tr>
+            <tr>
+                <td>Précision de la quantité</td>
+                <td>2</td>
+                <td>Nombre de décimales pour les quantités (ex : 1,25 kg).</td>
+            </tr>
+        </table>
+        
+        <h4>• Taxe</h4>
+        <p>Cette section regroupe les informations principales relatives à l'entreprise. Voici le détail <strong>champ par champ :</strong></p>
+        
+        <table>
+            <tr>
+                <th>Champ</th>
+                <th>Exemple / Info</th>
+                <th>Utilité / Description</th>
+            </tr>
+            <tr>
+                <td>Taxe 1 Nom</td>
+                <td>TPS / TVA / Autres</td>
+                <td>Nom de la première taxe appliquée (ex. : TVA, TPS, GST).</td>
+            </tr>
+            <tr>
+                <td>N° de TVA 1</td>
+                <td>(Ex : FR12345678901)</td>
+                <td>Numéro d'identification fiscale de l'entreprise pour cette taxe (TVA 1).</td>
+            </tr>
+            <tr>
+                <td>Nom de l'impôt 2</td>
+                <td>TVA / TPS / Taxe locale</td>
+                <td>Nom d'une seconde taxe si applicable (utilisée pour double imposition ou taxes régionales).</td>
+            </tr>
+            <tr>
+                <td>N° de TVA 2</td>
+                <td>(Ex : CM987654321)</td>
+                <td>Numéro fiscal lié à la seconde taxe.</td>
+            </tr>
+            <tr>
+                <td>Activer la taxe en ligne dans l'achat et la vente</td>
+                <td>Case à cocher</td>
+                <td>Si activée, applique automatiquement les taxes lors des achats et des ventes.</td>
+            </tr>
+        </table>
+        
+        <p><strong>Remarques :</strong></p>
+        <ul>
+            <li>Vous pouvez <strong>laisser vider les champs relatifs à la seconde taxe si votre activité ne</strong> nécessite pas de double imposition.</li>
+            <li>Ces paramètres influencent la facturation, les rapports fiscaux et la conformité <strong>légale de votre entreprise.</strong></li>
+        </ul>
+        
+        <h4>• Produit</h4>
+        <p>Cette section regroupe les informations principales relatives à l'entreprise. Voici le détail <strong>champ par champ :</strong></p>
+        
+        <table>
+            <tr>
+                <th>Champ / Option</th>
+                <th>Type / Exemple</th>
+                <th>Utilité / Description</th>
+            </tr>
+            <tr>
+                <td>Préfixe SKU</td>
+                <td>Exemple : PROD-</td>
+                <td>Préfixe automatique pour les références produits (SKU = Stock Keeping Unit).</td>
+            </tr>
+            <tr>
+                <td>Activer l'expiration du produit</td>
+                <td>Menu déroulant</td>
+                <td>Permet de définir une date d'expiration pour les produits (ex : produits alimentaires).</td>
+            </tr>
+            <tr>
+                <td>Activer les marques</td>
+                <td>Case cochée</td>
+                <td>Permet d'associer chaque produit à une marque (utile pour le filtrage, rapport, etc.).</td>
+            </tr>
+            <tr>
+                <td>Activer les informations sur les prix et les taxes</td>
+                <td>Case cochée</td>
+                <td>Active l'affichage et la gestion des prix et taxes directement dans les fiches produites.</td>
+            </tr>
+            <tr>
+                <td>Activer les racks</td>
+                <td>Case vide</td>
+                <td>Permet de spécifier l'emplacement (rack) des produits dans l'entrepôt ou le magasin.</td>
+            </tr>
+            <tr>
+                <td>Activer la garantie</td>
+                <td>Case vide</td>
+                <td>Ajoute un champ pour définir une durée de garantie sur le produit.</td>
+            </tr>
+            <tr>
+                <td>Activer les catégories</td>
+                <td>Case cochée</td>
+                <td>Permet de classer les produits par catégorie principale.</td>
+            </tr>
+            <tr>
+                <td>Activer les sous-catégories</td>
+                <td>Case cochée</td>
+                <td>Permet un niveau supplémentaire d'organisation : sous-catégories.</td>
+            </tr>
+            <tr>
+                <td>Unité par défaut</td>
+                <td>Liste déroulante (kg, pcs, etc.)</td>
+                <td>Définit l'unité principale utilisée pour le produit.</td>
+            </tr>
+            <tr>
+                <td>Activer les sous-unités</td>
+                <td>Case vide</td>
+                <td>Permet d'utiliser des unités secondaires (ex : pack → bouteille).</td>
+            </tr>
+            <tr>
+                <td>Activer la ligne</td>
+                <td>Case vide</td>
+                <td>Ajoute un champ "ligne de produit", utile pour segmenter les articles selon leur gamme.</td>
+            </tr>
+            <tr>
+                <td>Activer la position</td>
+                <td>Case vide</td>
+                <td>Ajoute un champ pour indiquer une position précise de stockage dans l'entrepôt.</td>
+            </tr>
+            <tr>
+                <td>L'image du produit est-elle requise ?</td>
+                <td>Case vide</td>
+                <td>Rend le téléchargement d'une image obligatoire lors de la création d'un produit.</td>
+            </tr>
+        </table>
+        
+        <h4>• Contact</h4>
+        <p>Cette section regroupe les informations principales relatives à l'entreprise. Voici le détail <strong>champ par champ :</strong></p>
+        
+        <table>
+            <tr>
+                <th>Champ</th>
+                <th>Exemple / Valeur attendue</th>
+                <th>Utilité / Description</th>
+            </tr>
+            <tr>
+                <td>Limite de crédit par défaut</td>
+                <td>100 000 FCFA</td>
+                <td>Définit le montant maximal de crédit qu'un client peut utiliser par défaut dans le système.</td>
+            </tr>
+        </table>
+        
+        <h4>• Vente</h4>
+        <p>Cette section regroupe les informations principales relatives à l'entreprise. Voici le détail <strong>champ par champ :</strong></p>
+        
+        <h5>Paramètres de configuration des ventes</h5>
+        <table>
+            <tr>
+                <th>Champ / Option</th>
+                <th>Exemple / Valeur</th>
+                <th>Utilité / Description</th>
+            </tr>
+            <tr>
+                <td>Remise de vente par défaut</td>
+                <td>0.00%</td>
+                <td>Pourcentage de remise appliqué automatiquement sur toutes les ventes.</td>
+            </tr>
+            <tr>
+                <td>Taxe de vente par défaut</td>
+                <td>Aucun</td>
+                <td>Taxe ajoutée automatiquement aux produits vendus.</td>
+            </tr>
+            <tr>
+                <td>Méthode d'ajout d'article de vente</td>
+                <td>Ajouter ou augmenter la quantité</td>
+                <td>Définit comment les produits sont ajoutés dans le panier (ajout ou mise à jour de quantité).</td>
+            </tr>
+            <tr>
+                <td>Méthode d'arrondissement du montant</td>
+                <td>Aucun / Arrondir à 0.05, etc.</td>
+                <td>Applique une règle d'arrondi sur les montants des ventes.</td>
+            </tr>
+            <tr>
+                <td>Le prix de vente est le prix de vente minimum</td>
+                <td>(Option)</td>
+                <td>Empêche la vente à un prix inférieur au prix minimum défini.</td>
+            </tr>
+            <tr>
+                <td>Autoriser la survente</td>
+                <td>(Option)</td>
+                <td>Permet de vendre un produit même si le stock est insuffisant.</td>
+            </tr>
+            <tr>
+                <td>Activer la commande client</td>
+                <td>Case vide</td>
+                <td>Active la possibilité de générer des commandes clients avant la facturation.</td>
+            </tr>
+            <tr>
+                <td>Un délai de paie est-il requis ?</td>
+                <td>Case vide</td>
+                <td>Ajoute un champ pour définir un délai de paiement pour les clients.</td>
+            </tr>
+        </table>
+        
+        <h5>Paramètres du commissionnaire</h5>
+        <table>
+            <tr>
+                <th>Champ / Option</th>
+                <th>Exemple / Valeur</th>
+                <th>Utilité / Description</th>
+            </tr>
+            <tr>
+                <td>Commissionnaire de vente</td>
+                <td>Activer / Désactiver</td>
+                <td>Active la gestion des commissions sur les ventes.</td>
+            </tr>
+            <tr>
+                <td>Type de calcul de la commission</td>
+                <td>Valeur de la facture / Marge bénéficiaire</td>
+                <td>Détermine la base de calcul de la commission (montant total ou bénéfice).</td>
+            </tr>
+            <tr>
+                <td>Un commissionnaire est-il nécessaire ?</td>
+                <td>Case vide</td>
+                <td>Oblige à sélectionner un commissionnaire pour chaque vente.</td>
+            </tr>
+        </table>
+        
+        <h5>Lien de paiement et intégrations</h5>
+        <table>
+            <tr>
+                <th>Champ / Option</th>
+                <th>Exemple / Valeur</th>
+                <th>Utilité / Description</th>
+            </tr>
+            <tr>
+                <td>Activer le lien de paiement</td>
+                <td>Case vide</td>
+                <td>Permet d'envoyer un lien de paiement au client (ex : pour règlement à distance).</td>
+            </tr>
+        </table>
+        
+        <h5>Passerelles de paiement</h5>
+        <table>
+            <tr>
+                <th>Passerelle</th>
+                <th>Champ</th>
+                <th>Utilité</th>
+            </tr>
+            <tr>
+                <td>Razorpay</td>
+                <td>ID de la clé / Secret clé</td>
+                <td>Intégration avec Razorpay (pour l'Inde).</td>
+            </tr>
+            <tr>
+                <td>Stripe (Raie)</td>
+                <td>Clé publique / Clé secrète</td>
+                <td>Permet l'intégration de Stripe pour les paiements en ligne.</td>
+            </tr>
+        </table>
+        
+        <h4>• POS (Point de Vente)</h4>
+        <p>Cette section regroupe les informations principales relatives à l'entreprise. Voici le détail <strong>champ par champ :</strong></p>
+        
+        <h5>Opérations et raccourcis définis :</h5>
+        <table>
+            <tr>
+                <th>Opération</th>
+                <th>Raccourci clavier</th>
+            </tr>
+            <tr>
+                <td>Paiement express</td>
+                <td>shiftt+e</td>
+            </tr>
+            <tr>
+                <td>Payer et passer à la caisse</td>
+                <td>shiftt+p</td>
+            </tr>
+            <tr>
+                <td>Brouillon</td>
+                <td>shiftt+d</td>
+            </tr>
+            <tr>
+                <td>Annuler</td>
+                <td>shiftt+c</td>
+            </tr>
+            <tr>
+                <td>Aller à la quantité de produit</td>
+                <td>f2</td>
+            </tr>
+            <tr>
+                <td>Balance</td>
+                <td>(vide)</td>
+            </tr>
+            <tr>
+                <td>Modifier la remise</td>
+                <td>shiftt+i</td>
+            </tr>
+            <tr>
+                <td>Modifier la taxe de commande</td>
+                <td>shiftt+t</td>
+            </tr>
+            <tr>
+                <td>Ajouter une ligne de paiement</td>
+                <td>shiftt+r</td>
+            </tr>
+            <tr>
+                <td>Finaliser le paiement</td>
+                <td>shiftt+f</td>
+            </tr>
+            <tr>
+                <td>Ajouter un nouveau produit</td>
+                <td>f4</td>
+            </tr>
+        </table>
+        
+        <p>Vous pouvez modifier ces raccourcis selon vos préférences, en utilisant les touches listées (ctrl, shift, alt, etc.).</p>
+        
+        <h5>Paramètres du point de vente</h5>
+        <p>Ce sont des options qui permettent de personnaliser le comportement de l'interface du point de vente. Voici ce que chaque case signifie :</p>
+        
+        <table>
+            <tr>
+                <th>Option</th>
+                <th>Description</th>
+            </tr>
+            <tr>
+                <td>Désactiver la paie multiple</td>
+                <td>Interdit de faire plusieurs paiements en une seule transaction.</td>
+            </tr>
+            <tr>
+                <td>Désactiver le brouillon</td>
+                <td>Empêche l'enregistrement temporaire des ventes incomplètes.</td>
+            </tr>
+            <tr>
+                <td>Désactiver le paiement express</td>
+                <td>Supprime l'option de paiement rapide.</td>
+            </tr>
+            <tr>
+                <td>Ne pas afficher la suggestion de produit</td>
+                <td>Cache les recommandations automatiques de produits.</td>
+            </tr>
+            <tr>
+                <td>Ne pas afficher les transactions récentes</td>
+                <td>Empêche l'affichage des ventes récentes à l'écran.</td>
+            </tr>
+            <tr>
+                <td>Désactiver la remise</td>
+                <td>Désactive l'application de remises sur les ventes.</td>
+            </tr>
+            <tr>
+                <td>Désactiver la taxe sur les commandes</td>
+                <td>Supprime l'ajout automatique de la TVA ou autres taxes.</td>
+            </tr>
+            <tr>
+                <td>Sous-total modifiable</td>
+                <td>Autorise la modification manuelle du sous-total.</td>
+            </tr>
+            <tr>
+                <td>Désactiver la suspension de la vente</td>
+                <td>Supprime l'option de mettre une vente en attente.</td>
+            </tr>
+            <tr>
+                <td>Activer la date de la transaction sur l'écran du PDV</td>
+                <td>Affiche la date de la vente sur l'écran principal.</td>
+            </tr>
+            <tr>
+                <td>Activer le personnel de service dans la gamme de produits</td>
+                <td>Lie les produits à des membres du personnel pour suivi des ventes.</td>
+            </tr>
+            <tr>
+                <td>Du personnel de service est-il nécessaire ?</td>
+                <td>Rend obligatoire la sélection d'un personnel pour chaque vente.</td>
+            </tr>
+            <tr>
+                <td>Désactiver le bouton de vente à crédit</td>
+                <td>Interdit la possibilité de faire une vente à crédit.</td>
+            </tr>
+            <tr>
+                <td>Activer la balance</td>
+                <td>Active l'utilisation d'une balance (pesée) intégrée.</td>
+            </tr>
+            <tr>
+                <td>Afficher le schéma de facturation</td>
+                <td>Affiche un aperçu du modèle de facture.</td>
+            </tr>
+            <tr>
+                <td>Afficher la liste déroulante de la mise en page de la facture</td>
+                <td>Permet de choisir un style de facture.</td>
+            </tr>
+            <tr>
+                <td>Imprimer la facture en suspension</td>
+                <td>Permet d'imprimer même une facture suspendue.</td>
+            </tr>
+            <tr>
+                <td>Afficher les prix sur l'infobulle de suggestion de produit</td>
+                <td>Ajoute les prix dans les bulles d'info des produits suggérés.</td>
+            </tr>
+        </table>
+        
+        <h5>Réglage du code-barres de la balance</h5>
+        <p>Configure comment <strong>lire un</strong> <strong>code-barres généré par une balance (ex : en magasin de</strong> fruits/légumes au poids).</p>
+        
+        <table>
+            <tr>
+                <th>Champ</th>
+                <th>Description</th>
+            </tr>
+            <tr>
+                <td>Préfixe</td>
+                <td>Les premiers chiffres du code-barres pour identifier qu'il s'agit d'un poids (ex. : 20).</td>
+            </tr>
+            <tr>
+                <td>Longueur du produit</td>
+                <td>Nombre de chiffres représentant l'ID du produit.</td>
+            </tr>
+            <tr>
+                <td>Quantité entière de la longueur de la pièce</td>
+                <td>Nombres de chiffres utilisés pour la partie entière du poids.</td>
+            </tr>
+            <tr>
+                <td>Quantité de longueur de pièce fractionnée</td>
+                <td>Nombres de chiffres utilisés pour la partie décimale (fraction) du poids.</td>
+            </tr>
+        </table>
+        
+        <p><strong>Exemple : un code-barres 2 0 0 1 2 3 0 0 4 5 0 0 peut être interprété ainsi :</strong></p>
+        <ul>
+            <li>2 0 = préfixe</li>
+            <li>0 1 2 3 0 = ID produit (5 chiffres)</li>
+            <li>0 4 5 0 0 = poids 4.500 kg (4 chiffres pour entier, 3 pour décimal)</li>
+        </ul>
+        
+        <h4>• Écran d'affichage</h4>
+        <p>Cette section regroupe les informations principales relatives à l'entreprise. Voici le détail <strong>champ par champ :</strong></p>
+        
+        <h5>Paramètres de l'Écran d'Affichage du Client</h5>
+        <table>
+            <tr>
+                <th>Élément</th>
+                <th>Description</th>
+            </tr>
+            <tr>
+                <td>Activer l'écran d'affichage du client</td>
+                <td>Permet d'afficher un écran client (généralement sur un second moniteur ou un onglet en miroir).</td>
+            </tr>
+            <tr>
+                <td>En-tête de l'écran d'affichage</td>
+                <td>Zone de texte riche (éditeur WYSIWYG) pour écrire un message personnalisé qui apparaîtra sur l'écran client.</td>
+            </tr>
+            <tr>
+                <td>Image du carrousel 1 à 10</td>
+                <td>Permet de charger jusqu'à 10 images qui seront affichées de manière tournante (carrousel) sur l'écran du client.</td>
+            </tr>
+            <tr>
+                <td>Parcourir (upload)</td>
+                <td>Bouton pour sélectionner et téléverser une image. Remplace l'image précédente si déjà existante.</td>
+            </tr>
+        </table>
+        
+        <p><strong>Notes Importantes :</strong></p>
+        <ul>
+            <li>L'écran d'affichage client fonctionne uniquement si :
+                <ul>
+                    <li>Le navigateur utilisé pour le POS et l'écran client est le même.</li>
+                    <li>L'écran client est ouvert dans un nouvel onglet et mis en miroir sur un autre <strong>moniteur.</strong></li>
+                </ul>
+            </li>
+            <li>Le <strong>carrousel d'images est souvent utilisé pour des</strong> <strong>promotions, offres, ou branding</strong> visuel sur l'écran client.</li>
+        </ul>
+        
+        <h4>• Achats</h4>
+        <p>Cette section regroupe les informations principales relatives à l'entreprise. Voici le détail <strong>champ par champ :</strong></p>
+        
+        <table>
+            <tr>
+                <th>Option</th>
+                <th>Description</th>
+                <th>État</th>
+            </tr>
+            <tr>
+                <td>Activer la modification du prix du produit à partir de l'écran d'achat</td>
+                <td>Autorise la modification du prix d'un produit directement depuis l'écran d'achat.</td>
+                <td>Active</td>
+            </tr>
+            <tr>
+                <td>Activer le numéro de lot</td>
+                <td>Permet d'activer la gestion des numéros de lot (utile pour traçabilité, expiration, etc.).</td>
+                <td>Désactivé</td>
+            </tr>
+            <tr>
+                <td>Activer la demande d'achat</td>
+                <td>Active les demandes d'achat internes avant de passer des commandes (workflow d'approbation).</td>
+                <td>Désactivé</td>
+            </tr>
+            <tr>
+                <td>Activer le statut d'achat</td>
+                <td>Affiche les statuts des achats (commandé, reçu, annulé, etc.) pour une meilleure gestion du cycle achat.</td>
+                <td>Active</td>
+            </tr>
+            <tr>
+                <td>Activer le bon de commande</td>
+                <td>Active l'utilisation des bons de commande dans le module d'achat.</td>
+                <td>Désactivé</td>
+            </tr>
+        </table>
+        
+        <p><strong>Remarque :</strong><br>
+        Ces options sont utiles pour personnaliser le processus d'approvisionnement selon vos besoins.</p>
+        
+        <h4>• Paiement</h4>
+        <p>Cette section regroupe les informations principales relatives à l'entreprise. Voici le détail <strong>champ par champ :</strong></p>
+        
+        <table>
+            <tr>
+                <th>Champ / Option</th>
+                <th>Description</th>
+                <th>Exemple / État</th>
+            </tr>
+            <tr>
+                <td>Valeurs nominales</td>
+                <td>Liste des coupures disponibles en espèces, séparées par des virgules.</td>
+                <td>100,200,500,2000</td>
+            </tr>
+            <tr>
+                <td>Activer la coupure en espèces sur</td>
+                <td>Indique où cette fonctionnalité est activée (ex. écran de point de vente).</td>
+                <td>Écran de point de vente</td>
+            </tr>
+            <tr>
+                <td>Activer la coupure en espèces pour les modes de paiement</td>
+                <td>Limite les modes de paiement concernés par la coupure en espèces.</td>
+                <td>(Champ vide ici)</td>
+            </tr>
+            <tr>
+                <td>Contrôle strict</td>
+                <td>Si coché, impose l'utilisation exacte des coupures définies.</td>
+                <td>(Non activé)</td>
+            </tr>
+        </table>
+        
+        <h4>• Tableau de bord</h4>
+        <p>Cette section regroupe les informations principales relatives à l'entreprise. Voici le détail <strong>champ par champ :</strong></p>
+        
+        <table>
+            <tr>
+                <th>Champ</th>
+                <th>Description</th>
+                <th>Valeur Exemple</th>
+            </tr>
+            <tr>
+                <td>Voir l'alerte d'expiration de stock pour</td>
+                <td>Définit le nombre de jours avant la date d'expiration d'un produit pour afficher une alerte.</td>
+                <td>30 jours</td>
+            </tr>
+        </table>
+        
+        <p><strong>Utilité :</strong><br>
+        Permet de recevoir une <strong>alerte préventive pour les produits qui approchent de leur date</strong> d'expiration, facilitant la <strong>gestion des stocks périssables.</strong></p>
+        
+        <h4>• Système</h4>
+        <p>Cette section regroupe les informations principales relatives à l'entreprise. Voici le détail <strong>champ par champ :</strong></p>
+        
+        <table>
+            <tr>
+                <th>Élément</th>
+                <th>Description</th>
+                <th>Valeur sélectionnée</th>
+            </tr>
+            <tr>
+                <td>Couleur du thème</td>
+                <td>Choix de la couleur du thème</td>
+                <td>Vert</td>
+            </tr>
+            <tr>
+                <td>Entrées de page de table de données par défaut</td>
+                <td>Nombre d'entrées affichées par page dans une table de données</td>
+                <td>25</td>
+            </tr>
+            <tr>
+                <td>Option d'affichage</td>
+                <td>Affichage du texte d'aide</td>
+                <td>Activé (case cochée)</td>
+            </tr>
+        </table>
+        
+        <h4>• Préfixes</h4>
+        <p>Cette section regroupe les informations principales relatives à l'entreprise. Voici le détail <strong>champ par champ :</strong></p>
+        
+        <table>
+            <tr>
+                <th>Terme</th>
+                <th>Abréviation</th>
+                <th>Explication</th>
+            </tr>
+            <tr>
+                <td>Achat</td>
+                <td>PO</td>
+                <td>Purchase Order (Bon de commande) : Document officiel émis pour commander des biens ou services.</td>
+            </tr>
+            <tr>
+                <td>Bon de commande</td>
+                <td></td>
+                <td>Document qui détaille les articles, quantités et prix convenus pour un achat.</td>
+            </tr>
+            <tr>
+                <td>Retour de vente</td>
+                <td>CN</td>
+                <td>Crédit Note (Note de crédit) : Document utilisé pour enregistrer un retour ou une annulation de vente.</td>
+            </tr>
+            <tr>
+                <td>Paiement de l'achat</td>
+                <td>PP</td>
+                <td>Paiement effectué pour régler une commande d'achat.</td>
+            </tr>
+            <tr>
+                <td>Emplacement de l'entreprise</td>
+                <td>BL</td>
+                <td>Localisation ou adresse physique de l'entreprise.</td>
+            </tr>
+            <tr>
+                <td>Brouillon</td>
+                <td></td>
+                <td>Document temporaire ou non finalisé, en cours de préparation.</td>
+            </tr>
+            <tr>
+                <td>Retour d'achat</td>
+                <td></td>
+                <td>Processus ou document lié au retour des produits achetés, par exemple en cas de défaut.</td>
+            </tr>
+            <tr>
+                <td>Transfert d'actions</td>
+                <td>ST</td>
+                <td>Mouvement ou transfert de stock d'un emplacement à un autre.</td>
+            </tr>
+            <tr>
+                <td>Dépense</td>
+                <td>EP</td>
+                <td>Somme d'argent dépensée pour des coûts divers, autres que les achats directs.</td>
+            </tr>
+            <tr>
+                <td>Paiement de la vente</td>
+                <td>SP</td>
+                <td>Encaissement reçu suite à une vente réalisée.</td>
+            </tr>
+            <tr>
+                <td>Nom d'utilisateur</td>
+                <td></td>
+                <td>Identifiant ou nom de la personne qui utilise le système ou effectue une opération.</td>
+            </tr>
+            <tr>
+                <td>Commande client</td>
+                <td></td>
+                <td>Demande officielle passée par un client pour obtenir un produit ou service.</td>
+            </tr>
+            <tr>
+                <td>Demande d'achat</td>
+                <td></td>
+                <td>Requête interne pour acquérir un produit ou service avant de passer un bon de commande.</td>
+            </tr>
+            <tr>
+                <td>Ajustement des stocks</td>
+                <td>SA</td>
+                <td>Correction ou mise à jour du stock pour refléter la réalité physique ou comptable.</td>
+            </tr>
+            <tr>
+                <td>Contacts</td>
+                <td>CO</td>
+                <td>Informations sur les personnes ou entreprises à contacter (fournisseurs, clients, etc.).</td>
+            </tr>
+            <tr>
+                <td>Paiement des dépenses</td>
+                <td></td>
+                <td>Règlement des frais engagés pour diverses dépenses (ex. frais généraux).</td>
+            </tr>
+            <tr>
+                <td>N° d'abonnement</td>
+                <td></td>
+                <td>Numéro associé à un abonnement ou contrat périodique.</td>
+            </tr>
+        </table>
+        
+        <h4>• Paramètres de messagerie</h4>
+        <p>Cette section regroupe les informations principales relatives à l'entreprise. Voici le détail <strong>champ par champ :</strong></p>
+        
+        <table>
+            <tr>
+                <th>Champ</th>
+                <th>Description</th>
+                <th>Exemple</th>
+            </tr>
+            <tr>
+                <td>Pilote de courrier</td>
+                <td>Type de protocole utilisé pour l'envoi d'e-mails</td>
+                <td>SMTP, PHP mail, sendmail</td>
+            </tr>
+            <tr>
+                <td>Hôte</td>
+                <td>Adresse du serveur SMTP</td>
+                <td>smtp.exemple.com</td>
+            </tr>
+            <tr>
+                <td>Port</td>
+                <td>Port utilisé pour la connexion au serveur SMTP</td>
+                <td>587, 465</td>
+            </tr>
+            <tr>
+                <td>Nom d'utilisateur</td>
+                <td>Nom d'utilisateur pour se connecter au serveur SMTP</td>
+                <td>utilisateur@example.com</td>
+            </tr>
+            <tr>
+                <td>Mot de passe</td>
+                <td>Mot de passe associé à ce compte utilisateur</td>
+                <td>*********</td>
+            </tr>
+            <tr>
+                <td>Chiffrement</td>
+                <td>Type de sécurisation pour la connexion</td>
+                <td>TLS, SSL</td>
+            </tr>
+            <tr>
+                <td>Adresse de l'expéditeur</td>
+                <td>Adresse e-mail qui apparaîtra comme expéditeur</td>
+                <td>no-reply@example.com</td>
+            </tr>
+            <tr>
+                <td>Nom de l'expéditeur</td>
+                <td>Nom qui apparaîtra comme expéditeur dans les e-mails</td>
+                <td>Nom de la société</td>
+            </tr>
+        </table>
+        
+        <p>Le bouton « Envoyer un e-mail de test » sert à vérifier que la configuration fonctionne correctement en envoyant un message test.</p>
+        
+        <h4>• Paramètres SMS</h4>
+        <p>Cette section regroupe les informations principales relatives à l'entreprise. Voici le détail <strong>champ par champ :</strong></p>
+        
+        <table>
+            <tr>
+                <th>Champ</th>
+                <th>Description</th>
+            </tr>
+            <tr>
+                <td>Service SMS</td>
+                <td>Sélection du prestataire de service SMS (ex : Twilio, Nexmo, Autre).</td>
+            </tr>
+            <tr>
+                <td>URL</td>
+                <td>URL de l'API du service SMS.</td>
+            </tr>
+            <tr>
+                <td>Envoyer au nom du paramètre</td>
+                <td>Nom du paramètre de l'API où sera mis le numéro de destination.</td>
+            </tr>
+            <tr>
+                <td>Nom du paramètre de message</td>
+                <td>Nom du paramètre de l'API où sera mis le contenu du message.</td>
+            </tr>
+            <tr>
+                <td>Méthode de demande</td>
+                <td>Méthode HTTP utilisée pour l'envoi de la requête (ex : POST, GET, PUBLIER — ici « PUBLIER » est sélectionné).</td>
+            </tr>
+            <tr>
+                <td>Touche d'en-tête 1, 2, 3</td>
+                <td>Clés des en-têtes HTTP si requis par l'API (ex : Authorization, Content-Type).</td>
+            </tr>
+            <tr>
+                <td>Valeur de l'en-tête 1, 2, 3</td>
+                <td>Valeurs correspondantes aux touches d'en-tête.</td>
+            </tr>
+            <tr>
+                <td>Touche de paramètre 1 à 10</td>
+                <td>Noms des paramètres additionnels exigés par l'API (ex : token, API key, sender ID).</td>
+            </tr>
+            <tr>
+                <td>Valeur du paramètre 1 à 10</td>
+                <td>Valeurs correspondantes aux touches de paramètres.</td>
+            </tr>
+            <tr>
+                <td>Numéro de test</td>
+                <td>Numéro de téléphone sur lequel envoyer un SMS de test.</td>
+            </tr>
+            <tr>
+                <td>Envoyer un SMS de test (bouton)</td>
+                <td>Bouton pour envoyer un SMS test et valider la configuration.</td>
+            </tr>
+        </table>
+        
+        <h4>• Paramètres des points de récompense</h4>
+        <p>Cette section regroupe les informations principales relatives à l'entreprise. Voici le détail <strong>champ par champ :</strong></p>
+        
+        <h5>Tableau des Paramètres de Points de Récompense</h5>
+        <table>
+            <tr>
+                <th>Catégorie</th>
+                <th>Champ</th>
+                <th>Description</th>
+            </tr>
+            <tr>
+                <td>Général</td>
+                <td>Activer le point de récompense</td>
+                <td>Cochez cette case pour activer le système de points de récompense dans votre boutique.</td>
+            </tr>
+            <tr>
+                <td>Général</td>
+                <td>Nom d'affichage du point de récompense</td>
+                <td>Nom personnalisé du point visible par les clients (ex. : "Crédit", "Point", "Stars").</td>
+            </tr>
+        </table>
+        
+        <h5>Paramètres de gain de points</h5>
+        <table>
+            <tr>
+                <th>Champ</th>
+                <th>Description</th>
+            </tr>
+            <tr>
+                <td>Montant dépensé par point unitaire</td>
+                <td>Montant que le client doit dépenser pour gagner 1 point. Exemple : 1,00 = 1 point par 1€.</td>
+            </tr>
+            <tr>
+                <td>Total minimum de commande pour gagner la récompense</td>
+                <td>Le montant minimal de la commande nécessaire pour que le client commence à accumuler des points.</td>
+            </tr>
+            <tr>
+                <td>Nombre maximum de points par commande</td>
+                <td>Plafond du nombre de points qu'un client peut gagner par commande (optionnel).</td>
+            </tr>
+        </table>
+        
+        <h5>Paramètres d'échange de points</h5>
+        <table>
+            <tr>
+                <th>Champ</th>
+                <th>Description</th>
+            </tr>
+            <tr>
+                <td>Montant d'échange par point unitaire</td>
+                <td>Montant (en €) que vaut 1 point lors de son utilisation. Exemple : 1 point = 1€.</td>
+            </tr>
+            <tr>
+                <td>Total minimum de la commande pour échanger des points</td>
+                <td>Le montant minimal que doit atteindre la commande pour que l'échange de points soit possible.</td>
+            </tr>
+            <tr>
+                <td>Point d'échange minimum</td>
+                <td>Nombre minimal de points que le client doit avoir pour les utiliser.</td>
+            </tr>
+            <tr>
+                <td>Point d'échange maximum par commande</td>
+                <td>Plafond de points utilisables par commande. Laissez vide si vous ne souhaitez pas de limite.</td>
+            </tr>
+            <tr>
+                <td>Période d'expiration des points de récompense</td>
+                <td>Durée avant expiration automatique des points (en mois ou années).</td>
+            </tr>
+        </table>
+        
+        <h4>• Modules</h4>
+        <p>Cette section regroupe les informations principales relatives à l'entreprise. Voici le détail <strong>champ par champ :</strong></p>
+        
+        <table>
+            <tr>
+                <th>Module</th>
+                <th>Statut (coché / non coché)</th>
+                <th>Description</th>
+            </tr>
+            <tr>
+                <td>Achats</td>
+                <td>Activé</td>
+                <td>Permet la gestion des achats auprès des fournisseurs.</td>
+            </tr>
+            <tr>
+                <td>Ajouter une vente</td>
+                <td>Activé</td>
+                <td>Active la possibilité d'ajouter manuellement une vente dans le système.</td>
+            </tr>
+            <tr>
+                <td>POS (Point de vente)</td>
+                <td>Activé</td>
+                <td>Active l'interface de caisse pour les ventes en temps réel.</td>
+            </tr>
+            <tr>
+                <td>Transferts de stock</td>
+                <td>Activé</td>
+                <td>Permet de déplacer du stock d'un entrepôt ou d'un point de vente à un autre.</td>
+            </tr>
+            <tr>
+                <td>Ajustement des stocks</td>
+                <td>Activé</td>
+                <td>Autorise les ajustements manuels du stock (ex. : pertes, erreurs, inventaire).</td>
+            </tr>
+            <tr>
+                <td>Dépense</td>
+                <td>Activé</td>
+                <td>Permet de gérer les dépenses liées à l'activité (ex. : loyer, électricité, etc.).</td>
+            </tr>
+            <tr>
+                <td>Compte</td>
+                <td>Désactivé</td>
+                <td>Gestion de comptes clients ou fournisseurs spécifiques.</td>
+            </tr>
+            <tr>
+                <td>Tables</td>
+                <td>Désactivé</td>
+                <td>Gestion des tables (essentiel pour les restaurants/cafés).</td>
+            </tr>
+            <tr>
+                <td>Modificateurs</td>
+                <td>Désactivé</td>
+                <td>Permet d'ajouter des modificateurs à des produits (ex. : sans sucre, extra fromage).</td>
+            </tr>
+            <tr>
+                <td>Personnel de service</td>
+                <td>Désactivé</td>
+                <td>Gestion du personnel de salle (utile pour la restauration).</td>
+            </tr>
+            <tr>
+                <td>Activer les réservations</td>
+                <td>Désactivé</td>
+                <td>Permet aux clients de réserver une table.</td>
+            </tr>
+            <tr>
+                <td>Cuisine (Pour les restaurants)</td>
+                <td>Désactivé</td>
+                <td>Active le module cuisine pour gérer les commandes par la cuisine.</td>
+            </tr>
+            <tr>
+                <td>Activer l'abonnement</td>
+                <td>Désactivé</td>
+                <td>Pour vendre des abonnements ou services récurrents.</td>
+            </tr>
+            <tr>
+                <td>Types de services</td>
+                <td>Désactivé</td>
+                <td>Permet de définir différents types de service (ex. : sur place, à emporter, livraison).</td>
+            </tr>
+        </table>
+        
+        <p><strong>Modules actuellement activés :</strong></p>
+        <ul>
+            <li>Achats</li>
+            <li>Ajouter une vente</li>
+            <li>POS (Point of Sale)</li>
+            <li>Transférits de stock</li>
+            <li>Ajustement des stocks</li>
+            <li>Dépense</li>
+        </ul>
+        
+        <p>Si vous gérez un <strong>commerce de détail, cette configuration est adaptée.</strong></p>
+        <p>Mais si vous gérez un restaurant, vous devriez probablement aussi activer :</p>
+        <ul>
+            <li>Tables</li>
+            <li>Cuisine</li>
+            <li>Modificateurs</li>
+            <li>Types de services</li>
+            <li>Réservations (si vous acceptez les réservations)</li>
+        </ul>
+        
+        <h4>• Étiquettes personnalisées</h4>
+        <p>Cette section regroupe les informations principales relatives à l'entreprise. Voici le détail <strong>champ par champ :</strong></p>
+        
+        <h5>Paiements personnalisés</h5>
+        <table>
+            <tr>
+                <th>Nom du champ</th>
+                <th>Description</th>
+            </tr>
+            <tr>
+                <td>Paiement personnalisé 1 à 7</td>
+                <td>Permet de définir des modes de paiement supplémentaires personnalisés (ex : "Chèque cadeau", "Bon d'achat", "Crypto", etc.)</td>
+            </tr>
+        </table>
+        
+        <h5>Champs personnalisés de contact</h5>
+        <table>
+            <tr>
+                <th>Nom du champ</th>
+                <th>Description</th>
+            </tr>
+            <tr>
+                <td>Champ personnalisé 1 à 10</td>
+                <td>Ajout de champs pour clients/fournisseurs : par exemple "Numéro de fidélité", "Anniversaire", "Nom du responsable", etc.</td>
+            </tr>
+        </table>
+        
+        <h5>Champs personnalisés de produit</h5>
+        <table>
+            <tr>
+                <th>Nom du champ</th>
+                <th>Description</th>
+            </tr>
+            <tr>
+                <td>Champ personnalisé 1 à 20</td>
+                <td>Ajoutez des informations propres à vos produits, comme : "Couleur", "Taille", "Garantie", "Série", "Pays d'origine", etc.</td>
+            </tr>
+            <tr>
+                <td>Type de champ</td>
+                <td>Permet de définir le type de données : SMS, Datepicker, liste déroulante, etc.</td>
+            </tr>
+        </table>
+        
+        <h5>Champs personnalisés d'emplacement</h5>
+        <table>
+            <tr>
+                <th>Nom du champ</th>
+                <th>Description</th>
+            </tr>
+            <tr>
+                <td>Champ personnalisé 1 à 4</td>
+                <td>Informations spécifiques aux emplacements ou magasins : "Nom du responsable", "Zone géographique", etc.</td>
+            </tr>
+        </table>
+        
+        <h5>Champs personnalisés de l'utilisateur</h5>
+        <table>
+            <tr>
+                <th>Nom du champ</th>
+                <th>Description</th>
+            </tr>
+            <tr>
+                <td>Champ personnalisé 1 à 4</td>
+                <td>Ajoutez des infos utilisateur : par exemple "Rôle spécifique", "Département", etc.</td>
+            </tr>
+        </table>
+        
+        <h5>Champs personnalisés d'achat</h5>
+        <table>
+            <tr>
+                <th>Nom du champ</th>
+                <th>Description</th>
+            </tr>
+            <tr>
+                <td>Champ personnalisé 1 à 4</td>
+                <td>Champs ajoutés lors d'un achat (ex. : "Fournisseur préféré", "Numéro de commande fournisseur")</td>
+            </tr>
+            <tr>
+                <td>Est obligatoire</td>
+                <td>Oblige l'utilisateur à remplir ce champ lors d'un achat</td>
+            </tr>
+        </table>
+        
+        <h5>Champs personnalisés d'expédition d'achat</h5>
+        <table>
+            <tr>
+                <th>Nom du champ</th>
+                <th>Description</th>
+            </tr>
+            <tr>
+                <td>Champ personnalisé 1 à 5</td>
+                <td>Champs pour la gestion de l'expédition d'achats (ex : "Numéro de suivi", "Nom du transporteur", etc.)</td>
+            </tr>
+            <tr>
+                <td>Est obligatoire</td>
+                <td>Définit si le champ doit être rempli obligatoirement</td>
+            </tr>
+        </table>
+        
+        <h5>Champs personnalisés de vente (Sell)</h5>
+        <table>
+            <tr>
+                <th>Nom du champ</th>
+                <th>Description</th>
+            </tr>
+            <tr>
+                <td>Champ personnalisé 1 à 4</td>
+                <td>Champs supplémentaires pour les ventes, par exemple : "Référence client", "Nom du vendeur"</td>
+            </tr>
+            <tr>
+                <td>Est obligatoire</td>
+                <td>Rend le champ obligatoire lors de la vente</td>
+            </tr>
+        </table>
+        
+        <h5>Champs personnalisés d'expédition de vente</h5>
+        <table>
+            <tr>
+                <th>Nom du champ</th>
+                <th>Description</th>
+            </tr>
+            <tr>
+                <td>Champ personnalisé 1 à 5</td>
+                <td>Infos pour l'expédition des ventes : "Transporteur", "Délai de livraison", etc.</td>
+            </tr>
+            <tr>
+                <td>Est obligatoire</td>
+                <td>Rend le champ obligatoire</td>
+            </tr>
+            <tr>
+                <td>Est par défaut pour le contact</td>
+                <td>Définit si la valeur est automatiquement utilisée à partir des données du client</td>
+            </tr>
+        </table>
+        
+        <h5>Types de champs personnalisés de service</h5>
+        <table>
+            <tr>
+                <th>Nom du champ</th>
+                <th>Description</th>
+            </tr>
+            <tr>
+                <td>Champ personnalisé 1 à 6</td>
+                <td>Champs à remplir pour des services (ex. : "Durée", "Intervenant", "Lieu du service", etc.)</td>
+            </tr>
+        </table>
+        
+        <p><strong>Note : Ce menu permet de naviguer entre les différentes sections de configuration de</strong> l'application.</p>
+        
+        <h3>❖ Bouton : Mettre à jour les paramètres</h3>
+        <ul>
+            <li><strong>Fonction : Enregistre tous les paramètres saisis ou modifiés.</strong></li>
+            <li><strong>Type : Action critique → toute modification ici peut impacter l'ensemble de</strong> l'application.</li>
+        </ul>
+        
+        <h4>Fonction de recherche (en haut de la section)</h4>
+        <p>Elle Permet de rechercher rapidement un paramètre dans les différentes sections sans devoir les parcourir manuellement.</p>
+        
+        <h4>Illustration de l'interface :</h4>
+        <p>Image ici</p>
+    </section>
+
+    <!-- 2) Emplacements des entreprises -->
+    <section class="section">
+        <h2>2) Emplacements des entreprises</h2>
+        
+        <h3>2.1) Objectif de l'interface</h3>
+        <p>L'interface <strong>Emplacements des entreprises dans movelys</strong> permet à l'administrateur de gérer les sites physiques ou divisions commerciales de son entreprise. Chaque emplacement peut disposer de ses propres paramètres de facturation, groupe de prix, mise en page des factures, etc.</p>
+        <p>Elle est essentielle dans les cas de multi-succursales, filiales, points de vente répartis géographiquement.</p>
+        
+        <h3>2.2) Présentation générale</h3>
+        
+        <h4>2.2.1) Tableau des emplacements</h4>
+        <p>La table centrale présente tous les emplacements commerciaux enregistrés dans le système. Chaque ligne correspond à un emplacement unique.</p>
+        
+        <p><strong>Champs visibles et leur explication :</strong></p>
+        
+        <ol>
+            <li><strong>Nom</strong>
+                <ul>
+                    <li><strong>Exemple :</strong> Senteur & Vitalité</li>
+                    <li><strong>Description :</strong> Nom de l'emplacement ou du site. Il peut être similaire ou différent du nom de l'entreprise principale.</li>
+                </ul>
+            </li>
+            <li><strong>ID de l'emplacement</strong>
+                <ul>
+                    <li><strong>Exemple :</strong> Réf. BL0001</li>
+                    <li><strong>Utilité :</strong> Identifiant unique attribué automatiquement ou manuellement à chaque site. Sert de référence dans les rapports, API, etc.</li>
+                </ul>
+            </li>
+            <li><strong>Repère</strong>
+                <ul>
+                    <li><strong>Exemple :</strong> Rue de Vieuville DREUX, France</li>
+                    <li><strong>Description :</strong> Adresse détaillée ou repère géographique pour localiser le site.</li>
+                </ul>
+            </li>
+            <li><strong>Ville</strong>
+                <ul>
+                    <li><strong>Exemple :</strong> Paris</li>
+                    <li><strong>Description :</strong> Ville où se trouve l'emplacement.</li>
+                </ul>
+            </li>
+            <li><strong>Code postal</strong>
+                <ul>
+                    <li><strong>Exemple :</strong> 33045</li>
+                    <li><strong>Description :</strong> Code postal lié à la localisation physique.</li>
+                </ul>
+            </li>
+            <li><strong>État / Région</strong>
+                <ul>
+                    <li><strong>Exemple :</strong> `IDF (Île-de-France)</li>
+                    <li><strong>Utilité :</strong> Région administrative, utile pour le classement géographique ou fiscal.</li>
+                </ul>
+            </li>
+            <li><strong>Pays</strong>
+                <ul>
+                    <li><strong>Exemple :</strong> France</li>
+                    <li><strong>Utilité :</strong> Pays d'implantation, utile pour la fiscalité, devises, ou autres règles commerciales.</li>
+                </ul>
+            </li>
+            <li><strong>Groupe de prix</strong>
+                <ul>
+                    <li><strong>Exemple :</strong> `Faire défaut`</li>
+                    <li><strong>Description :</strong> Groupe tarifaire appliqué par défaut pour cet emplacement.</li>
+                    <li><strong>Remarque :</strong> Utile si les prix varient selon les points de vente (ex : prix grossiste vs détaillant).</li>
+                </ul>
+            </li>
+            <li><strong>Système de facturation</strong>
+                <ul>
+                    <li><strong>Exemple :</strong> `Faire défaut`</li>
+                    <li><strong>Description :</strong> Modèle de facturation utilisé pour cet emplacement.</li>
+                    <li><strong>Remarque :</strong> Peut-être personnalisé selon les politiques propres à chaque site.</li>
+                </ul>
+            </li>
+            <li><strong>Mise en page de facture pour le point de vente</strong>
+                <ul>
+                    <li><strong>Exemple :</strong> `Faire défaut`</li>
+                    <li><strong>Utilité :</strong> Format/design utilisé pour imprimer ou envoyer les factures générées au niveau du point de vente (POS).</li>
+                </ul>
+            </li>
+            <li><strong>Mise en page de la facture pour la vente</strong>
+                <ul>
+                    <li><strong>Exemple :</strong> Faire défaut</li>
+                    <li><strong>Utilité :</strong> Format spécifique utilisé pour les factures classiques hors POS (commandes, devis transformés, etc.)</li>
+                </ul>
+            </li>
+            <li><strong>Boutons d'action</strong>
+                <p>Dans la colonne Action, chaque ligne contient des options de gestion :</p>
+                <p><strong>Éditer</strong></p>
+                <ul>
+                    <li><strong>Utilité :</strong> Ouvre un formulaire pour modifier les informations de l'emplacement sélectionné.</li>
+                    <li><strong>Exemple d'usage :</strong> changer l'adresse, le système de facturation, etc.</li>
+                </ul>
+                <p><strong>Paramètres</strong></p>
+                <ul>
+                    <li><strong>Utilité :</strong> Accès rapide aux paramètres avancés propres à l'emplacement.</li>
+                </ul>
+                <p><strong>Désactiver la localisation</strong></p>
+                <ul>
+                    <li><strong>Utilité :</strong> Permet de désactiver temporairement ou définitivement un site sans le supprimer.</li>
+                    <li><strong>Effect :</strong> L'emplacement devient inactif pour les ventes, mais reste dans l'historique.</li>
+                </ul>
+            </li>
+        </ol>
+        
+        <h3>❖ Bouton « Ajouter »</h3>
+        <p>Permet d'enregistrer un nouvel emplacement d'entreprise dans l'application.</p>
+        
+        <h3>❖ Barre de recherche</h3>
+        <p>Elle permet de Filtrer les emplacements selon les mots-clés (nom, ville, ID, etc.)</p>
+        
+        <h3>Illustration de l'interface :</h3>
+        <p>Image ici</p>
+    </section>
+
+    <!-- 3) Paramètres de facturation -->
+    <section class="section">
+        <h2>3) Paramètres de facturation</h2>
+        
+        <h3>3.1) Objectif de l'interface</h3>
+        <p>L'interface <strong>Paramètres de facturation</strong> permet de définir les <strong>schémas de numérotation des factures</strong> ainsi que la <strong>mise en page des documents</strong> liés à la facturation.</p>
+        <p>Elle joue un rôle essentiel dans :</p>
+        <ul>
+            <li>L'organisation et la traçabilité des factures,</li>
+            <li>Le respect des normes comptables,</li>
+            <li>La personnalisation du processus de facturation,</li>
+            <li>La clarté pour les clients et l'administration fiscale.</li>
+        </ul>
+        
+        <h3>3.2) Présentation générale</h3>
+        
+        <h4>Onglets disponibles</h4>
+        <p>En haut de la section centrale, on trouve <strong>deux onglets :</strong></p>
+        
+        <h5>1. Barèmes de facturation</h5>
+        <ul>
+            <li>Gère les <strong>règles de numérotation des factures.</strong></li>
+            <li>Permet de créer différents schémas de facturation personnalisés.</li>
+        </ul>
+        
+        <h5>2. Mises en page de factures</h5>
+        <ul>
+            <li>Gère le <strong>design et format d'impression des factures. Elle permet également d'ajouter</strong> une nouvelle mise en page des factures.</li>
+        </ul>
+        
+        <h3>3.3) Tableau des schémas de facturation</h3>
+        <p>Ce tableau affiche la liste de tous les schémas de facturation définis dans le système.</p>
+        
+        <h4>Colonnes du tableau et leur signification :</h4>
+        
+        <ol>
+            <li><strong>Nom</strong>
+                <ul>
+                    <li><strong>Valeur exemple :</strong> Par défaut</li>
+                    <li><strong>Description :</strong> Nom du schéma de facturation. Cela peut être « Par défaut » ou un nom personnalisé (ex : "Facture export", "Facture POS", etc.)</li>
+                    <li><strong>Badge :</strong> Par défaut (indique que ce schéma est actuellement utilisé comme modèle principal)</li>
+                </ul>
+            </li>
+            <li><strong>Préfixe</strong>
+                <ul>
+                    <li><strong>Valeur :</strong> Champ vide dans la capture (mais peut contenir un texte comme INV, FAC, etc.)</li>
+                    <li><strong>Utilité :</strong> Permet de commencer chaque facture avec un préfixe spécifique (utile pour identifier rapidement le type de facture ou son origine).</li>
+                    <li><strong>Exemple :</strong> INV-0001,POS-0256</li>
+                </ul>
+            </li>
+            <li><strong>Type de numérotation</strong>
+                <ul>
+                    <li><strong>Valeur :</strong> Séquentiel</li>
+                    <li><strong>Description :</strong> Indique le mode de génération des numéros de factures.</li>
+                    <li><strong>Séquentiel :</strong> Incrémente le numéro de la dernière facture enregistrée (ex : 0001 → 0002 → 0003).</li>
+                    <li>D'autres types (non visibles ici) peuvent exister selon le système : date-based, alphanumérique, etc.</li>
+                </ul>
+            </li>
+            <li><strong>Commencer à partir de</strong>
+                <ul>
+                    <li><strong>Valeur :</strong> 1</li>
+                    <li><strong>Utilité :</strong> Détermine à quel numéro commencera la première facture dans ce schéma.</li>
+                    <li><strong>Exemple :</strong> Si « Commencer à partir de = 1 », la première facture générée sera 0001.</li>
+                </ul>
+            </li>
+            <li><strong>Nombre de factures</strong>
+                <ul>
+                    <li><strong>Valeur :</strong> 26</li>
+                    <li><strong>Description :</strong> Indique le nombre total de factures générées à l'aide de ce schéma.</li>
+                    <li><strong>Utilité :</strong> Suivi statistique de l'utilisation du barème.</li>
+                </ul>
+            </li>
+            <li><strong>Nombre de chiffres</strong>
+                <ul>
+                    <li><strong>Valeur :</strong> 4</li>
+                    <li><strong>Description :</strong> Définit la longueur du numéro de facture (hors préfixe).</li>
+                    <li><strong>Exemple :</strong>
+                        <ul>
+                            <li>Si « nombre de chiffres » = 4 → 0001,0026,0099</li>
+                            <li>Si = 6 → 000001, etc.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li><strong>Actions disponibles (colonne « Action »)</strong>
+                <p>Pour chaque schéma de facturation, tu peux effectuer les actions suivantes :</p>
+                <p><strong>Éditer</strong></p>
+                <ul>
+                    <li>Permet de modifier les paramètres du schéma :
+                        <ul>
+                            <li>Préfixe</li>
+                            <li>Type de numérotation</li>
+                            <li>Point de départ</li>
+                            <li>Nombre de chiffres</li>
+                        </ul>
+                    </li>
+                </ul>
+                <p><strong>Supprimer</strong></p>
+                <ul>
+                    <li>Utilité : Supprimer un schéma s'il n'est plus utilisé.</li>
+                    <li><strong>Note : Le bouton est désactivé car il s'agit du schéma par défaut, qui ne peut pas être</strong> supprimé tant qu'il est actif.</li>
+                </ul>
+                <p><strong>Faire défaut</strong></p>
+                <ul>
+                    <li>Sert à définir un schéma comme par défaut pour toutes les nouvelles factures.</li>
+                    <li>Désactivé ici, car ce schéma est déjà défini par défaut.</li>
+                </ul>
+            </li>
+        </ol>
+        
+        <h3>❖ Bouton « Ajouter »</h3>
+        <p>Elle permet de créer un nouveau barème de facturation personnalisé.</p>
+        <p>L'utilisateur peut y spécifier :</p>
+        <ul>
+            <li>Le nom du schéma</li>
+            <li>Le type de numérotation</li>
+        </ul>
+        
+        <h3>Barre de recherche</h3>
+        <p>Elle Permet de filtrer les schémas selon un mot-clé (nom, préfixe, etc.), ce qui est utile en cas de nombreux barèmes.</p>
+        
+        <h3>Illustration de l'interface :</h3>
+        <p>Image ici</p>
+    </section>
+
+    <!-- 4) Interface Codes-barres -->
+    <section class="section">
+        <h2>4) Interface Codes-barres</h2>
+        
+        <h3>4.1) Objectif de l'interface</h3>
+        <p>Cette interface permet de gérer les réglages des paramètres des codes-barres qui seront utilisés pour imprimer des étiquettes, des autocollants ou identifier des produits et des documents.</p>
+        <p>Elle est essentielle si vous souhaitez :<br>
+        Généner des codes-barres personnalisés.<br>
+        Configurer des formats de feuilles d'étiquettes.<br>
+        Organiser le suivi des stocks ou la vente au détail.</p>
+        
+        <h3>4.2) Présentation générale</h3>
+        
+        <h3>❖ Liste des paramètres</h3>
+        <p>Cette section présente la liste de tous les réglages enregistrés de feuilles d'étiquettes autocollantes.</p>
+        
+        <h4>Tableau affiché</h4>
+        <p>Le tableau contient les colonnes suivantes :</p>
+        
+        <table>
+            <tr>
+                <th>Nom de colonne</th>
+                <th>Description claire</th>
+            </tr>
+            <tr>
+                <td>Nom du réglage de la feuille d'autocollants</td>
+                <td>Le nom attribué à un réglage spécifique (ex. : « Étiquette A4 », etc.).</td>
+            </tr>
+            <tr>
+                <td>Feuille d'autocollants Description du réglage</td>
+                <td>Une description détaillée du format de feuille ou des dimensions.</td>
+            </tr>
+            <tr>
+                <td>Action</td>
+                <td>Les boutons d'action pour gérer chaque réglage.</td>
+            </tr>
+        </table>
+        
+        <h3>❖ Bouton « Ajouter un nouveau paramètre »</h3>
+        <p>Elle Ouvre le formulaire permettant de créer un nouveau réglage d'étiquette.</p>
+        <p>On y retrouver les informations suivantes :</p>
+        
+        <table>
+            <tr>
+                <th>Champ</th>
+                <th>Description</th>
+            </tr>
+            <tr>
+                <td>Nom du réglage de la feuille d'autocollants</td>
+                <td>Nom que vous attribuez à ce modèle de feuille d'étiquettes (ex : "Étiquettes 3x8", "Format A4", etc.).</td>
+            </tr>
+            <tr>
+                <td>Feuille d'autocollants Description du réglage</td>
+                <td>Description libre du réglage (ex : usage, format spécial, imprimante dédiée).</td>
+            </tr>
+            <tr>
+                <td>Aliments continus ou rouleaux</td>
+                <td>Cochez si vous utilisez des étiquettes en rouleau continu, plutôt qu'en feuille (souvent utilisé avec les imprimantes thermiques).</td>
+            </tr>
+            <tr>
+                <td>Marge supérieure supplémentaire (en pouces)</td>
+                <td>Espace à ajouter au-dessus de la première rangée d'étiquettes (pour éviter que l'impression commence trop haut).</td>
+            </tr>
+            <tr>
+                <td>Marge gauche supplémentaire (en pouces)</td>
+                <td>Espace à ajouter à gauche de la première colonne d'étiquettes (pour centrage horizontal ou marges spécifiques).</td>
+            </tr>
+            <tr>
+                <td>Largeur de l'autocollant (en pouces)</td>
+                <td>Largeur d'une seule étiquette (pas la feuille) – en pouces.</td>
+            </tr>
+            <tr>
+                <td>Hauteur de l'autocollant (en pouces)</td>
+                <td>Hauteur d'une seule étiquette, aussi en pouces.</td>
+            </tr>
+            <tr>
+                <td>Largeur du papier (en pouces)</td>
+                <td>Largeur totale de la feuille d'étiquettes (par exemple : 8.27 pouces pour du A4).</td>
+            </tr>
+            <tr>
+                <td>Hauteur du papier (en pouces)</td>
+                <td>Hauteur totale de la feuille (ex : 11.69 pouces pour A4).</td>
+            </tr>
+            <tr>
+                <td>Autocollants sur une rangée</td>
+                <td>Nombre d'étiquettes côte à côte par ligne (ex : 3 étiquettes par ligne sur une feuille A4).</td>
+            </tr>
+            <tr>
+                <td>Distance entre deux rangées (en pouces)</td>
+                <td>Espace vertical entre deux lignes d'étiquettes (s'il y a un espace entre chaque rangée).</td>
+            </tr>
+            <tr>
+                <td>Distance entre deux colonnes (en pouces)</td>
+                <td>Espace horizontal entre deux colonnes d'étiquettes (utile si les étiquettes ne sont pas jointes).</td>
+            </tr>
+            <tr>
+                <td>Nombre d'autocollants par feuille</td>
+                <td>Nombre total d'étiquettes imprimables sur une seule feuille (calculé automatiquement selon les dimensions ou à remplir manuellement).</td>
+            </tr>
+            <tr>
+                <td>Définir par défaut</td>
+                <td>Si coché, ce réglage sera utilisé automatiquement pour l'impression des étiquettes (sans avoir à le resélectionner à chaque fois).</td>
+            </tr>
+            <tr>
+                <td>Sauvegarder (bouton)</td>
+                <td>Enregistre les paramètres définis pour les réutiliser ultérieurement.</td>
+            </tr>
+        </table>
+        
+        <p><strong>À noter sur les unités :</strong></p>
+        <p>Tous les champs dimensionnels sont exprimés en pouces (1 pouce = 2,54 cm).<br>
+        Si vos mesures sont en millimètres, divisez-les par 25.4 pour convertir en pouces.</p>
+        
+        <h3>Barre de recherche</h3>
+        <p>Elle permet de Filtrer les réglages par mot-clé. Retrouver facilement un format spécifique lorsque vous en aurez créé plusieurs.</p>
+        
+        <h3>Illustration de l'interface :</h3>
+        <p>Image ici</p>
+    </section>
+
+    <!-- 5) Imprimantes -->
+    <section class="section">
+        <h2>5) Imprimantes</h2>
+        
+        <h3>5.1) Objectif de l'interface</h3>
+        <p>L'interface <strong>Imprimantes</strong> dans movelys permet de <strong>gérer les imprimantes configurées</strong> dans le système Movelys. Ces imprimantes sont utilisées notamment pour :</p>
+        <ul>
+            <li>L'impression des factures,</li>
+            <li>L'impression des reçus (POS),</li>
+            <li>L'édition d'étiquettes ou rapports comptables.</li>
+        </ul>
+        <p>C'est une interface essentielle pour les environnements commerciaux ou industriels connectés à des imprimantes thermiques, réseau ou locales.</p>
+        
+        <h3>5.2) Présentation générale</h3>
+        
+        <h4>Tableau des imprimantes</h4>
+        <table>
+            <tr>
+                <th>Nom de colonne</th>
+                <th>Description technique professionnelle</th>
+            </tr>
+            <tr>
+                <td>Nom de l'imprimante</td>
+                <td>Le nom attribué à l'imprimante (libellé personnalisé pour l'identifier dans Movelys).</td>
+            </tr>
+            <tr>
+                <td>Type de connexion</td>
+                <td>Méthode de liaison de l'imprimante avec Movelys : USB, IP, Bluetooth, Cloud, etc.</td>
+            </tr>
+            <tr>
+                <td>Profil de capacité</td>
+                <td>Spécifie les fonctionnalités techniques de l'imprimante (ex. : Ticket, A4, Étiquette, etc.).</td>
+            </tr>
+            <tr>
+                <td>Caractères par ligne</td>
+                <td>Nombre maximal de caractères imprimables sur une seule ligne. Paramètre utile pour l'impression POS.</td>
+            </tr>
+            <tr>
+                <td>Adresse IP</td>
+                <td>Adresse réseau de l'imprimante (dans le cas d'une imprimante connectée en TCP/IP).</td>
+            </tr>
+            <tr>
+                <td>Port</td>
+                <td>Port réseau ou port logique utilisé pour la connexion (ex. : 9100, 631, COM3…).</td>
+            </tr>
+            <tr>
+                <td>Chemin</td>
+                <td>Chemin local ou UNC vers l'imprimante (ex. : /dev/USB/lp0 ou \\SERVEUR\EPSON).</td>
+            </tr>
+            <tr>
+                <td>Action</td>
+                <td>Permet d'éditer ou supprimer une imprimante. (Aucun bouton visible ici car aucune imprimante ajoutée)</td>
+            </tr>
+        </table>
+        
+        <h3>❖ Bouton « Ajouter une imprimante »</h3>
+        <p>Elle permet de Lancer un formulaire de configuration d'une nouvelle imprimante.</p>
+        <p>Lors de l'ajout, les champs typiques à compléter sont :</p>
+        
+        <table>
+            <tr>
+                <th>Champ</th>
+                <th>Description</th>
+            </tr>
+            <tr>
+                <td>Nom de l'imprimante</td>
+                <td>Un nom personnalisé pour identifier facilement cette imprimante (ex : "Imprimante caisse 1", "Cuisine", etc.).</td>
+            </tr>
+            <tr>
+                <td>Type de connexion</td>
+                <td>Le mode de connexion utilisé pour l'imprimante. Options possibles : • Réseau(via IP) • USB (connexion locale) • Bluetooth.</td>
+            </tr>
+            <tr>
+                <td>Profil de capacité</td>
+                <td>Choix d'un profil prédéfini de capacités de l'imprimante (ex : faire défaut, haute performance, thermique, etc.).</td>
+            </tr>
+            <tr>
+                <td>Caractères par ligne</td>
+                <td>Nombre maximum de caractères que l'imprimante peut imprimer sur une seule ligne (important pour la mise en page des tickets).</td>
+            </tr>
+            <tr>
+                <td>Adresse IP</td>
+                <td>Adresse IP de l'imprimante si elle est connectée en réseau. Exemple : 192.168.1.100.</td>
+            </tr>
+            <tr>
+                <td>Port</td>
+                <td>Port utilisé pour communiquer avec l'imprimante. Par défaut : 9100, qui est standard pour les imprimantes réseau.</td>
+            </tr>
+            <tr>
+                <td>Bouton "Sauvegarder"</td>
+                <td>Permet d'enregistrer les paramètres de l'imprimante ajoutée.</td>
+            </tr>
+        </table>
+        
+        <p><strong>Remarques techniques importantes :</strong></p>
+        <ul>
+            <li>Les <strong>champs marqués d'un astérisque (*) sont obligatoires.</strong></li>
+            <li>Si vous utilisez une <strong>imprimante réseau, assurez-vous que l'adresse IP est bien fixe</strong> pour éviter les coupures.</li>
+            <li>Le nombre de caractères par ligne varie selon le type d'imprimante (ticket thermique ≈ 32-48 caractères ; A4 ≈ 80-100+).</li>
+            <li>Le port 9100 est couramment utilisé pour les imprimantes via le protocole RAW/JetDirect.</li>
+        </ul>
+        
+        <h3>Barre de recherche</h3>
+        <p>Elle permet de Filtrer dynamiquement les imprimantes listées dans le tableau selon un mot-clé (ex. : EPSON, TSP143, etc.)</p>
+        
+        <h3>Illustration de l'interface :</h3>
+        <p>Image ici</p>
+    </section>
+
+    <!-- 6) Taux d'imposition -->
+    <section class="section">
+        <h2>6) Taux d'imposition</h2>
+        
+        <h3>6.1) Objectif de l'interface</h3>
+        <p>L'interface <strong>Taux d'imposition permet à l'administrateur ou au comptable :</strong></p>
+        <ul>
+            <li>De créer et gérer les différents taux de taxes (TVA, taxes locales, éco-participation, etc.).</li>
+            <li>D'organiser les <strong>groupes d'impôts, c'est-à-dire une</strong> <strong>combinaison de plusieurs taxes</strong> <strong>appliquées simultanément sur un produit ou une transaction.</strong></li>
+        </ul>
+        
+        <h3>6.2) Structure de l'interface</h3>
+        <p>L'écran est divisé en deux sections principales :</p>
+        <ol>
+            <li><strong>Tous vos taux d'imposition (taux simples)</strong></li>
+            <li><strong>Groupes d'impôts (combinaison de plusieurs taux)</strong></li>
+        </ol>
+        
+        <h4>1) Section : Tous vos taux d'imposition</h4>
+        
+        <h5>Description</h5>
+        <p>Permet de gérer les <strong>taux de taxes individuels, tels que :</strong></p>
+        <ul>
+            <li>TVA 19.25 %</li>
+            <li>TVA 0 %</li>
+            <li>Taxe écologique 3 %</li>
+            <li>Taxe locale 5 %, etc.</li>
+        </ul>
+        
+        <h5>Composants de l'interface</h5>
+        
+        <p><strong>Tableau des taxes simples</strong></p>
+        <table>
+            <tr>
+                <th>Colonne</th>
+                <th>Fonction</th>
+            </tr>
+            <tr>
+                <td>Nom</td>
+                <td>Nom attribué à la taxe (ex. : TVA normale, Taxe locale)</td>
+            </tr>
+            <tr>
+                <td>Taux d'imposition %</td>
+                <td>Le pourcentage appliqué (ex. : 19.25 %, 5 %, 0 %)</td>
+            </tr>
+            <tr>
+                <td>Action</td>
+                <td>Boutons pour modifier ou supprimer un taux (invisible car vide ici)</td>
+            </tr>
+        </table>
+        
+        <p><strong>État actuel : Aucun taux enregistré (Aucune donnée disponible dans le tableau)</strong></p>
+        
+        <p><strong>Bouton « Ajouter »</strong></p>
+        <p>Champs à saisir typiques :</p>
+        <ul>
+            <li>Nom de la taxe</li>
+            <li>Taux d'imposition %</li>
+        </ul>
+        
+        <p><strong>Barre de recherche</strong></p>
+        <p>Elle Permet de filtrer dynamiquement la liste des taxes enregistrées.</p>
+        
+        <h3>❖ Contrôles de données</h3>
+        <table>
+            <tr>
+                <th>Bouton</th>
+                <th>Fonction</th>
+            </tr>
+            <tr>
+                <td>Exporter CSV</td>
+                <td>Télécharge les données du tableau au format .csv</td>
+            </tr>
+            <tr>
+                <td>Exporter Excel</td>
+                <td>Télécharge les données au format Excel .xlsx</td>
+            </tr>
+            <tr>
+                <td>Imprimer</td>
+                <td>Lance l'impression directe de la liste</td>
+            </tr>
+            <tr>
+                <td>Visibilité des colonnes</td>
+                <td>Permet d'afficher/cacher certaines colonnes du tableau</td>
+            </tr>
+            <tr>
+                <td>Exporter le PDF</td>
+                <td>Génère un fichier PDF de la liste des taxes</td>
+            </tr>
+        </table>
+        
+        <ul>
+            <li><strong>Pagination</strong>
+                <ul>
+                    <li>Permet de naviguer entre les pages d'enregistrements si leur nombre dépasse le seuil défini.</li>
+                    <li>Contrôles visibles : Précédent et Prochain</li>
+                </ul>
+            </li>
+            <li><strong>Sélecteur de lignes à afficher</strong>
+                <ul>
+                    <li><strong>Champ :</strong> Montrer [25] Entrées</li>
+                    <li>Permet de définir combien de lignes sont visibles dans le tableau par page (25 par défaut).</li>
+                </ul>
+            </li>
+        </ul>
+        
+        <h4>2) Section : Groupes d'impôts</h4>
+        
+        <h5>Description</h5>
+        <p>Cette section permet de créer des groupes de taxes, c'est-à-dire des ensembles de plusieurs taux appliqués en parallèle sur un produit ou une vente.</p>
+        <p>Exemple :<br>
+        Un produit peut être soumis à :<br>
+        TVA 19.25 %<br>
+        Taxe communale 1.75 %<br>
+        Total appliqué via un groupe d'impôt.</p>
+        
+        <h5>Composants de l'interface</h5>
+        
+        <p><strong>Tableau des groupes de taxes</strong></p>
+        <table>
+            <tr>
+                <th>Colonne</th>
+                <th>Fonction</th>
+            </tr>
+            <tr>
+                <td>Nom</td>
+                <td>Nom du groupe (ex. : Taxes France 2025, TVA + Éco Taxe)</td>
+            </tr>
+            <tr>
+                <td>Taux d'imposition %</td>
+                <td>Somme totale des pourcentages composant le groupe</td>
+            </tr>
+            <tr>
+                <td>Sous-taxes</td>
+                <td>Liste des taxes individuelles incluses dans le groupe</td>
+            </tr>
+            <tr>
+                <td>Action</td>
+                <td>Boutons pour éditer ou supprimer le groupe (aucun ici)</td>
+            </tr>
+        </table>
+        
+        <p><strong>État actuel : Aucun groupe enregistré.</strong></p>
+        
+        <p><strong>Bouton « Ajouter »</strong></p>
+        <ul>
+            <li>Permet d'ajouter un nouveau groupe d'impôts.</li>
+            <li>Champs typiques :
+                <ul>
+                    <li>Nom</li>
+                    <li>Sous-taxes</li>
+                </ul>
+            </li>
+        </ul>
+        
+        <p><strong>Barre de recherche</strong></p>
+        <p>Elle Permet de filtrer les groupes d'impôts existants.</p>
+        
+        <h3>❖ Contrôles de données</h3>
+        <table>
+            <tr>
+                <th>Bouton</th>
+                <th>Fonction</th>
+            </tr>
+            <tr>
+                <td>Exporter CSV</td>
+                <td>Exporte la liste des groupes en CSV</td>
+            </tr>
+            <tr>
+                <td>Exporter Excel</td>
+                <td>Exporte au format Excel</td>
+            </tr>
+            <tr>
+                <td>Imprimer</td>
+                <td>Impression directe de la liste</td>
+            </tr>
+            <tr>
+                <td>Visibilité des colonnes</td>
+                <td>Gérer les colonnes affichées</td>
+            </tr>
+            <tr>
+                <td>Exporter le PDF</td>
+                <td>Génération PDF de la table</td>
+            </tr>
+        </table>
+        
+        <ul>
+            <li><strong>Pagination</strong>
+                <ul>
+                    <li>Permet de naviguer entre les pages d'enregistrements si leur nombre dépasse le seuil défini.</li>
+                    <li>Contrôles visibles : Précédent et Prochain</li>
+                </ul>
+            </li>
+            <li><strong>Sélecteur de lignes à afficher</strong>
+                <ul>
+                    <li><strong>Champ :</strong> Montrer [25] Entrées</li>
+                    <li>Permet de définir combien de lignes sont visibles dans le tableau par page (25 par défaut).</li>
+                </ul>
+            </li>
+        </ul>
+        
+        <h3>Illustration de l'interface :</h3>
+        <p>Image ici</p>
+    </section>
+
+    <!-- 7) Abonnement au forfait -->
+    <section class="section">
+        <h2>7) Abonnement au forfait</h2>
+        
+        <h3>7.1) Objectif de l'interface</h3>
+        <p>L'interface <strong>Abonnement au forfait</strong> dans movelys permet aux utilisateurs de <strong>souscrire, consulter ou gérer un abonnement mensuel</strong> à l'application Movelys. Ce système repose sur des <strong>forfaits</strong> (ou « paquets ») selon le volume d'activité et le type d'entreprise (PME, grande entreprise, multi-établissements…).</p>
+        
+        <h3>7.2) Présentation générale</h3>
+        <p>L'écran est divisé en trois grandes sections :</p>
+        <ol>
+            <li><strong>Statut d'abonnement actif</strong></li>
+            <li><strong>Historique / détails des abonnements</strong></li>
+            <li>Choix et présentation des paquets (forfaits)</li>
+        </ol>
+        
+        <h4>1) Bloc supérieur : Abonnement actif</h4>
+        <p>"Aucun abonnement actif trouvé"<br>
+        Cela signifie que l'utilisateur n'a actuellement aucun abonnement en cours d'utilisation.</p>
+        
+        <h4>2) Section centrale : Liste des abonnements existants</h4>
+        <p>Cette section affiche tous les abonnements passés ou en cours (qu'ils soient actifs, expirés ou en attente).</p>
+        
+        <h3>❖ Barre de contrôle des entrées</h3>
+        <ul>
+            <li><strong>Montrer :</strong> Sélecteur du nombre d'entrées visibles (par défaut 25).</li>
+            <li><strong>Rechercher :</strong> Champ de recherche pour filtrer les abonnements par mot-clé.</li>
+        </ul>
+        
+        <h3>❖ Boutons d'actions disponibles</h3>
+        <table>
+            <tr>
+                <th>Bouton</th>
+                <th>Fonction</th>
+            </tr>
+            <tr>
+                <td>Exporter CSV</td>
+                <td>Exporte la liste des groupes en CSV</td>
+            </tr>
+            <tr>
+                <td>Exporter Excel</td>
+                <td>Exporte au format Excel</td>
+            </tr>
+            <tr>
+                <td>Imprimer</td>
+                <td>Impression directe de la liste</td>
+            </tr>
+            <tr>
+                <td>Visibilité des colonnes</td>
+                <td>Gérer les colonnes affichées</td>
+            </tr>
+            <tr>
+                <td>Exporter le PDF</td>
+                <td>Génération PDF de la table</td>
+            </tr>
+        </table>
+        
+        <p>Ces outils permettent d'exporter ou d'imprimer la liste des abonnements pour archivage ou reporting.</p>
+        
+        <h4>Tableau de données des abonnements</h4>
+        <table>
+            <tr>
+                <th>Colonne</th>
+                <th>Description technique</th>
+            </tr>
+            <tr>
+                <td>Nom du paquet</td>
+                <td>Le nom du forfait souscrit</td>
+            </tr>
+            <tr>
+                <td>Date de début</td>
+                <td>Date à laquelle l'abonnement a été activé</td>
+            </tr>
+            <tr>
+                <td>Date de fin de l'essai</td>
+                <td>Si période d'essai active, date de fin</td>
+            </tr>
+            <tr>
+                <td>Date de fin</td>
+                <td>Fin de validité du forfait</td>
+            </tr>
+            <tr>
+                <td>Prix</td>
+                <td>Montant payé pour l'abonnement</td>
+            </tr>
+            <tr>
+                <td>Payant via</td>
+                <td>Mode de paiement utilisé</td>
+            </tr>
+            <tr>
+                <td>Transaction Id</td>
+                <td>Référence unique du paiement</td>
+            </tr>
+            <tr>
+                <td>Statut</td>
+                <td>État de l'abonnement</td>
+            </tr>
+            <tr>
+                <td>Créé à</td>
+                <td>Date de création de l'entrée dans la base</td>
+            </tr>
+            <tr>
+                <td>Créé par</td>
+                <td>Nom de l'administrateur ou utilisateur responsable</td>
+            </tr>
+            <tr>
+                <td>Action</td>
+                <td>Bouton vue pour consulter les détails complets de cet abonnement.</td>
+            </tr>
+        </table>
+        
+        <h4>3) Section inférieure : Offres de forfaits disponibles</h4>
+        <p>Cette section permet à l'utilisateur de choisir parmi <strong>3 paquets d'abonnement mensuel.</strong></p>
+        
+        <h5>Paquet 1 : Basique</h5>
+        <table>
+            <tr>
+                <th>Détail</th>
+                <th>Description</th>
+            </tr>
+            <tr>
+                <td>1 Emplacement</td>
+                <td>Une seule entreprise ou site géré</td>
+            </tr>
+            <tr>
+                <td>1 Utilisateur</td>
+                <td>Un seul utilisateur gère le compte</td>
+            </tr>
+            <tr>
+                <td>250 Produits</td>
+                <td>Nombre maximum de produits</td>
+            </tr>
+            <tr>
+                <td>Factures illimitées</td>
+                <td>Aucune limite de facturation</td>
+            </tr>
+            <tr>
+                <td>7 jours d'essai</td>
+                <td>Période d'essai offerte</td>
+            </tr>
+            <tr>
+                <td>Prix : 5 000 FCFA / mois</td>
+                <td>Forfait économique pour petites entreprises</td>
+            </tr>
+            <tr>
+                <td>Bouton : Payer et s'abonner</td>
+                <td>Démarre la procédure d'abonnement</td>
+            </tr>
+        </table>
+        
+        <p><strong>Cible : Petites boutiques, commerces de quartier, utilisateurs indépendants.</strong></p>
+        
+        <h5>Paquet 2 : Standard</h5>
+        <table>
+            <tr>
+                <th>Détail</th>
+                <th>Description</th>
+            </tr>
+            <tr>
+                <td>3 Emplacements</td>
+                <td>Jusqu'à 3 sites / succursales</td>
+            </tr>
+            <tr>
+                <td>6 Utilisateurs</td>
+                <td>6 comptes utilisateurs gérés</td>
+            </tr>
+            <tr>
+                <td>1 000 Produits</td>
+                <td>Capacité de gestion plus élevée</td>
+            </tr>
+            <tr>
+                <td>Factures illimitées</td>
+                <td>Aucune limite de facturation</td>
+            </tr>
+            <tr>
+                <td>Prix : 15 000 FCFA / mois</td>
+                <td>Rapport coût / volume optimal</td>
+            </tr>
+            <tr>
+                <td>Bouton : Payer et s'abonner</td>
+                <td>Démarre la procédure d'abonnement</td>
+            </tr>
+        </table>
+        
+        <p>Cible : PME avec plusieurs points de vente ou équipe multi-utilisateurs.</p>
+        
+        <h5>Paquet 3 : Prime</h5>
+        <table>
+            <tr>
+                <th>Détail</th>
+                <th>Description</th>
+            </tr>
+            <tr>
+                <td>Emplacements illimités</td>
+                <td>Aucun plafond sur le nombre de sites gérés</td>
+            </tr>
+            <tr>
+                <td>25 utilisateurs</td>
+                <td>Gestion d'un grand nombre d'employés</td>
+            </tr>
+            <tr>
+                <td>Produits illimités</td>
+                <td>Pas de limite d'inventaire</td>
+            </tr>
+            <tr>
+                <td>Factures illimitées</td>
+                <td>Aucune limite de facturation</td>
+            </tr>
+            <tr>
+                <td>Prix : 35 000 FCFA / mois</td>
+                <td>Forfait haut de gamme</td>
+            </tr>
+            <tr>
+                <td>Bouton : Payer et s'abonner</td>
+                <td>Démarre la procédure d'abonnement</td>
+            </tr>
+        </table>
+        
+        <p><strong>Cible : Grandes entreprises, chaînes de magasins, entreprises à déploiement large.</strong></p>
+        
+        <h3>Illustration de l'interface :</h3>
+        <p>Image ici</p>
+    </section>
+
+    <!-- Conclusion -->
+    <section class="section">
+        <h2>Conclusion</h2>
+        <p>Le module de gestion des paramètres de Movelys offre aux entreprises un <strong>cadre de</strong> <strong>paramétrage centralisé et intelligent, indispensable à une utilisation optimale de</strong> l'application. En permettant de définir, personnaliser et contrôler chaque aspect fondamental du système, ce module contribue à créer un environnement de travail sur mesure, conforme aux exigences internes et externes de l'organisation.</p>
+        
+        <p>Il constitue le <strong>point d'ancrage stratégique de l'outil, garantissant que toutes les opérations –</strong> de la facturation à la gestion des stocks – s'exécutent selon les règles et standards propres à l'entreprise. Grâce à cette souplesse de configuration, Movelys devient un véritable outil de gestion modulaire, évolutif et aligné avec les pratiques de terrain.</p>
+        
+        <p>Configurer efficacement les paramètres dans Movelys, c'est poser les bases solides d'un système d'information performant, cohérent et parfaitement adapté aux réalités du quotidien.</p>
+    </section>
+</div>

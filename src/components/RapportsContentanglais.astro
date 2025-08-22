@@ -1,0 +1,2846 @@
+---
+
+import '../styles/global1.css';
+
+---
+
+<div class="container">
+
+     <header class="header">
+        <h1>Report Management in Movelys</h1>
+    </header>
+
+    <!-- Introduction Section -->
+    <section class="introduction">
+        <h2>Introduction</h2>
+        <p>
+            In a business environment where data drives strategic decisions, 
+            <strong>report management becomes a fundamental lever for steering and performance.</strong> 
+            Movelys' reporting module is designed to give businesses a clear, detailed, and real-time 
+            view of all their commercial, financial, and logistical operations.
+        </p>
+        <p>
+            With a rich and user-friendly interface, this module automatically generates a wide variety 
+            of essential reports: sales, purchases, payments, inventory, user activity, expenses, 
+            profitability, customer/supplier tracking, product performance, stock transfers, and more. 
+            Each report can be filtered by period, location, user, or category for targeted and relevant analysis.
+        </p>
+        <p>
+            Movelys transforms raw data into readable and actionable insights, offering exports (PDF, Excel, CSV), 
+            summary tables, charts, and performance indicators. This module enhances transparency, traceability, 
+            and <strong>decision-making while adapting to each company's specific needs.</strong>
+        </p>
+    </section>
+
+    <!-- Section 1: Profit and Loss Report -->
+    <section class="section-1">
+        <h2>1) Profit and Loss Report</h2>
+
+        <article class="subsection">
+            <h3>1.1) Purpose of this Interface</h3>
+            <p>
+                The Profit and Loss Report interface provides a detailed analysis of a company's profitability 
+                over a given period. It combines accounting and operational data needed to:
+            </p>
+            <ul>
+                <li>Measure the cost of goods sold</li>
+                <li>Calculate net profit</li>
+                <li>Evaluate performance by product, customer, category, brand, date, etc.</li>
+            </ul>
+            <p>
+                This report is essential for strategic decisions, financial planning, and 
+                <strong>managerial accounting.</strong>
+            </p>
+        </article>
+
+        <article class="subsection">
+            <h3>1.2) Interface Structure</h3>
+            <p>
+                The interface consists of four functional blocks:
+            </p>
+            <ul>
+                <li><strong>Selection filters (location, date)</strong></li>
+                <li><strong>Financial report summary (left and right)</strong></li>
+                <li><strong>Automatic COGS and profit calculations</strong></li>
+                <li><strong>Profit breakdown by segment (bottom table)</strong></li>
+            </ul>
+
+            <h4>1.2.1) Selection Filters</h4>
+            <p>
+                <strong>Location selector:</strong><br>
+                Filters the report by site (warehouse, store, etc.)<br>
+                <strong>Date filter:</strong><br>
+                Opens a calendar to define a specific analysis period
+            </p>
+
+            <h4>1.2.2) Financial Report Summary</h4>
+            <p>
+                This section is divided into two main columns:
+            </p>
+            <h5>➢ Left: Stock & Purchase Cost Data</h5>
+            <ul>
+                <li><strong>Opening stock (purchase):</strong> Value of available stock at the start of the period, at purchase price</li>
+                <li><strong>Opening stock (sale):</strong> Same, but at selling prices</li>
+                <li><strong>Total purchases:</strong> Cumulative amount of purchased products</li>
+                <li><strong>Total stock adjustment:</strong> Value of manual adjustments or losses</li>
+                <li><strong>Total purchase shipping costs:</strong> Transport costs related to supplies</li>
+                <li><strong>Additional purchase expenses:</strong> Other purchase-related charges (e.g., customs, handling)</li>
+                <li><strong>Transfer shipping costs:</strong> Internal transfer expenses between sites</li>
+                <li><strong>Total purchase discount:</strong> Discounts negotiated with suppliers</li>
+                <li><strong>Customer reward (on sale):</strong> Discounts or bonuses granted to customers</li>
+                <li><strong>Total sale return:</strong> Percentage or value of sales gain</li>
+            </ul>
+
+            <h5>➢ Right: Sales, Returns, Closing Stock</h5>
+            <ul>
+                <li><strong>Closing stock (purchase):</strong> Value of remaining stock at the end, at purchase price</li>
+                <li><strong>Closing stock (sale):</strong> Value of remaining stock at the end, at selling price</li>
+                <li><strong>Total sales (excl. tax):</strong> Cumulative amount of sales made, excluding taxes</li>
+                <li><strong>Shipping costs (sale):</strong> Charges incurred on sales logistics</li>
+                <li><strong>Additional sale expenses:</strong> E.g., commissions, packaging, customer service</li>
+                <li><strong>Recovered stock:</strong> Items returned by customers</li>
+                <li><strong>Total purchase return:</strong> Goods returned to suppliers</li>
+                <li><strong>Purchase discount:</strong> Discounts applied to purchases</li>
+                <li><strong>Sale rounding:</strong> Rounded differences on tax-inclusive sale amounts</li>
+            </ul>
+        </article>
+
+        <article class="subsection">
+            <h3>1.3) Automatic Calculations – Financial Results</h3>
+            <table class="component-table">
+                <tr>
+                    <th>Element</th>
+                    <th>Meaning</th>
+                </tr>
+                <tr>
+                    <td>COGS (Cost of Goods Sold)</td>
+                    <td>Cost of goods sold = opening stock + purchases – closing stock</td>
+                </tr>
+                <tr>
+                    <td>Gross profit</td>
+                    <td>Total sales – COGS</td>
+                </tr>
+                <tr>
+                    <td>Net profit</td>
+                    <td>Gross profit – fees & discounts</td>
+                </tr>
+            </table>
+            <p>
+                These figures reflect the overall financial health of the business during the selected period.
+            </p>
+        </article>
+
+        <article class="subsection">
+            <h3>1.4) Profit Breakdown by Segment</h3>
+            <h4>+ Segmentation Tabs</h4>
+            <p>
+                Users can view profits:
+            </p>
+            <ul>
+                <li><strong>By product</strong></li>
+                <li><strong>By invoice</strong></li>
+                <li><strong>By location</strong></li>
+                <li><strong>By date</strong></li>
+                <li><strong>By customer</strong></li>
+                <li><strong>By category</strong></li>
+                <li><strong>By brand</strong></li>
+                <li><strong>By service staff</strong></li>
+                <li><strong>By day</strong></li>
+            </ul>
+
+            <h5>Example of a Results Table for Products</h5>
+            <table class="component-table">
+                <tr>
+                    <th>Column</th>
+                    <th>Description</th>
+                </tr>
+                <tr>
+                    <td>Product</td>
+                    <td>Name of the sold product</td>
+                </tr>
+                <tr>
+                    <td>Gross margin</td>
+                    <td>Profit generated by this product (sale – cost)</td>
+                </tr>
+            </table>
+
+            <p><strong>Example display:</strong></p>
+            <ul>
+                <li><strong>Astral24: 80,000 FCFA margin</strong></li>
+                <li><strong>Women's perfume 30%: 82,500 FCFA</strong></li>
+                <li><strong>Essence perfume 100 ml: 4,500 FCFA</strong></li>
+                <li><strong>Gross total: 167,000 FCFA</strong></li>
+            </ul>
+        </article>
+
+        <article class="subsection">
+            <h3>Associated Functions:</h3>
+            <ul>
+                <li>✓ <strong>CSV / Excel / PDF Export:</strong> Generates user reports in the desired format.</li>
+                <li>✓ <strong>Direct printing:</strong> A print button is available to produce a paper version of the list.</li>
+                <li>✓ <strong>Column visibility:</strong> Allows hiding or displaying certain columns based on preferences.</li>
+                <li>✓ <strong>Dynamic search:</strong> A quick search field helps locate specific users.</li>
+                <li>✓ <strong>Pagination & entries per page:</strong> Users can navigate between pages and choose how many records to display per page (e.g., 10, 25, 50).</li>
+            </ul>
+            <div class="image-placeholder">
+                <p>Interface Illustration</p>
+                <img src="/image/rapport1.png" alt="Description de l'image" width="900" height="600" style="max-width:100%;height:auto;border-radius:8px;" />
+            </div>
+        </article>
+
+        <article class="subsection">
+            <h3>Important Notes</h3>
+            <ul>
+                <li>The report does not include invoice discounts.</li>
+                <li>Returns and discounts are included in global calculations.</li>
+                <li>All amounts are in FCFA unless currency is changed.</li>
+            </ul>
+        </article>
+    </section>
+
+
+    <!-- Section 2: Purchase and Sale -->
+    <section class="section-2">
+        <h2>2) Purchase and Sale</h2>
+
+        <article class="subsection">
+            <h3>2.1) Purpose of this Interface</h3>
+            <p>
+                The Purchase and Sale report effectively compares company purchases against recorded sales to evaluate:
+            </p>
+            <ul>
+                <li>The gross profitability of operations,</li>
+                <li>Discrepancies between amounts spent and recovered,</li>
+                <li>Outstanding payments to suppliers (purchase due) or from customers (sale due),</li>
+                <li>And detect operational imbalances.</li>
+            </ul>
+            <p>
+                This is a synthetic view ideal for managers, financial officers, or business owners.
+            </p>
+        </article>
+
+        <article class="subsection">
+            <h3>2.2) Interface Structure</h3>
+            <p>
+                The interface is divided into 3 main sections:
+            </p>
+            <ul>
+                <li>Filters (location and dates)</li>
+                <li>Summary blocks: Purchases vs Sales</li>
+                <li>Final analytical summary</li>
+            </ul>
+
+            <h4>2.2.1) Analysis Filters</h4>
+            <p>
+                <strong>Location (site):</strong><br>
+                Selects the activity site (store, depot, warehouse) to analyze<br>
+                <strong>Date filter:</strong><br>
+                Allows selecting a <strong>specific time range to generate the report (e.g., monthly, quarterly)</strong>
+            </p>
+            <p>
+                These filters ensure <strong>temporal and geographical targeting of the report.</strong>
+            </p>
+
+            <h4>2.2.2) Summary Blocks (Purchases vs Sales)</h4>
+            <h5>Purchases Block (left)</h5>
+            <table class="component-table">
+                <tr>
+                    <th>Line</th>
+                    <th>Description</th>
+                </tr>
+                <tr>
+                    <td>Total purchase</td>
+                    <td>Total purchase amount (excluding tax) during the selected period</td>
+                </tr>
+                <tr>
+                    <td>Purchase incl. tax</td>
+                    <td>Purchase amount including tax (if applicable)</td>
+                </tr>
+                <tr>
+                    <td>Total purchase return incl. tax</td>
+                    <td>Return on investment or profit on tax-inclusive purchases (in this view: 0.00 FCFA, so no profit calculated)</td>
+                </tr>
+                <tr>
+                    <td>Purchase due</td>
+                    <td>Total amounts not yet paid to suppliers</td>
+                </tr>
+            </table>
+            <p>
+                This block tracks financial commitments related to procurement.
+            </p>
+
+            <h5>Sales Block (right)</h5>
+            <table class="component-table">
+                <tr>
+                    <th>Line</th>
+                    <th>Description</th>
+                </tr>
+                <tr>
+                    <td>Total sale</td>
+                    <td>Total sales amount (excluding tax)</td>
+                </tr>
+                <tr>
+                    <td>Sale incl. tax</td>
+                    <td>Sales amount including tax</td>
+                </tr>
+                <tr>
+                    <td>Total sale return incl. tax</td>
+                    <td>Represents total net gain (in this case 0.00 FCFA, as no accounting variation recorded)</td>
+                </tr>
+                <tr>
+                    <td>Sale due</td>
+                    <td>Total sales not yet collected (debtor customers)</td>
+                </tr>
+            </table>
+
+            <h4>2.2.3) Consolidated Financial Summary</h4>
+            <p>
+                Located at the bottom, this panel provides a direct readout of results.
+            </p>
+            <p>
+                <strong>Sale – Purchase:</strong><br>
+                Calculation of <strong>gross margin = Total sales – Total purchases = 817,000 FCFA (theoretical profit)</strong><br>
+                <strong>Amount due:</strong><br>
+                Net remaining debt, calculated as:<br>
+                (Purchase due – Sale due) = -18,000 FCFA, meaning a payment is still <strong>due to the supplier.</strong>
+            </p>
+            <p>
+                ☺ <strong>Green value (profit):</strong> indicates that sales generated a surplus compared to purchases.<br>
+                ☻ <strong>Red value (amount due):</strong> alerts about unpaid supplier commitments.
+            </p>
+        </article>
+
+        <article class="subsection">
+            <h3>2.3) Additional Features</h3>
+            <table class="component-table">
+                <tr>
+                    <th>Button</th>
+                    <th>Function</th>
+                </tr>
+                <tr>
+                    <td>Print</td>
+                    <td>Generates a paper or PDF version of the report for archiving or presentation</td>
+                </tr>
+                <tr>
+                    <td>Blue tooltips</td>
+                    <td>Help understand the exact meaning of each line (e.g., calculation of totals or returns)</td>
+                </tr>
+            </table>
+            <div class="image-placeholder">
+                <p>Interface Illustration</p>
+                <img src="/image/rapport2.png" alt="Description de l'image" width="900" height="600" style="max-width:100%;height:auto;border-radius:8px;" />
+            </div>
+        </article>
+
+        <article class="subsection">
+            <h3>Usage Recommendations</h3>
+            <ul>
+                <li>Ensure all sales and purchases are recorded for the period.</li>
+                <li>Verify that <strong>related payments</strong> are up to date to avoid a <strong>false balance.</strong></li>
+                <li>Consult this report <strong>weekly/monthly to anticipate cash flow management.</strong></li>
+                <li>Use this report before <strong>restocking to compare profitability.</strong></li>
+            </ul>
+        </article>
+    </section>
+
+    <!-- Section 3: Tax Report -->
+    <section class="section-3">
+        <h2>3) Tax Report</h2>
+
+        <article class="subsection">
+            <h3>3.1) Purpose of this Interface</h3>
+            <p>
+                The "Tax Report" interface allows the company to:
+            </p>
+            <ul>
+                <li><strong>Track tax application on various transactions (purchases, sales, expenses),</strong></li>
+                <li><strong>Establish precise tax statements for monthly/quarterly declarations,</strong></li>
+                <li><strong>Prepare tax reports for authorities (VAT, service tax, etc.),</strong></li>
+                <li>And justify tax credits/debits during audits or regular accounting.</li>
+            </ul>
+            <p>
+                This is a key interface for accountants, financial officers, or administrative managers.
+            </p>
+        </article>
+
+        <article class="subsection">
+            <h3>3.2) Interface Composition</h3>
+            <p>
+                The interface is divided into three main sections:
+            </p>
+            <ul>
+                <li>Viewing filters</li>
+                <li>Global tax balance summary</li>
+                <li>Detailed tables by tax type (with tabs)</li>
+            </ul>
+
+            <h4>3.2.1) Viewing Filters</h4>
+            <table class="component-table">
+                <tr>
+                    <th>Element</th>
+                    <th>Function</th>
+                </tr>
+                <tr>
+                    <td>Company location</td>
+                    <td>Selects a specific site or all sites combined</td>
+                </tr>
+                <tr>
+                    <td>Contact</td>
+                    <td>Filters reports by relevant supplier or customer</td>
+                </tr>
+                <tr>
+                    <td>Date range</td>
+                    <td>Defines the tax analysis period (e.g., 01/01/2025 – 31/12/2025 in the screenshot)</td>
+                </tr>
+            </table>
+            <p>
+                These filters ensure <strong>targeted analysis compliant with the relevant tax period.</strong>
+            </p>
+
+            <h4>3.2.2) Global Tax Summary (central banner)</h4>
+            <p>
+                The central line of the interface indicates:
+            </p>
+            <p>
+                <strong>"Downstream tax - Upstream tax - Expense tax: FCFA 0.00"</strong>
+            </p>
+            <p>
+                This corresponds to a global tax balance:
+            </p>
+            <table class="component-table">
+                <tr>
+                    <th>Term</th>
+                    <th>Definition</th>
+                </tr>
+                <tr>
+                    <td>Downstream tax</td>
+                    <td>Total tax collected on sales (VAT charged to customers)</td>
+                </tr>
+                <tr>
+                    <td>Upstream tax</td>
+                    <td>Tax borne by the company on purchases (VAT paid to suppliers)</td>
+                </tr>
+                <tr>
+                    <td>Expense tax</td>
+                    <td>Taxes applied to other charges (e.g., fuel, external fees)</td>
+                </tr>
+            </table>
+            <p>
+                <strong>Basic formula used to declare VAT due:</strong>
+            </p>
+            <p>
+                <strong>Net VAT = Downstream tax – Upstream tax – Expense tax</strong>
+            </p>
+            <p>
+                In the example: no movement recorded yet, hence a zero balance (FCFA 0.00).
+            </p>
+        </article>
+
+        <article class="subsection">
+            <h3>3.2.3) Tax Analysis Tables (with tabs)</h3>
+            <p>
+                This section appears as three distinct tabs, each containing a <strong>detailed table:</strong>
+            </p>
+
+            <h4>a) Input Tax Tab (Purchases)</h4>
+            <p>
+                This table displays all taxes collected during purchases.
+            </p>
+            <p><strong>Main columns:</strong></p>
+            <table class="component-table">
+                <tr>
+                    <th>Column</th>
+                    <th>Role</th>
+                </tr>
+                <tr>
+                    <td>Date</td>
+                    <td>Purchase transaction date</td>
+                </tr>
+                <tr>
+                    <td>Reference number</td>
+                    <td>Purchase order or invoice reference</td>
+                </tr>
+                <tr>
+                    <td>Supplier</td>
+                    <td>Name of the concerned supplier</td>
+                </tr>
+                <tr>
+                    <td>Tax identification number</td>
+                    <td>Supplier's IFU/NIF number</td>
+                </tr>
+                <tr>
+                    <td>Total amount</td>
+                    <td>Total invoice amount including tax</td>
+                </tr>
+                <tr>
+                    <td>Payment method</td>
+                    <td>Cash, transfer, credit, etc.</td>
+                </tr>
+                <tr>
+                    <td>Discount</td>
+                    <td>Discounts applied to the purchase</td>
+                </tr>
+            </table>
+            <p>
+                This report is essential to justify VAT deductibility on purchases.
+            </p>
+
+            <h4>b) Downstream Tax Tab (Sales)</h4>
+            <p>
+                This table groups taxes collected on sales.
+            </p>
+            <p><strong>Main columns:</strong></p>
+            <table class="component-table">
+                <tr>
+                    <th>Column</th>
+                    <th>Role</th>
+                </tr>
+                <tr>
+                    <td>Date</td>
+                    <td>Purchase transaction date</td>
+                </tr>
+                <tr>
+                    <td>Invoice number</td>
+                    <td>Unique identifier for each invoice</td>
+                </tr>
+                <tr>
+                    <td>Customer</td>
+                    <td>Name of the concerned customer</td>
+                </tr>
+                <tr>
+                    <td>Tax identification number</td>
+                    <td>Customer's IFU/NIF number</td>
+                </tr>
+                <tr>
+                    <td>Total amount</td>
+                    <td>Total invoice amount including tax</td>
+                </tr>
+                <tr>
+                    <td>Payment method</td>
+                    <td>Cash, transfer, credit, etc.</td>
+                </tr>
+                <tr>
+                    <td>Discount</td>
+                    <td>Discounts applied to the purchase</td>
+                </tr>
+            </table>
+
+            <h4>c) Expense Tax Tab</h4>
+            <p>
+                Designed for <strong>non-trading charges (e.g., phone, transport, energy), this tab</strong>
+                justifies taxes unrelated to stock or merchandise purchases.
+            </p>
+            <p>Main columns:</p>
+            <table class="component-table">
+                <tr>
+                    <th>Column</th>
+                    <th>Role</th>
+                </tr>
+                <tr>
+                    <td>Date</td>
+                    <td>Purchase transaction date</td>
+                </tr>
+                <tr>
+                    <td>Reference number</td>
+                    <td>Purchase order or invoice reference</td>
+                </tr>
+                <tr>
+                    <td>Tax identification number</td>
+                    <td>Supplier's IFU/NIF number</td>
+                </tr>
+                <tr>
+                    <td>Total amount</td>
+                    <td>Total invoice amount including tax</td>
+                </tr>
+                <tr>
+                    <td>Payment method</td>
+                    <td>Cash, transfer, credit, etc.</td>
+                </tr>
+            </table>
+        </article>
+
+        <article class="subsection">
+            <h3>3.3) Additional Functions</h3>
+            <ul>
+                <li>✓ <strong>CSV / Excel / PDF Export:</strong> Generates user reports in the desired format.</li>
+                <li>✓ <strong>Direct printing:</strong> A print button is available to produce a paper version of the list.</li>
+                <li>✓ <strong>Column visibility:</strong> Allows hiding or displaying certain columns based on preferences.</li>
+                <li>✓ <strong>Dynamic search:</strong> A quick search field helps locate specific users.</li>
+                <li>✓ <strong>Pagination & entries per page:</strong> Users can navigate between pages and choose how many records to display per page (e.g., 10, 25, 50).</li>
+            </ul>
+            <div class="image-placeholder">
+                <p>Interface Illustration</p>
+                <img src="/image/rapport3.png" alt="Description de l'image" width="900" height="600" style="max-width:100%;height:auto;border-radius:8px;" />
+            </div>
+        </article>
+
+        <article class="subsection">
+            <h3>Practical Recommendations</h3>
+            <ul>
+                <li>This report should be generated at the end of each month or before any tax declaration.</li>
+                <li>It is essential to correctly enter VAT rates during purchases/sales in the system to ensure tax data consistency.</li>
+                <li>Use the "Tax identification number" field for strict tax compliance.</li>
+            </ul>
+        </article>
+    </section>
+
+    <!-- Section 4: Supplier and Customer Report -->
+    <section class="section-4">
+        <h2>4) Supplier and Customer Report</h2>
+
+        <article class="subsection">
+            <h3>4.1) Purpose of this Interface</h3>
+            <p>
+                The Supplier and Customer Report interface in Movelys provides a consolidated view of commercial transactions (purchases and sales) conducted with each contact registered in the system (customer or supplier).
+            </p>
+            <p>
+                It offers direct insight into <strong>amounts committed, payments received or made, and</strong>
+                remaining outstanding balances.
+            </p>
+            <p>
+                This functionality is essential for:
+            </p>
+            <ul>
+                <li>Tracking <strong>supplier and customer accounts,</strong></li>
+                <li>Identifying <strong>unpaid amounts or credits to recover,</strong></li>
+                <li>Managing financial relationships by third party.</li>
+            </ul>
+        </article>
+
+        <article class="subsection">
+            <h3>4.2) General Interface Structure</h3>
+            <p>
+                The interface consists of three main areas:
+            </p>
+            <ul>
+                <li><strong>Filter and search bar</strong></li>
+                <li><strong>Transaction summary table</strong></li>
+                <li><strong>Export and print functions</strong></li>
+            </ul>
+
+            <h4>4.2.1) Filter and Search Bar</h4>
+            <p>
+                It contains the following elements:
+            </p>
+            <table class="component-table">
+                <tr>
+                    <th>Column</th>
+                    <th>Description</th>
+                </tr>
+                <tr>
+                    <td>Customer group name</td>
+                    <td>Name of the concerned customer group.</td>
+                </tr>
+                <tr>
+                    <td>Type</td>
+                    <td>Nature of the relationship between the contact and the company (customer, supplier)</td>
+                </tr>
+                <tr>
+                    <td>Location</td>
+                    <td>Operation point (store, depot, service)</td>
+                </tr>
+                <tr>
+                    <td>Contact</td>
+                    <td>Name of the concerned customer or supplier.</td>
+                </tr>
+                <tr>
+                    <td>Date range</td>
+                    <td>Analyzed time interval</td>
+                </tr>
+            </table>
+            <p>
+                These filters enable <strong>targeted consultation, facilitating audits or tracking of specific</strong>
+                third parties.
+            </p>
+
+            <h4>4.2.2) Transaction Summary Table</h4>
+            <p>
+                This dynamic table centralizes all financial data by contact.
+                Each line corresponds to a <strong>third party (customer or supplier) and displays the following indicators:</strong>
+            </p>
+            <table class="component-table">
+                <tr>
+                    <th>Contact</th>
+                    <th>Name of the concerned customer or supplier.</th>
+                </tr>
+                <tr>
+                    <td>Total purchase</td>
+                    <td>Total sum of purchases made from the contact (if supplier)</td>
+                </tr>
+                <tr>
+                    <td>Contact number</td>
+                    <td>Contact's phone number.</td>
+                </tr>
+                <tr>
+                    <td>Total purchase return</td>
+                    <td>Total sum of purchases made from the contact (if supplier).</td>
+                </tr>
+                <tr>
+                    <td>Total sale</td>
+                    <td>Total amount of goods returned to the supplier (purchase returns)</td>
+                </tr>
+                <tr>
+                    <td>Total sale return</td>
+                    <td>Total amount of products returned by the customer to the company, due to non-compliance or cancellation.</td>
+                </tr>
+                <tr>
+                    <td>Opening balance due</td>
+                    <td>Balance prior to the first use of the software or contact registration.</td>
+                </tr>
+                <tr>
+                    <td>Due</td>
+                    <td>Remaining balance that the customer or company still needs to pay at the report consultation date.</td>
+                </tr>
+            </table>
+            <p>
+                This table provides a bilateral view (purchases and sales), very useful for hybrid partners
+                (both customers and suppliers).
+            </p>
+        </article>
+
+        <article class="subsection">
+            <h3>4.2.3) Additional Features</h3>
+            <p>
+                Located at the top or right of the interface:
+            </p>
+            <ul>
+                <li>✓ <strong>CSV / Excel / PDF Export:</strong> Generates user reports in the desired format.</li>
+                <li>✓ <strong>Direct printing:</strong> A print button is available to produce a paper version of the list.</li>
+                <li>✓ <strong>Column visibility:</strong> Allows hiding or displaying certain columns based on preferences.</li>
+                <li>✓ <strong>Dynamic search:</strong> A quick search field helps locate specific users.</li>
+                <li>✓ <strong>Pagination & entries per page:</strong> Users can navigate between pages and choose how many records to display per page (e.g., 10, 25, 50).</li>
+            </ul>
+            <div class="image-placeholder">
+                <p>Interface Illustration</p>
+                <img src="/image/rapport4.png" alt="Description de l'image" width="900" height="600" style="max-width:100%;height:auto;border-radius:8px;" />
+            </div>
+        </article>
+
+        <article class="subsection">
+            <h3>4.3) Access Rules and Permissions</h3>
+            <table class="component-table">
+                <tr>
+                    <th>User role</th>
+                    <th>Recommended access</th>
+                </tr>
+                <tr>
+                    <td>Administrator</td>
+                    <td>Full access</td>
+                </tr>
+                <tr>
+                    <td>Accountant / Finance</td>
+                    <td>Read + export</td>
+                </tr>
+                <tr>
+                    <td>Sales manager</td>
+                    <td>Read only (sales)</td>
+                </tr>
+                <tr>
+                    <td>Standard user</td>
+                    <td>Restricted or no access</td>
+                </tr>
+            </table>
+        </article>
+    </section>
+
+    <!-- Section 5: Customer Group Report -->
+    <section class="section-5">
+        <h2>5) Customer Group Report</h2>
+
+        <article class="subsection">
+            <h3>5.1) Purpose of this Interface</h3>
+            <p>
+                The Customer Group Report in Movelys allows the company to:
+            </p>
+            <ul>
+                <li>Analyze <strong>sales generated by customer segments (e.g., retailers, wholesalers,</strong>
+                VIPs, resellers…),</li>
+                <li>Evaluate the <strong>profitability and business volume</strong> of each group,</li>
+                <li>Guide commercial, marketing, and pricing strategies based on segment performance.</li>
+            </ul>
+            <p>
+                This report is essential for a targeted customer approach, <strong>personalization of offers, and</strong>
+                optimization of commercial management.
+            </p>
+        </article>
+
+        <article class="subsection">
+            <h3>5.2) Interface Composition</h3>
+            <p>
+                The interface is structured into two main areas:
+            </p>
+            <ul>
+                <li>Filter bar</li>
+                <li>Summary data table</li>
+            </ul>
+
+            <h4>5.2.1) Analysis Filters</h4>
+            <table class="component-table">
+                <tr>
+                    <th>Element</th>
+                    <th>Function</th>
+                </tr>
+                <tr>
+                    <td>Company location</td>
+                    <td>Filters sales by a specific site (store, warehouse, branch)</td>
+                </tr>
+                <tr>
+                    <td>Customer group name</td>
+                    <td>Dynamically filters results by a customer group name</td>
+                </tr>
+                <tr>
+                    <td>Date range</td>
+                    <td>Defines the time interval to analyze</td>
+                </tr>
+            </table>
+            <p>
+                These filters enable <strong>contextual, precise, and targeted reading of inventory based on</strong>
+                commercial or logistical strategy.
+            </p>
+            <p>
+                Defines the time interval to analyze (e.g., from 01/01/2024 to 06/30/2024)
+            </p>
+
+            <h4>5.2.2) Customer Group Summary Table</h4>
+            <p>
+                Each line of the table corresponds to a <strong>predefined customer group in the system (e.g.,</strong>
+                individuals, businesses, distributors...).
+            </p>
+            <table class="component-table">
+                <tr>
+                    <th>Column</th>
+                    <th>Description</th>
+                </tr>
+                <tr>
+                    <td>Customer group name</td>
+                    <td>Designation of the customer segment (e.g., Resellers, B2B, VIP)</td>
+                </tr>
+                <tr>
+                    <td>Total sale</td>
+                    <td>Total sum of sales generated by this group during the selected period</td>
+                </tr>
+            </table>
+        </article>
+
+        <article class="subsection">
+            <h3>5.3) Complementary Features</h3>
+            <table class="component-table">
+                <tr>
+                    <th>Function</th>
+                    <th>Description</th>
+                </tr>
+                <tr>
+                    <td>Export CSV / Excel / PDF</td>
+                    <td>To save or share the report with management, or integrate it into a global report</td>
+                </tr>
+                <tr>
+                    <td>Print</td>
+                    <td>Generates a printable version for physical presentation or archiving</td>
+                </tr>
+                <tr>
+                    <td>Column visibility</td>
+                    <td>Allows customizing visible columns for clearer reading</td>
+                </tr>
+                <tr>
+                    <td>Dynamic search</td>
+                    <td>A quick search field helps locate specific users.</td>
+                </tr>
+                <tr>
+                    <td>Pagination & entries per page</td>
+                    <td>Users can navigate between pages and choose how many records to display per page (e.g., 10, 25, 50).</td>
+                </tr>
+            </table>
+            <div class="image-placeholder">
+                <p>Interface Illustration</p>
+                <img src="/image/rapport5.png" alt="Description de l'image" width="900" height="600" style="max-width:100%;height:auto;border-radius:8px;" />
+            </div>
+        </article>
+
+        <article class="subsection">
+            <h3>5.4) Recommended Access</h3>
+            <table class="component-table">
+                <tr>
+                    <th>User role</th>
+                    <th>Recommended access</th>
+                </tr>
+                <tr>
+                    <td>Administrator</td>
+                    <td>Full</td>
+                </tr>
+                <tr>
+                    <td>Sales manager</td>
+                    <td>Read + analyze</td>
+                </tr>
+                <tr>
+                    <td>Marketing department</td>
+                    <td>For campaign targeting</td>
+                </tr>
+                <tr>
+                    <td>Accounting</td>
+                    <td>For payment tracking</td>
+                </tr>
+            </table>
+        </article>
+    </section>
+
+    <!-- Section 6: Action Report -->
+    <section class="section-6">
+        <h2>6) Action Report</h2>
+
+        <article class="subsection">
+            <h3>6.1) Purpose of this Interface</h3>
+            <p>
+                The <strong>Action Report aims to</strong> <strong>exhaustively record all</strong>
+                <strong>actions performed by users in the system.</strong>
+                It serves as an audit trail for:
+            </p>
+            <ul>
+                <li>Verifying internal activities,</li>
+                <li>Identifying human errors or fraud attempts,</li>
+                <li>Ensuring traceability and transparency in data management.</li>
+            </ul>
+            <p>
+                This is an essential tool for system administrators, internal auditors, and compliance officers.
+            </p>
+        </article>
+
+        <article class="subsection">
+            <h3>6.2) Interface Structure</h3>
+            <p>
+                The interface consists of three main areas:
+            </p>
+            <ul>
+                <li>Search filters</li>
+                <li>Summary data</li>
+                <li>Product-by-product data table</li>
+            </ul>
+
+            <h4>6.2.1) Analysis Filters</h4>
+            <p>
+                This section allows users to adjust table results based on certain criteria:
+            </p>
+            <table class="component-table">
+                <tr>
+                    <th>Field</th>
+                    <th>Description</th>
+                </tr>
+                <tr>
+                    <td>Company location</td>
+                    <td>Filters results by storage or sales site.</td>
+                </tr>
+                <tr>
+                    <td>Category</td>
+                    <td>Filters products by their main category (e.g., perfumes, cosmetics, hair care, etc.).</td>
+                </tr>
+                <tr>
+                    <td>Subcategory</td>
+                    <td>Further refines the filter by subtype (e.g., 30ml bottles, gift sets, testers).</td>
+                </tr>
+                <tr>
+                    <td>Brand</td>
+                    <td>Displays only products associated with a specific brand.</td>
+                </tr>
+                <tr>
+                    <td>Unit</td>
+                    <td>Filters by measurement unit (ml, kg, liter, etc.).</td>
+                </tr>
+            </table>
+            <p>
+                These filters enable <strong>contextual, precise, and targeted reading of inventory based on</strong>
+                commercial or logistical strategy.
+            </p>
+
+            <h4>6.2.2) Summary Data</h4>
+            <p>
+                <strong>These four major financial indicators are automatically updated based on selected</strong>
+                filters:
+            </p>
+            <table class="component-table">
+                <tr>
+                    <th>Indicator</th>
+                    <th>Meaning and utility</th>
+                </tr>
+                <tr>
+                    <td>Closing stock (at purchase price)</td>
+                    <td>Total value of products still in stock, calculated based on their unit purchase cost.</td>
+                </tr>
+                <tr>
+                    <td>Closing stock (at selling price)</td>
+                    <td>Revenue estimate if all stock were sold at its selling price.</td>
+                </tr>
+                <tr>
+                    <td>Potential profit</td>
+                    <td>Theoretical gross margin if all products in stock are sold.</td>
+                </tr>
+                <tr>
+                    <td>Profit margin %</td>
+                    <td>Ratio expressed as a percentage of profit over selling price. This is a profitability indicator.</td>
+                </tr>
+            </table>
+            Here's the complete English translation of your document:
+
+<h4>6.2.3) Product-by-Product Data Table</h4>
+<p>
+    This table is the <strong>backbone of the report. Each row represents a distinct product,</strong>
+    with all its management and profitability details.
+</p>
+<table class="component-table">
+    <tr>
+        <th>Column</th>
+        <th>Explanation</th>
+    </tr>
+    <tr>
+        <td>Action</td>
+        <td>"Product Stock History" button: Displays entries, transfers, adjustments, and sales linked to a specific product.</td>
+    </tr>
+    <tr>
+        <td>SKU</td>
+        <td>Unique product identification code in the system (Stock Keeping Unit), used to facilitate tracking and management.</td>
+    </tr>
+    <tr>
+        <td>Product</td>
+        <td>Commercial name of the product as recorded in the database (user-visible name).</td>
+    </tr>
+    <tr>
+        <td>Variation</td>
+        <td>Product variant details: fragrance, volume, size, color, format, etc.</td>
+    </tr>
+    <tr>
+        <td>Category</td>
+        <td>Product classification within a specific family or segment (e.g., Men's Fragrances, Hair Care, etc.).</td>
+    </tr>
+    <tr>
+        <td>Location</td>
+        <td>Physical site or store where the product is currently stored (e.g., Scent & Vitality, Central Warehouse).</td>
+    </tr>
+    <tr>
+        <td>Unit Selling Price</td>
+        <td>Price of a single product unit, including all taxes.</td>
+    </tr>
+    <tr>
+        <td>Current Stock</td>
+        <td>Physically available quantity in stock. Typically expressed in units, bottles, or other custom units.</td>
+    </tr>
+    <tr>
+        <td>Current Stock Value (Purchase Price)</td>
+        <td>Total value of current stock calculated at unit purchase price: Current Stock × Purchase Price.</td>
+    </tr>
+    <tr>
+        <td>Current Stock Value (Selling Price)</td>
+        <td>Market value of stock if fully sold, calculated as Current Stock × Selling Price.</td>
+    </tr>
+    <tr>
+        <td>Potential Profit</td>
+        <td>Difference between sales value and purchase value of stock: Sales Value – Purchase Value. Indicates forecasted gains.</td>
+    </tr>
+    <tr>
+        <td>Total Units Sold</td>
+        <td>Total quantity of this product already sold during the selected period. Reflects the product's commercial performance.</td>
+    </tr>
+    <tr>
+        <td>Total Units Transferred</td>
+        <td>Sum of quantities of this product transferred to another company site or location.</td>
+    </tr>
+    <tr>
+        <td>Total Units Adjusted</td>
+        <td>Total quantity modified via stock adjustments: includes losses, breakages, expired products, or counting errors.</td>
+    </tr>
+    <tr>
+        <td>Custom Field 1</td>
+        <td>Configurable free field according to business needs. Example uses: batch code, initial supplier, expiration date, etc.</td>
+    </tr>
+    <tr>
+        <td>Custom Field 2</td>
+        <td>Second configurable free field. Can be used for specifics like internal codes, supplier references, or packaging types.</td>
+    </tr>
+    <tr>
+        <td>Custom Field 3</td>
+        <td>Third custom field for additional product metadata (e.g., exact location, series type, etc.).</td>
+    </tr>
+    <tr>
+        <td>Custom Field 4</td>
+        <td>Fourth free field. Example uses: logistical information, external codes, links to sales or import campaigns.</td>
+    </tr>
+</table>
+
+<article class="subsection">
+    <h3>6.3) Available Features</h3>
+    <table class="component-table">
+        <tr>
+            <th>Tool</th>
+            <th>Function</th>
+        </tr>
+        <tr>
+            <td>Export CSV/Excel/PDF</td>
+            <td>Generates a downloadable version of the report in various formats for archiving or external analysis.</td>
+        </tr>
+        <tr>
+            <td>Print</td>
+            <td>Opens a printable version of the current display.</td>
+        </tr>
+        <tr>
+            <td>Column Visibility</td>
+            <td>Customizes visible columns in the table.</td>
+        </tr>
+        <tr>
+            <td>Quick Search</td>
+            <td>Real-time filtering of rows by product name, SKU, etc.</td>
+        </tr>
+    </table>
+    <div class="image-placeholder">
+                <p>Interface Illustration</p>
+                <img src="/image/rapport6.png" alt="Description de l'image" width="900" height="600" style="max-width:100%;height:auto;border-radius:8px;" />
+            </div>
+</article>
+
+<!-- Section 7: Stock Adjustment Report -->
+<section class="section-7">
+    <h2>7) Stock Adjustment Report</h2>
+
+    <article class="subsection">
+        <h3>7.1) Purpose of This Interface</h3>
+        <p>
+            The <strong>Stock Adjustment Report interface in Movelys</strong> allows users to:
+        </p>
+        <ul>
+            <li>Track all <strong>stock adjustments not linked to sales or purchases,</strong></li>
+            <li>Correct <strong>inventory discrepancies (losses, thefts, errors, unrecorded returns),</strong></li>
+            <li>Maintain <strong>accurate and compliant quantities of available items.</strong></li>
+        </ul>
+        <p>
+            It is crucial for ensuring <strong>stock data integrity and minimizing unjustified shortages or surpluses.</strong>
+        </p>
+    </article>
+
+    <article class="subsection">
+        <h3>7.2) Interface Structure</h3>
+        <p>
+            The interface consists of four functional blocks:
+        </p>
+        <ul>
+            <li><strong>Selection filters (site, date)</strong></li>
+            <li><strong>Analytical summary of adjustments</strong></li>
+            <li><strong>Stock adjustment table</strong></li>
+        </ul>
+
+        <h4>7.2.1) Selection Filters</h4>
+        <p>
+            <strong>Location Selector:</strong><br>
+            Filters the report by site (warehouse, store, etc.)<br>
+            <strong>Date Filter:</strong><br>
+            Opens a calendar to define a specific analysis period.
+        </p>
+
+        <h4>7.2.2) Adjustment Analytical Summary</h4>
+        <p>
+            It provides a <strong>clear distinction between different adjustments:</strong>
+        </p>
+        <ul>
+            <li><strong>Total Normal</strong><br>
+            Value of adjustments considered regular or expected (e.g., internal replenishment, justified voluntary adjustment).</li>
+            <li><strong>Total Abnormal</strong><br>
+            Value of adjustments linked to anomalies or irregularities (e.g., theft, unjustified breakage, repeated inventory errors).</li>
+            <li><strong>Total Stock Adjustment</strong><br>
+            Global sum of all adjustments made (positive + negative), representing the net impact on stock.</li>
+            <li><strong>Total Amount Recovered</strong><br>
+            Financial amount recovered following an adjustment (e.g., refund, supplier return, bank regularization).</li>
+        </ul>
+    </article>
+
+    <article class="subsection">
+        <h3>7.2.3) Stock Adjustment Table</h3>
+        <p>
+            Each row represents an <strong>adjustment operation recorded in the system.</strong>
+        </p>
+        <table class="component-table">
+            <tr>
+                <th>Column</th>
+                <th>Description</th>
+            </tr>
+            <tr>
+                <td>Action</td>
+                <td>Set of icons allowing users to view, edit, or delete a stock adjustment.</td>
+            </tr>
+            <tr>
+                <td>Date</td>
+                <td>Date when the adjustment was performed.</td>
+            </tr>
+            <tr>
+                <td>Reference Number</td>
+                <td>Unique identifier assigned to each adjustment operation.</td>
+            </tr>
+            <tr>
+                <td>Location</td>
+                <td>Site or warehouse where the adjustment was made.</td>
+            </tr>
+            <tr>
+                <td>Adjustment Type</td>
+                <td>Category of adjustment: can be "Normal" (planned) or "Abnormal" (loss, error, etc.).</td>
+            </tr>
+            <tr>
+                <td>Total Amount</td>
+                <td>Total monetary value of the adjustment, based on quantities and unit price.</td>
+            </tr>
+            <tr>
+                <td>Total Amount Recovered</td>
+                <td>Amount effectively recovered or compensated after the adjustment (e.g., supplier return, refund).</td>
+            </tr>
+            <tr>
+                <td>Reason</td>
+                <td>Justification for the adjustment (e.g., breakage, theft, counting error, expiration).</td>
+            </tr>
+            <tr>
+                <td>Added By</td>
+                <td>Name of the user who entered or validated the adjustment in the system.</td>
+            </tr>
+        </table>
+    </article>
+
+    <article class="subsection">
+        <h3>7.3) Additional Tools</h3>
+        <p>
+            Located at the top or right of the interface:
+        </p>
+        <ul>
+            <li>✓ <strong>Export CSV/Excel/PDF:</strong> Generates user reports in the desired format.</li>
+            <li>✓ <strong>Direct Print:</strong> A print button is available to produce a paper version of the list.</li>
+            <li>✓ <strong>Column Visibility:</strong> Allows hiding or displaying certain columns based on preferences.</li>
+            <li>✓ <strong>Dynamic Search:</strong> A quick search field helps locate specific users.</li>
+            <li>✓ <strong>Pagination & Entries per Page:</strong> Users can navigate between pages and choose how many records to display per page (e.g., 10, 25, 50).</li>
+        </ul>
+        <div class="image-placeholder">
+                <p>Interface Illustration</p>
+                <img src="/image/rapport7.png" alt="Description de l'image" width="900" height="600" style="max-width:100%;height:auto;border-radius:8px;" />
+            </div>
+    </article>
+
+    <article class="subsection">
+        <h3>7.4) Access Rights</h3>
+        <table class="component-table">
+            <tr>
+                <th>Role</th>
+                <th>Access</th>
+            </tr>
+            <tr>
+                <td>Administrator</td>
+                <td>Creation, editing, deletion</td>
+            </tr>
+            <tr>
+                <td>Store Manager</td>
+                <td>Creation + consultation</td>
+            </tr>
+            <tr>
+                <td>Accountant</td>
+                <td>Read-only for reconciliation</td>
+            </tr>
+            <tr>
+                <td>Standard User</td>
+                <td>Restricted or prohibited access</td>
+            </tr>
+        </table>
+    </article>
+</section>
+
+<!-- Section 8: Trending Products -->
+<section class="section-8">
+    <h2>8) Trending Products</h2>
+
+    <article class="subsection">
+        <h3>8.1) Purpose of This Interface</h3>
+        <p>
+            The Trending Products Report in Movelys helps businesses:
+        </p>
+        <ul>
+            <li>Identify high-turnover products,</li>
+            <li>Understand customer preferences and adjust stock accordingly,</li>
+            <li>Optimize targeted marketing campaigns or promotions,</li>
+            <li>Anticipate stockouts for high-demand products.</li>
+        </ul>
+        <p>
+            This is an essential analysis tool for sales, marketing, and logistics teams.
+        </p>
+    </article>
+
+    <article class="subsection">
+        <h3>8.2) Interface Structure</h3>
+        <p>
+            This interface is organized around two main blocks:
+        </p>
+        <ul>
+            <li><strong>Selection Filters</strong></li>
+            <li><strong>Popular Products Visualization</strong></li>
+        </ul>
+
+        <h4>8.2.1) Analysis Filters</h4>
+        <table class="component-table">
+            <tr>
+                <th>Field</th>
+                <th>Description</th>
+            </tr>
+            <tr>
+                <td>Business Location</td>
+                <td>Filters results by storage or sales site.</td>
+            </tr>
+            <tr>
+                <td>Category</td>
+                <td>Filters products by their main category (e.g., perfumes, cosmetics, hair care).</td>
+            </tr>
+            <tr>
+                <td>Subcategory</td>
+                <td>Further filters by subtype (e.g., 30ml bottles, gift sets, testers).</td>
+            </tr>
+            <tr>
+                <td>Brand</td>
+                <td>Displays only products associated with a specific brand.</td>
+            </tr>
+            <tr>
+                <td>Unit</td>
+                <td>Filters by measurement unit (ml, kg, liter, etc.).</td>
+            </tr>
+            <tr>
+                <td>Date Range</td>
+                <td>Defines the sales analysis period (e.g., 01/01/2024 to 06/30/2024).</td>
+            </tr>
+            <tr>
+                <td>Number of Products</td>
+                <td>Allows entering the number of products (5).</td>
+            </tr>
+            <tr>
+                <td>Product Type</td>
+                <td>Allows selecting the product type (beauty...).</td>
+            </tr>
+        </table>
+        <p>
+            These filters enable <strong>precise temporal and geographical analysis, adapted to actual business activity.</strong>
+        </p>
+
+        <h4>8.2.2) Popular Products Visualization</h4>
+        <p>
+            This section presents a graphical analysis of total sales in units for three fragrance references.
+            The goal is to identify the top-performing products in terms of sales volume.
+        </p>
+
+        <h5>8.2.2.1) Chart Description</h5>
+        <p>
+            The chart used is a vertical bar diagram. It compares the total number of units sold for each product listed on the horizontal axis.
+        </p>
+        <ul>
+            <li><strong>Y-axis (Ordinate):</strong><br>
+            Represents numerical values of units sold.<br>
+            Scale from 0 to 40.<br>
+            Unit of measure: number of units.</li>
+            <li><strong>X-axis (Abscissa):</strong><br>
+            Displays the following three product references:<br>
+             PERFUME – 00000100011 (fic)<br>
+             AstraI24 – Luxury Women's Fragrance Essence 30%-50 ml -ASTRAL24(flc)<br>
+             Women's Fragrance Essence 30%-100 ml-263(flc)</li>
+        </ul>
+
+        <h5>8.2.2.2) Data Analysis</h5>
+        <ul>
+            <li><strong>Best-Selling Product</strong><br>
+            PERFUME – 00000100011 (fic) leads with approximately 33-34 units sold.<br>
+            Clearly the top commercial performer among the three.</li>
+            <li><strong>Moderate Sales Product</strong><br>
+            AstraI24 – Luxury Women's Fragrance Essence 30%-50 ml -ASTRAL24(flc) records about 8 units sold.<br>
+            Mid-range performance.</li>
+            <li><strong>Lowest-Selling Product</strong><br>
+            Women's Fragrance Essence 30%-100 ml-263(flc) recorded only about 1 unit sold.<br>
+            Very weak commercial performance, requiring special attention.</li>
+        </ul>
+        <p>
+            The analysis highlights a strong disparity in sales volumes between the three products. PERFUME – 00000100011 (fic) dominates sales, while Women's Fragrance Essence 100 ml – 263 shows relative commercial failure.
+        </p>
+    </article>
+
+    <article class="subsection">
+        <h3>8.3) Additional Features</h3>
+        <p>
+            A Print button allows generating a printable version for archiving or sharing.
+        </p>
+        <div class="image-placeholder">
+                <p>Interface Illustration</p>
+                <img src="/image/rapport8.png" alt="Description de l'image" width="900" height="600" style="max-width:100%;height:auto;border-radius:8px;" />
+            </div>
+        <table class="component-table">
+            <tr>
+                <th>Recommended Access</th>
+                <th></th>
+            </tr>
+            <tr>
+                <td>User Role</td>
+                <td>Recommended Access</td>
+            </tr>
+            <tr>
+                <td>Administrator</td>
+                <td>Full</td>
+            </tr>
+            <tr>
+                <td>Sales Manager</td>
+                <td>Read + export</td>
+            </tr>
+            <tr>
+                <td>Department Manager</td>
+                <td>Read-only</td>
+            </tr>
+            <tr>
+                <td>Accountant/Logistician</td>
+                <td>Read as needed</td>
+            </tr>
+        </table>
+    </article>
+</section>
+
+<!-- Section 9: Product Report -->
+<section class="section-9">
+    <h2>9) Product Report</h2>
+
+    <article class="subsection">
+        <h3>9.1) Purpose of This Interface</h3>
+        <p>
+            The Product Report provides an in-depth view of each item's performance in the product catalog. It allows users to:
+        </p>
+        <ul>
+            <li>Track a product's complete lifecycle (purchase, sale, stock),</li>
+            <li>Evaluate individual product profitability,</li>
+            <li>Monitor available, sold, purchased, or adjusted quantities,</li>
+            <li>Identify slow or fast-moving products.</li>
+        </ul>
+        <p>
+            This is a highly useful interface for logistics, sales, and accounting teams.
+        </p>
+    </article>
+
+    <article class="subsection">
+        <h3>9.2) Interface Structure</h3>
+        <p>
+            This interface consists of two main functional areas:
+        </p>
+        <ul>
+            <li>Advanced filter bar</li>
+            <li>Product-by-product analysis table</li>
+        </ul>
+
+        <h4>9.2.1) Search Filters</h4>
+        <table class="component-table">
+            <tr>
+                <th>Element</th>
+                <th>Function</th>
+            </tr>
+            <tr>
+                <td>Supplier</td>
+                <td>Filters an existing supplier</td>
+            </tr>
+            <tr>
+                <td>Purchase Date</td>
+                <td>Selects a purchase date</td>
+            </tr>
+            <tr>
+                <td>Customer</td>
+                <td>Filters an existing customer</td>
+            </tr>
+            <tr>
+                <td>Sale Date</td>
+                <td>Selects a sale date</td>
+            </tr>
+            <tr>
+                <td>Business Location</td>
+                <td>Filters results by storage or sales site</td>
+            </tr>
+        </table>
+        <p>
+            These filters ensure customized and targeted product performance analysis.
+        </p>
+
+        <h4>9.2.2) Product Analysis Table</h4>
+        <p>
+            Each row represents a unique item (product or article) in the inventory.
+        </p>
+        <table class="component-table">
+            <tr>
+                <th>Column</th>
+                <th>Professional Description</th>
+            </tr>
+            <tr>
+                <td>Product</td>
+                <td>Commercial name or designation of the product. This is the item being tracked in stock.</td>
+            </tr>
+            <tr>
+                <td>SKU</td>
+                <td>Unique management code for the product (Stock Keeping Unit), used for quick identification in inventory systems.</td>
+            </tr>
+            <tr>
+                <td>Description</td>
+                <td>Additional information or product characteristics (format, fragrance, color, etc.).</td>
+            </tr>
+            <tr>
+                <td>Purchase Date</td>
+                <td>Date when the product was acquired from the supplier.</td>
+            </tr>
+            <tr>
+                <td>Purchase</td>
+                <td>Quantity purchased during procurement.</td>
+            </tr>
+            <tr>
+                <td>Batch Number</td>
+                <td>Code or identifier assigned to a specific production or purchase batch, useful for quality tracking or recalls.</td>
+            </tr>
+            <tr>
+                <td>Supplier</td>
+                <td>Name of the supplier from whom the product was purchased.</td>
+            </tr>
+            <tr>
+                <td>Purchase Price</td>
+                <td>Unit cost paid for the product (excluding or including taxes based on settings).</td>
+            </tr>
+            <tr>
+                <td>Sale Date</td>
+                <td>Date when the product was sold to a customer.</td>
+            </tr>
+            <tr>
+                <td>Sale</td>
+                <td>Quantity of the product actually sold.</td>
+            </tr>
+            <tr>
+                <td>Location</td>
+                <td>Site or warehouse from which the product was stored, sold, or transferred.</td>
+            </tr>
+            <tr>
+                <td>Sale Quantity</td>
+                <td>Specific quantity sold in a transaction or invoice line (equivalent to "Sale," may appear separately in some filters).</td>
+            </tr>
+            <tr>
+                <td>Selling Price</td>
+                <td>Unit amount at which the product was sold to the customer.</td>
+            </tr>
+            <tr>
+                <td>Subtotal</td>
+                <td>Total amount generated by the sale of the indicated quantity</td>
+            </tr>
+        </table>
+    </article>
+
+    <article class="subsection">
+        <h3>9.3) Additional Functions</h3>
+        <p>
+            Located at the top or right of the interface:
+        </p>
+        <ul>
+            <li>✓ <strong>Export CSV/Excel/PDF:</strong> Generates user reports in the desired format.</li>
+            <li>✓ <strong>Direct Print:</strong> A print button is available to produce a paper version of the list.</li>
+            <li>✓ <strong>Column Visibility:</strong> Allows hiding or displaying certain columns based on preferences.</li>
+            <li>✓ <strong>Dynamic Search:</strong> A quick search field helps locate specific users.</li>
+            <li>✓ <strong>Pagination & Entries per Page:</strong> Users can navigate between pages and choose how many records to display per page (e.g., 10, 25, 50).</li>
+        </ul>
+        <div class="image-placeholder">
+                <p>Interface Illustration</p>
+                <img src="/image/rapport9.png" alt="Description de l'image" width="900" height="600" style="max-width:100%;height:auto;border-radius:8px;" />
+            </div>
+    </article>
+
+    <article class="subsection">
+        <h3>9.4) Access Rights</h3>
+        <table class="component-table">
+            <tr>
+                <th>User</th>
+                <th>Access Level</th>
+            </tr>
+            <tr>
+                <td>Administrator</td>
+                <td>Full</td>
+            </tr>
+            <tr>
+                <td>Logistics Manager</td>
+                <td>Read + export</td>
+            </tr>
+            <tr>
+                <td>Department/Stock Manager</td>
+                <td>Read-only</td>
+            </tr>
+            <tr>
+                <td>Unauthorized Employee</td>
+                <td>Restricted access</td>
+            </tr>
+        </table>
+    </article>
+</section>
+
+<!-- Section 10: Product Purchase Report -->
+<section class="section-10">
+    <h2>10) Product Purchase Report</h2>
+
+    <article class="subsection">
+        <h3>10.1) Purpose of This Interface</h3>
+        <p>
+            The Product Purchase Report displays and analyzes all purchase operations for each catalog item. It provides precise visibility of:
+        </p>
+        <ul>
+            <li>Quantities purchased,</li>
+            <li>Amounts spent,</li>
+            <li>Involved suppliers,</li>
+            <li>Procurement performance by product.</li>
+        </ul>
+        <p>
+            This report is essential for expense control, supplier management, and restocking optimization.
+        </p>
+    </article>
+
+    <article class="subsection">
+        <h3>10.2) General Interface Structure</h3>
+        <p>
+            This interface is divided into two main zones:
+        </p>
+        <ol>
+            <li>Search filter zone</li>
+            <li>Purchase report table</li>
+        </ol>
+
+        <h4>10.2.1) Analysis Filters</h4>
+        <table class="component-table">
+            <tr>
+                <th>Element</th>
+                <th>Description</th>
+            </tr>
+            <tr>
+                <td>Search for a Product</td>
+                <td>Allows searching</td>
+            </tr>
+            <tr>
+                <td>Supplier</td>
+                <td>Filters an existing supplier</td>
+            </tr>
+            <tr>
+                <td>Business Location</td>
+                <td>Filters purchases by the concerned warehouse or sales point</td>
+            </tr>
+            <tr>
+                <td>Date Range</td>
+                <td>Defines the sales analysis period (e.g., 01/01/2024 to 06/30/2024)</td>
+            </tr>
+            <tr>
+                <td>Brands</td>
+                <td>Filters an existing brand</td>
+            </tr>
+        </table>
+        <p>
+            These filters enable <strong>targeted purchase analysis to refine procurement decisions.</strong>
+        </p>
+
+        <h4>10.2.2) Product Purchases Table</h4>
+        <p>
+            Each row corresponds to a <strong>product purchased at least once during the selected</strong> period.
+        </p>
+        <table class="component-table">
+            <tr>
+                <th>Column</th>
+                <th>Professional Description</th>
+            </tr>
+            <tr>
+                <td>Product</td>
+                <td>Commercial name or designation of the purchased product</td>
+            </tr>
+            <tr>
+                <td>SKU</td>
+                <td>Unique internal product code (Stock Keeping Unit) used for inventory identification.</td>
+            </tr>
+            <tr>
+                <td>Supplier</td>
+                <td>Name of the supplier from whom the purchase was made. This tracks the origin of each product.</td>
+            </tr>
+            <tr>
+                <td>Reference Number</td>
+                <td>Identification code of the purchase order or invoice linked to the operation (e.g., PUR-000124).</td>
+            </tr>
+            <tr>
+                <td>Date</td>
+                <td>Date when the purchase transaction was recorded in the system.</td>
+            </tr>
+            <tr>
+                <td>Quantity</td>
+                <td>Total number of product units purchased in the corresponding order line.</td>
+            </tr>
+            <tr>
+                <td>Total Adjusted Units</td>
+                <td>Quantity subject to adjustment after purchase (e.g., return to supplier, loss in transit, receipt error).</td>
+            </tr>
+            <tr>
+                <td>Unit Price</td>
+                <td>Purchase price of a single product unit (excluding taxes or including taxes based on configuration).</td>
+            </tr>
+            <tr>
+                <td>Subtotal</td>
+                <td>Total amount corresponding to this purchase line</td>
+            </tr>
+        </table>
+    </article>
+
+    <article class="subsection">
+        <h3>10.3) Additional Features</h3>
+        <p>
+            Located at the top or right of the interface:
+        </p>
+        <ul>
+            <li>✓ <strong>Export CSV/Excel/PDF:</strong> Generates user reports in the desired format.</li>
+            <li>✓ <strong>Direct Print:</strong> A print button is available to produce a paper version of the list.</li>
+            <li>✓ <strong>Column Visibility:</strong> Allows hiding or displaying certain columns based on preferences.</li>
+            <li>✓ <strong>Dynamic Search:</strong> A quick search field helps locate specific users.</li>
+            <li>✓ <strong>Pagination & Entries per Page:</strong> Users can navigate between pages and choose how many records to display per page (e.g., 10, 25, 50).</li>
+        </ul>
+        <div class="image-placeholder">
+                <p>Interface Illustration</p>
+                <img src="/image/rapport10.png" alt="Description de l'image" width="900" height="600" style="max-width:100%;height:auto;border-radius:8px;" />
+            </div>
+    </article>
+
+    <article class="subsection">
+        <h3>10.4) Access Rights</h3>
+        <table class="component-table">
+            <tr>
+                <th>User</th>
+                <th>Access Level</th>
+            </tr>
+            <tr>
+                <td>Administrator</td>
+                <td>Full</td>
+            </tr>
+            <tr>
+                <td>Purchaser/Procurement Manager</td>
+                <td>Read + export</td>
+            </tr>
+            <tr>
+                <td>Accountant</td>
+                <td>Read-only</td>
+            </tr>
+            <tr>
+                <td>Other roles</td>
+                <td>Restricted per internal policy</td>
+            </tr>
+        </table>
+    </article>
+</section>
+
+<!-- Section 11: Product Sales Report -->
+<section class="section-11">
+    <h2>11) Product Sales Report</h2>
+
+    <article class="subsection">
+        <h3>11.1) Purpose of This Interface</h3>
+        <p>
+            The Product Sales Report provides a product-by-product view of commercial performance over a given period. It enables users to:
+        </p>
+        <ul>
+            <li>Identify top revenue-generating products,</li>
+            <li>Track sales trends,</li>
+            <li>Facilitate stock planning,</li>
+            <li>Support marketing and sales decisions.</li>
+        </ul>
+        <p>
+            This report is central to product profitability analysis, sales evolution, and sales force efficiency.
+        </p>
+    </article>
+
+    <article class="subsection">
+        <h3>11.2) Interface Composition</h3>
+        <p>
+            The interface consists of two main zones:
+        </p>
+        <ul>
+            <li>Dynamic filter bar</li>
+            <li>Grouping tabs</li>
+        </ul>
+
+        <h4>11.2.1) Search Filters</h4>
+        <table class="component-table">
+            <tr>
+                <th>Field</th>
+                <th>Purpose</th>
+            </tr>
+            <tr>
+                <td>Search for a Product</td>
+                <td>Filters sales by a specific product (via name, SKU, or barcode).</td>
+            </tr>
+            <tr>
+                <td>Customer</td>
+                <td>Filters sales made by or for a specific customer.</td>
+            </tr>
+            <tr>
+                <td>Customer Group Name</td>
+                <td>Segments reports by groups (businesses, individuals, VIPs...).</td>
+            </tr>
+            <tr>
+                <td>Business Location</td>
+                <td>Filters by site or branch.</td>
+            </tr>
+            <tr>
+                <td>Category</td>
+                <td>Displays products by their classification (e.g., Men's Fragrance, Women's Fragrance).</td>
+            </tr>
+            <tr>
+                <td>Brand</td>
+                <td>Filters sales by brand.</td>
+            </tr>
+            <tr>
+                <td>Date Range</td>
+                <td>Defines the analysis period (e.g., 01/01/2025 to 12/31/2025).</td>
+            </tr>
+            <tr>
+                <td>Time Range</td>
+                <td>Restricts analysis to specific time slots (useful for 24/7 sales points).</td>
+            </tr>
+        </table>
+        <p>
+            These filters allow analysis to focus on a <strong>precise scope, relevant to commercial strategy.</strong>
+        </p>
+
+        <h4>11.2.2) Grouping Tabs</h4>
+        <table class="component-table">
+            <tr>
+                <th>Tab</th>
+                <th>Function</th>
+            </tr>
+            <tr>
+                <td>Detailed</td>
+                <td>Line-by-line view of all sales.</td>
+            </tr>
+            <tr>
+                <td>Detailed (with Purchase)</td>
+                <td>Includes purchase data associated with sold products (gross margin, purchase cost, etc.).</td>
+            </tr>
+            <tr>
+                <td>Grouped (by Date)</td>
+                <td>Aggregates sales by day.</td>
+            </tr>
+            <tr>
+                <td>By Category</td>
+                <td>Sorts sales by product families.</td>
+            </tr>
+            <tr>
+                <td>By Brand</td>
+                <td>Groups sales by product brand.</td>
+            </tr>
+        </table>
+    </article>
+
+    <article class="subsection">
+        <h3>11.3) Additional Features</h3>
+        <p>
+            Located at the top or right of the interface:
+        </p>
+        <ul>
+            <li>✓ <strong>Export CSV/Excel/PDF:</strong> Generates user reports in the desired format.</li>
+            <li>✓ <strong>Direct Print:</strong> A print button is available to produce a paper version of the list.</li>
+            <li>✓ <strong>Column Visibility:</strong> Allows hiding or displaying certain columns based on preferences.</li>
+            <li>✓ <strong>Dynamic Search:</strong> A quick search field helps locate specific users.</li>
+            <li>✓ <strong>Pagination & Entries per Page:</strong> Users can navigate between pages and choose how many records to display per page (e.g., 10, 25, 50).</li>
+        </ul>
+        <div class="image-placeholder">
+                <p>Interface Illustration</p>
+                <img src="/image/rapport11.png" alt="Description de l'image" width="900" height="600" style="max-width:100%;height:auto;border-radius:8px;" />
+            </div>
+    </article>
+
+    <article class="subsection">
+        <h3>11.4) Access Permissions</h3>
+        <table class="component-table">
+            <tr>
+                <th>User Role</th>
+                <th>Recommended Access</th>
+            </tr>
+            <tr>
+                <td>Administrator</td>
+                <td>Read + export</td>
+            </tr>
+            <tr>
+                <td>Sales Manager</td>
+                <td>Full read access</td>
+            </tr>
+            <tr>
+                <td>Department/Store Manager</td>
+                <td>Limited to concerned site</td>
+            </tr>
+            <tr>
+                <td>Unauthorized User</td>
+                <td>Restricted or denied access</td>
+            </tr>
+        </table>
+    </article>
+</section>
+
+<!-- Section 12: Purchase Payment Report -->
+<section class="section-12">
+    <h2>12) Purchase Payment Report</h2>
+
+    <article class="subsection">
+        <h3>12.1) Purpose of This Interface</h3>
+        <p>
+            The Purchase Payment Report provides a detailed and structured view of all <strong>outgoing financial transactions related to merchandise or service purchases from suppliers.</strong>
+            It enables users to:
+        </p>
+        <ul>
+            <li>Track payment history,</li>
+            <li>Verify alignment between purchases and payments,</li>
+            <li>Manage outgoing cash flow,</li>
+            <li>Audit payments made to suppliers.</li>
+        </ul>
+        <p>
+            This report is indispensable for supplier accounting control.
+        </p>
+    </article>
+
+    <article class="subsection">
+        <h3>12.2) Interface Structure</h3>
+        <p>
+            Two main zones compose the interface:
+        </p>
+        <ul>
+            <li>Search filter zone</li>
+            <li>Payment summary table</li>
+        </ul>
+
+        <h4>12.2.1) Search Filters</h4>
+        <table class="component-table">
+            <tr>
+                <th>Element</th>
+                <th>Function</th>
+            </tr>
+            <tr>
+                <td>Business Location</td>
+                <td>Filters payments by site or entity</td>
+            </tr>
+            <tr>
+                <td>Supplier</td>
+                <td>Selects a specific supplier to view their payments</td>
+            </tr>
+            <tr>
+                <td>Date Range</td>
+                <td>Limits search to payments made between two dates</td>
+            </tr>
+        </table>
+        <p>
+            These filters enable targeted analysis, useful during audits or bank reconciliations.
+        </p>
+
+        <h4>12.2.2) Purchase Payments Table</h4>
+        <p>
+            This table lists all payments recorded in the system linked to purchases.
+        </p>
+        <table class="component-table">
+            <tr>
+                <th>Column</th>
+                <th>Description</th>
+            </tr>
+            <tr>
+                <td>Reference Number</td>
+                <td>Unique payment transaction code</td>
+            </tr>
+            <tr>
+                <td>Paid On</td>
+                <td>Date when the payment was effectively recorded in the system. Corresponds to the actual invoice settlement date.</td>
+            </tr>
+            <tr>
+                <td>Supplier</td>
+                <td>Name or legal entity of the concerned supplier</td>
+            </tr>
+            <tr>
+                <td>Quantity</td>
+                <td>Amount or volume of products concerned by the payment. Sometimes indicates the number of lines or products paid. May also be contextual based on configuration.</td>
+            </tr>
+            <tr>
+                <td>Payment Method</td>
+                <td>Method used: cash, transfer, check, card, e-wallet, etc.</td>
+            </tr>
+            <tr>
+                <td>Purchase</td>
+                <td>Number or label of the associated purchase order/invoice. Links the payment to the corresponding purchase document.</td>
+            </tr>
+            <tr>
+                <td>Action</td>
+                <td>Column containing <strong>interaction icons</strong>: view payment details, edit (if authorized), delete, or print receipt.</td>
+            </tr>
+        </table>
+    </article>
+
+    <article class="subsection">
+        <h3>12.3) Integrated Features</h3>
+        <p>
+            Located at the top or right of the interface:
+        </p>
+        <ul>
+            <li>✓ <strong>Export CSV/Excel/PDF:</strong> Generates user reports in the desired format.</li>
+            <li>✓ <strong>Direct Print:</strong> A print button is available to produce a paper version of the list.</li>
+            <li>✓ <strong>Column Visibility:</strong> Allows hiding or displaying certain columns based on preferences.</li>
+            <li>✓ <strong>Dynamic Search:</strong> A quick search field helps locate specific users.</li>
+            <li>✓ <strong>Pagination & Entries per Page:</strong> Users can navigate between pages and choose how many records to display per page (e.g., 10, 25, 50).</li>
+        </ul>
+        <div class="image-placeholder">
+                <p>Interface Illustration</p>
+                <img src="/image/rapport12.png" alt="Description de l'image" width="900" height="600" style="max-width:100%;height:auto;border-radius:8px;" />
+            </div>
+    </article>
+
+    <article class="subsection">
+        <h3>12.4) Access Rights</h3>
+        <table class="component-table">
+            <tr>
+                <th>User</th>
+                <th>Access</th>
+            </tr>
+            <tr>
+                <td>Administrator</td>
+                <td>Full</td>
+            </tr>
+            <tr>
+                <td>Supplier Accountant</td>
+                <td>Read + Export</td>
+            </tr>
+            <tr>
+                <td>Purchasing Manager</td>
+                <td>Read-only</td>
+            </tr>
+            <tr>
+                <td>Other users</td>
+                <td>Restricted or prohibited access</td>
+            </tr>
+        </table>
+    </article>
+</section>
+
+<!-- Section 13: Sales Payment Report -->
+<section class="section-13">
+    <h2>13) Sales Payment Report</h2>
+
+    <article class="subsection">
+        <h3>13.1) Purpose of This Interface</h3>
+        <p>
+            The Sales Payment Report displays all payments <strong>received from customers, whether through cash register, transfer, or any other means.</strong>
+        </p>
+        <p>
+            It enables users to:
+        </p>
+        <ul>
+            <li>Track incoming cash flow,</li>
+            <li>Verify collections linked to sales,</li>
+            <li>Identify transactions associated with specific invoices,</li>
+            <li>Perform financial reconciliations between sales and actual payments.</li>
+        </ul>
+        <p>
+            This report is indispensable for accounting, billing, and collection departments.
+        </p>
+    </article>
+
+    <article class="subsection">
+        <h3>13.2) Interface Composition</h3>
+        <p>
+            This interface is organized around two sections:
+        </p>
+        <ul>
+            <li>Search filters</li>
+            <li>Payment summary table</li>
+        </ul>
+
+        <h4>13.2.1) Search Filters</h4>
+        <table class="component-table">
+            <tr>
+                <th>Element</th>
+                <th>Function</th>
+            </tr>
+            <tr>
+                <td>Business Location</td>
+                <td>Filters payments by sales point</td>
+            </tr>
+            <tr>
+                <td>Customer</td>
+                <td>Targets payments from a specific customer</td>
+            </tr>
+            <tr>
+                <td>Date Range</td>
+                <td>Restricts the analysis period</td>
+            </tr>
+            <tr>
+                <td>Payment Method</td>
+                <td>Filters by payment method: cash, transfer, check, card, mobile money, etc.</td>
+            </tr>
+            <tr>
+                <td>Customer Group</td>
+                <td>Filters an existing customer group</td>
+            </tr>
+        </table>
+        <p>
+            These filters help <strong>quickly retrieve</strong> a payment or set of transactions.
+        </p>
+
+        <h4>13.2.2) Sales Payments Table</h4>
+        <p>
+            Each row corresponds to <strong>a customer payment</strong>, whether partial, full, or in installments.
+        </p>
+        <table class="component-table">
+            <tr>
+                <th>Column</th>
+                <th>Professional Description</th>
+            </tr>
+            <tr>
+                <td>Contact ID</td>
+                <td>Unique internal identifier assigned to the customer in the system. This code ensures tracking of transactions linked to a specific contact.</td>
+            </tr>
+            <tr>
+                <td>Reference Number</td>
+                <td>Sales payment reference (e.g., PAY-SLS-00056). Identifies the transaction in the payment journal.</td>
+            </tr>
+            <tr>
+                <td>Customer</td>
+                <td>Full name of the person or company making the purchase. Corresponds to the debtor in the commercial relationship.</td>
+            </tr>
+            <tr>
+                <td>Customer Group</td>
+                <td>Segment or category the customer belongs to (e.g., individuals, resellers, businesses, VIPs). Organizes customers for targeted analysis.</td>
+            </tr>
+            <tr>
+                <td>Payment Method</td>
+                <td>Method used to settle the sale: cash, bank card, transfer, check, mobile money, etc.</td>
+            </tr>
+            <tr>
+                <td>Sale</td>
+                <td>Number or label of the invoice or sales slip concerned by the payment. Links each payment to a sales operation.</td>
+            </tr>
+            <tr>
+                <td>Paid On</td>
+                <td>Date when the payment was received and recorded. Reflects the actual collection date.</td>
+            </tr>
+            <tr>
+                <td>Quantity</td>
+                <td>Amount or number of units concerned by the payment. Depending on context, may represent either the number of items paid or the amount paid (based on report configuration).</td>
+            </tr>
+            <tr>
+                <td>Action</td>
+                <td>Allows certain actions (view)</td>
+            </tr>
+        </table>
+        <p>
+            This data links an <strong>invoice to its actual payment.</strong>
+        </p>
+    </article>
+
+    <article class="subsection">
+        <h3>13.3) Available Features</h3>
+        <p>
+            Located at the top or right of the interface:
+        </p>
+        <ul>
+            <li>✓ <strong>Export CSV/Excel/PDF:</strong> Generates user reports in the desired format.</li>
+            <li>✓ <strong>Direct Print:</strong> A print button is available to produce a paper version of the list.</li>
+            <li>✓ <strong>Column Visibility:</strong> Allows hiding or displaying certain columns based on preferences.</li>
+            <li>✓ <strong>Dynamic Search:</strong> A quick search field helps locate specific users.</li>
+            <li>✓ <strong>Pagination & Entries per Page:</strong> Users can navigate between pages and choose how many records to display per page (e.g., 10, 25, 50).</li>
+        </ul>
+       <div class="image-placeholder">
+                <p>Interface Illustration</p>
+                <img src="/image/rapport13.png" alt="Description de l'image" width="900" height="600" style="max-width:100%;height:auto;border-radius:8px;" />
+            </div>
+    </article>
+
+    <article class="subsection">
+        <h3>13.4) Recommended Access</h3>
+        <table class="component-table">
+            <tr>
+                <th>User</th>
+                <th>Access</th>
+            </tr>
+            <tr>
+                <td>Administrator</td>
+                <td>Full read and export</td>
+            </tr>
+            <tr>
+                <td>Sales Manager</td>
+                <td>Read-only</td>
+            </tr>
+            <tr>
+                <td>Accountant</td>
+                <td>Read + bank reconciliation</td>
+            </tr>
+            <tr>
+                <td>Cashier</td>
+                <td>Restricted to own collections</td>
+            </tr>
+        </table>
+    </article>
+</section>
+
+<!-- Section 14: Expense Report -->
+<section class="section-14">
+    <h2>14) Expense Report</h2>
+
+    <article class="subsection">
+        <h3>14.1) Purpose of This Interface</h3>
+        <p>
+            The <strong>Expense Report interface in Movelys</strong> allows employees to <strong>manage expenses incurred in the course of their duties</strong>. It centralizes expenses related to:
+        </p>
+        <ul>
+            <li>Business travel</li>
+            <li>Operational purchases (transport, accommodation, meals, etc.)</li>
+            <li>Cash advances</li>
+            <li>Personal reimbursements</li>
+        </ul>
+        <p>
+            This tool ensures <strong>expense traceability, clear budget justification, and better accounting management</strong>.
+        </p>
+    </article>
+
+    <article class="subsection">
+        <h3>14.2) Interface Organization</h3>
+        <p>
+            This interface includes:
+        </p>
+        <ol>
+            <li>Search and filter zone</li>
+            <li>Graphical visualization zone</li>
+            <li>Table of recorded expense reports</li>
+        </ol>
+
+        <h4>14.2.1) Search Filters</h4>
+        <table class="component-table">
+            <thead>
+                <tr>
+                    <th>Field</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Business Location</td>
+                    <td>Dropdown menu to select the concerned site.</td>
+                </tr>
+                <tr>
+                    <td>Category</td>
+                    <td>Filters expenses by nature (Transport, Meals, Supplies, etc.)</td>
+                </tr>
+                <tr>
+                    <td>Date Range</td>
+                    <td>Selects a custom period</td>
+                </tr>
+                <tr>
+                    <td>Apply Filters button (purple)</td>
+                    <td>Applies filters to update displayed results.</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>
+            These filters ensure <strong>quick and effective targeting</strong> of expenses to audit or validate.
+        </p>
+
+        <h4>14.2.2) Graphical Visualization Zone</h4>
+        <p>
+            A chart is designed to <strong>visually display expense reports</strong> by category or selected period.
+        </p>
+        <p class="remark">
+            <strong>Note:</strong> In this section, <strong>no data is available, so the chart is empty.</strong> But in a real context, this zone would show bars or curves of expenses by category.
+        </p>
+        <p>
+            Additionally, this chart can be downloaded in various formats (PNG, JPEG, PDF, SVG), viewed in full screen, or printed by clicking the button on the right.
+        </p>
+
+        <h4>14.2.3) Recorded Expense Reports Table</h4>
+        <p>
+            Located at the bottom of the page, it lists detailed expenses. Let's analyze each component:
+        </p>
+        <table class="component-table">
+            <thead>
+                <tr>
+                    <th>Column</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Expense Categories</td>
+                    <td>Shows types of expenses (e.g., fuel, hotel, supplies, etc.)</td>
+                </tr>
+                <tr>
+                    <td>Total Expenses</td>
+                    <td>Total amount spent by category (in FCFA)</td>
+                </tr>
+            </tbody>
+        </table>
+    </article>
+
+    <article class="subsection">
+        <h3>14.3) Complementary Features</h3>
+        <p>
+            Located at the top or right of the interface:
+        </p>
+        <ul class="features-list">
+            <li><strong>Export CSV/Excel/PDF:</strong> Allows generating user reports in the desired format.</li>
+            <li><strong>Direct Print:</strong> A print button is available to produce a paper version of the list.</li>
+            <li><strong>Column Visibility:</strong> Allows hiding or displaying certain columns based on preferences.</li>
+            <li><strong>Dynamic Search:</strong> A quick search field helps locate specific users.</li>
+            <li><strong>Pagination & Entries per Page:</strong> Users can navigate between pages and choose how many records to display per page (e.g., 10, 25, 50).</li>
+        </ul>
+        <div class="image-placeholder">
+                <p>Interface Illustration</p>
+                <img src="/image/rapport14.png" alt="Description de l'image" width="900" height="600" style="max-width:100%;height:auto;border-radius:8px;" />
+            </div>
+    </article>
+
+    <article class="subsection">
+        <h3>14.4) Access and Recommended Roles</h3>
+        <table class="component-table">
+            <thead>
+                <tr>
+                    <th>User Role</th>
+                    <th>Access</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Employee</td>
+                    <td>Creation and consultation of own reports</td>
+                </tr>
+                <tr>
+                    <td>HR Manager / Director</td>
+                    <td>Validation and rejection</td>
+                </tr>
+                <tr>
+                    <td>Accounting</td>
+                    <td>Reimbursement processing and export</td>
+                </tr>
+                <tr>
+                    <td>Administrator</td>
+                    <td>Full access (including deletion)</td>
+                </tr>
+            </tbody>
+        </table>
+    </article>
+</section>
+
+<!-- Section 15: Save Report -->
+<section class="section-15">
+    <h2>15) Save Report</h2>
+
+    <article class="subsection">
+        <h3>15.1) Purpose of This Interface</h3>
+        <p>
+            The <strong>Save Report interface in Movelys</strong> allows users to <strong>save a generated report with its applied filters</strong>, in order to:
+        </p>
+        <ul>
+            <li>Retrieve it more easily later,</li>
+            <li>Share it with other authorized users,</li>
+            <li>Use it as a template for periodic consultation (daily, weekly, monthly...),</li>
+            <li>Maintain filtering parameter consistency, especially in complex reports (customers, sales, payments...).</li>
+        </ul>
+        <p>
+            This is a practical tool for automating precise indicator tracking without manually reconfiguring filters each time.
+        </p>
+    </article>
+
+    <article class="subsection">
+        <h3>15.2) Interface Structure</h3>
+        <p>
+            This interface is divided into two sections:
+        </p>
+        <ul>
+            <li>Filter section</li>
+            <li>Cash register sessions table</li>
+        </ul>
+
+        <h4>15.2.1) Search Filters</h4>
+        <p>
+            These filters allow customizing the search and refining report display:
+        </p>
+        <ul>
+            <li>
+                <strong>User:</strong>
+                <ul>
+                    <li>Dropdown menu to filter reports by user (e.g., cashiers, salespeople).</li>
+                </ul>
+            </li>
+            <li>
+                <strong>Status:</strong>
+                <ul>
+                    <li>Filters by session status (all, open, closed).</li>
+                </ul>
+            </li>
+            <li>
+                <strong>Date Range:</strong>
+                <ul>
+                    <li>Selects a date to filter reports for a defined period</li>
+                </ul>
+            </li>
+        </ul>
+
+        <h4>15.2.2) Cash Register Sessions Table</h4>
+        <p>
+            Each row in the table represents a <strong>cash register session, identified by its opening and closing</strong>. Here are the available columns:
+        </p>
+        <table class="component-table">
+            <thead>
+                <tr>
+                    <th>Column</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Opening Time</td>
+                    <td>Date and time when the session started.</td>
+                </tr>
+                <tr>
+                    <td>Closing Time</td>
+                    <td>Date and time when the session ended.</td>
+                </tr>
+                <tr>
+                    <td>Location</td>
+                    <td>Sales point or branch concerned. Example: "Scent & Vitality".</td>
+                </tr>
+                <tr>
+                    <td>User</td>
+                    <td>Name of the user who performed the session + email address.</td>
+                </tr>
+                <tr>
+                    <td>Total Card Slips</td>
+                    <td>Total amount collected via bank card</td>
+                </tr>
+                <tr>
+                    <td>Total Checks</td>
+                    <td>Total amount collected via checks.</td>
+                </tr>
+                <tr>
+                    <td>Total Cash</td>
+                    <td>Amount collected in cash.</td>
+                </tr>
+                <tr>
+                    <td>Total Bank Transfer</td>
+                    <td>Amount collected via transfer.</td>
+                </tr>
+                <tr>
+                    <td>Total Deposit</td>
+                    <td>Amounts received as deposits.</td>
+                </tr>
+                <tr>
+                    <td>Custom Payment 1, 2, 3,4,5,6,7</td>
+                    <td>Customizable fields according to the business (other payment methods).</td>
+                </tr>
+                <tr>
+                    <td>Other Payments</td>
+                    <td>Contains view and close actions</td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="remark">
+            <strong>Note:</strong> Each cell displays an amount followed by a number in parentheses likely representing the <strong>number of transactions</strong> (e.g., FCFA 0.00 (0)).
+        </p>
+    </article>
+
+    <article class="subsection">
+        <h3>15.3) Complementary Features</h3>
+        <p>
+            Located at the top or right of the interface:
+        </p>
+        <ul class="features-list">
+            <li><strong>Export CSV/Excel/PDF:</strong> Allows generating user reports in the desired format.</li>
+            <li><strong>Direct Print:</strong> A print button is available to produce a paper version of the list.</li>
+            <li><strong>Column Visibility:</strong> Allows hiding or displaying certain columns based on preferences.</li>
+            <li><strong>Dynamic Search:</strong> A quick search field helps locate specific users.</li>
+            <li><strong>Pagination & Entries per Page:</strong> Users can navigate between pages and choose how many records to display per page (e.g., 10, 25, 50).</li>
+        </ul>
+       <div class="image-placeholder">
+                <p>Interface Illustration</p>
+                <img src="/image/rapport15.png" alt="Description de l'image" width="900" height="600" style="max-width:100%;height:auto;border-radius:8px;" />
+            </div>
+    </article>
+
+    <article class="subsection">
+        <h3>15.4) Permissions and Recommendations</h3>
+        <table class="component-table">
+            <thead>
+                <tr>
+                    <th>User Role</th>
+                    <th>Recommended Right</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Employee</strong></td>
+                    <td>Can save own reports in private mode</td>
+                </tr>
+                <tr>
+                    <td><strong>Manager / Supervisor</strong></td>
+                    <td>Can create and share team reports</td>
+                </tr>
+                <tr>
+                    <td><strong>Administrator</strong></td>
+                    <td>Can view all reports and organize or clean them</td>
+                </tr>
+            </tbody>
+        </table>
+    </article>
+</section>
+
+<!-- Section 16: Sales Representative Report -->
+<section class="section-16">
+    <h2>16) Sales Representative Report</h2>
+
+    <article class="subsection">
+        <h3>16.1) Purpose of This Interface</h3>
+        <p>
+            The <strong>Sales Representative Report interface in Movelys</strong> allows users to:
+        </p>
+        <ul>
+            <li>Evaluate each seller or representative's performance,</li>
+            <li>Track generated sales volumes,</li>
+            <li>Verify collections attributed to each sales team member,</li>
+            <li>Calculate sales commissions based on real and verifiable data.</li>
+        </ul>
+        <p>
+            This is a crucial view for sales force management, commercial motivation, and individual productivity analysis.
+        </p>
+    </article>
+
+    <article class="subsection">
+        <h3>16.2) Interface Structure</h3>
+        <p>
+            This interface consists of:
+        </p>
+        <ul>
+            <li>Search filters</li>
+            <li>Report summary</li>
+            <li>Sales representatives' performance summary table</li>
+        </ul>
+
+        <h4>16.2.1) Filter Zone</h4>
+        <p>
+            These filters allow customizing the search and refining report display:
+        </p>
+        <ul>
+            <li>
+                <strong>User:</strong>
+                <ul>
+                    <li>Dropdown menu to filter reports by user (e.g., cashiers, salespeople).</li>
+                </ul>
+            </li>
+            <li>
+                <strong>Business Location</strong>
+                <ul>
+                    <li>Dropdown menu to select the sales point.</li>
+                </ul>
+            </li>
+            <li>
+                <strong>Date Range:</strong>
+                <ul>
+                    <li>Selects a date to filter reports for a defined period</li>
+                </ul>
+            </li>
+        </ul>
+        <p>
+            These filters provide a <strong>personalized, periodic, and individualized view of sales performance</strong>.
+        </p>
+
+        <h4>16.2.2) Report Summary</h4>
+        <p>
+            This block presents financial aggregates for the selected period and filters:
+        </p>
+        <ul>
+            <li>
+                <strong>Total Sales - Revenue:</strong>
+                <ul>
+                    <li>835,000.00 FCFA (gross value) - 0.00 FCFA (no discount or return)</li>
+                    <li><strong>Net Total: 835,000.00 FCFA</strong></li>
+                </ul>
+            </li>
+            <li>
+                <strong>Total Expenses: FCFA 0.00</strong>
+                <ul>
+                    <li>No expenses recorded for the period.</li>
+                </ul>
+            </li>
+        </ul>
+
+        <h4>16.2.3) Sales Table</h4>
+        <p>
+            A detailed table lists <strong>each individual sale</strong>, with the following columns:
+        </p>
+        <table class="component-table">
+            <thead>
+                <tr>
+                    <th>Column</th>
+                    <th>Explanation</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Date</td>
+                    <td>Sale date.</td>
+                </tr>
+                <tr>
+                    <td>Invoice Number</td>
+                    <td>Unique number linked to the sale.</td>
+                </tr>
+                <tr>
+                    <td>Customer Name</td>
+                    <td>Here, all customers are named "Walk-in Customer." This may indicate a generic or spontaneous customer type.</td>
+                </tr>
+                <tr>
+                    <td>Location</td>
+                    <td>Sales point where the transaction occurred. Here: Scent & Vitality.</td>
+                </tr>
+                <tr>
+                    <td>Payment Status</td>
+                    <td>Displays "Paid" (green badge) to indicate the sale is fully settled.</td>
+                </tr>
+                <tr>
+                    <td>Total Amount</td>
+                    <td>Total invoice amount.</td>
+                </tr>
+                <tr>
+                    <td>Total Paid</td>
+                    <td>Amount effectively paid (matches total amount if fully paid).</td>
+                </tr>
+                <tr>
+                    <td>Total Remaining</td>
+                    <td>Amount still owed by the customer.</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h4>16.2.3.1) Tabs Above the Table</h4>
+        <table class="component-table">
+            <thead>
+                <tr>
+                    <th>Tab</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Added Sales</td>
+                    <td>(Active tab) – Displays individual sales made.</td>
+                </tr>
+                <tr>
+                    <td>Sales with Commission</td>
+                    <td>Secondary tab – Allows viewing sales generating commission for the representative.</td>
+                </tr>
+                <tr>
+                    <td>Expense</td>
+                    <td>Displays expenses incurred by the representative</td>
+                </tr>
+            </tbody>
+        </table>
+    </article>
+
+    <article class="subsection">
+        <h3>16.3) Integrated Features</h3>
+        <p>
+            Located at the top or right of the interface:
+        </p>
+        <ul class="features-list">
+            <li><strong>Export CSV/Excel/PDF:</strong> Allows generating user reports in the desired format.</li>
+            <li><strong>Direct Print:</strong> A print button is available to produce a paper version of the list.</li>
+            <li><strong>Column Visibility:</strong> Allows hiding or displaying certain columns based on preferences.</li>
+            <li><strong>Dynamic Search:</strong> A quick search field helps locate specific users.</li>
+            <li><strong>Pagination & Entries per Page:</strong> Users can navigate between pages and choose how many records to display per page (e.g., 10, 25, 50).</li>
+        </ul>
+        <div class="image-placeholder">
+                <p>Interface Illustration</p>
+                <img src="/image/rapport16.png" alt="Description de l'image" width="900" height="600" style="max-width:100%;height:auto;border-radius:8px;" />
+            </div>
+    </article>
+
+    <article class="subsection">
+        <h3>16.4) Recommended Access Rights</h3>
+        <table class="component-table">
+            <thead>
+                <tr>
+                    <th>User Role</th>
+                    <th>Access</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Sales Representative</td>
+                    <td>Access only to own performance</td>
+                </tr>
+                <tr>
+                    <td>Sales Manager</td>
+                    <td>Access to entire team</td>
+                </tr>
+                <tr>
+                    <td>Administrator</td>
+                    <td>Global access, including editing targets</td>
+                </tr>
+            </tbody>
+        </table>
+    </article>
+</section>
+
+<!-- Section 17: Activity Log -->
+<section class="section-17">
+    <h2>17) Activity Log</h2>
+
+    <article class="subsection">
+        <h3>17.1) Purpose of This Interface</h3>
+        <p>
+            The <strong>Activity Log interface in Movelys</strong> (often called <strong>System Log</strong> or <strong>Audit Trail</strong>) allows users to:
+        </p>
+        <ul>
+            <li><strong>Trace all actions performed in the system,</strong></li>
+            <li><strong>Track user manipulation history</strong> (add, modify, delete),</li>
+            <li><strong>Ensure user accountability,</strong></li>
+            <li>Provide an <strong>overview of interactions with key modules</strong> (sales, purchases, products, settings...).</li>
+        </ul>
+        <p>
+            This is an essential tool for security, data governance, and regulatory compliance (e.g., GDPR, internal audits, etc.).
+        </p>
+    </article>
+
+    <article class="subsection">
+        <h3>17.2) Interface Organization</h3>
+        <p>
+            This interface is structured around:
+        </p>
+        <ul>
+            <li>A filter zone to refine searches</li>
+            <li>A table listing log events</li>
+        </ul>
+
+        <h4>17.2.1) Analysis Filters</h4>
+        <p>
+            Allow customizing searches in activity logs:
+        </p>
+        <table class="component-table">
+            <thead>
+                <tr>
+                    <th>Field</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>By:</td>
+                    <td>Filters by user</td>
+                </tr>
+                <tr>
+                    <td>Subject Type:</td>
+                    <td>Filters by action type (User, Sale, Product, etc.)</td>
+                </tr>
+                <tr>
+                    <td>Date Range:</td>
+                    <td>Selected time interval</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>
+            These filters help locate a specific action or a user's complete behavior.
+        </p>
+
+        <h4>17.2.2) Activity Log Table</h4>
+        <p>
+            Each row represents <strong>a logged event, i.e., an action automatically recorded by the system</strong>.
+        </p>
+        <table class="component-table">
+            <thead>
+                <tr>
+                    <th>Column</th>
+                    <th>Explanation</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Date</td>
+                    <td>Exact date and time when the action was performed.</td>
+                </tr>
+                <tr>
+                    <td>Subject Type</td>
+                    <td>Type of affected entity (here mostly User, but also Purchase, Contact, Sell).</td>
+                </tr>
+                <tr>
+                    <td>Action</td>
+                    <td>Type of action performed. Examples: Login, Logout, Additional</td>
+                </tr>
+                <tr>
+                    <td>By</td>
+                    <td>Name of the user who performed the action (here: Mr. internal internal).</td>
+                </tr>
+                <tr>
+                    <td>Note</td>
+                    <td>Additional detail about the action. Displays important information like invoice number, invoice status (e.g., Final), total amount, and payment status (e.g., Paid).</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h5>Example Line Analysis:</h5>
+        <ul>
+            <li><strong>Date:</strong> 07/28/2025 17:10</li>
+            <li><strong>Subject Type:</strong> <em>Sell</em></li>
+            <li><strong>Action:</strong> <em>Additional</em></li>
+            <li><strong>Note:</strong>
+                <ul>
+                    <li>Invoice No.: 0023</li>
+                    <li>Status: Final</li>
+                    <li>Total: 12,500.00 FCFA</li>
+                    <li>Payment Status: Paid (blue badge)</li>
+                </ul>
+            </li>
+        </ul>
+    </article>
+
+    <article class="subsection">
+        <h3>17.3) Available Features</h3>
+        <p>
+            Located at the top or right of the interface:
+        </p>
+        <ul class="features-list">
+            <li><strong>Export CSV/Excel/PDF:</strong> Allows generating user reports in the desired format.</li>
+            <li><strong>Direct Print:</strong> A print button is available to produce a paper version of the list.</li>
+            <li><strong>Column Visibility:</strong> Allows hiding or displaying certain columns based on preferences.</li>
+            <li><strong>Dynamic Search:</strong> A quick search field helps locate specific users.</li>
+            <li><strong>Pagination & Entries per Page:</strong> Users can navigate between pages and choose how many records to display per page (e.g., 10, 25, 50).</li>
+        </ul>
+        <div class="image-placeholder">
+                <p>Interface Illustration</p>
+                <img src="/image/rapport17.png" alt="Description de l'image" width="900" height="600" style="max-width:100%;height:auto;border-radius:8px;" />
+            </div>
+    </article>
+
+    <article class="subsection">
+        <h3>17.4) Security and Access</h3>
+        <table class="component-table">
+            <thead>
+                <tr>
+                    <th>User Role</th>
+                    <th>Log Access</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Administrator</td>
+                    <td>Full access</td>
+                </tr>
+                <tr>
+                    <td>IT/Security Manager</td>
+                    <td>Full access + export</td>
+                </tr>
+                <tr>
+                    <td>Operational Manager</td>
+                    <td>Partial read (limited to own team)</td>
+                </tr>
+                <tr>
+                    <td>Standard User</td>
+                    <td>No access (to ensure log integrity)</td>
+                </tr>
+            </tbody>
+        </table>
+    </article>
+</section>
+
+<!-- Conclusion -->
+<section class="conclusion">
+    <h2>Conclusion</h2>
+    <p>
+        Movelys' report management module is much more than a simple analysis tool: it is a <strong>true decision-making dashboard integrated into the heart of your information system</strong>. It enables each manager – whether executive, accountant, logistician, or salesperson – to monitor the company's key indicators with precision and responsiveness.
+    </p>
+    <p>
+        By centralizing and structuring data from various modules (sales, purchases, inventory, payments, expenses...), Movelys provides a global and dynamic view of business activity. This module thus helps strengthen operational performance, prevent <strong>anomalies</strong>, optimize internal processes, and support strategic decisions.
+    </p>
+    <p>
+        Using Movelys reports means transforming every piece of data into added value, serving the mastery, profitability, and sustainable growth of your business.
+    </p>
+</section>
+</div>

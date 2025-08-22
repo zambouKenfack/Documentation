@@ -1,0 +1,383 @@
+---
+import '../styles/global1.css';
+
+// Styles pour les tableaux
+const tableStyles = `
+  .component-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1rem 0;
+    font-size: 0.9rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  }
+
+  .component-table thead tr {
+    background-color: #f8fafc;
+    text-align: left;
+    font-weight: 600;
+    border-bottom: 2px solid #e2e8f0;
+  }
+
+  .component-table th,
+  .component-table td {
+    padding: 0.75rem 1rem;
+    border: 1px solid #e2e8f0;
+  }
+
+  .component-table tbody tr {
+    border-bottom: 1px solid #e2e8f0;
+    transition: background-color 0.2s;
+  }
+
+  .component-table tbody tr:nth-child(even) {
+    background-color: #f8fafc;
+  }
+
+  .component-table tbody tr:hover {
+    background-color: #f1f5f9;
+  }
+
+  .component-table th {
+    color: #475569;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    letter-spacing: 0.05em;
+  }
+`;
+---
+
+<style is:global>
+  {tableStyles}
+</style>
+
+<div class="container">
+    <header class="header">
+        <h1>Gestion des Achats</h1>
+    </header>
+
+    <section class="section">
+        <article class="article">
+            <h2>Introduction</h2>
+            <p>Dans tout environnement commercial performant, la gestion des achats représente une fonction stratégique essentielle à la continuité et à la rentabilité des opérations. C'est dans cette optique que Movelys intègre un module d'achats complet, conçu pour automatiser, structurer et optimiser l'ensemble du processus d'approvisionnement.</p>
+            <p>Grâce à ce module, les entreprises peuvent gérer facilement les commandes fournisseurs, suivre les livraisons, enregistrer les achats, contrôler les coûts et centraliser toutes les informations relatives à leurs fournisseurs. L'interface de Movelys permet une saisie rapide et précise des données, avec des champs dédiés aux prix d'achat, quantités, taxes, dates, emplacements, et numéros de factures.</p>
+            <p>La gestion des achats dans Movelys est également interconnectée avec les modules de stock, de produits et de rapports, assurant ainsi une traçabilité fluide et un suivi en temps réel des entrées de marchandises. Cette interconnexion garantit une meilleure visibilité sur les dépenses, une réduction des erreurs humaines et une prise de décision plus éclairée.</p>
+        </article>
+    </section>
+
+    <section class="section">
+        <article class="article">
+            <h2>1) Gestion de la liste des achats</h2>
+
+            <div class="article-section">
+                <h3>1.1) Fonction générale</h3>
+                <p>La <strong>Gestion de la liste des achats</strong> est une interface essentielle de Movelys permettant aux entreprises de suivre, consulter et gérer toutes les opérations d'achat effectuées auprès de <strong>leurs fournisseurs.</strong></p>
+                <p>Ce tableau centralise :</p>
+                <ul>
+                    <li>Les achats validés,</li>
+                    <li>Les commandes en attente,</li>
+                    <li>Les paiements partiels ou complets,</li>
+                    <li>Et les documents liés aux fournisseurs (factures, bons de commande, etc.).</li>
+                </ul>
+                <p>Ce module assure une <strong>traçabilité totale, renforce la</strong> <strong>gestion des relations fournisseurs et</strong> offre un <strong>suivi comptable rigoureux.</strong></p>
+            </div>
+            <div class="article-section">
+                <h3>1.2) Description de l'interface</h3>
+                <p>L'interface de la liste des achats se présente sous forme de tableau dynamique, riche en options de visualisation, d'analyse et d'action.</p>
+
+                <h4>1.2.1) Fonctions visibles sur l'interface</h4>
+                <ul>
+                    <li><strong>Nombre d'entrées par page :</strong> Permet de choisir combien de lignes afficher à l'écran (10, 25, 50, 100...).</li>
+                    <li><strong>Boutons d'action en haut de la table :</strong>
+                        <ul>
+                            <li>Exporter en CSV</li>
+                            <li>Exporter en Excel</li>
+                            <li>Imprimer</li>
+                            <li>Visibilité des colonnes (afficher/masquer certains champs)</li>
+                        </ul>
+                    </li>
+                    <li><strong>Barre de recherche :</strong> Permet de filtrer rapidement par mot-clé (ex. : nom du fournisseur, facture, date…).</li>
+                    <li><strong>Bouton "Ajouter " :</strong> Accès rapide au formulaire d'ajout d'un nouvel achat.</li>
+                </ul>
+                <div class="image-placeholder"><p>Illustration de l'interface</p>
+                <img src="/images/achat1.png" alt="Description de l'image" width="900" height="600" style="max-width:100%;height:auto;border-radius:8px;" />
+                </div>
+
+                <h4>1.2.2) Fonctionnalités techniques</h4>
+                <h5>1.2.2.1 Filtres dynamiques</h5>
+                <ul>
+                    <li>L'utilisateur peut filtrer les résultats selon plusieurs critères : emplacement de l'entreprise, fournisseur, statut d'achat, statut du paiement, plage de dates.</li>
+                    <li>Un tri peut être effectué sur toutes les colonnes (ascendant ou descendant).</li>
+                </ul>
+
+                <h5>1.2.2.2 Actions en masse</h5>
+                <ul>
+                    <li>Possibilité de supprimer plusieurs achats à la fois.</li>
+                    <li>Exporter tout ou partie de la liste selon les filtres appliqués.</li>
+                </ul>
+            </article>
+
+            </div>
+            <div class="article-section">
+                <h3>1.3) Intégration dans les autres modules Movelys</h3>
+                <table class="component-table">
+                    <thead>
+                        <tr>
+                            <th>Module</th>
+                            <th>Impact</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Produits</td>
+                            <td>Les articles achetés sont ajoutés ou mis à jour dans les stocks</td>
+                        </tr>
+                        <tr>
+                            <td>Stocks</td>
+                            <td>Les mouvements de stock sont générés automatiquement à la réception</td>
+                        </tr>
+                        <tr>
+                            <td>Fournisseurs</td>
+                            <td>Mise à jour de l'historique de chaque fournisseur</td>
+                        </tr>
+                        <tr>
+                            <td>Rapports</td>
+                            <td>Statistiques détaillées des dépenses par période, catégorie ou fournisseur</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </article>
+
+            </div>
+            <div class="article-section">
+                <h3>1.4) Accès et permissions</h3>
+                <table class="component-table">
+                    <thead>
+                        <tr>
+                            <th>Rôle utilisateur</th>
+                            <th>Niveau d'accès recommandé</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Administrateur</td>
+                            <td>Accès complet à toutes les fonctions</td>
+                        </tr>
+                        <tr>
+                            <td>Responsable achats</td>
+                            <td>Consultation, modification, exportation</td>
+                        </tr>
+                        <tr>
+                            <td>Comptable</td>
+                            <td>Lecture + exportation des données pour traitement fiscal</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </article>
+        </article>
+    </section>
+
+    <section class="section">
+        <article class="article">
+            <h2>2) Gestion de l'ajout d'un achat</h2>
+
+            <div class="article-section">
+                <h3>2.1) Fonction générale</h3>
+                <p>La fonctionnalité Ajouter un achat dans Movelys permet d'enregistrer une nouvelle <strong>transaction d'achat auprès d'un fournisseur.</strong></p>
+                <p>C'est une étape clé du processus d'approvisionnement : elle permet de générer une commande fournisseur, mettre à jour les stocks et lancer le suivi des paiements.</p>
+            </article>
+            </div>
+            <div class="article-section">
+                <h3>2.2) Présentation de l'interface</h3>
+                <p>Le formulaire « Ajouter un achat » est une interface complète divisée en plusieurs sections logiques :</p>
+
+                <h4>A. Informations générales</h4>
+                <ul>
+                    <li>Fournisseur</li>
+                    <li>Numéro de référence</li>
+                    <li>Date d'achat</li>
+                    <li>Statut de l'achat</li>
+                    <li>Emplacement de l'entreprise</li>
+                    <li>Durée de la paie</li>
+                    <li>On peut aussi joindre un document si on veut bien</li>
+                </ul>
+                <p>Toujours dans cette interface d'ajout on peut également importer des produits. Pour ce faire on peut ajouter un nouveau produit ou bien faite une recherche sur un produits qui existe déjà dans la base de données enfin de l'ajouter dans le tableau.</p>
+                <h4>B. Détails des articles</h4>
+                <p>Cette section permet de définir le type de remise, le montant de la remise, la taxe d'achat, et des notes supplémentaires qui sont des éléments très essentielle lorsque on ajoute un achat dans notre base de données.</p>
+                <p>Elle permet également d'effectuer l'ajout des dépenses supplémentaires et pour ce faire il faudrait écrire le nom de la dépense supplémentaire ainsi que sa quantité. Avant de faire cela il faudrait également donner les détails d'expédition ainsi que les frais d'expédition supplémentaires.</p>
+
+                <h4>C. Informations de paiement</h4>
+                <p>Une section dans laquelle on peut ajouter un paiement, pour effectuer cela il te faudra donne une quantité, renseigner la date de payement, le mode de paiement et la note de paiement.</p>
+
+                <div class="image-placeholder"><p>Illustration de l'interface</p>
+                <img src="/images/achat2.png" alt="Description de l'image" width="900" height="600" style="max-width:100%;height:auto;border-radius:8px;" />
+                </div>
+            </article>
+            </div>
+            <div class="article-section">
+                <h3>2.3) Fonctionnement logique</h3>
+                <ul>
+                    <li>Une fois l'achat enregistré, il apparaît dans la <strong>liste des achats avec son statut.</strong></li>
+                    <li>Si la commande est « Reçue », les <strong>stocks sont automatiquement mis à jour.</strong></li>
+                    <li>Si un paiement est saisi, le module <strong>comptabilité est synchronisé.</strong></li>
+                </ul>
+            </article>
+            </div>
+            <div class="article-section">
+                <h3>2.4) Contrôle d'accès</h3>
+                <table class="component-table">
+                    <thead>
+                        <tr>
+                            <th>Rôle utilisateur</th>
+                            <th>Accès</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Administrateur</td>
+                            <td>Complet</td>
+                        </tr>
+                        <tr>
+                            <td>Responsable achats</td>
+                            <td>Création et suivi</td>
+                        </tr>
+                        <tr>
+                            <td>Comptable</td>
+                            <td>Pour le suivi financier</td>
+                        </tr>
+                        <tr>
+                            <td>Agent stock</td>
+                            <td>Lecture seule ou accès restreint</td>
+                        </tr>
+                        <tr>
+                            <td>Utilisateur invité</td>
+                            <td>Aucun accès</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </article>
+        </article>
+    </section>
+    </section>
+    <section class="section">
+        <article class="article">
+            <h2>3) Gestion de la liste de retour d'achat</h2>
+            <div class="article-section">
+                <h3>3.1) Fonction générale</h3>
+                <p>La Gestion de la liste de retour d'achat permet aux utilisateurs de suivre, enregistrer et traiter les retours de produits aux fournisseurs à la suite :</p>
+                <ul>
+                    <li>D'un produit non conforme,</li>
+                    <li>D'un excédent de livraison,</li>
+                    <li>Ou d'une erreur de commande.</li>
+                </ul>
+                <p>Ce module est crucial pour garantir :</p>
+                <ul>
+                    <li>La qualité des marchandises réceptionnées,</li>
+                    <li>La transparence des relations fournisseurs,</li>
+                    <li>Et la mise à jour automatique des stocks et flux financiers.</li>
+                </ul>
+            </article>
+            </div>
+            <div class="article-section">
+                <h3>3.2) Présentation de l'interface</h3>
+                <p>L'interface prend la forme d'un tableau de gestion des retours avec plusieurs outils de navigation et de gestion :</p>
+
+                <h4>Fonctions disponibles</h4>
+                <ul>
+                    <li>Sélection du nombre d'entrées par page</li>
+                    <li>Barre de recherche (par fournisseur, date, référence, etc.)</li>
+                    <li>Boutons d'export :
+                        <ul>
+                            <li>Exporter en CSV,</li>
+                            <li>Exporter en Excel, PDF</li>
+                            <li>Imprimer</li>
+                        </ul>
+                    </li>
+                    <li>Personnalisation des colonnes visibles</li>
+                    <li>Le filtrage pour faciliter également les recherches</li>
+                </ul>
+
+                <h4>Bouton « Ajouter un retour d'achat »</h4>
+                <p>Permet d'enregistrer un nouveau retour avec tous les détails nécessaires. Et comporte les champs suivants :</p>
+                <ul>
+                    <li>Fournisseur</li>
+                    <li>Emplacement de l'entreprise</li>
+                    <li>Numéro de référence</li>
+                    <li>Date</li>
+                    <li>Joindre document</li>
+                </ul>
+                <p>On peut aussi rechercher un produit enfin de l'ajouter à la liste des produits et soumettre le formulaire la fin.</p>
+                <div class="image-placeholder"><p>Illustration de l'interface</p>
+                <img src="/images/achat3.png" alt="Description de l'image" width="900" height="600" style="max-width:100%;height:auto;border-radius:8px;" />
+                </div>
+            </article>
+
+            </div>
+            <div class="article-section">
+                <h3>3.3) Intégration avec les autres modules</h3>
+                <table class="component-table">
+                    <thead>
+                        <tr>
+                            <th>Module</th>
+                            <th>Impact</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Stock</td>
+                            <td>Les produits retournés sont déduits automatiquement des stocks</td>
+                        </tr>
+                        <tr>
+                            <td>Produits</td>
+                            <td>Historique des mouvements de chaque article mis à jour</td>
+                        </tr>
+                        <tr>
+                            <td>Fournisseurs</td>
+                            <td>Impacte l'historique et les rapports liés au fournisseur concerné</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </article>
+            </div>
+            <div class="article-section">
+                <h3>3.4) Accès et rôles utilisateurs</h3>
+                <table class="component-table">
+                    <thead>
+                        <tr>
+                            <th>Rôle</th>
+                            <th>Droits recommandés</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Administrateur</td>
+                            <td>Gestion complète</td>
+                        </tr>
+                        <tr>
+                            <td>Responsable achats / stock</td>
+                            <td>Création, édition, suppression</td>
+                        </tr>
+                        <tr>
+                            <td>Comptable</td>
+                            <td>Suivi financier et génération d'avoir</td>
+                        </tr>
+                        <tr>
+                            <td>Utilisateur logistique</td>
+                            <td>Lecture + actions limitées</td>
+                        </tr>
+                        <tr>
+                            <td>Utilisateur invité</td>
+                            <td>Aucun accès</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </article>
+        </article>
+    </section>
+    <section class="section">
+        <article class="article">
+            <h2>Conclusion</h2>
+            <p>Le module d'achats de Movelys est un outil puissant, pensé pour simplifier et fiabiliser le processus d'approvisionnement des entreprises modernes. En centralisant les interactions avec les fournisseurs et en assurant une parfaite synchronisation avec les autres modules du système, il permet de mieux planifier les achats, de réduire les ruptures de stock, et de maîtriser les coûts d'exploitation.</p>
+            <p>Avec Movelys, la gestion des achats ne se limite plus à une simple opération comptable : elle devient un levier stratégique pour améliorer la rentabilité, sécuriser les approvisionnements et renforcer la performance globale de l'organisation.</p>
+        </article>
+    </section>
+</div>

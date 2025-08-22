@@ -1,0 +1,2881 @@
+
+---
+import '../styles/global1.css';
+---
+
+<div class="container">
+
+     <header class="header">
+        <h1>Gestion des rapports dans Movelys</h1>
+    </header>
+
+    <!-- Section Introduction -->
+    <section class="introduction">
+        <h2>Introduction</h2>
+        <p>
+            Dans un environnement d’affaires où les données guident les décisions stratégiques, la
+            <strong>gestion des rapports devient un levier fondamental de pilotage et de performance. Le module</strong>
+            de rapports de Movelys a été conçu pour offrir aux entreprises une vue claire, détaillée et en
+            temps réel de toutes leurs opérations commerciales, financières et logistiques.
+        </p>
+        <p>
+            Grâce à une interface riche et conviviale, ce module permet de générer automatiquement une
+            grande variété de rapports essentiels : ventes, achats, paiements, stocks, activité des
+            utilisateurs, dépenses, rentabilité, suivi client/fournisseur, performances des produits,
+            transferts de stock, et bien plus encore. Chaque rapport peut être filtré par période,
+            emplacement, utilisateur, ou catégorie, pour permettre une analyse ciblée et pertinente.
+        </p>
+        <p>
+            Movelys transforme les données brutes en informations lisibles et exploitables, en proposant
+            également des exports (PDF, Excel, CSV), des tableaux synthétiques, des graphiques et des
+            indicateurs de performance. Ce module renforce ainsi la transparence, la traçabilité et l'aide
+            <strong>à la décision, tout en s’adaptant aux besoins spécifiques de chaque entreprise.</strong>
+        </p>
+    </section>
+
+    <!-- Section 1 : Rapport sur les profits et pertes -->
+    <section class="section-1">
+        <h2>1) Rapport sur les profits et pertes</h2>
+
+        <article class="subsection">
+            <h3>1.1) Objectif de cette interface</h3>
+            <p>
+                L’interface Rapport sur les profits et pertes fournit une analyse détaillée de la rentabilité
+                de l'entreprise sur une période donnée. Elle regroupe les données comptables et
+                opérationnelles nécessaires pour :
+            </p>
+            <ul>
+                <li>Mesurer le coût des marchandises vendues</li>
+                <li>Calculer le bénéfice net</li>
+                <li>Évaluer les performances par produit, client, catégorie, marque, date, etc.</li>
+            </ul>
+            <p>
+                Ce rapport est essentiel pour les décisions stratégiques, la planification financière, et la
+                <strong>comptabilité analytique.</strong>
+            </p>
+        </article>
+
+        <article class="subsection">
+            <h3>1.2) Structure de l’interface</h3>
+            <p>
+                L’interface est composée de quatre blocs fonctionnels :
+            </p>
+            <ul>
+                <li><strong>Filtres de sélection (site, date)</strong></li>
+                <li><strong>Synthèse du rapport financier (gauche et droite)</strong></li>
+                <li><strong>Calculs automatiques du COGS et bénéfices</strong></li>
+                <li><strong>Détail du profit par segment (tableau en bas)</strong></li>
+            </ul>
+
+            <h4>1.2.1) Filtres de sélection</h4>
+            <p>
+                <strong>Sélecteur d’emplacement :</strong><br>
+                Permet de filtrer le rapport par site (entrepôt, magasin, etc.)<br>
+                <strong>Filtrer par date :</strong><br>
+                Ouvre un calendrier pour définir une période d’analyse spécifique
+            </p>
+
+            <h4>1.2.2) Synthèse du rapport financier</h4>
+            <p>
+                Cette section est divisée en deux colonnes principales :
+            </p>
+            <h5>➢ Gauche : Données liées au stock & coûts d’achat</h5>
+            <ul>
+                <li><strong>Stock d’ouverture (achat) :</strong> Valeur des stocks disponibles au début de la période, selon le prix d’achat</li>
+                <li><strong>Stock d’ouverture (vente) :</strong> Idem, mais selon les prix de vente</li>
+                <li><strong>Achats totaux :</strong> Montant cumulé des produits achetés</li>
+                <li><strong>Ajustement total des stocks :</strong> Valeur des ajustements manuels ou pertes</li>
+                <li><strong>Frais d’expédition totaux de l’achat :</strong> Coûts de transport liés aux approvisionnements</li>
+                <li><strong>Dépenses supplémentaires d’achat :</strong> Autres charges liées à l’achat (ex. : douane, manutention)</li>
+                <li><strong>Frais d’expédition via transfert :</strong> Dépenses internes de transfert entre sites</li>
+                <li><strong>Remise totale sur l’achat :</strong> Remises négociées avec les fournisseurs</li>
+                <li><strong>Récompense client (sur vente) :</strong> Réductions ou bonus attribués aux clients</li>
+                <li><strong>Rendement total de la vente :</strong> Pourcentage ou valeur du gain sur ventes</li>
+            </ul>
+
+            <h5>➢ Droite : Ventes, retour, stock final</h5>
+            <ul>
+                <li><strong>Stock de clôture (achat) :</strong> Valeur du stock restant à la fin, selon prix d’achat</li>
+                <li><strong>Stock de clôture (vente) :</strong> Valeur du stock restant à la fin, selon prix de vente</li>
+                <li><strong>Total des ventes (HT) :</strong> Montant cumulé des ventes effectuées, hors taxes</li>
+                <li><strong>Frais d’expédition (vente) :</strong> Charges supportées sur la logistique de vente</li>
+                <li><strong>Dépenses de vente supplémentaires :</strong> Ex. : commissions, emballages, service client</li>
+                <li><strong>Stock récupéré :</strong> Articles retournés par les clients</li>
+                <li><strong>Retour total d’achat :</strong> Marchandises retournées aux fournisseurs</li>
+                <li><strong>Remise sur l’achat :</strong> Réductions appliquées sur les achats</li>
+                <li><strong>Arrondi sur la vente :</strong> Écarts arrondis sur les montants TTC des ventes</li>
+            </ul>
+        </article>
+
+        <article class="subsection">
+            <h3>1.3) Calculs automatiques – Résultats financiers</h3>
+            <table class="component-table">
+                <tr>
+                    <th>Élément</th>
+                    <th>Signification</th>
+                </tr>
+                <tr>
+                    <td>COGS (Cost of Goods Sold)</td>
+                    <td>Coût des marchandises vendues = stock initial + achats – stock final</td>
+                </tr>
+                <tr>
+                    <td>Bénéfice brut</td>
+                    <td>Total ventes – COGS</td>
+                </tr>
+                <tr>
+                    <td>Bénéfice net</td>
+                    <td>Bénéfice brut – frais & remises</td>
+                </tr>
+            </table>
+            <p>
+                Ces chiffres reflètent la santé financière globale de l’activité sur la période sélectionnée.
+            </p>
+        </article>
+
+        <article class="subsection">
+            <h3>1.4) Détail du profit par segment</h3>
+            <h4>+ Onglets de segmentation</h4>
+            <p>
+                L’utilisateur peut consulter les profits :
+            </p>
+            <ul>
+                <li><strong>Par produit</strong></li>
+                <li><strong>Par facture</strong></li>
+                <li><strong>Par emplacement</strong></li>
+                <li><strong>Par date</strong></li>
+                <li><strong>Par client</strong></li>
+                <li><strong>Par catégorie</strong></li>
+                <li><strong>Par marque</strong></li>
+                <li><strong>Par personnel de service</strong></li>
+                <li><strong>Par jour</strong></li>
+            </ul>
+
+            <h5>Exemple d’un Tableau de résultats lorsque nous sommes dans produits</h5>
+            <table class="component-table">
+                <tr>
+                    <th>Colonne</th>
+                    <th>Description</th>
+                </tr>
+                <tr>
+                    <td>Produit</td>
+                    <td>Désignation du produit vendu</td>
+                </tr>
+                <tr>
+                    <td>Marge brute</td>
+                    <td>Montant du profit généré par ce produit (vente – coût)</td>
+                </tr>
+            </table>
+
+            <p><strong>Exemple affiché :</strong></p>
+            <ul>
+                <li><strong>Astral24 : 80 000 FCFA de marge</strong></li>
+                <li><strong>Parfum femme 30 % : 82 500 FCFA</strong></li>
+                <li><strong>Parfum essence 100 ml : 4 500 FCFA</strong></li>
+                <li><strong>Total brut : 167 000 FCFA</strong></li>
+            </ul>
+        </article>
+
+        <article class="subsection">
+            <h3>Fonctions associées :</h3>
+            <ul>
+                <li>✓ <strong>Export CSV / Excel / PDF :</strong> permet de générer des rapports sur les utilisateurs au format souhaité.</li>
+                <li>✓ <strong>Impression directe :</strong> un bouton d’impression est disponible pour produire une version papier de la liste.</li>
+                <li>✓ <strong>Visibilité des colonnes :</strong> permet de masquer ou d’afficher certaines colonnes selon les préférences.</li>
+                <li>✓ <strong>Recherche dynamique :</strong> un champ de recherche rapide facilite la localisation d’un utilisateur spécifique.</li>
+                <li>✓ <strong>Pagination & nombre d’entrées par page :</strong> l'utilisateur peut naviguer entre les pages et choisir combien d’enregistrements afficher par page (par exemple : 10, 25, 50, etc.).</li>
+            </ul>
+            <div class="image-placeholder"><p>Illustration de l'interface</p>
+                <img src="/images/rapport1.png" alt="Description de l'image" width="900" height="600" style="max-width:100%;height:auto;border-radius:8px;" />
+                </div>
+        </article>
+        </article>
+
+        <article class="subsection">
+            <h3>Remarques importantes</h3>
+            <ul>
+                <li>Le rapport n’intègre pas les escomptes sur facture.</li>
+                <li>Les retours et remises sont inclus dans les calculs globaux.</li>
+                <li>Tous les montants sont exprimés en FCFA, sauf changement de devise.</li>
+            </ul>
+        </article>
+    </section>
+
+
+    <!-- Section 2 : Achat et vente -->
+    <section class="section-2">
+        <h2>2) Achat et vente</h2>
+
+        <article class="subsection">
+            <h3>2.1) Objectif de cette interface</h3>
+            <p>
+                Le rapport d’achat et de vente permet de comparer efficacement les achats réalisés par
+                l’entreprise face aux ventes enregistrées, afin d’évaluer :
+            </p>
+            <ul>
+                <li>La rentabilité brute de l’activité,</li>
+                <li>Les écarts entre les montants engagés et récupérés,</li>
+                <li>Les impayés côté fournisseur (achat dû) ou client (vente due),</li>
+                <li>Et de détecter les déséquilibres d’exploitation.</li>
+            </ul>
+            <p>
+                C’est une vue synthétique idéale pour les gestionnaires, responsables financiers ou chefs
+                d’entreprise.
+            </p>
+        </article>
+
+        <article class="subsection">
+            <h3>2.2) Structure de l’interface</h3>
+            <p>
+                L’interface est divisée en 3 sections principales :
+            </p>
+            <ul>
+                <li>Filtres (emplacement et dates)</li>
+                <li>Blocs récapitulatifs : Achats vs Ventes</li>
+                <li>Résumé analytique final</li>
+            </ul>
+
+            <h4>2.2.1) Filtres d’analyse</h4>
+            <p>
+                <strong>Emplacement (site) :</strong><br>
+                Permet de choisir le site d’activité (magasin, dépôt, entrepôt) à analyser<br>
+                <strong>Filtrer par date :</strong><br>
+                Permet de sélectionner une <strong>plage temporelle précise pour générer le rapport (ex. : mensuel,</strong>
+                trimestriel, etc.)
+            </p>
+            <p>
+                Ces filtres assurent un <strong>ciblage temporel et géographique du rapport.</strong>
+            </p>
+
+            <h4>2.2.2) Blocs de synthèse (Achats vs Ventes)</h4>
+            <h5>Bloc Achats (à gauche)</h5>
+            <table class="component-table">
+
+
+                <tr>
+                    <th>Ligne</th>
+                    <th>Description</th>
+                </tr>
+                <tr>
+                    <td>Achat total</td>
+                    <td>Montant global des achats (hors taxes) effectués pendant la période sélectionnée</td>
+                </tr>
+                <tr>
+                    <td>Achat TTC</td>
+                    <td>Montant des achats incluant la taxe (si applicable)</td>
+                </tr>
+                <tr>
+                    <td>Rendement total de l’achat TTC</td>
+                    <td>Retour sur investissement ou bénéfice sur achat TTC (dans cette vue : 0,00 FCFA, donc pas de plus-value calculée)</td>
+                </tr>
+                <tr>
+                    <td>Achat dû</td>
+                    <td>Total des sommes non encore réglées aux fournisseurs</td>
+                </tr>
+            </table>
+            <p>
+                Ce bloc permet de suivre les engagements financiers liés à l'approvisionnement.
+            </p>
+
+            <h5>Bloc Ventes (à droite)</h5>
+            <table class="component-table">
+                <tr>
+                    <th>Ligne</th>
+                    <th>Description</th>
+                </tr>
+                <tr>
+                    <td>Total de la vente</td>
+                    <td>Montant global des ventes réalisées (hors taxes)</td>
+                </tr>
+                <tr>
+                    <td>Vente TTC</td>
+                    <td>Montant des ventes incluant la taxe</td>
+                </tr>
+                <tr>
+                    <td>Rendement total de la vente, taxes comprises</td>
+                    <td>Représente le gain total net (dans ce cas 0,00 FCFA, car aucune variation comptable enregistrée)</td>
+                </tr>
+                <tr>
+                    <td>Vente due</td>
+                    <td>Total des ventes non encore encaissées (clients débiteurs)</td>
+                </tr>
+            </table>
+
+            <h4>2.2.3) Résumé financier consolidé</h4>
+            <p>
+                Situé en bas, ce panneau offre une lecture directe des résultats.
+            </p>
+            <p>
+                <strong>Vente – Achat :</strong><br>
+                Calcul de la <strong>marge brute = Total des ventes – Total des achats = 817 000 FCFA (bénéfice</strong>
+                théorique)<br>
+                <strong>Montant dû :</strong><br>
+                Dette nette restante, calculée selon la formule :<br>
+                (Achat dû – Vente due) = -18 000 FCFA, ce qui signifie qu’un paiement est encore dû
+                <strong>au fournisseur.</strong>
+            </p>
+            <p>
+                ☺ <strong>Valeur verte (bénéfice) :</strong> indique que les ventes ont généré un excédent par rapport aux
+                achats.<br>
+                ☻ <strong>Valeur rouge (montant dû) :</strong> alerte sur des engagements fournisseurs non encore
+                honorés.
+            </p>
+        </article>
+
+        <article class="subsection">
+            <h3>2.3) Fonctionnalités supplémentaires</h3>
+            <table class="component-table">
+                <tr>
+                    <th>Bouton</th>
+                    <th>Fonction</th>
+                </tr>
+                <tr>
+                    <td>Imprimer</td>
+                    <td>Permet de générer une version papier ou PDF du rapport pour archivage ou présentation</td>
+                </tr>
+                <tr>
+                    <td>Infobulles bleues</td>
+                    <td>Aident à comprendre la signification exacte de chaque ligne (ex. : calcul du total ou des rendements)</td>
+                </tr>
+            </table>
+            <div class="image-placeholder"><p>Illustration de l'interface</p>
+                <img src="/images/rapport2.png" alt="Description de l'image" width="900" height="600" style="max-width:100%;height:auto;border-radius:8px;" />
+                </div>
+        </article>
+
+        <article class="subsection">
+            <h3>Recommandations d’usage</h3>
+            <ul>
+                <li>Vérifier que toutes les ventes et achats sont bien enregistrés sur la période.</li>
+                <li>S’assurer que les <strong>paiements liés</strong> sont à jour afin d’éviter un <strong>faux bilan.</strong></li>
+                <li>Consulter ce rapport <strong>chaque fin de semaine/mois pour anticiper la gestion de trésorerie.</strong></li>
+                <li>Utiliser ce rapport avant de faire un <strong>réapprovisionnement afin de comparer la rentabilité.</strong></li>
+            </ul>
+        </article>
+    </section>
+
+
+
+
+    <!-- Section 3 : Rapport fiscal -->
+    <section class="section-3">
+        <h2>3) Rapport fiscal</h2>
+
+        <article class="subsection">
+            <h3>3.1) Objectif de cette interface</h3>
+            <p>
+                L’interface « Rapport fiscal » permet à l’entreprise de :
+            </p>
+            <ul>
+                <li><strong>Suivre l’application des taxes sur ses différentes transactions (achats, ventes, dépenses),</strong></li>
+                <li><strong>Établir un bilan fiscal précis pour les déclarations mensuelles/trimestrielles,</strong></li>
+                <li><strong>Préparer les états fiscaux à remettre aux autorités (TVA, taxe sur les services, etc.),</strong></li>
+                <li>Et justifier les crédits/débits fiscaux dans le cadre d’un audit ou d’une comptabilité régulière.</li>
+            </ul>
+            <p>
+                C’est une interface clé pour les comptables, responsables financiers ou gestionnaires administratifs.
+            </p>
+        </article>
+
+        <article class="subsection">
+            <h3>3.2) Composition de l’interface</h3>
+            <p>
+                L’interface se divise en trois grandes sections :
+            </p>
+            <ul>
+                <li>Filtres de consultation</li>
+                <li>Vue synthétique du solde fiscal global</li>
+                <li>Tableaux détaillés par nature de taxe (avec onglets)</li>
+            </ul>
+
+
+
+            <h4>3.2.1) Filtres de consultation</h4>
+            <table class="component-table">
+                <tr>
+                    <th>Élément</th>
+                    <th>Fonction</th>
+                </tr>
+                <tr>
+                    <td>Emplacement de l'entreprise</td>
+                    <td>Permet de sélectionner un site spécifique ou tous les sites cumulés</td>
+                </tr>
+                <tr>
+                    <td>Contact</td>
+                    <td>Permet de filtrer les rapports par fournisseur ou client concerné</td>
+                </tr>
+                <tr>
+                    <td>Plage de dates</td>
+                    <td>Définit la période d’analyse fiscale (ex. : 01/01/2025 – 31/12/2025 dans la capture)</td>
+                </tr>
+            </table>
+            <p>
+                Ces filtres garantissent une <strong>analyse ciblée et conforme à la période fiscale concernée.</strong>
+            </p>
+
+            <h4>3.2.2) Résumé fiscal global (bannière centrale)</h4>
+            <p>
+                La ligne centrale de l’interface indique :
+            </p>
+            <p>
+                <strong>"Taxe en aval - Taxe en amont - Taxe sur les dépenses : FCFA 0,00"</strong>
+            </p>
+            <p>
+                Cela correspond à un bilan fiscal global :
+            </p>
+            <table class="component-table">
+                <tr>
+                    <th>Terme</th>
+                    <th>Définition</th>
+                </tr>
+                <tr>
+                    <td>Taxe en aval</td>
+                    <td>Montant total de la taxe collectée sur les ventes (TVA facturée aux clients)</td>
+                </tr>
+                <tr>
+                    <td>Taxe en amont</td>
+                    <td>Taxe supportée par l’entreprise sur les achats (TVA payée aux fournisseurs)</td>
+                </tr>
+                <tr>
+                    <td>Taxe sur les dépenses</td>
+                    <td>Taxes appliquées aux autres charges (ex. : carburant, frais externes, etc.)</td>
+                </tr>
+            </table>
+            <p>
+                <strong>Formule de base utilisée pour déclarer la TVA due :</strong>
+            </p>
+            <p>
+                <strong>TVA nette = Taxe en aval – Taxe en amont – Taxe sur les dépenses</strong>
+            </p>
+            <p>
+                Dans l’exemple : aucun mouvement n’est encore enregistré, d’où un solde nul (FCFA 0,00).
+            </p>
+        </article>
+
+        <article class="subsection">
+            <h3>3.2.3) Tableaux d’analyse fiscale (avec onglets)</h3>
+            <p>
+                Cette partie se présente sous forme de trois onglets distincts, chacun contenant un tableau
+                <strong>détaillé :</strong>
+            </p>
+
+            <h4>a) Onglet Taxe sur les intrants (Achats)</h4>
+            <p>
+                Ce tableau affiche toutes les taxes collectées au cours des achats.
+            </p>
+            <p><strong>Colonnes principales :</strong></p>
+            <table class="component-table">
+                <tr>
+                    <th>Colonne</th>
+                    <th>Rôle</th>
+                </tr>
+                <tr>
+                    <td>Date</td>
+                    <td>Date de la transaction d’achat</td>
+                </tr>
+                <tr>
+                    <td>N° de référence</td>
+                    <td>Référence du bon d’achat ou de la facture</td>
+                </tr>
+                <tr>
+                    <td>Fournisseur</td>
+                    <td>Nom du fournisseur concerné</td>
+                </tr>
+                <tr>
+                    <td>Numéro d’identification fiscale</td>
+                    <td>Numéro IFU/NIF du fournisseur</td>
+                </tr>
+                <tr>
+                    <td>Montant total</td>
+                    <td>Montant global de la facture incluant taxe</td>
+                </tr>
+                <tr>
+                    <td>Mode de paiement</td>
+                    <td>Espèces, virement, crédit, etc.</td>
+                </tr>
+                <tr>
+                    <td>Rabais</td>
+                    <td>Remises appliquées à l’achat</td>
+                </tr>
+            </table>
+            <p>
+                Ce rapport est essentiel pour justifier la déductibilité de la TVA sur achat.
+            </p>
+
+            <h4>b) Onglet Taxe en aval (Ventes)</h4>
+            <p>
+                Ce tableau regroupe les taxes perçues sur les ventes.
+            </p>
+            <p><strong>Colonnes principales :</strong></p>
+            <table class="component-table">
+                <tr>
+                    <th>Colonne</th>
+                    <th>Rôle</th>
+                </tr>
+                <tr>
+                    <td>Date</td>
+                    <td>Date de la transaction d’achat</td>
+                </tr>
+                <tr>
+                    <td>N° de facture</td>
+                    <td>Permettant d’identifier chaque facture de façon unique</td>
+                </tr>
+                <tr>
+                    <td>Client</td>
+                    <td>Nom du client concerné</td>
+                </tr>
+                <tr>
+                    <td>Numéro d’identification fiscale</td>
+                    <td>Numéro IFU/NIF du client</td>
+                </tr>
+                <tr>
+                    <td>Montant total</td>
+                    <td>Montant global de la facture incluant taxe</td>
+                </tr>
+                <tr>
+                    <td>Mode de paiement</td>
+                    <td>Espèces, virement, crédit, etc.</td>
+                </tr>
+                <tr>
+                    <td>Rabais</td>
+                    <td>Remises appliquées à l’achat</td>
+                </tr>
+            </table>
+
+            <h4>c) Onglet Impôt sur les dépenses</h4>
+            <p>
+                Destiné aux <strong>charges non marchandes (ex. : téléphone, transport, énergie, etc.), cet onglet</strong>
+                permet de justifier les taxes non liées à l’achat de stock ou de marchandises.
+            </p>
+            <p>Les colonnes principales sont :</p>
+            <table class="component-table">
+                <tr>
+                    <th>Colonne</th>
+                    <th>Rôle</th>
+                </tr>
+                <tr>
+                    <td>Date</td>
+                    <td>Date de la transaction d’achat</td>
+                </tr>
+                <tr>
+                    <td>N° de référence</td>
+                    <td>Référence du bon d’achat ou de la facture</td>
+                </tr>
+                <tr>
+                    <td>Numéro d’identification fiscale</td>
+                    <td>Numéro IFU/NIF du fournisseur</td>
+                </tr>
+                <tr>
+                    <td>Montant total</td>
+                    <td>Montant global de la facture incluant taxe</td>
+                </tr>
+                <tr>
+                    <td>Mode de paiement</td>
+                    <td>Espèces, virement, crédit, etc.</td>
+                </tr>
+            </table>
+        </article>
+
+        <article class="subsection">
+            <h3>3.3) Fonctions supplémentaires</h3>
+            <ul>
+                <li>✓ <strong>Export CSV / Excel / PDF :</strong> permet de générer des rapports sur les utilisateurs au format souhaité.</li>
+                <li>✓ <strong>Impression directe :</strong> un bouton d’impression est disponible pour produire une version papier de la liste.</li>
+                <li>✓ <strong>Visibilité des colonnes :</strong> permet de masquer ou d’afficher certaines colonnes selon les préférences.</li>
+                <li>✓ <strong>Recherche dynamique :</strong> un champ de recherche rapide facilite la localisation d’un utilisateur spécifique.</li>
+                <li>✓ <strong>Pagination & nombre d’entrées par page :</strong> l'utilisateur peut naviguer entre les pages et choisir combien d’enregistrements afficher par page (par exemple : 10, 25, 50, etc.).</li>
+            </ul>
+            <div class="image-placeholder"><p>Illustration de l'interface</p>
+                <img src="/images/rapport3.png" alt="Description de l'image" width="900" height="600" style="max-width:100%;height:auto;border-radius:8px;" />
+                </div>
+        </article>
+
+        <article class="subsection">
+            <h3>Recommandations pratiques</h3>
+            <ul>
+                <li>Ce rapport devrait être généré à chaque fin de mois, ou avant toute déclaration fiscale.</li>
+                <li>Il est essentiel de renseigner correctement les taux de TVA lors des achats/ventes dans le système pour garantir la cohérence des données fiscales.</li>
+                <li>Utilisez le champ « Numéro d’identification fiscale » pour conformité fiscale stricte.</li>
+            </ul>
+        </article>
+    </section>
+
+    <!-- Section 4 : Rapport fournisseur et client -->
+    <section class="section-4">
+        <h2>4) Rapport fournisseur et client</h2>
+
+        <article class="subsection">
+            <h3>4.1) Objectif de cette interface</h3>
+            <p>
+                L’interface Rapport fournisseur et client dans movelys permet de visualiser de manière consolidée les transactions commerciales (achats et ventes) effectuées avec chaque contact enregistré dans le système (client ou fournisseur).
+            </p>
+            <p>
+                Elle offre une lecture directe sur les <strong>montants engagés, les paiements reçus ou effectués, et</strong>
+                les soldes restants dus.
+            </p>
+            <p>
+                Cette fonctionnalité est essentielle pour :
+            </p>
+            <ul>
+                <li>Suivre les <strong>comptes fournisseurs et clients,</strong></li>
+                <li>Identifier les <strong>impayés ou les crédits à recouvrer,</strong></li>
+                <li>Gérer les relations financières par tiers.</li>
+            </ul>
+        </article>
+
+        <article class="subsection">
+            <h3>4.2) Structure générale de l’interface</h3>
+            <p>
+                L’interface est composée de trois grandes zones :
+            </p>
+            <ul>
+                <li><strong>Barre de filtres et de recherche</strong></li>
+                <li><strong>Tableau récapitulatif des transactions</strong></li>
+                <li><strong>Fonctionnalités d’exportation et d’impression</strong></li>
+            </ul>
+
+            <h4>4.2.1) Barre de filtres et recherche</h4>
+            <p>
+                Elle contient les éléments suivants :
+            </p>
+            <table class="component-table">
+                <tr>
+                    <th>Colonne</th>
+                    <th>Description</th>
+                </tr>
+                <tr>
+                    <td>Nom du groupe de client</td>
+                    <td>Nom du groupe client concerné.</td>
+                </tr>
+                <tr>
+                    <td>Type</td>
+                    <td>Nature de la relation entre le contact et l’entreprise (client, fournisseurs)</td>
+                </tr>
+                <tr>
+                    <td>Emplacement</td>
+                    <td>Point d’opération (magasin, dépôt, service)</td>
+                </tr>
+                <tr>
+                    <td>Contact</td>
+                    <td>Nom du client ou fournisseur concerné.</td>
+                </tr>
+                <tr>
+                    <td>Plage de date</td>
+                    <td>Intervalle temporel analysé</td>
+                </tr>
+            </table>
+            <p>
+                Ces filtres permettent une <strong>consultation ciblée, facilitant les audits ou le suivi de tiers</strong>
+                spécifiques.
+            </p>
+
+            <h4>4.2.2) Tableau récapitulatif des transactions</h4>
+            <p>
+                Ce tableau dynamique centralise l’ensemble des données financières par contact.
+                Chaque ligne correspond à un <strong>tiers (client ou fournisseur) et affiche les indicateurs suivants :</strong>
+            </p>
+            <table class="component-table">
+                <tr>
+                    <th>Contact</th>
+                    <th>Nom du client ou fournisseur concerné.</th>
+                </tr>
+                <tr>
+                    <td>Achat total</td>
+                    <td>Somme totale des achats effectués auprès du contact (si fournisseur</td>
+                </tr>
+                <tr>
+                    <td>Numéro de contact</td>
+                    <td>Numéro de téléphone du contact.</td>
+                </tr>
+                <tr>
+                    <td>Retourtotalsur l’achat</td>
+                    <td>Somme totale des achats effectués auprès du contact (si fournisseur).</td>
+                </tr>
+                <tr>
+                    <td>Totaldelavente</td>
+                    <td>Montant global des marchandises retournées au fournisseur (retours d’achat)</td>
+                </tr>
+                <tr>
+                    <td>Rendementtotalde lavente</td>
+                    <td>Montant global des produits retournés par le client à l’entreprise, pour des raisons de non-conformité, ou annulation.</td>
+                </tr>
+                <tr>
+                    <td>Solded’ouverturedû</td>
+                    <td>Solde antérieur à la première utilisation du logiciel ou à l’enregistrement du contact.</td>
+                </tr>
+                <tr>
+                    <td>Due</td>
+                    <td>Solde restant que le client ou l’entreprise doit encore payer à la date de consultation du rapport.</td>
+                </tr>
+            </table>
+            <p>
+                Ce tableau offre une vision bilatérale (achats et ventes), très utile pour les partenaires
+                hybrides (à la fois clients et fournisseurs).
+            </p>
+        </article>
+
+        <article class="subsection">
+            <h3>4.2.3) Fonctionnalités supplémentaires</h3>
+            <p>
+                Situées en haut ou à droite de l’interface :
+            </p>
+            <ul>
+                <li>✓ <strong>Export CSV / Excel / PDF :</strong> permet de générer des rapports sur les utilisateurs au format souhaité.</li>
+                <li>✓ <strong>Impression directe :</strong> un bouton d’impression est disponible pour produire une version papier de la liste.</li>
+                <li>✓ <strong>Visibilité des colonnes :</strong> permet de masquer ou d’afficher certaines colonnes selon les préférences.</li>
+                <li>✓ <strong>Recherche dynamique :</strong> un champ de recherche rapide facilite la localisation d’un utilisateur spécifique.</li>
+                <li>✓ <strong>Pagination & nombre d’entrées par page :</strong> l'utilisateur peut naviguer entre les pages et choisir combien d’enregistrements afficher par page (par exemple : 10, 25, 50, etc.).</li>
+            </ul>
+           <div class="image-placeholder"><p>Illustration de l'interface</p>
+                <img src="/images/rapport4.png" alt="Description de l'image" width="900" height="600" style="max-width:100%;height:auto;border-radius:8px;" />
+                </div>
+        </article>
+
+        <article class="subsection">
+            <h3>4.3) Règles d’accès et permissions</h3>
+            <table class="component-table">
+                <tr>
+                    <th>Rôle utilisateur</th>
+                    <th>Accès recommandé</th>
+                </tr>
+                <tr>
+                    <td>Administrateur</td>
+                    <td>Accès complet</td>
+                </tr>
+                <tr>
+                    <td>Comptable / Finance</td>
+                    <td>Lecture + exportation</td>
+                </tr>
+                <tr>
+                    <td>Responsable commercial</td>
+                    <td>Lecture uniquement (ventes)</td>
+                </tr>
+                <tr>
+                    <td>Utilisateur standard</td>
+                    <td>Accès restreint ou interdit</td>
+                </tr>
+            </table>
+        </article>
+    </section>
+
+
+
+    <!-- Section 5 : Rapport sur les groupes de client -->
+    <section class="section-5">
+        <h2>5) Rapport sur les groupes de client</h2>
+
+        <article class="subsection">
+            <h3>5.1) Objectif de cette interface</h3>
+            <p>
+                Le Rapport sur les groupes de clients dans Movelys permet à l'entreprise de :
+            </p>
+            <ul>
+                <li>Analyser les <strong>ventes générées par segment de clientèle (ex. : détaillants, grossistes,</strong>
+                VIP, revendeurs…),</li>
+                <li>Évaluer la <strong>rentabilité et le volume d'affaires</strong> de chaque groupe,</li>
+                <li>Orienter la stratégie commerciale, marketing et tarifaire selon la performance des
+                segments.</li>
+            </ul>
+            <p>
+                Ce rapport est essentiel pour une approche client ciblée, une <strong>personalisation des offres et</strong>
+                une optimisation de la gestion commerciale.
+            </p>
+        </article>
+
+        <article class="subsection">
+            <h3>5.2) Composition de l’interface</h3>
+            <p>
+                L’interface est structurée en deux principales zones :
+            </p>
+            <ul>
+                <li>Barre de filtres</li>
+                <li>Tableau de données récapitulatives</li>
+            </ul>
+
+            <h4>5.2.1) Filtres d’analyse</h4>
+            <table class="component-table">
+                <tr>
+                    <th>Élément</th>
+                    <th>Fonction</th>
+                </tr>
+                <tr>
+                    <td>Emplacement de l'entreprise</td>
+                    <td>Filtre les ventes selon un site spécifique (magasin, entrepôt, succursale)</td>
+                </tr>
+                <tr>
+                    <td>Nom du groupe de clients</td>
+                    <td>Permet de filtrer dynamiquement les résultats selon le nom d’un groupe client</td>
+                </tr>
+                <tr>
+                    <td>Plage de date</td>
+                    <td>Permet de définir l’intervalle temporel à analyser</td>
+                </tr>
+            </table>
+            <p>
+                Ces filtres permettent de focaliser l’analyse sur un lieu ou une période spécifique, pour
+                comparaison ou audit.
+            </p>
+            <p>
+                Permet de définir l’intervalle temporel à analyser (ex : du 01/01/2024 au 30/06/2024)
+            </p>
+
+            <h4>5.2.2) Tableau récapitulatif des groupes de clients</h4>
+            <p>
+                Chaque ligne du tableau correspond à un <strong>groupe client prédéfini dans le système (ex. :</strong>
+                particuliers, entreprises, distributeurs...).
+            </p>
+            <table class="component-table">
+                <tr>
+                    <th>Colonne</th>
+                    <th>Description</th>
+                </tr>
+                <tr>
+                    <td>Nom du groupe de clients</td>
+                    <td>Désignation du segment de clients (ex. : Revendeurs, B2B, VIP)</td>
+                </tr>
+                <tr>
+                    <td>Total de la vente</td>
+                    <td>Somme globale des ventes générées par ce groupe durant la période sélectionnée</td>
+                </tr>
+            </table>
+        </article>
+
+        <article class="subsection">
+            <h3>5.3) Fonctionnalités complémentaires</h3>
+            <table class="component-table">
+                <tr>
+                    <th>Fonction</th>
+                    <th>Description</th>
+                </tr>
+                <tr>
+                    <td>Exporter CSV / Excel / PDF</td>
+                    <td>Pour sauvegarder ou partager le rapport avec la direction, ou l'intégrer dans un rapport global</td>
+                </tr>
+                <tr>
+                    <td>Imprimer</td>
+                    <td>Génère une version imprimable pour présentation physique ou archivage</td>
+                </tr>
+                <tr>
+                    <td>Visibilité des colonnes</td>
+                    <td>Permet de personnaliser les colonnes visibles pour lecture plus claire</td>
+                </tr>
+                <tr>
+                    <td>Recherche dynamique</td>
+                    <td>Un champ de recherche rapide facilite la localisation d’un utilisateur spécifique.</td>
+                </tr>
+                <tr>
+                    <td>Pagination & nombre d’entrées par page</td>
+                    <td>L’utilisateur peut naviguer entre les pages et choisir combien d’enregistrements afficher par page (par exemple : 10, 25, 50, etc.).</td>
+                </tr>
+            </table>
+            <div class="image-placeholder"><p>Illustration de l'interface</p>
+                <img src="/images/rapport5.png" alt="Description de l'image" width="900" height="600" style="max-width:100%;height:auto;border-radius:8px;" />
+                </div>
+        </article>
+
+        <article class="subsection">
+            <h3>5.4) Accès recommandé</h3>
+            <table class="component-table">
+                <tr>
+                    <th>Rôle utilisateur</th>
+                    <th>Accès recommandé</th>
+                </tr>
+                <tr>
+                    <td>Administrateur</td>
+                    <td>Complet</td>
+                </tr>
+                <tr>
+                    <td>Responsable commercial</td>
+                    <td>Lecture + analyse</td>
+                </tr>
+                <tr>
+                    <td>Service marketing</td>
+                    <td>Pour ciblage des campagnes</td>
+                </tr>
+                <tr>
+                    <td>Comptabilité</td>
+                    <td>Pour suivi des paiements</td>
+                </tr>
+            </table>
+        </article>
+    </section>
+
+    <!-- Section 6 : Rapport sur les actions -->
+    <section class="section-6">
+        <h2>6) Rapport sur les actions</h2>
+
+        <article class="subsection">
+            <h3>6.1) Objectif de cette interface</h3>
+            <p>
+                Le <strong>Rapport sur les actions a pour but de</strong> <strong>consigner de manière exhaustive toutes les</strong>
+                <strong>actions réalisées par les utilisateurs dans le système.</strong>
+                Il sert de trace d’audit pour :
+            </p>
+            <ul>
+                <li>Vérifier les activités internes,</li>
+                <li>Identifier les erreurs humaines ou tentatives de fraude,</li>
+                <li>Assurer la traçabilité et la transparence dans la gestion des données.</li>
+            </ul>
+            <p>
+                C’est un outil essentiel pour les administrateurs système, les auditeurs internes et les
+                responsables conformité.
+            </p>
+        </article>
+
+        <article class="subsection">
+            <h3>6.2) Structure de l’interface</h3>
+            <p>
+                L’interface se compose de trois zones principales :
+            </p>
+            <ul>
+                <li>Filtres de recherche</li>
+                <li>Donnée de synthèse</li>
+                <li>Tableau de données produit par produit</li>
+            </ul>
+
+            <h4>6.2.1) Filtres d’analyse</h4>
+            <p>
+                Cette section permet à l'utilisateur d’ajuster les résultats du tableau en fonction de certains
+                critères :
+            </p>
+            <table class="component-table">
+                <tr>
+                    <th>Champ</th>
+                    <th>Description</th>
+                </tr>
+                <tr>
+                    <td>Emplacement de l’entreprise</td>
+                    <td>Permet de filtrer les résultats selon le site de stockage ou de vente.</td>
+                </tr>
+                <tr>
+                    <td>Catégorie</td>
+                    <td>Filtre les produits par leur catégorie principale (ex. : parfums, cosmétiques, soins capillaires, etc.).</td>
+                </tr>
+                <tr>
+                    <td>Sous-catégorie</td>
+                    <td>Affine encore le filtre par sous-type (ex. : flacons 30ml, coffrets, testeurs).</td>
+                </tr>
+                <tr>
+                    <td>Marque</td>
+                    <td>Affiche uniquement les produits associés à une marque spécifique.</td>
+                </tr>
+                <tr>
+                    <td>Unité</td>
+                    <td>Permet de filtrer par unité de mesure (ml, kg, litre, etc.).</td>
+                </tr>
+            </table>
+            <p>
+                Ces filtres permettent une lecture <strong>contextuelle, précise et ciblée du stock en fonction de la</strong>
+                stratégie commerciale ou logistique.
+            </p>
+
+            <h4>6.2.2) donnée de synthèse</h4>
+            <p>
+                <strong>Ces quatre grands indicateurs financiers sont automatiquement mis à jour selon les filtres</strong>
+                sélectionnés :
+            </p>
+            <table class="component-table">
+                <tr>
+                    <th>Indicateur</th>
+                    <th>Signification et utilité</th>
+                </tr>
+                <tr>
+                    <td>Stock de clôture (par prix d’achat)</td>
+                    <td>Montant total des produits encore en stock, calculé en se basant sur leur coût d’achat unitaire.</td>
+                </tr>
+                <tr>
+                    <td>Stock de clôture (par prix de vente)</td>
+                    <td>Estimation des revenus si tout le stock était vendu à son prix de vente.</td>
+                </tr>
+                <tr>
+                    <td>Bénéfice potentiel</td>
+                    <td>Marge brute théorique si tous les produits en stock sont écoulés.</td>
+                </tr>
+                <tr>
+                    <td>Marge bénéficiaire %</td>
+                    <td>Ratio exprimé en pourcentage du profit sur le prix de vente. C’est un indicateur de rentabilité.</td>
+                </tr>
+            </table>
+
+
+
+            <h4>6.2.3) Tableau de données produit par produit</h4>
+            <p>
+                Ce tableau est la <strong>colonne vertébrale du rapport. Chaque ligne représente un produit distinct,</strong>
+                avec tous ses détails de gestion et de rentabilité.
+            </p>
+            <table class="component-table">
+                <tr>
+                    <th>Colonne</th>
+                    <th>Explication</th>
+                </tr>
+                <tr>
+                    <td>Action</td>
+                    <td>Bouton " Historique des stocks de produits" : permet d’afficher les entrées, transferts, ajustements et ventes liées à un produit spécifique.</td>
+                </tr>
+                <tr>
+                    <td>SKU</td>
+                    <td>Code unique d’identification du produit dans le système (Stock Keeping Unit), utilisé pour faciliter le suivi et la gestion.</td>
+                </tr>
+                <tr>
+                    <td>Produit</td>
+                    <td>Dénomination commerciale du produit tel qu’enregistré dans la base de données (nom visible par les utilisateurs).</td>
+                </tr>
+                <tr>
+                    <td>Variation</td>
+                    <td>Détail de déclinaison du produit : parfum, volume, taille, couleur, format, etc.</td>
+                </tr>
+                <tr>
+                    <td>Catégorie</td>
+                    <td>Classement du produit dans une famille ou segment spécifique (ex. : Parfums pour hommes, Soins capillaires, etc.).</td>
+                </tr>
+                <tr>
+                    <td>Emplacement</td>
+                    <td>Site ou magasin physique où le produit est actuellement entreposé (ex. : Senteur & Vitalité, Entrepôt central).</td>
+                </tr>
+                <tr>
+                    <td>Prix de vente unitaire</td>
+                    <td>Prix de vente d’une seule unité de produit, toutes taxes comprises.</td>
+                </tr>
+                <tr>
+                    <td>Stock actuel</td>
+                    <td>Quantité physiquement disponible en stock. Généralement exprimée en unités, flacons, ou autre unité personnalisée.</td>
+                </tr>
+                <tr>
+                    <td>Valeur actuelle des actions (prix d’achat)</td>
+                    <td>Montant total du stock actuel calculé selon le prix d’achat unitaire : Stock actuel × Prix d’achat.</td>
+                </tr>
+                <tr>
+                    <td>Valeur actuelle du stock (prix de vente)</td>
+                    <td>Valeur marchande du stock, si entièrement vendu, calculée par Stock actuel × Prix de vente.</td>
+                </tr>
+                <tr>
+                    <td>Bénéfice potentiel</td>
+                    <td>Différence entre la valeur de vente et la valeur d’achat du stock : Valeur vente – Valeur achat. Indique les gains prévisionnels.</td>
+                </tr>
+                <tr>
+                    <td>Total des unités vendues</td>
+                    <td>Quantité totale de ce produit déjà vendue sur la période sélectionnée. Reflète la performance commerciale du produit.</td>
+                </tr>
+                <tr>
+                    <td>Total de l’unité transférée</td>
+                    <td>Somme des quantités de ce produit qui ont été transférées vers un autre site ou emplacement de l’entreprise.</td>
+                </tr>
+                <tr>
+                    <td>Total des unités ajustées</td>
+                    <td>Quantité totale modifiée via des ajustements de stock : cela inclut les pertes, casses, produits périmés, ou erreurs de comptage.</td>
+                </tr>
+                <tr>
+                    <td>Champ personnalisé 1</td>
+                    <td>Champ libre configurable selon les besoins de l’entreprise. Exemple d’usage : code de lot, fournisseur initial, date de péremption, etc.</td>
+                </tr>
+                <tr>
+                    <td>Champ personnalisé 2</td>
+                    <td>Deuxième champ libre configurable. Peut être utilisé pour des spécificités telles qu’un code interne, une référence fournisseur ou un type de conditionnement.</td>
+                </tr>
+                <tr>
+                    <td>Champ personnalisé 3</td>
+                    <td>Troisième champ personnalisé pour ajouter une métadonnée supplémentaire au produit (par exemple : localisation exacte, type de série, etc.).</td>
+                </tr>
+                <tr>
+                    <td>Champ personnalisé 4</td>
+                    <td>Quatrième champ libre. Exemples d’utilisation : informations logistiques, code externe, lien avec une campagne de vente ou d'importation.</td>
+                </tr>
+            </table>
+        </article>
+
+        <article class="subsection">
+            <h3>6.3) Fonctionnalités disponibles</h3>
+            <table class="component-table">
+                <tr>
+                    <th>Outil</th>
+                    <th>Fonction</th>
+                </tr>
+                <tr>
+                    <td>Exporter CSV / Excel / PDF</td>
+                    <td>Génère une version téléchargeable du rapport dans différents formats pour archivage ou analyse externe.</td>
+                </tr>
+                <tr>
+                    <td>Imprimer</td>
+                    <td>Ouvre une version imprimable de l'affichage actuel.</td>
+                </tr>
+                <tr>
+                    <td>Visibilité des colonnes</td>
+                    <td>Personnalise les colonnes visibles dans le tableau.</td>
+                </tr>
+                <tr>
+                    <td>Recherche rapide</td>
+                    <td>Barre pour filtrer en direct les lignes selon le nom du produit, SKU, etc.</td>
+                </tr>
+            </table>
+            <div class="image-placeholder"><p>Illustration de l'interface</p>
+                <img src="/images/rapport6.png" alt="Description de l'image" width="900" height="600" style="max-width:100%;height:auto;border-radius:8px;" />
+                </div>
+        </article>
+    </section>
+
+    <!-- Section 7 : Rapport d’ajustement des stocks -->
+    <section class="section-7">
+        <h2>7) Rapport d’ajustement des stocks</h2>
+
+        <article class="subsection">
+            <h3>7.1) Objectif de cette interface</h3>
+            <p>
+                L’interface <strong>Rapport d’ajustement des stocks dans</strong> <strong>movelys</strong> permet de :
+            </p>
+            <ul>
+                <li>Suivre tous les <strong>ajustements de stock non liés aux ventes ou achats,</strong></li>
+                <li>Corriger les <strong>écarts d’inventaire (pertes, vols, erreurs, retours non comptabilisés),</strong></li>
+                <li>Maintenir une <strong>quantité réelle et conforme des articles disponibles.</strong></li>
+            </ul>
+            <p>
+                Elle est cruciale pour garantir <strong>l'intégrité des données de stock et pour minimiser les</strong>
+                <strong>ruptures ou surplus injustifiés.</strong>
+            </p>
+        </article>
+
+        <article class="subsection">
+            <h3>7.2) Structure de l’interface</h3>
+            <p>
+                L’interface est composée de quatre blocs fonctionnels :
+            </p>
+            <ul>
+                <li><strong>Filtres de sélection (site, date)</strong></li>
+                <li><strong>Résumé analytique des ajustements</strong></li>
+                <li><strong>Tableau ajustement stock</strong></li>
+            </ul>
+
+            <h4>7.2.1) Filtres de sélection</h4>
+            <p>
+                <strong>Sélecteur d’emplacement :</strong><br>
+                Permet de filtrer le rapport par site (entrepôt, magasin, etc.)<br>
+                <strong>Filtrer par date :</strong><br>
+                Ouvre un calendrier pour définir une période d’analyse spécifique
+            </p>
+
+            <h4>7.2.2) Résumé analytique des ajustements</h4>
+            <p>
+                Elle permet une distinction <strong>claire entre les différents ajustements :</strong>
+            </p>
+            <ul>
+                <li><strong>Total Normal</strong><br>
+                Valeur des ajustements considérés comme réguliers ou attendus (ex. : réapprovisionnement
+                interne, ajustement volontaire justifié).</li>
+                <li><strong>Anormal total</strong><br>
+                Valeur des ajustements liés à des anomalies ou irrégularités (ex. : vol, casse non justifiée,
+                erreurs d’inventaire répétées).</li>
+                <li><strong>Ajustement total des stocks</strong><br>
+                Somme globale de tous les ajustements effectués (positifs + négatifs), représentant l’impact
+                net sur le stock.</li>
+                <li><strong>Montant total recouvré</strong><br>
+                Montant financier récupéré suite à un ajustement (ex. : remboursement, retour fournisseur,
+                régularisation bancaire).</li>
+            </ul>
+        </article>
+
+        <article class="subsection">
+            <h3>7.2.3) Tableau des ajustements de stock</h3>
+            <p>
+                Chaque ligne du tableau représente une <strong>opération d’ajustement enregistrée dans le système.</strong>
+            </p>
+            <table class="component-table">
+                <tr>
+                    <th>Colonne</th>
+                    <th>Description</th>
+                </tr>
+                <tr>
+                    <td>Action</td>
+                    <td>Ensemble d’icônes permettant de consulter, modifier ou supprimer un ajustement de stock.</td>
+                </tr>
+                <tr>
+                    <td>Date</td>
+                    <td>Date à laquelle l’ajustement a été effectué.</td>
+                </tr>
+                <tr>
+                    <td>Numéro de référence</td>
+                    <td>Identifiant unique attribué à chaque opération d’ajustement.</td>
+                </tr>
+                <tr>
+                    <td>Emplacement</td>
+                    <td>Site ou entrepôt où l’ajustement a été effectué</td>
+                </tr>
+                <tr>
+                    <td>Type de réglage</td>
+                    <td>Catégorie de l’ajustement : peut être "Normal" (prévu) ou "Anormal" (perte, erreur, etc.).</td>
+                </tr>
+                <tr>
+                    <td>Montant total</td>
+                    <td>Valeur monétaire totale de l’ajustement, basée sur les quantités et le prix unitaire.</td>
+                </tr>
+                <tr>
+                    <td>Montant total recouvré</td>
+                    <td>Somme effectivement récupérée ou compensée après l’ajustement (ex. : retour fournisseur, remboursement).</td>
+                </tr>
+                <tr>
+                    <td>Raison</td>
+                    <td>Motif justifiant l’ajustement (ex. : casse, vol, erreur de comptage, expiration).</td>
+                </tr>
+                <tr>
+                    <td>Ajouter par</td>
+                    <td>Nom de l’utilisateur qui a saisi ou validé l’ajustement dans le système.</td>
+                </tr>
+            </table>
+        </article>
+
+        <article class="subsection">
+            <h3>7.3) Outils supplémentaires</h3>
+            <p>
+                Situées en haut ou à droite de l’interface :
+            </p>
+            <ul>
+                <li>✓ <strong>Export CSV / Excel / PDF :</strong> permet de générer des rapports sur les utilisateurs au format souhaité.</li>
+                <li>✓ <strong>Impression directe :</strong> un bouton d’impression est disponible pour produire une version papier de la liste.</li>
+                <li>✓ <strong>Visibilité des colonnes :</strong> permet de masquer ou d’afficher certaines colonnes selon les préférences.</li>
+                <li>✓ <strong>Recherche dynamique :</strong> un champ de recherche rapide facilite la localisation d’un utilisateur spécifique.</li>
+                <li>✓ <strong>Pagination & nombre d’entrées par page :</strong> l'utilisateur peut naviguer entre les pages et choisir combien d’enregistrements afficher par page (par exemple : 10, 25, 50, etc.).</li>
+            </ul>
+            <div class="image-placeholder"><p>Illustration de l'interface</p>
+                <img src="/images/rapport7.png" alt="Description de l'image" width="900" height="600" style="max-width:100%;height:auto;border-radius:8px;" />
+                </div>
+        </article>
+
+        <article class="subsection">
+            <h3>7.4) Accès</h3>
+            <table class="component-table">
+                <tr>
+                    <th>Rôle</th>
+                    <th>Accès</th>
+                </tr>
+                <tr>
+                    <td>Administrateur</td>
+                    <td>Création, édition, suppression</td>
+                </tr>
+                <tr>
+                    <td>Responsable magasin</td>
+                    <td>Création + consultation</td>
+                </tr>
+                <tr>
+                    <td>Comptable</td>
+                    <td>Lecture pour rapprochement</td>
+                </tr>
+                <tr>
+                    <td>Utilisateur standard</td>
+                    <td>Accès restreint ou interdit</td>
+                </tr>
+            </table>
+        </article>
+    </section>
+
+    <!-- Section 8 : Produits tendance -->
+    <section class="section-8">
+        <h2>8) Produits tendance</h2>
+
+        <article class="subsection">
+            <h3>8.1) Objectif de cette interface</h3>
+            <p>
+                Le Rapport sur les produits tendance dans movelys permet à l’entreprise de :
+            </p>
+            <ul>
+                <li>Identifier les produits à forte rotation,</li>
+                <li>Comprendre les préférences clients et ajuster les stocks en conséquence,</li>
+                <li>Optimiser les campagnes marketing ou promotions ciblées,</li>
+                <li>Anticiper les ruptures de stock en fonction des produits les plus demandés.</li>
+            </ul>
+            <p>
+                C’est un outil d’analyse essentiel pour les services commerciaux, marketing et logistique.
+            </p>
+        </article>
+
+        <article class="subsection">
+            <h3>8.2) Structure de l’interface</h3>
+            <p>
+                Cette interface est organisée autour de deux blocs principaux :
+            </p>
+            <ul>
+                <li><strong>Filtres de sélection</strong></li>
+                <li><strong>Le graphisme des produits populaires</strong></li>
+            </ul>
+
+            <h4>8.2.1) Filtres d’analyse</h4>
+            <table class="component-table">
+                <tr>
+                    <th>Champs</th>
+                    <th>Description</th>
+                </tr>
+                <tr>
+                    <td>Emplacement de l'entreprise</td>
+                    <td>Permet de filtrer les résultats selon le site de stockage ou de vente.</td>
+                </tr>
+                <tr>
+                    <td>Catégorie</td>
+                    <td>Filtre les produits par leur catégorie principale (ex. : parfums, cosmétiques, soins capillaires, etc.).</td>
+                </tr>
+                <tr>
+                    <td>Sous-catégorie</td>
+                    <td>Affine encore le filtre par sous-type (ex. : flacons 30ml, coffrets, testeurs).</td>
+                </tr>
+                <tr>
+                    <td>Marque</td>
+                    <td>Affiche uniquement les produits associés à une marque spécifique.</td>
+                </tr>
+                <tr>
+                    <td>Unité</td>
+                    <td>Permet de filtrer par unité de mesure (ml, kg, litre, etc.).</td>
+                </tr>
+                <tr>
+                    <td>Plage de dates</td>
+                    <td>Délimite la période d’analyse des ventes (ex. : du 01/01/2024 au 30/06/2024)</td>
+                </tr>
+                <tr>
+                    <td>Nombre de produit</td>
+                    <td>Permet d’entrer le nombre de produit (5)</td>
+                </tr>
+                <tr>
+                    <td>Type de produit</td>
+                    <td>Permet de sélectionner le type de produit (beauté ...)</td>
+                </tr>
+            </table>
+            <p>
+                Ces filtres permettent une <strong>analyse temporelle et géographique précise, adaptée à l’activité</strong>
+                réelle.
+            </p>
+
+            <h4>8.2.2) graphique des produits populaires</h4>
+            <p>
+                Cette section présente une analyse graphique des ventes totales en unités de trois références
+                de parfums. L’objectif est d’identifier les produits les plus performants en termes de volume
+                de ventes.
+            </p>
+
+            <h5>8.2.2.1) Description du graphique</h5>
+            <p>
+                Le graphique utilisé est un diagramme à barres verticales. Il permet de comparer le nombre
+                total d’unités vendues pour chaque produit listé sur l’axe horizontal.
+            </p>
+            <ul>
+                <li><strong>Axe des ordonnées (axe Y) :</strong><br>
+                Représente les valeurs numériques des unités vendues.<br>
+                Échelle de 0 à 40.<br>
+                Unité de mesure : nombre d’unités.</li>
+                <li><strong>Axe des abscesses (axe X) :</strong><br>
+                Affiche les trois références produits suivantes :<br>
+                 PARFUM – 00000100011 (fic)<br>
+                 AstraI24 – Parfum femme Luxury Essenc 30%-50 ml -ASTRAL24(flc)<br>
+                 Parfum femme essence 30%-100 ml-263(flc)</li>
+            </ul>
+
+            <h5>8.2.2.2) Analyse des données</h5>
+            <ul>
+                <li><strong>Produit le plus vendu</strong><br>
+                PARFUM – 00000100011 (fic) est en tête avec environ 33 à 34 unités vendues.<br>
+                Il s’agit clairement du produit ayant la meilleure performance commerciale parmi les trois.</li>
+                <li><strong>Produit avec ventes modérées</strong><br>
+                AstraI24 – Parfum femme Luxury Essenc 30%-50 ml -ASTRAL24(flc) enregistre environ 8 unités
+                vendues.<br>
+                Ce produit se positionne en milieu de tableau avec une performance modérée.</li>
+                <li><strong>Produit le moins vendu</strong><br>
+                Parfum femme essence 30%-100 ml-263(flc) n’a enregistré qu’environ 1 unité vendue.<br>
+                Sa performance commerciale est très faible, nécessitant une attention particulière.</li>
+            </ul>
+            <p>
+                L’analyse met en évidence une forte disparité dans les volumes de vente entre les trois
+                produits. Le produit PARFUM – 00000100011 (fic) domine largement les ventes, tandis que le
+                produit Parfum femme essence 100 ml – 263 connaît un échec commercial relatif.
+            </p>
+        </article>
+
+        <article class="subsection">
+            <h3>8.3) Fonctionnalités supplémentaires</h3>
+            <p>
+                Un bouton Imprimer qui permet de Générer une version imprimable pour archivage ou
+                partage.
+            </p>
+            <div class="image-placeholder"><p>Illustration de l'interface</p>
+                <img src="/images/rapport8.png" alt="Description de l'image" width="900" height="600" style="max-width:100%;height:auto;border-radius:8px;" />
+                </div>
+            <table class="component-table">
+                <tr>
+                    <th>Accès recommandé</th>
+                    <th>Droit</th>
+                </tr>
+                <tr>
+                    <td>Rôle utilisateur</td>
+                    <td>Accès conseillé</td>
+                </tr>
+                <tr>
+                    <td>Administrateur</td>
+                    <td>Total</td>
+                </tr>
+                <tr>
+                    <td>Responsable des ventes</td>
+                    <td>Lecture + export</td>
+                </tr>
+                <tr>
+                    <td>Chef de rayon</td>
+                    <td>Lecture uniquement</td>
+                </tr>
+                <tr>
+                    <td>Comptable / Logisticien</td>
+                    <td>Lecture selon besoin</td>
+                </tr>
+            </table>
+        </article>
+    </section>
+
+
+
+
+    <!-- Section 9 : Rapport sur les objets -->
+    <section class="section-9">
+        <h2>9) Rapport sur les objets</h2>
+
+        <article class="subsection">
+            <h3>9.1) Objectif de cette interface</h3>
+            <p>
+                Le rapport sur les objets est conçu pour offrir une vue approfondie des performances de
+                chaque article présent dans le catalogue produit. Il permet de :
+            </p>
+            <ul>
+                <li>Suivre le cycle de vie complet d’un produit (achat, vente, stock),</li>
+                <li>Évaluer la rentabilité individuelle des objets,</li>
+                <li>Contrôler les quantités disponibles, vendues, achetées ou ajustées,</li>
+                <li>Identifier les produits à rotation lente ou rapide.</li>
+            </ul>
+            <p>
+                C’est une interface très utile pour les équipes logistiques, commerciales et comptables.
+            </p>
+        </article>
+
+        <article class="subsection">
+            <h3>9.2) Structure de l’interface</h3>
+            <p>
+                Cette interface est composée de deux zones fonctionnelles principales :
+            </p>
+            <ul>
+                <li>Barre de filtres avancés</li>
+                <li>Tableau d’analyse produit par produit</li>
+            </ul>
+
+            <h4>9.2.1) Filtres de recherche</h4>
+            <table class="component-table">
+                <tr>
+                    <th>Élément</th>
+                    <th>Fonction</th>
+                </tr>
+                <tr>
+                    <td>Fournisseur</td>
+                    <td>Permet de filtrer un fournisseur existant</td>
+                </tr>
+                <tr>
+                    <td>Date d’achat</td>
+                    <td>Permet de sélectionner une date d’achat</td>
+                </tr>
+                <tr>
+                    <td>Client</td>
+                    <td>Permet de filtrer un client existant</td>
+                </tr>
+                <tr>
+                    <td>Date de vente</td>
+                    <td>Permet de sélectionner une date de vente</td>
+                </tr>
+                <tr>
+                    <td>Emplacement de l’entreprise</td>
+                    <td>Permet de filtrer les résultats selon le site de stockage ou de vente</td>
+                </tr>
+            </table>
+            <p>
+                Ces filtres garantissent une analyse personnalisée et ciblée de la performance produit.
+            </p>
+
+            <h4>9.2.2) Tableau d’analyse des objets</h4>
+            <p>
+                Chaque ligne représente un objet unique (produit ou article) inscrit dans l’inventaire.
+            </p>
+            <table class="component-table">
+                <tr>
+                    <th>Colonne</th>
+                    <th>Description professionnelle</th>
+                </tr>
+                <tr>
+                    <td>Produit</td>
+                    <td>Nom ou désignation commerciale du produit. Il s’agit de l'article suivi dans le stock.</td>
+                </tr>
+                <tr>
+                    <td>SKU</td>
+                    <td>Code de gestion unique du produit (Stock Keeping Unit), utilisé pour l’identification rapide dans les systèmes d’inventaire.</td>
+                </tr>
+                <tr>
+                    <td>Description</td>
+                    <td>Informations complémentaires ou caractéristiques du produit (format, parfum, couleur, etc.).</td>
+                </tr>
+                <tr>
+                    <td>Date d’achat</td>
+                    <td>Date à laquelle le produit a été acquis auprès du fournisseur.</td>
+                </tr>
+                <tr>
+                    <td>Achat</td>
+                    <td>Quantité achetée du produit lors de l’approvisionnement.</td>
+                </tr>
+                <tr>
+                    <td>Numéro de lot</td>
+                    <td>Code ou identifiant attribué à un lot spécifique de production ou d’achat, utile pour le suivi qualité ou les rappels.</td>
+                </tr>
+                <tr>
+                    <td>Fournisseur</td>
+                    <td>Nom du fournisseur auprès duquel le produit a été acheté.</td>
+                </tr>
+                <tr>
+                    <td>Prix d’achat</td>
+                    <td>Coût unitaire payé pour le produit à l’achat (hors ou toutes taxes selon le paramétrage).</td>
+                </tr>
+                <tr>
+                    <td>Date de vente</td>
+                    <td>Date à laquelle le produit a été vendu à un client.</td>
+                </tr>
+                <tr>
+                    <td>Vente</td>
+                    <td>Quantité du produit effectivement vendue.</td>
+                </tr>
+                <tr>
+                    <td>Emplacement</td>
+                    <td>Lieu ou entrepôt à partir duquel le produit a été stocké, vendu ou transféré.</td>
+                </tr>
+                <tr>
+                    <td>Vendre la quantité</td>
+                    <td>Quantité spécifique vendue sur une transaction ou une ligne de facture (équivaut à "Vente", peut apparaître séparément dans certains filtres).</td>
+                </tr>
+                <tr>
+                    <td>Prix de vente</td>
+                    <td>Montant unitaire auquel le produit a été vendu au client.</td>
+                </tr>
+                <tr>
+                    <td>Sous-total</td>
+                    <td>Montant total généré par la vente de la quantité indiquée</td>
+                </tr>
+            </table>
+        </article>
+
+        <article class="subsection">
+            <h3>9.3) Fonctions supplémentaires</h3>
+            <p>
+                Situées en haut ou à droite de l’interface :
+            </p>
+            <ul>
+                <li>✓ <strong>Export CSV / Excel / PDF :</strong> permet de générer des rapports sur les utilisateurs au format souhaité.</li>
+                <li>✓ <strong>Impression directe :</strong> un bouton d’impression est disponible pour produire une version papier de la liste.</li>
+                <li>✓ <strong>Visibilité des colonnes :</strong> permet de masquer ou d’afficher certaines colonnes selon les préférences.</li>
+                <li>✓ <strong>Recherche dynamique :</strong> un champ de recherche rapide facilite la localisation d’un utilisateur spécifique.</li>
+                <li>✓ <strong>Pagination & nombre d’entrées par page :</strong> l'utilisateur peut naviguer entre les pages et choisir combien d’enregistrements afficher par page (par exemple : 10, 25, 50, etc.).</li>
+            </ul>
+            <div class="image-placeholder"><p>Illustration de l'interface</p>
+                <img src="/images/rapport9.png" alt="Description de l'image" width="900" height="600" style="max-width:100%;height:auto;border-radius:8px;" />
+                </div>
+        </article>
+
+        <article class="subsection">
+            <h3>9.4) Droits d’accès</h3>
+            <table class="component-table">
+                <tr>
+                    <th>Utilisateur</th>
+                    <th>Droit</th>
+                </tr>
+                <tr>
+                    <td>Administrateur</td>
+                    <td>Accès complet</td>
+                </tr>
+                <tr>
+                    <td>Responsable logistique</td>
+                    <td>Lecture + exportation</td>
+                </tr>
+                <tr>
+                    <td>Chef de rayon / stock</td>
+                    <td>Lecture</td>
+                </tr>
+                <tr>
+                    <td>Employé non autorisé</td>
+                    <td>Accès restreint</td>
+                </tr>
+            </table>
+        </article>
+    </section>
+
+    <!-- Section 10 : Rapport d’achat de produit -->
+    <section class="section-10">
+        <h2>10) Rapport d’achat de produit</h2>
+
+        <article class="subsection">
+            <h3>10.1) Objectif de cette interface</h3>
+            <p>
+                Le rapport d’achat de produit permet de visualiser et d’analyser toutes les opérations d’achat effectuées pour chaque article du catalogue.
+                Il offre une vue précise des :
+            </p>
+            <ul>
+                <li>Quantités achetées,</li>
+                <li>Montants dépensés,</li>
+                <li>Fournisseurs impliqués,</li>
+                <li>Performances d’approvisionnement par produit.</li>
+            </ul>
+            <p>
+                Ce rapport est un outil essentiel pour le contrôle des dépenses, la gestion des fournisseurs et l’optimisation des réassorts.
+            </p>
+        </article>
+
+        <article class="subsection">
+            <h3>10.2) Structure générale de l’interface</h3>
+            <p>
+                Cette interface se divise en deux grandes zones :
+            </p>
+            <ol>
+                <li>Zone de filtres de recherche</li>
+                <li>Tableau de rapport d’achats</li>
+            </ol>
+
+            <h4>10.2.1) Filtres d’analyse</h4>
+            <table class="component-table">
+                <tr>
+                    <th>Élément</th>
+                    <th>Description</th>
+                </tr>
+                <tr>
+                    <td>Rechercher un produit</td>
+                    <td>Permet d’effectuer une recherche</td>
+                </tr>
+                <tr>
+                    <td>Fournisseur</td>
+                    <td>Permet de filtrer un fournisseur existant</td>
+                </tr>
+                <tr>
+                    <td>Emplacement de l’entreprise</td>
+                    <td>Filtre les achats selon l’entrepôt ou point de vente concerné</td>
+                </tr>
+                <tr>
+                    <td>Plage de dates</td>
+                    <td>Délimite la période d’analyse des ventes (ex. : du 01/01/2024 au 30/06/2024)</td>
+                </tr>
+                <tr>
+                    <td>Marques</td>
+                    <td>Permet de filtrer une marque existante</td>
+                </tr>
+            </table>
+            <p>
+                Ces filtres permettent une <strong>analyse ciblée des achats, pour affiner les décisions</strong>
+                d’approvisionnement.
+            </p>
+
+            <h4>10.2.2) Tableau des achats de produits</h4>
+            <p>
+                Chaque ligne correspond à un <strong>produit acheté au moins une fois durant la période</strong>
+                sélectionnée.
+            </p>
+            <table class="component-table">
+                <tr>
+                    <th>Colonne</th>
+                    <th>Description professionnelle</th>
+                </tr>
+                <tr>
+                    <td>Produit</td>
+                    <td>Nom ou désignation commerciale du produit acheté</td>
+                </tr>
+                <tr>
+                    <td>SKU</td>
+                    <td>Code interne unique du produit (Stock Keeping Unit) utilisé pour l’identification dans l’inventaire.</td>
+                </tr>
+                <tr>
+                    <td>Fournisseur</td>
+                    <td>Nom du fournisseur auprès duquel l’achat a été effectué. Cela permet de suivre l’origine de chaque produit.</td>
+                </tr>
+                <tr>
+                    <td>Numéro de référence</td>
+                    <td>Code d’identification de la commande ou de la facture d’achat liée à l’opération (ex. : ACH-000124).</td>
+                </tr>
+                <tr>
+                    <td>Date</td>
+                    <td>Date à laquelle la transaction d’achat a été enregistrée dans le système.</td>
+                </tr>
+                <tr>
+                    <td>Quantité</td>
+                    <td>Nombre total d’unités de produit achetées dans la ligne de commande correspondante.</td>
+                </tr>
+                <tr>
+                    <td>Total des unités ajustées</td>
+                    <td>Quantité ayant fait l’objet d’un ajustement après l’achat (ex. : retour au fournisseur, perte en transit, erreur de réception).</td>
+                </tr>
+                <tr>
+                    <td>Prix unitaire</td>
+                    <td>Prix d’achat d’une seule unité du produit (hors taxes ou TTC selon la configuration).</td>
+                </tr>
+                <tr>
+                    <td>Sous-total</td>
+                    <td>Montant total correspondant à cette ligne d’achat</td>
+                </tr>
+            </table>
+        </article>
+
+        <article class="subsection">
+            <h3>10.3) Fonctionnalités supplémentaires</h3>
+            <p>
+                Situées en haut ou à droite de l’interface :
+            </p>
+            <ul>
+                <li>✓ <strong>Export CSV / Excel / PDF :</strong> permet de générer des rapports sur les utilisateurs au format souhaité.</li>
+                <li>✓ <strong>Impression directe :</strong> un bouton d’impression est disponible pour produire une version papier de la liste.</li>
+                <li>✓ <strong>Visibilité des colonnes :</strong> permet de masquer ou d’afficher certaines colonnes selon les préférences.</li>
+                <li>✓ <strong>Recherche dynamique :</strong> un champ de recherche rapide facilite la localisation d’un utilisateur spécifique.</li>
+                <li>✓ <strong>Pagination & nombre d’entrées par page :</strong> l'utilisateur peut naviguer entre les pages et choisir combien d’enregistrements afficher par page (par exemple : 10, 25, 50, etc.).</li>
+            </ul>
+            <div class="image-placeholder"><p>Illustration de l'interface</p>
+                <img src="/images/rapport10.png" alt="Description de l'image" width="900" height="600" style="max-width:100%;height:auto;border-radius:8px;" />
+                </div>
+        </article>
+
+        <article class="subsection">
+            <h3>10.4) droit Accès</h3>
+            <table class="component-table">
+                <tr>
+                    <th>Utilisateur</th>
+                    <th>Niveau d’accès</th>
+                </tr>
+                <tr>
+                    <td>Administrateur</td>
+                    <td>Total</td>
+                </tr>
+                <tr>
+                    <td>Acheteur / Responsable approvisionnement</td>
+                    <td>Lecture + export</td>
+                </tr>
+                <tr>
+                    <td>Comptable</td>
+                    <td>Lecture</td>
+                </tr>
+                <tr>
+                    <td>Autres rôles</td>
+                    <td>Restraint selon politique interne</td>
+                </tr>
+            </table>
+        </article>
+    </section>
+
+    <!-- Section 11 : Rapport de vente de produit -->
+    <section class="section-11">
+        <h2>11) Rapport de vente de produit</h2>
+
+        <article class="subsection">
+            <h3>11.1) Objectif de cette interface</h3>
+            <p>
+                Le rapport de vente de produit offre une vision produite par produit des performances
+                commerciales réalisées sur une période donnée. Il permet de :
+            </p>
+            <ul>
+                <li>Identifier les produits générant le plus de chiffre d'affaires,</li>
+                <li>Suivre les tendances de vente,</li>
+                <li>Faciliter la planification de stock,</li>
+                <li>Soutenir les décisions marketing et commerciales.</li>
+            </ul>
+            <p>
+                Ce rapport est central dans l’analyse de rentabilité produit, d’évolution des ventes et
+                d’efficacité de la force de vente .
+            </p>
+        </article>
+
+        <article class="subsection">
+            <h3>11.2) Composition de l’interface</h3>
+            <p>
+                L’interface se compose de deux grandes zones :
+            </p>
+            <ul>
+                <li>Barre de filtres dynamiques</li>
+                <li>Onglet de regroupement</li>
+            </ul>
+
+            <h4>11.2.1) Filtres de recherche</h4>
+            <table class="component-table">
+                <tr>
+                    <th>Champ</th>
+                    <th>Utilité</th>
+                </tr>
+                <tr>
+                    <td>Rechercher un produit</td>
+                    <td>Permet de filtrer les ventes selon un produit spécifique (via nom, SKU ou code-barres).</td>
+                </tr>
+                <tr>
+                    <td>Client</td>
+                    <td>Filtre les ventes effectuées par ou pour un client spécifique.</td>
+                </tr>
+                <tr>
+                    <td>Nom du groupe de clients</td>
+                    <td>Segmente les rapports par groupes (entreprises, particuliers, VIP…).</td>
+                </tr>
+                <tr>
+                    <td>Emplacement de l’entreprise</td>
+                    <td>Permet de filtrer par site ou succursale.</td>
+                </tr>
+                <tr>
+                    <td>Catégorie</td>
+                    <td>Affiche les produits selon leur classification (ex : Parfum homme, Parfum femme, etc.).</td>
+                </tr>
+                <tr>
+                    <td>Marque</td>
+                    <td>Filtre les ventes par marque.</td>
+                </tr>
+                <tr>
+                    <td>Plage de dates</td>
+                    <td>Détermine la période d’analyse (ex : 01/01/2025 au 31/12/2025).</td>
+                </tr>
+                <tr>
+                    <td>Plage horaire</td>
+                    <td>Restraint l’analyse à des plages horaires précises (utile en cas de point de vente 24h/24).</td>
+                </tr>
+            </table>
+            <p>
+                Ces filtres permettent de concentrer l’analyse sur un <strong>périmètre précis, pertinent pour la</strong>
+                stratégie commerciale.
+            </p>
+
+            <h4>11.2.2) Onglets de regroupement</h4>
+            <table class="component-table">
+                <tr>
+                    <th>Onglet</th>
+                    <th>Fonction</th>
+                </tr>
+                <tr>
+                    <td>Détaillé</td>
+                    <td>Vue ligne par ligne de toutes les ventes.</td>
+                </tr>
+                <tr>
+                    <td>Détaillé (avec achat)</td>
+                    <td>Inclut les données d’achat associées aux produits vendus (marge brute, coût d’achat, etc.).</td>
+                </tr>
+                <tr>
+                    <td>Groupé (par date)</td>
+                    <td>Agrège les ventes par jour.</td>
+                </tr>
+                <tr>
+                    <td>Par catégorie</td>
+                    <td>Trie les ventes selon les familles de produits.</td>
+                </tr>
+                <tr>
+                    <td>Par marque</td>
+                    <td>Regroupe les ventes selon la marque du produit.</td>
+                </tr>
+            </table>
+        </article>
+
+        <article class="subsection">
+            <h3>11.3) Fonctionnalités supplémentaires</h3>
+            <p>
+                Situées en haut ou à droite de l’interface :
+            </p>
+            <ul>
+                <li>✓ <strong>Export CSV / Excel / PDF :</strong> permet de générer des rapports sur les utilisateurs au format souhaité.</li>
+                <li>✓ <strong>Impression directe :</strong> un bouton d’impression est disponible pour produire une version papier de la liste.</li>
+                <li>✓ <strong>Visibilité des colonnes :</strong> permet de masquer ou d’afficher certaines colonnes selon les préférences.</li>
+                <li>✓ <strong>Recherche dynamique :</strong> un champ de recherche rapide facilite la localisation d’un utilisateur spécifique.</li>
+                <li>✓ <strong>Pagination & nombre d’entrées par page :</strong> l'utilisateur peut naviguer entre les pages et choisir combien d’enregistrements afficher par page (par exemple : 10, 25, 50, etc.).</li>
+            </ul>
+            <div class="image-placeholder"><p>Illustration de l'interface</p>
+                <img src="/images/rapport11.png" alt="Description de l'image" width="900" height="600" style="max-width:100%;height:auto;border-radius:8px;" />
+                </div>
+        </article>
+
+        <article class="subsection">
+            <h3>11.4) Permissions d’accès</h3>
+            <table class="component-table">
+                <tr>
+                    <th>Rôle utilisateur</th>
+                    <th>Accès recommandé</th>
+                </tr>
+                <tr>
+                    <td>Administrateur</td>
+                    <td>Lecture + export</td>
+                </tr>
+                <tr>
+                    <td>Responsable des ventes</td>
+                    <td>Lecture complète</td>
+                </tr>
+                <tr>
+                    <td>Chef de rayon / magasin</td>
+                    <td>Accès limité au site concerné</td>
+                </tr>
+                <tr>
+                    <td>Utilisateur non autorisé</td>
+                    <td>Accès restreint ou refusé</td>
+                </tr>
+            </table>
+        </article>
+    </section>
+
+    <!-- Section 12 : Rapport sur les paiements d’achat -->
+    <section class="section-12">
+        <h2>12) Rapport sur les paiements d’achat</h2>
+
+        <article class="subsection">
+            <h3>12.1) Objectif de cette interface</h3>
+            <p>
+                Le rapport sur les paiements d’achat fournit une vue détaillée et structurée de toutes les
+                <strong>transactions financières sortantes liées à des achats de marchandises ou services auprès de</strong>
+                fournisseurs.
+                Il permet de :
+            </p>
+            <ul>
+                <li>Suivre l’historique des règlements effectués,</li>
+                <li>Vérifier la concordance entre les achats et les paiements,</li>
+                <li>Gérer la trésorerie sortante,</li>
+                <li>Auditer les paiements effectués aux fournisseurs.</li>
+            </ul>
+            <p>
+                Ce rapport constitue un outil de contrôle indispensable pour la comptabilité fournisseurs.
+            </p>
+        </article>
+
+        <article class="subsection">
+            <h3>12.2) Structure de l’interface</h3>
+            <p>
+                Deux zones principales composent l’interface :
+            </p>
+            <ul>
+                <li>Zone de filtres de recherche</li>
+                <li>Tableau récapitulatif des paiements</li>
+            </ul>
+
+            <h4>12.2.1) Filtres de recherche</h4>
+            <table class="component-table">
+                <tr>
+                    <th>Élément</th>
+                    <th>Fonction</th>
+                </tr>
+                <tr>
+                    <td>Emplacement de l'entreprise</td>
+                    <td>Filtre les paiements selon le site ou l'entité concernée</td>
+                </tr>
+                <tr>
+                    <td>Fournisseur</td>
+                    <td>Permet de sélectionner un fournisseur spécifique pour visualiser ses règlements</td>
+                </tr>
+                <tr>
+                    <td>Plage de dates</td>
+                    <td>Limite la recherche aux paiements effectués entre deux dates</td>
+                </tr>
+            </table>
+            <p>
+                Ces filtres permettent une analyse ciblée, utile lors d’audits ou de rapprochements bancaires.
+            </p>
+
+            <h4>12.2.2) Tableau des paiements d’achat</h4>
+            <p>
+                Ce tableau liste tous les paiements enregistrés dans le système en lien avec des achats.
+            </p>
+            <table class="component-table">
+                <tr>
+                    <th>Colonne</th>
+                    <th>Description</th>
+                </tr>
+                <tr>
+                    <td>Numéro de référence</td>
+                    <td>Code unique de la transaction de paiement</td>
+                </tr>
+                <tr>
+                    <td>Paye le</td>
+                    <td>Date à laquelle le paiement a été effectivement enregistré dans le système. Elle correspond à la date réelle de règlement de la facture d’achat.</td>
+                </tr>
+                <tr>
+                    <td>Fournisseur</td>
+                    <td>Nom ou raison sociale du fournisseur concerné</td>
+                </tr>
+                <tr>
+                    <td>Quantité</td>
+                    <td>Montant ou volume de produits concernés par le paiement. Parfois cette colonne indique le nombre de lignes ou de produits réglés. Elle peut également être contextuelle selon la configuration.</td>
+                </tr>
+                <tr>
+                    <td>Mode de paiement</td>
+                    <td>Méthode utilisée : espèces, virement, chèque, carte, portefeuille électronique, etc.</td>
+                </tr>
+                <tr>
+                    <td>Achat</td>
+                    <td>Numéro ou libellé de la commande/facture d’achat associée au paiement. Sert à faire le lien entre le document d’achat et le paiement correspondant.</td>
+                </tr>
+                <tr>
+                    <td>Action</td>
+                    <td>Colonne contenant les <strong>icônes d’interaction</strong> : visualisation des détails du paiement, édition (si autorisée), suppression ou impression de reçu.</td>
+                </tr>
+            </table>
+        </article>
+
+        <article class="subsection">
+            <h3>12.3) Fonctionnalités intégrées</h3>
+            <p>
+                Situées en haut ou à droite de l’interface :
+            </p>
+            <ul>
+                <li>✓ <strong>Export CSV / Excel / PDF :</strong> permet de générer des rapports sur les utilisateurs au format souhaité.</li>
+                <li>✓ <strong>Impression directe :</strong> un bouton d’impression est disponible pour produire une version papier de la liste.</li>
+                <li>✓ <strong>Visibilité des colonnes :</strong> permet de masquer ou d’afficher certaines colonnes selon les préférences.</li>
+                <li>✓ <strong>Recherche dynamique :</strong> un champ de recherche rapide facilite la localisation d’un utilisateur spécifique.</li>
+                <li>✓ <strong>Pagination & nombre d’entrées par page :</strong> l'utilisateur peut naviguer entre les pages et choisir combien d’enregistrements afficher par page (par exemple : 10, 25, 50, etc.).</li>
+            </ul>
+            <div class="image-placeholder"><p>Illustration de l'interface</p>
+                <img src="/images/rapport12.png" alt="Description de l'image" width="900" height="600" style="max-width:100%;height:auto;border-radius:8px;" />
+                </div>
+        </article>
+
+        <article class="subsection">
+            <h3>12.4) Droits d’accès</h3>
+            <table class="component-table">
+                <tr>
+                    <th>Utilisateur</th>
+                    <th>Accès</th>
+                </tr>
+                <tr>
+                    <td>Administrateur</td>
+                    <td>Complet</td>
+                </tr>
+                <tr>
+                    <td>Comptable fournisseur</td>
+                    <td>Lecture + Export</td>
+                </tr>
+                <tr>
+                    <td>Responsable achats</td>
+                    <td>Lecture</td>
+                </tr>
+                <tr>
+                    <td>Autres utilisateurs</td>
+                    <td>Accès restreint ou interdit</td>
+                </tr>
+            </table>
+        </article>
+    </section>
+
+    <!-- Section 13 : Rapport sur les paiements de vente -->
+    <section class="section-13">
+        <h2>13) Rapport sur les paiements de vente</h2>
+
+        <article class="subsection">
+            <h3>13.1) Objectif de cette interface</h3>
+            <p>
+                Le rapport sur les paiements de vente permet de visualiser l’ensemble des paiements
+                <strong>requs de la part des clients, qu’il s’agisse de règlements en caisse, par virement, ou par tout</strong>
+                autre moyen.
+            </p>
+            <p>
+                Il permet de :
+            </p>
+            <ul>
+                <li>Suivre les flux de trésorerie entrants,</li>
+                <li>Vérifier les encaissements liés aux ventes,</li>
+                <li>Identifier les transactions associées à des factures spécifiques,</li>
+                <li>Réaliser des rapprochements financiers entre la vente et son paiement effectif.</li>
+            </ul>
+            <p>
+                Ce rapport est indispensable pour les services comptabilité, facturation et recouvrement.
+            </p>
+        </article>
+
+        <article class="subsection">
+            <h3>13.2) Composition de l’interface</h3>
+            <p>
+                Cette interface s’articule autour de deux sections :
+            </p>
+            <ul>
+                <li>Filtres de recherche</li>
+                <li>Tableau récapitulatif des paiements</li>
+            </ul>
+
+            <h4>13.2.1) Filtres de recherche</h4>
+            <table class="component-table">
+                <tr>
+                    <th>Élément</th>
+                    <th>Fonction</th>
+                </tr>
+                <tr>
+                    <td>Emplacement de l'entreprise</td>
+                    <td>Permet de filtrer les paiements selon le point de vente</td>
+                </tr>
+                <tr>
+                    <td>Client</td>
+                    <td>Cible les règlements d’un client spécifique</td>
+                </tr>
+                <tr>
+                    <td>Plage de dates</td>
+                    <td>Restreint la période d’analyse</td>
+                </tr>
+                <tr>
+                    <td>Mode de paiement</td>
+                    <td>Permet de filtrer un mode de paiement : espèces, virement, chèque, carte, portefeuille électronique, etc.</td>
+                </tr>
+                <tr>
+                    <td>Groupe de clients</td>
+                    <td>Permet de filtrer un groupe de client existant</td>
+                </tr>
+            </table>
+            <p>
+                Ces filtres permettent de <strong>retrouver rapidement</strong> un paiement ou un ensemble de transactions.
+            </p>
+
+            <h4>13.2.2) Tableau des paiements de vente</h4>
+            <p>
+                Chaque ligne du tableau correspond à <strong>un paiement client</strong>, qu’il soit partiel, total ou en plusieurs fois.
+            </p>
+            <table class="component-table">
+                <tr>
+                    <th>Colonne</th>
+                    <th>Description professionnelle</th>
+                </tr>
+                <tr>
+                    <td>Contact ID</td>
+                    <td>Identifiant interne unique attribué au client dans le système. Ce code est utilisé pour assurer le suivi des transactions liées à un contact spécifique.</td>
+                </tr>
+                <tr>
+                    <td>Numéro de référence</td>
+                    <td>Référence du paiement de vente (ex. : PAY-VNT-00056). Elle permet d’identifier la transaction dans le journal des paiements.</td>
+                </tr>
+                <tr>
+                    <td>Client</td>
+                    <td>Nom complet de la personne ou de l’entreprise ayant effectué l’achat. Cela correspond au débiteur dans la relation commerciale.</td>
+                </tr>
+                <tr>
+                    <td>Groupe de clients</td>
+                    <td>Segment ou catégorie à laquelle le client appartient (ex. : particuliers, revendeurs, entreprises, VIP). Cela permet d’organiser les clients pour des analyses ciblées.</td>
+                </tr>
+                <tr>
+                    <td>Mode de paiement</td>
+                    <td>Méthode utilisée pour régler la vente : espèces, carte bancaire, virement, chèque, mobile money, etc.</td>
+                </tr>
+                <tr>
+                    <td>Vendre</td>
+                    <td>Numéro ou libellé de la facture ou du bon de vente concerné par le paiement. Sert à relier chaque paiement à une opération de vente.</td>
+                </tr>
+                <tr>
+                    <td>Payé le</td>
+                    <td>Date à laquelle le paiement a été reçu et enregistré. Reflète la date réelle d'encaissement.</td>
+                </tr>
+                <tr>
+                    <td>Quantité</td>
+                    <td>Montant ou nombre d’unités concernées par le paiement. Selon le contexte, cela peut représenter soit le nombre d’articles réglés, soit le montant payé (en fonction de la configuration du rapport).</td>
+                </tr>
+                <tr>
+                    <td>Action</td>
+                    <td>Permet d’effectuer certaine action (vue)</td>
+                </tr>
+            </table>
+            <p>
+                Ces données permettent de faire le lien entre une <strong>facture de vente et son</strong> <strong>paiement effectif.</strong>
+            </p>
+        </article>
+
+        <article class="subsection">
+            <h3>13.3) Fonctionnalités disponibles</h3>
+            <p>
+                Situées en haut ou à droite de l’interface :
+            </p>
+            <ul>
+                <li>✓ <strong>Export CSV / Excel / PDF :</strong> permet de générer des rapports sur les utilisateurs au format souhaité.</li>
+                <li>✓ <strong>Impression directe :</strong> un bouton d’impression est disponible pour produire une version papier de la liste.</li>
+                <li>✓ <strong>Visibilité des colonnes :</strong> permet de masquer ou d’afficher certaines colonnes selon les préférences.</li>
+                <li>✓ <strong>Recherche dynamique :</strong> un champ de recherche rapide facilite la localisation d’un utilisateur spécifique.</li>
+                <li>✓ <strong>Pagination & nombre d’entrées par page :</strong> l'utilisateur peut naviguer entre les pages et choisir combien d’enregistrements afficher par page (par exemple : 10, 25, 50, etc.).</li>
+            </ul>
+            <div class="image-placeholder"><p>Illustration de l'interface</p>
+                <img src="/images/rapport13.png" alt="Description de l'image" width="900" height="600" style="max-width:100%;height:auto;border-radius:8px;" />
+                </div>
+        </article>
+
+        <article class="subsection">
+            <h3>13.4) Accès recommandé</h3>
+            <table class="component-table">
+                <tr>
+                    <th>Utilisateur</th>
+                    <th>Accès</th>
+                </tr>
+                <tr>
+                    <td>Administrateur</td>
+                    <td>Lecture et export complet</td>
+                </tr>
+                <tr>
+                    <td>Responsable des ventes</td>
+                    <td>Lecture</td>
+                </tr>
+                <tr>
+                    <td>Comptable</td>
+                    <td>Lecture + rapprochement bancaire</td>
+                </tr>
+                <tr>
+                    <td>Caissier</td>
+                    <td>Accès restreint à ses propres encaissements</td>
+                </tr>
+            </table>
+        </article>
+    </section>
+
+    <!-- Section 14 : Note de frais -->
+<section class="section-14">
+    <h2>14) Note de frais</h2>
+
+    <article class="subsection">
+        <h3>14.1) Objectif de cette interface</h3>
+        <p>
+            L'interface <strong>Note de frais</strong> dans movelys permet de <strong>gérer les dépenses engagées par les collaborateurs</strong> de l'entreprise dans le cadre de leurs fonctions. Elle centralise les frais liés à :
+        </p>
+        <ul>
+            <li>Des déplacements professionnels</li>
+            <li>Des achats opérationnels (transport, hébergement, restauration, etc.)</li>
+            <li>Des avances de trésorerie</li>
+            <li>Des remboursements personnels</li>
+        </ul>
+        <p>
+            Cet outil garantit une <strong>traçabilité des dépenses</strong>, une <strong>justification budgétaire claire</strong>, et une <strong>meilleure gestion comptable</strong>.
+        </p>
+    </article>
+
+    <article class="subsection">
+        <h3>14.2) Organisation de l'interface</h3>
+        <p>
+            Cette interface comprend :
+        </p>
+        <ol>
+            <li>Zone de recherche et filtres</li>
+            <li>Zone réserver au graphisme</li>
+            <li>Tableau des notes de frais enregistrées</li>
+        </ol>
+
+        <h4>14.2.1) Filtres de recherche</h4>
+        <table class="component-table">
+            <thead>
+                <tr>
+                    <th>Champ</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Emplacement de l'entreprise</td>
+                    <td>Menu déroulant pour choisir le site concerné.</td>
+                </tr>
+                <tr>
+                    <td>Catégorie</td>
+                    <td>Permet de filtrer les dépenses selon leur nature (Transport, Restauration, Fournitures, etc.)</td>
+                </tr>
+                <tr>
+                    <td>Plage de dates</td>
+                    <td>Permet de Sélectionner une période personnalisée</td>
+                </tr>
+                <tr>
+                    <td>Bouton Appliquer des filtres (violet)</td>
+                    <td>Lance l'application des filtres pour mettre à jour les résultats affichés.</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>
+            Ces filtres assurent un <strong>ciblage rapide et efficace</strong> des frais à auditer ou à valider.
+        </p>
+
+        <h4>14.2.2) Zone réserver au graphisme</h4>
+        <p>
+            Un graphique est prévu pour <strong>afficher visuellement les notes de frais</strong> selon la catégorie ou la période choisie.
+        </p>
+        <p class="remark">
+            <strong>Remarque :</strong> Dans cette partie, <strong>aucune donnée n'est disponible, donc le graphique est vide.</strong> Mais dans un contexte réel, cette zone montrerait des barres ou des courbes de dépenses par catégorie.
+        </p>
+        <p>
+            Sans oublier qu'on peut également télécharger ce graphisme sous plusieurs formes (png, jpeg, PDF, svp), le voir en plein écran, l'imprimer également. Tous cela est possible en appuyant dans sur le bouton situe à droite.
+        </p>
+
+        <h4>14.2.3) Tableau des notes de frais enregistrer</h4>
+        <p>
+            Situé en bas de page, il liste les dépenses détaillées. Analysons chaque composant :
+        </p>
+        <table class="component-table">
+            <thead>
+                <tr>
+                    <th>Colonne</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Catégories de dépenses</td>
+                    <td>Montre les types de charges (ex : carburant, hôtel, fournitures, etc.)</td>
+                </tr>
+                <tr>
+                    <td>Total des charges</td>
+                    <td>Montant total dépensé par catégorie (en FCFA)</td>
+                </tr>
+            </tbody>
+        </table>
+    </article>
+
+    <article class="subsection">
+        <h3>14.3) Fonctionnalités complémentaires</h3>
+        <p>
+            Situées en haut ou à droite de l'interface :
+        </p>
+        <ul class="features-list">
+            <li><strong>Export CSV / Excel / PDF :</strong> permet de générer des rapports sur les utilisateurs au format souhaité.</li>
+            <li><strong>Impression directe :</strong> un bouton d'impression est disponible pour produire une version papier de la liste.</li>
+            <li><strong>Visibilité des colonnes :</strong> permet de masquer ou d'afficher certaines colonnes selon les préférences.</li>
+            <li><strong>Recherche dynamique :</strong> un champ de recherche rapide facilite la localisation d'un utilisateur spécifique.</li>
+            <li><strong>Pagination & nombre d'entrées par page :</strong> l'utilisateur peut naviguer entre les pages et choisir combien d'enregistrements afficher par page (par exemple : 10, 25, 50, etc.).</li>
+        </ul>
+        <div class="image-placeholder"><p>Illustration de l'interface</p>
+                <img src="/images/rapport14.png" alt="Description de l'image" width="900" height="600" style="max-width:100%;height:auto;border-radius:8px;" />
+                </div>
+    </article>
+
+    <article class="subsection">
+        <h3>14.4) Accès et rôles recommandés</h3>
+        <table class="component-table">
+            <thead>
+                <tr>
+                    <th>Rôle utilisateur</th>
+                    <th>Accès</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Collaborateur</td>
+                    <td>Création et consultation de ses propres notes</td>
+                </tr>
+                <tr>
+                    <td>Responsable RH / Direction</td>
+                    <td>Validation et rejet</td>
+                </tr>
+                <tr>
+                    <td>Comptabilité</td>
+                    <td>Traitement des remboursements et export</td>
+                </tr>
+                <tr>
+                    <td>Administrateur</td>
+                    <td>Accès complet (y compris suppression)</td>
+                </tr>
+            </tbody>
+        </table>
+    </article>
+</section>
+
+<!-- Section 15 : Enregistrer le rapport -->
+<section class="section-15">
+    <h2>15) Enregistrer le rapport</h2>
+
+    <article class="subsection">
+        <h3>15.1) Objectif de cette interface</h3>
+        <p>
+            L'interface <strong>Enregistrer le rapport dans</strong> <strong>movelys</strong> permet à l'utilisateur de <strong>sauvegarder un rapport généré avec ses filtres appliqués</strong>, afin de :
+        </p>
+        <ul>
+            <li>Le retrouver plus facilement plus tard,</li>
+            <li>Le partager avec d'autres utilisateurs autorisés,</li>
+            <li>L'utiliser comme modèle de consultation périodique (quotidienne, hebdomadaire, mensuelle...),</li>
+            <li>Maintenir la cohérence des paramètres de filtrage, surtout dans les rapports complexes (clients, ventes, paiements...).</li>
+        </ul>
+        <p>
+            C'est un outil pratique pour automatiser le suivi d'indicateurs précis, sans devoir reconfigurer les filtres manuellement à chaque fois.
+        </p>
+    </article>
+
+    <article class="subsection">
+        <h3>15.2) Structure de l'interface</h3>
+        <p>
+            Cette interface est divisée en deux sections :
+        </p>
+        <ul>
+            <li>Section de filtre</li>
+            <li>Tableau des sessions en caisse</li>
+        </ul>
+
+        <h4>15.2.1) Filtre de recherche</h4>
+        <p>
+            Ces filtres permettent de personnaliser la recherche et d'affiner l'affichage des rapports :
+        </p>
+        <ul>
+            <li>
+                <strong>Utilisateur :</strong>
+                <ul>
+                    <li>Menu déroulant permettant de filtrer les rapports par utilisateur (ex. : caissiers, vendeurs).</li>
+                </ul>
+            </li>
+            <li>
+                <strong>Statut :</strong>
+                <ul>
+                    <li>Permet de filtrer par statut de la session (tout, ouvrir, fermer).</li>
+                </ul>
+            </li>
+            <li>
+                <strong>Plage de dates :</strong>
+                <ul>
+                    <li>Permet de Sélectionner la date pour filtrer les rapports sur une période définie</li>
+                </ul>
+            </li>
+        </ul>
+
+        <h4>15.2.2) Tableau des sessions en caisse</h4>
+        <p>
+            Chaque ligne du tableau représente une <strong>session de caisse, identifiée par son ouverture et fermeture</strong>. Voici les colonnes disponibles :
+        </p>
+        <table class="component-table">
+            <thead>
+                <tr>
+                    <th>Colonne</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Temps d'ouverture</td>
+                    <td>Date et heure de début de la session.</td>
+                </tr>
+                <tr>
+                    <td>Temps de fermeture</td>
+                    <td>Date et heure de fin de la session.</td>
+                </tr>
+                <tr>
+                    <td>Emplacement</td>
+                    <td>Point de vente ou succursale concerné. Exemple : "Senteur & Vitalité".</td>
+                </tr>
+                <tr>
+                    <td>Utilisateur</td>
+                    <td>Nom de l'utilisateur ayant effectué la session + adresse e-mail.</td>
+                </tr>
+                <tr>
+                    <td>Total des bordereaux de carte</td>
+                    <td>Montant total encaissé via carte bancaire</td>
+                </tr>
+                <tr>
+                    <td>Total des chèques</td>
+                    <td>Montant total encaissé via chèques.</td>
+                </tr>
+                <tr>
+                    <td>Total de l'encaisse</td>
+                    <td>Montant encaissé en espèces.</td>
+                </tr>
+                <tr>
+                    <td>Virement bancaire total</td>
+                    <td>Montant encaissé via virement.</td>
+                </tr>
+                <tr>
+                    <td>Acompte total</td>
+                    <td>Montants perçus en acompte.</td>
+                </tr>
+                <tr>
+                    <td>Paiement personnalisé 1, 2, 3,4,5,6,7</td>
+                    <td>Champs personnalisables selon l'entreprise (autres méthodes de paiement).</td>
+                </tr>
+                <tr>
+                    <td>Autre paiements</td>
+                    <td>Dispose des actions de vue et de fermeture</td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="remark">
+            <strong>Remarque :</strong> Chaque cellule affiche un montant suivi d'un nombre entre parenthèses représentant probablement le <strong>nombre de transactions</strong> (ex. FCFA 0,00 (0)).
+        </p>
+    </article>
+
+    <article class="subsection">
+        <h3>15.3) Fonctionnalités complémentaires</h3>
+        <p>
+            Situées en haut ou à droite de l'interface :
+        </p>
+        <ul class="features-list">
+            <li><strong>Export CSV / Excel / PDF :</strong> permet de générer des rapports sur les utilisateurs au format souhaité.</li>
+            <li><strong>Impression directe :</strong> un bouton d'impression est disponible pour produire une version papier de la liste.</li>
+            <li><strong>Visibilité des colonnes :</strong> permet de masquer ou d'afficher certaines colonnes selon les préférences.</li>
+            <li><strong>Recherche dynamique :</strong> un champ de recherche rapide facilite la localisation d'un utilisateur spécifique.</li>
+            <li><strong>Pagination & nombre d'entrées par page :</strong> l'utilisateur peut naviguer entre les pages et choisir combien d'enregistrements afficher par page (par exemple : 10, 25, 50, etc.).</li>
+        </ul>
+        <div class="image-placeholder"><p>Illustration de l'interface</p>
+                <img src="/images/rapport15.png" alt="Description de l'image" width="900" height="600" style="max-width:100%;height:auto;border-radius:8px;" />
+                </div>
+    </article>
+
+    <article class="subsection">
+        <h3>15.4) Permissions et recommandations</h3>
+        <table class="component-table">
+            <thead>
+                <tr>
+                    <th>Rôle utilisateur</th>
+                    <th>Droit recommandé</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Collaborateur</strong></td>
+                    <td>Peut enregistrer ses propres rapports en mode privé</td>
+                </tr>
+                <tr>
+                    <td><strong>Manager / Responsable</strong></td>
+                    <td>Peut créer et partager des rapports d'équipe</td>
+                </tr>
+                <tr>
+                    <td><strong>Administrateur</strong></td>
+                    <td>Peut voir tous les rapports et les classer ou nettoyer</td>
+                </tr>
+            </tbody>
+        </table>
+    </article>
+</section>
+
+<!-- Section 16 : Rapport du représentant commercial -->
+<section class="section-16">
+    <h2>16) Rapport du représentant commercial</h2>
+
+    <article class="subsection">
+        <h3>16.1) Objectif de cette interface</h3>
+        <p>
+            L'interface <strong>Rapport du représentant commercial</strong> dans movelys permet de :
+        </p>
+        <ul>
+            <li>Évaluer la performance de chaque vendeur ou représentant,</li>
+            <li>Suivre les volumes de vente générés,</li>
+            <li>Vérifier les encaissements attribués à chaque membre de l'équipe commerciale,</li>
+            <li>Calculer des commissions de vente sur des bases réelles et vérifiables.</li>
+        </ul>
+        <p>
+            C'est une vue cruciale pour la gestion des forces de vente, la motivation commerciale et l'analyse de productivité individuelle.
+        </p>
+    </article>
+
+    <article class="subsection">
+        <h3>16.2) Structure de l'interface</h3>
+        <p>
+            Cette interface est composée de :
+        </p>
+        <ul>
+            <li>Filtres de recherche</li>
+            <li>Résume du rapport</li>
+            <li>Tableau récapitulatif des performances des commerciaux</li>
+        </ul>
+
+        <h4>16.2.1) Zone de filtres</h4>
+        <p>
+            Ces filtres permettent de personnaliser la recherche et d'affiner l'affichage des rapports :
+        </p>
+        <ul>
+            <li>
+                <strong>Utilisateur :</strong>
+                <ul>
+                    <li>Menu déroulant permettant de filtrer les rapports par utilisateur (ex. : caissiers, vendeurs).</li>
+                </ul>
+            </li>
+            <li>
+                <strong>Emplacement de l'entreprise</strong>
+                <ul>
+                    <li>Menu déroulant pour choisir le point de vente.</li>
+                </ul>
+            </li>
+            <li>
+                <strong>Plage de dates :</strong>
+                <ul>
+                    <li>Permet de Sélectionner la date pour filtrer les rapports sur une période définie</li>
+                </ul>
+            </li>
+        </ul>
+        <p>
+            Ces filtres permettent une vue <strong>personnalisée, périodique et individualisée des performances commerciales</strong>.
+        </p>
+
+        <h4>16.2.2) Résume du rapport</h4>
+        <p>
+            Ce bloc présente les agrégats financiers de la période et des filtres sélectionnés :
+        </p>
+        <ul>
+            <li>
+                <strong>Total Vente - Chiffre d'affaires :</strong>
+                <ul>
+                    <li>835 000,00 FCFA (valeur brute) - 0,00 FCFA (aucune remise ou retour)</li>
+                    <li><strong>Total net : 835 000,00 FCFA</strong></li>
+                </ul>
+            </li>
+            <li>
+                <strong>Dépenses totales : FCFA 0,00</strong>
+                <ul>
+                    <li>Aucune dépense saisie sur la période.</li>
+                </ul>
+            </li>
+        </ul>
+
+        <h4>16.2.3) Tableau des ventes</h4>
+        <p>
+            Un tableau détaillé recense <strong>chaque vente individuelle</strong>, avec les colonnes suivantes :
+        </p>
+        <table class="component-table">
+            <thead>
+                <tr>
+                    <th>Colonne</th>
+                    <th>Explication</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Date</td>
+                    <td>Date de la vente.</td>
+                </tr>
+                <tr>
+                    <td>N° de facture</td>
+                    <td>Numéro unique lié à la vente.</td>
+                </tr>
+                <tr>
+                    <td>Nom du client</td>
+                    <td>Ici, tous les clients sont nommés "Client sans rendez-vous". Cela peut indiquer un type de client générique ou spontané.</td>
+                </tr>
+                <tr>
+                    <td>Emplacement</td>
+                    <td>Point de vente où la transaction a eu lieu. Ici : Senteur & Vitalité.</td>
+                </tr>
+                <tr>
+                    <td>Statut du paiement</td>
+                    <td>Affiche "Payé" (badge vert) pour indiquer que la vente est totalement réglée.</td>
+                </tr>
+                <tr>
+                    <td>Montant total</td>
+                    <td>Montant total de la facture.</td>
+                </tr>
+                <tr>
+                    <td>Total payé</td>
+                    <td>Montant effectivement payé (correspond au montant total si tout est payé).</td>
+                </tr>
+                <tr>
+                    <td>Total restant</td>
+                    <td>Montant encore dû par le client.</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h4>16.2.3.1) Onglets au-dessus du tableau</h4>
+        <table class="component-table">
+            <thead>
+                <tr>
+                    <th>Onglet</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Ventes ajoutées</td>
+                    <td>(Onglet actif) – Affiche les ventes individuelles réalisées.</td>
+                </tr>
+                <tr>
+                    <td>Ventes avec commission</td>
+                    <td>Onglet secondaire – Permet de consulter les ventes générant une commission pour le commercial.</td>
+                </tr>
+                <tr>
+                    <td>Dépense</td>
+                    <td>Affiche les dépenses effectuées par le commercial</td>
+                </tr>
+            </tbody>
+        </table>
+    </article>
+
+    <article class="subsection">
+        <h3>16.3) Fonctions intégrées</h3>
+        <p>
+            Situées en haut ou à droite de l'interface :
+        </p>
+        <ul class="features-list">
+            <li><strong>Export CSV / Excel / PDF :</strong> permet de générer des rapports sur les utilisateurs au format souhaité.</li>
+            <li><strong>Impression directe :</strong> un bouton d'impression est disponible pour produire une version papier de la liste.</li>
+            <li><strong>Visibilité des colonnes :</strong> permet de masquer ou d'afficher certaines colonnes selon les préférences.</li>
+            <li><strong>Recherche dynamique :</strong> un champ de recherche rapide facilite la localisation d'un utilisateur spécifique.</li>
+            <li><strong>Pagination & nombre d'entrées par page :</strong> l'utilisateur peut naviguer entre les pages et choisir combien d'enregistrements afficher par page (par exemple : 10, 25, 50, etc.).</li>
+        </ul>
+        <div class="image-placeholder"><p>Illustration de l'interface</p>
+                <img src="/images/rapport16.png" alt="Description de l'image" width="900" height="600" style="max-width:100%;height:auto;border-radius:8px;" />
+                </div>
+    </article>
+
+    <article class="subsection">
+        <h3>16.4) Droits d'accès recommandés</h3>
+        <table class="component-table">
+            <thead>
+                <tr>
+                    <th>Rôle utilisateur</th>
+                    <th>Droit</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Représentant commercial</td>
+                    <td>Accès uniquement à ses propres performances</td>
+                </tr>
+                <tr>
+                    <td>Chef des ventes / Manager</td>
+                    <td>Accès à toute l'équipe</td>
+                </tr>
+                <tr>
+                    <td>Administrateur</td>
+                    <td>Accès global, y compris édition des objectifs</td>
+                </tr>
+            </tbody>
+        </table>
+    </article>
+</section>
+
+<!-- Section 17 : Journal d'activité -->
+<section class="section-17">
+    <h2>17) Journal d'activité</h2>
+
+    <article class="subsection">
+        <h3>17.1) Objectif de cette interface</h3>
+        <p>
+            L'interface <strong>Journal d'activité</strong> dans movelys (souvent appelée aussi <strong>Log système</strong> ou <strong>Audit trail</strong>) permet de :
+        </p>
+        <ul>
+            <li><strong>Tracer toutes les actions réalisées dans le système,</strong></li>
+            <li><strong>Suivre l'historique des manipulations</strong> des utilisateurs (ajout, modification, suppression),</li>
+            <li><strong>Garantir la responsabilité des utilisateurs,</strong></li>
+            <li>Offrir une <strong>vue d'ensemble des interactions avec les modules clés</strong> (ventes, achats, produits, paramètres...).</li>
+        </ul>
+        <p>
+            C'est un outil essentiel pour la sécurité, la gouvernance des données et la conformité réglementaire (ex. RGPD, audits internes, etc.).
+        </p>
+    </article>
+
+    <article class="subsection">
+        <h3>17.2) Organisation de l'interface</h3>
+        <p>
+            Cette interface se structure autour :
+        </p>
+        <ul>
+            <li>D'une zone de filtres pour affiner la recherche</li>
+            <li>D'un tableau listant les événements du journal</li>
+        </ul>
+
+        <h4>17.2.1) Filtres d'analyse</h4>
+        <p>
+            Permettent de personnaliser la recherche dans les logs d'activité :
+        </p>
+        <table class="component-table">
+            <thead>
+                <tr>
+                    <th>Champ</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Par :</td>
+                    <td>Permet de Filtrer par utilisateur</td>
+                </tr>
+                <tr>
+                    <td>Type de sujet :</td>
+                    <td>Filtre par type d'action (Utilisateur, Vente, Produit, etc.)</td>
+                </tr>
+                <tr>
+                    <td>Plage de dates :</td>
+                    <td>Intervalle de temps sélectionné</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>
+            Ces filtres permettent de retrouver une action spécifique ou le comportement complet d'un utilisateur.
+        </p>
+
+        <h4>17.2.2) Tableau du journal d'activité</h4>
+        <p>
+            Chaque ligne représente <strong>un événement journalisé, c'est-à-dire une action enregistrée automatiquement par le système</strong>.
+        </p>
+        <table class="component-table">
+            <thead>
+                <tr>
+                    <th>Colonne</th>
+                    <th>Explication</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Date</td>
+                    <td>Date et heure exacte à laquelle l'action a été effectuée.</td>
+                </tr>
+                <tr>
+                    <td>Type de sujet</td>
+                    <td>Type d'entité affectée (ici majoritairement Utilisateur, mais aussi Achat, Contact, Vendre).</td>
+                </tr>
+                <tr>
+                    <td>Action</td>
+                    <td>Type d'action réalisée. Exemples : Connectez-vous, Déconnexion, Supplémentaire</td>
+                </tr>
+                <tr>
+                    <td>Par</td>
+                    <td>Nom de l'utilisateur ayant effectué l'action (ici : M. interne interne).</td>
+                </tr>
+                <tr>
+                    <td>Note</td>
+                    <td>Détail complémentaire sur l'action. Affiche des informations importantes comme le numéro de facture, le statut de la facture (ex. : Final), le montant total, et le statut du paiement (ex. : Payé).</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h5>Exemple d'analyse d'une ligne :</h5>
+        <ul>
+            <li><strong>Date :</strong> 07/28/2025 17:10</li>
+            <li><strong>Type de sujet :</strong> <em>Vendre</em></li>
+            <li><strong>Action :</strong> <em>Supplémentaire</em></li>
+            <li><strong>Note :</strong>
+                <ul>
+                    <li>N° de facture : 0023</li>
+                    <li>Statut : Final</li>
+                    <li>Total : 12 500,00 FCFA</li>
+                    <li>Statut du paiement : Payé (badge bleu)</li>
+                </ul>
+            </li>
+        </ul>
+    </article>
+
+    <article class="subsection">
+        <h3>17.3) Fonctionnalités disponibles</h3>
+        <p>
+            Situées en haut ou à droite de l'interface :
+        </p>
+        <ul class="features-list">
+            <li><strong>Export CSV / Excel / PDF :</strong> permet de générer des rapports sur les utilisateurs au format souhaité.</li>
+            <li><strong>Impression directe :</strong> un bouton d'impression est disponible pour produire une version papier de la liste.</li>
+            <li><strong>Visibilité des colonnes :</strong> permet de masquer ou d'afficher certaines colonnes selon les préférences.</li>
+            <li><strong>Recherche dynamique :</strong> un champ de recherche rapide facilite la localisation d'un utilisateur spécifique.</li>
+            <li><strong>Pagination & nombre d'entrées par page :</strong> l'utilisateur peut naviguer entre les pages et choisir combien d'enregistrements afficher par page (par exemple : 10, 25, 50, etc.).</li>
+        </ul>
+        <div class="image-placeholder"><p>Illustration de l'interface</p>
+                <img src="/images/rapport17.png" alt="Description de l'image" width="900" height="600" style="max-width:100%;height:auto;border-radius:8px;" />
+                </div>
+    </article>
+
+    <article class="subsection">
+        <h3>17.4) Sécurité et accès</h3>
+        <table class="component-table">
+            <thead>
+                <tr>
+                    <th>Rôle utilisateur</th>
+                    <th>Accès au journal</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Administrateur</td>
+                    <td>Accès complet</td>
+                </tr>
+                <tr>
+                    <td>Responsable informatique / sécurité</td>
+                    <td>Accès complet + export</td>
+                </tr>
+                <tr>
+                    <td>Manager opérationnel</td>
+                    <td>Lecture partielle (limité à son équipe)</td>
+                </tr>
+                <tr>
+                    <td>Utilisateur standard</td>
+                    <td>Aucun accès (pour garantir l'intégrité du journal)</td>
+                </tr>
+            </tbody>
+        </table>
+    </article>
+</section>
+
+<!-- Conclusion -->
+<section class="conclusion">
+    <h2>Conclusion</h2>
+    <p>
+        Le module de gestion des rapports de Movelys est bien plus qu'un simple outil d'analyse : il s'agit d'un <strong>véritable tableau de bord décisionnel intégré au cœur de votre système d'information</strong>. Il permet à chaque responsable – qu'il soit dirigeant, comptable, logisticien ou commercial – de surveiller les indicateurs clés de l'entreprise avec précision et réactivité.
+    </p>
+    <p>
+        En centralisant et en structurant les données issues des différents modules (ventes, achats, stocks, paiements, dépenses...), Movelys offre une vision globale et dynamique de l'activité. Ce module contribue ainsi à renforcer la performance opérationnelle, à prévenir les <strong>anomalies</strong>, à optimiser les processus internes et à appuyer les choix stratégiques.
+    </p>
+    <p>
+        Utiliser les rapports de Movelys, c'est transformer chaque donnée en valeur ajoutée, au service de la maîtrise, de la rentabilité et de la croissance durable de votre entreprise.
+    </p>
+</section>
+</div>

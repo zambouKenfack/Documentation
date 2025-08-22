@@ -1,0 +1,395 @@
+---
+import '../styles/global1.css';
+
+// Styles for the tables
+const tableStyles = `
+  .component-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1rem 0;
+    font-size: 0.9rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  }
+
+  .component-table thead tr {
+    background-color: #f8fafc;
+    text-align: left;
+    font-weight: 600;
+    border-bottom: 2px solid #e2e8f0;
+  }
+
+  .component-table th,
+  .component-table td {
+    padding: 0.75rem 1rem;
+    border: 1px solid #e2e8f0;
+  }
+
+  .component-table tbody tr {
+    border-bottom: 1px solid #e2e8f0;
+    transition: background-color 0.2s;
+  }
+
+  .component-table tbody tr:nth-child(even) {
+    background-color: #f8fafc;
+  }
+
+  .component-table tbody tr:hover {
+    background-color: #f1f5f9;
+  }
+
+  .component-table th {
+    color: #475569;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    letter-spacing: 0.05em;
+  }
+`;
+---
+
+<style is:global>
+  {tableStyles}
+</style>
+
+<div class="container">
+    <header class="header">
+        <h1>Purchase Management</h1>
+    </header>
+
+    <section class="section">
+        <article class="article">
+            <h2>Introduction</h2>
+            <p>In any high-performing business environment, purchase management represents a strategic function essential to the continuity and profitability of operations. With this in mind, Movelys integrates a comprehensive purchasing module designed to automate, structure, and optimize the entire procurement process.</p>
+            <p>With this module, companies can easily manage supplier orders, track deliveries, record purchases, control costs, and centralize all information related to their suppliers. The Movelys interface allows for quick and accurate data entry, with dedicated fields for purchase prices, quantities, taxes, dates, locations, and invoice numbers.</p>
+            <p>Purchase management in Movelys is also interconnected with the stock, products, and reporting modules, ensuring smooth traceability and real-time tracking of goods received. This interconnection guarantees better visibility on expenses, reduces human errors, and allows for more informed decision-making.</p>
+        </article>
+    </section>
+
+    <section class="section">
+        <article class="article">
+            <h2>1) Managing the Purchase List</h2>
+
+            <div class="article-section">
+                <h3>1.1) General Function</h3>
+                <p>The <strong>Purchase List Management</strong> is an essential interface of Movelys that allows companies to track, view, and manage all purchasing operations made with <strong>their suppliers.</strong></p>
+                <p>This table centralizes:</p>
+                <ul>
+                    <li>Validated purchases,</li>
+                    <li>Pending orders,</li>
+                    <li>Partial or full payments,</li>
+                    <li>And documents related to suppliers (invoices, purchase orders, etc.).</li>
+                </ul>
+                <p>This module ensures <strong>total traceability, strengthens</strong> <strong>supplier relationship management, and</strong> offers <strong>rigorous accounting tracking.</strong></p>
+            </div>
+            <div class="article-section">
+                <h3>1.2) Interface Description</h3>
+                <p>The purchase list interface is presented as a dynamic table, rich in visualization, analysis, and action options.</p>
+
+                <h4>1.2.1) Functions Visible on the Interface</h4>
+                <ul>
+                    <li><strong>Number of entries per page:</strong> Allows choosing how many rows to display on the screen (10, 25, 50, 100...).</li>
+                    <li><strong>Action buttons at the top of the table:</strong>
+                        <ul>
+                            <li>Export to CSV</li>
+                            <li>Export to Excel</li>
+                            <li>Print</li>
+                            <li>Column visibility (show/hide certain fields)</li>
+                        </ul>
+                    </li>
+                    <li><strong>Search bar:</strong> Allows quick filtering by keyword (e.g., supplier name, invoice, date…).</li>
+                    <li><strong>"Add Purchase" button:</strong> Quick access to the form for adding a new purchase.</li>
+                </ul>
+                <div class="image-placeholder">
+                <p>Interface Illustration</p>
+                <img src="/image/achat1.png" alt="Description de l'image" width="900" height="600" style="max-width:100%;height:auto;border-radius:8px;" />
+            </div>
+
+                <h4>1.2.2) Technical Features</h4>
+                <h5>1.2.2.1 Dynamic Filters</h5>
+                <ul>
+                    <li>The user can filter results based on multiple criteria: company location, supplier, purchase status, payment status, date range.</li>
+                    <li>Sorting can be done on all columns (ascending or descending).</li>
+                </ul>
+
+                <h5>1.2.2.2 Bulk Actions</h5>
+                <ul>
+                    <li>Ability to delete multiple purchases at once.</li>
+                    <li>Export all or part of the list based on applied filters.</li>
+                </ul>
+            </article>
+
+            </div>
+            <div class="article-section">
+                <h3>1.3) Integration with Other Movelys Modules</h3>
+                <table class="component-table">
+                    <thead>
+                        <tr>
+                            <th>Module</th>
+                            <th>Impact</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Products</td>
+                            <td>The purchased items are added or updated in stock</td>
+                        </tr>
+                        <tr>
+                            <td>Stock</td>
+                            <td>Stock movements are generated automatically upon receipt</td>
+                        </tr>
+                        <tr>
+                            <td>Suppliers</td>
+                            <td>Updates the history of each supplier</td>
+                        </tr>
+                        <tr>
+                            <td>Reports</td>
+                            <td>Detailed spending statistics by period, category, or supplier</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </article>
+
+            </div>
+            <div class="article-section">
+                <h3>1.4) Access and Permissions</h3>
+                <table class="component-table">
+                    <thead>
+                        <tr>
+                            <th>User Role</th>
+                            <th>Recommended Access Level</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Administrator</td>
+                            <td>Full access to all functions</td>
+                        </tr>
+                        <tr>
+                            <td>Purchasing Manager</td>
+                            <td>Consultation, modification, export</td>
+                        </tr>
+                        <tr>
+                            <td>Accountant</td>
+                            <td>Read + export data for tax processing</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </article>
+        </article>
+    </section>
+
+    <section class="section">
+        <article class="article">
+            <h2>2) Managing the Addition of a Purchase</h2>
+
+            <div class="article-section">
+                <h3>2.1) General Function</h3>
+                <p>The "Add Purchase" function in Movelys allows recording a new <strong>purchase transaction from a supplier.</strong></p>
+                <p>This is a key step in the procurement process: it allows generating a supplier order, updating stock, and initiating payment tracking.</p>
+            </article>
+
+            </div>
+            <div class="article-section">
+                <h3>2.2) Interface Presentation</h3>
+                <p>The "Add Purchase" form is a comprehensive interface divided into several logical sections:</p>
+
+                <h4>A. General Information</h4>
+                <ul>
+                    <li>Supplier</li>
+                    <li>Reference number</li>
+                    <li>Purchase date</li>
+                    <li>Purchase status</li>
+                    <li>Company location</li>
+                    <li>Payment terms</li>
+                    <li>You can also attach a document if desired</li>
+                </ul>
+                <p>Also in this addition interface, you can import products. To do this, you can add a new product or search for an existing product in the database to add it to the table.</p>
+
+                <h4>B. Item Details</h4>
+                <p>This section allows you to define the type of discount, the amount of discount, purchase tax, and additional notes which are very essential when adding a purchase to our database.</p>
+                <p>It also allows adding additional expenses, for which you'll need to specify the name of the additional expense as well as its quantity. Before doing this, you should also provide shipping details along with any additional shipping costs.</p>
+
+                <h4>C. Payment Information</h4>
+                <p>A section where you can add a payment. To do this, you’ll need to provide an amount, enter the payment date, the payment method, and the payment note.</p>
+
+                <div class="image-placeholder">
+                <p>Interface Illustration</p>
+                <img src="/image/achat2.png" alt="Description de l'image" width="900" height="600" style="max-width:100%;height:auto;border-radius:8px;" />
+            </div>
+            </article>
+
+            </div>
+            <div class="article-section">
+                <h3>2.3) Logical Operation</h3>
+                <ul>
+                    <li>Once the purchase is recorded, it appears in the <strong>purchase list with its status.</strong></li>
+                    <li>If the order is "Received," the <strong>stock is automatically updated.</strong></li>
+                    <li>If a payment is entered, the accounting module is <strong>synchronized.</strong></li>
+                </ul>
+            </article>
+
+            </div>
+            <div class="article-section">
+                <h3>2.4) Access Control</h3>
+                <table class="component-table">
+                    <thead>
+                        <tr>
+                            <th>User Role</th>
+                            <th>Access</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Administrator</td>
+                            <td>Complete</td>
+                        </tr>
+                        <tr>
+                            <td>Purchasing Manager</td>
+                            <td>Creation and tracking</td>
+                        </tr>
+                        <tr>
+                            <td>Accountant</td>
+                            <td>For financial tracking</td>
+                        </tr>
+                        <tr>
+                            <td>Stock Employee</td>
+                            <td>Read only or limited access</td>
+                        </tr>
+                        <tr>
+                            <td>Guest User</td>
+                            <td>No access</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </article>
+        </article>
+    </section>
+
+    <section class="section">
+        <article class="article">
+            <h2>3) Managing the Purchase Return List</h2>
+
+            <div class="article-section">
+                <h3>3.1) General Function</h3>
+                <p>The Purchase Return Management allows users to track, record, and process product returns to suppliers due to:</p>
+                <ul>
+                    <li>Non-conforming products,</li>
+                    <li>Over-delivery,</li>
+                    <li>Or order errors.</li>
+                </ul>
+                <p>This module is crucial to ensure:</p>
+                <ul>
+                    <li>The quality of received goods,</li>
+                    <li>The transparency of supplier relationships,</li>
+                    <li>And the automatic updating of stock and financial flows.</li>
+                </p>
+            </div>
+
+            </div>
+            <div class="article-section">
+                <h3>3.2) Interface Presentation</h3>
+                <p>The interface takes the form of a returns management table with several navigation and management tools:</p>
+
+                <h4>Available Functions</h4>
+                <ul>
+                    <li>Selection of the number of entries per page</li>
+                    <li>Search bar (by supplier, date, reference, etc.)</li>
+                    <li>Export buttons:
+                        <ul>
+                            <li>Export to CSV,</li>
+                            <li>Export to Excel, PDF</li>
+                            <li>Print</li>
+                        </ul>
+                    </li>
+                    <li>Customization of visible columns</li>
+                    <li>Filtering to facilitate searches</li>
+                </ul>
+
+                <h4>"Add Purchase Return" Button</h4>
+                <p>Allows recording a new return with all necessary details. It includes the following fields:</p>
+                <ul>
+                    <li>Supplier</li>
+                    <li>Company location</li>
+                    <li>Reference number</li>
+                    <li>Date</li>
+                    <li>Attach document</li>
+                </ul>
+                <p>You can also search for a product to add it to the list and submit the form at the end.</p>
+
+            <div class="image-placeholder">
+                <p>Interface Illustration</p>
+                <img src="/image/achat3.png" alt="Description de l'image" width="900" height="600" style="max-width:100%;height:auto;border-radius:8px;" />
+            </div>
+            </article>
+
+            </div>
+            <div class="article-section">
+                <h3>3.3) Integration with Other Modules</h3>
+                <table class="component-table">
+                    <thead>
+                        <tr>
+                            <th>Module</th>
+                            <th>Impact</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Stock</td>
+                            <td>Returned products are automatically deducted from stock</td>
+                        </tr>
+                        <tr>
+                            <td>Products</td>
+                            <td>Movement history of each item updated</td>
+                        </tr>
+                        <tr>
+                            <td>Suppliers</td>
+                            <td>Impacts the history and reports related to the concerned supplier</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </article>
+
+            </div>
+            <div class="article-section">
+                <h3>3.4) Access and User Roles</h3>
+                <table class="component-table">
+                    <thead>
+                        <tr>
+                            <th>Role</th>
+                            <th>Recommended Rights</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Administrator</td>
+                            <td>Full management</td>
+                        </tr>
+                        <tr>
+                            <td>Purchasing/Stock Manager</td>
+                            <td>Creation, editing, deletion</td>
+                        </tr>
+                        <tr>
+                            <td>Accountant</td>
+                            <td>For financial tracking</td>
+                        </tr>
+                        <tr>
+                            <td>Logistics User</td>
+                            <td>Read + limited actions</td>
+                        </tr>
+                        <tr>
+                            <td>Guest User</td>
+                            <td>No access</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </article>
+        </article>
+    </section>
+
+    <section class="section">
+        <article class="article">
+            <h2>Conclusion</h2>
+            <p>The Movelys purchasing module is a powerful tool designed to simplify and streamline the procurement process for modern businesses. By centralizing interactions with suppliers and ensuring perfect synchronization with other modules of the system, it enables better planning of purchases, reduces stockouts, and controls operating costs.</p>
+            <p>With Movelys, purchase management is no longer just a simple accounting operation: it becomes a strategic lever to improve profitability, secure supplies, and enhance the overall performance of the organization.</p>
+        </article>
+    </section>
+</div>

@@ -1,0 +1,561 @@
+---
+// index.astro
+import '../styles/global1.css' ;
+---
+
+    <div class="container">
+        <header class="header">
+            <h1>Gestion des utilisateurs Movelys</h1>
+        </header>
+
+        <section class="section">
+            <h2>Introduction</h2>
+            <p>
+                La gestion des utilisateurs dans Movelys permet de contrôler qui peut accéder à quoi au sein de l'application. Elle offre un système clair pour créer des profils, attribuer des rôles (comme administrateur, agent d'achat, comptable, etc.) et définir les permissions de chaque utilisateur selon leurs responsabilités. Grâce à cette fonctionnalité, les entreprises peuvent assurer la sécurité des données, suivre les activités de chaque membre et organiser efficacement le travail collaboratif. Que ce soit pour une petite équipe ou une grande structure multi-sites, Movelys s'adapte et garantit un accès maîtrisé à tous les modules de gestion.
+            </p>
+        </section>
+
+        <section class="section">
+            <h2>1. Gestion des utilisateurs</h2>
+
+            <article class="article">
+                <h3>1.1 Présentation générale</h3>
+                <p>
+                    La section <strong>Utilisateurs</strong> de l'application <strong>Movelys</strong> est une composante essentielle de l'administration du système. Elle permet aux administrateurs de gérer les comptes des utilisateurs ayant accès à la plateforme. Cette fonctionnalité vise à assurer une organisation claire des rôles, à contrôler l'accès aux différentes fonctionnalités de l'application et à maintenir la sécurité et la traçabilité des actions des utilisateurs.
+                </p>
+            </article>
+
+            <article class="article">
+                <h3>1.2 Fonctions disponibles</h3>
+                <p>L'interface permet d'effectuer les actions suivantes :</p>
+                
+                <h4>a) Affichage des utilisateurs</h4>
+                <ul>
+                    <li>L'administrateur visualise sous forme de tableau l'ensemble des utilisateurs enregistrés.</li>
+                    <li>Les colonnes disponibles incluent sont :
+                        <ul>
+                            <li><strong>Nom d'utilisateur</strong> - C'est l'identifiant unique utilisé par une personne pour se connecter à un système ou une application.</li>
+                            <li><strong>Nom complet</strong> - Elle est généralement composé du prénom et du nom de famille.</li>
+                            <li><strong>Rôle (ex. : Admin)</strong> - Elle permet de définir les droits ou permissions d'un utilisateur dans le système.</li>
+                            <li><strong>Messagerie électronique</strong> - C'est l'adresse e-mail associée à l'utilisateur.</li>
+                            <li><strong>Actions disponibles (éditer, vue, supprimer)</strong> - Ce sont les opérations qu'on peut effectuer sur l'utilisateur depuis l'interface.</li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <h4>Modification des informations utilisateur</h4>
+                <ul>
+                    <li>Chaque ligne comporte un bouton "Éditer" qui permet de modifier les données de l'utilisateur sélectionné.</li>
+                    <li>L'administrateur peut ainsi mettre à jour les informations de contact ou le rôle attribué.</li>
+                </ul>
+
+                <h4>Visualisation des détails</h4>
+                <ul>
+                    <li>Le bouton "Vue" permet de consulter les informations détaillées sur un utilisateur sans les modifier.</li>
+                    <li>Cela peut inclure l'historique des connexions, les droits d'accès ou les activités récentes (selon configuration).</li>
+                </ul>
+
+                <h4>Suppression d'un utilisateur</h4>
+                <ul>
+                    <li>Le bouton "Supprimer", bien mis en évidence, permet de retirer un utilisateur du système.</li>
+                    <li>Une fenêtre de confirmation est généralement affichée pour éviter les suppressions accidentelles.</li>
+                </ul>
+
+                <div class="image-placeholder">
+                    <p>Illustration de l'interface</p>
+                </div>
+
+                <h4>b) Ajout d'un nouvel utilisateur</h4>
+                <ul>
+                    <li>Un bouton "Ajouter" (en haut à droite) permet d'enregistrer un nouvel utilisateur dans le système et lorsqu'on clique sur ce bouton on retrouve :</li>
+                    <li>Un formulaire permettant de saisir les identifiants d'un nouvel utilisateur à savoir :
+                        <ul>
+                            <li><strong>Préfixe</strong> - C'est une formule de politesse ou un titre placé avant le prénom/nom (M., Mme, Dr).</li>
+                            <li><strong>Prénom</strong> - C'est le nom personnel donné à une personne à la naissance, utilisé pour l'identifier individuellement.</li>
+                            <li><strong>Nom</strong> - C'est Le nom de famille, aussi appelé nom patronymique, elle est l'identifiant hérité de la famille.</li>
+                            <li><strong>Messagerie électronique</strong> - Aussi appelée adresse e-mail, c'est une adresse utilisée pour envoyer et recevoir des messages numériques.</li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <h4>Formulaire pour définir les rôles et les autorisations</h4>
+                <ul>
+                    <li><strong>Nom de l'utilisateur</strong> - C'est l'identifiant unique choisi pour accéder à un système.</li>
+                    <li><strong>Mot de passe</strong> - C'est un code secret utilisé pour sécuriser l'accès au compte.</li>
+                    <li><strong>Confirmez le mot de passe</strong> - Champ où l'on retape le même mot de passe pour s'assurer qu'il n'y a pas d'erreur de saisie.</li>
+                    <li><strong>Rôles</strong> - Ce champ permet de définir le niveau d'accès de l'utilisateur dans le système.</li>
+                    <li><strong>Lieux d'accès</strong> - Ce sont les emplacements physiques ou logiques où l'utilisateur est autorisé à se connecter ou à intervenir.</li>
+                </ul>
+
+                <h4>Formulaire pour définir les Ventes</h4>
+                <ul>
+                    <li><strong>Pourcentage de la commission de vente (%)</strong> - Ce pourcentage représente la part des ventes qu'un vendeur reçoit en tant que commission.</li>
+                    <li><strong>Pourcentage de remise sur les ventes maximales</strong> - Ce pourcentage indique la réduction maximale qu'un vendeur est autorisé à accorder à un client sur une vente.</li>
+                </ul>
+
+                <h4>Formulaire pour plus d'informations</h4>
+                <ul>
+                    <li><strong>Date de naissance</strong> - Elle représente La date à laquelle une personne est née.</li>
+                    <li><strong>Genre</strong> - Elle représente Le sexe ou l'identité de genre de la personne.</li>
+                    <li><strong>Situation de famille</strong> - Elle représente Le statut marital ou familial de la personne.</li>
+                    <li><strong>Groupe sanguin</strong> - Elle représente Le type de sang de la personne, important dans les contextes médicaux.</li>
+                    <li><strong>Numéro de téléphone portable</strong> - Elle représente Le numéro principal de téléphone mobile de l'utilisateur.</li>
+                    <li><strong>Autre numéro de téléphone</strong> - Elle représente Le numéro principal de téléphone mobile de l'utilisateur.</li>
+                    <li><strong>Numéro de contact de la famille</strong> - Elle représente Le numéro de téléphone d'un proche à contacter en cas d'urgence.</li>
+                    <li><strong>Lien Facebook</strong> - Elle représente le Lien vers le profil Facebook de l'utilisateur.</li>
+                    <li><strong>Lien Twitter</strong> - Elle représente le Lien vers le profil Twitter (X) de l'utilisateur.</li>
+                    <li><strong>Médias sociaux 2</strong> - Elle Peut servir à ajouter un lien vers un autre réseau social.</li>
+                    <li><strong>Champ personnalisé 1,2,3,4</strong> - Ce sont des champs libres définis par l'organisation pour enregistrer d'autres informations spécifiques.</li>
+                    <li><strong>Nom du tuteur</strong> - Elle représente Le nom d'un représentant légal, utilisé pour les mineurs ou personnes sous tutelle.</li>
+                    <li><strong>Nom de la preuve d'identité</strong> - Elle représente Le type de document d'identité présenté.</li>
+                    <li><strong>Numéro de preuve d'identité</strong> - Elle représente Le numéro inscrit sur le document d'identité fourni.</li>
+                    <li><strong>Adresse permanente</strong> - Elle représente L'adresse officielle et fixe de résidence habituelle (domicile légal).</li>
+                    <li><strong>Adresse actuelle</strong> - Elle représente L'endroit où la personne habite actuellement, si différent de l'adresse permanente.</li>
+                </ul>
+
+                <h4>Formulaire pour les coordonnées bancaires</h4>
+                <ul>
+                    <li><strong>Nom du titulaire du compte</strong> - Elle représente Le nom de la personne ou de l'entreprise à qui appartient le compte bancaire.</li>
+                    <li><strong>Numéro de compte</strong> - Elle représente Le numéro unique attribué au compte bancaire par la banque.</li>
+                    <li><strong>Nom de la banque</strong> - Elle représente Le nom officiel de l'établissement bancaire où le compte est ouvert.</li>
+                    <li><strong>Code d'identification de la banque</strong> - C'est le code qui permet d'identifier la banque de façon standardisée, souvent dans les transactions internationales.</li>
+                    <li><strong>Branche</strong> - C'est La succursale ou agence bancaire où le compte a été ouvert.</li>
+                    <li><strong>Numéro d'identification du contribuable</strong> - C'est le numéro fiscal unique attribué à un individu ou une entreprise pour l'identification auprès des autorités fiscales.</li>
+                </ul>
+
+                <div class="image-placeholder">
+                    <p>Illustration de l'interface</p>
+                </div>
+            </article>
+
+            <article class="article">
+                <h3>1.3 Fonctionnalités avancées de gestion de la table</h3>
+                <p>L'interface de la table propose plusieurs outils d'exportation et de gestion :</p>
+                <ul>
+                    <li><strong>Export CSV / Excel / PDF</strong> : permet de générer des rapports sur les utilisateurs au format souhaité.</li>
+                    <li><strong>Impression directe</strong> : un bouton d'impression est disponible pour produire une version papier de la liste.</li>
+                    <li><strong>Visibilité des colonnes</strong> : permet de masquer ou d'afficher certaines colonnes selon les préférences.</li>
+                    <li><strong>Recherche dynamique</strong> : un champ de recherche rapide facilite la localisation d'un utilisateur spécifique.</li>
+                    <li><strong>Pagination & nombre d'entrées par page</strong> : l'utilisateur peut naviguer entre les pages et choisir combien d'enregistrements afficher par page (par exemple : 10, 25, 50, etc.).</li>
+                </ul>
+            </article>
+
+            <article class="article">
+                <h3>1.4 Les rôles</h3>
+                <p>Chaque utilisateur possède un rôle, qui définit ses permissions au sein de l'application.</p>
+                <p>Les rôles peuvent être utilisés pour :</p>
+                <ul>
+                    <li>Restreindre ou accorder l'accès à certaines sections de l'application</li>
+                    <li>Gérer la visibilité des fonctionnalités sensibles (ex : finances, ressources humaines, statistiques)</li>
+                    <li>Appliquer des politiques de sécurité spécifiques</li>
+                </ul>
+            </article>
+
+            <article class="article">
+                <h3>1.5 Sécurité & traçabilité</h3>
+                <p>La gestion des utilisateurs est généralement associée à :</p>
+                <ul>
+                    <li>Des politiques de mot de passe fort</li>
+                    <li>Une journalisation des connexions et des actions critiques</li>
+                    <li>Des restrictions basées sur le rôle (RBAC : Role-Based Access Control)</li>
+                    <li>Des alertes en cas d'activité inhabituelle (si intégré)</li>
+                </ul>
+            </article>
+
+            <article class="article">
+                <h3>1.6 Cas d'usage</h3>
+                <table class="usage-table">
+                    <thead>
+                        <tr>
+                            <th>Cas d'usage</th>
+                            <th>Action</th>
+                            <th>Résultat attendu</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Ajouter un nouvel employé</td>
+                            <td>Cliquer sur "Ajouter", remplir le formulaire</td>
+                            <td>Un nouveau compte utilisateur est créé</td>
+                        </tr>
+                        <tr>
+                            <td>Modifier les droits d'un utilisateur</td>
+                            <td>Cliquer sur "Éditer", changer le rôle</td>
+                            <td>L'utilisateur a de nouveaux accès après sauvegarde</td>
+                        </tr>
+                        <tr>
+                            <td>Exporter la liste des utilisateurs</td>
+                            <td>Cliquer sur "Exporter CSV"</td>
+                            <td>Un fichier CSV est généré avec tous les utilisateurs</td>
+                        </tr>
+                        <tr>
+                            <td>Supprimer un utilisateur inactif</td>
+                            <td>Cliquer sur "Supprimer", confirmer</td>
+                            <td>Le compte est supprimé de la base de données</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </article>
+
+            <article class="article">
+                <h3>1.7 Importance de cette fonctionnalité</h3>
+                <p>
+                    Cette section garantit une gestion centralisée et maîtrisée des utilisateurs dans Movelys. Elle est indispensable pour :
+                </p>
+                <ul>
+                    <li>Maintenir une gouvernance claire de la plateforme</li>
+                    <li>Définir des responsabilités précises entre les membres de l'équipe</li>
+                    <li>Sécuriser les données sensibles de l'entreprise</li>
+                    <li>Respecter les normes de confidentialité (ex : RGPD)</li>
+                </ul>
+            </article>
+        </section>
+
+        <section class="section">
+            <h2>2. Gestion des rôles</h2>
+
+            <article class="article">
+                <h3>2.1 Présentation générale</h3>
+                <p>
+                    La gestion des rôles dans l'application <strong>Movelys est un composant fondamental du système de contrôle d'accès. Elle permet de définir des profils d'utilisateurs selon leurs responsabilités et leur niveau d'autorisation au sein de l'organisation. Chaque rôle conditionne l'accès aux différentes fonctionnalités de la plateforme, garantissant ainsi une sécurité optimale et une meilleure organisation des processus.
+                </p>
+            </article>
+
+            <article class="article">
+                <h3>2.2 Objectifs de la gestion des rôles</h3>
+                <ul>
+                    <li>Structurer les droits d'accès aux différentes parties du système.</li>
+                    <li>Déléguer les fonctions et responsabilités selon le poste de l'utilisateur.</li>
+                    <li>Renforcer la sécurité et éviter les manipulations non autorisées.</li>
+                    <li>Simplifier la gestion des autorisations : un rôle modifié affecte tous les utilisateurs qui y sont rattachés.</li>
+                </ul>
+            </article>
+
+            <article class="article">
+                <h3>2.3 Fonctionnalités disponibles</h3>
+                
+                <h4>a) Affichage des rôles existants</h4>
+                <ul>
+                    <li>Un tableau liste tous les rôles enregistrés dans le système.</li>
+                    <li>Pour chaque rôle, deux actions sont disponibles : Éditer et Supprimer.</li>
+                </ul>
+
+                <div class="image-placeholder">
+                    <p>Illustration de l'interface</p>
+                </div>
+
+                <h4>b) Ajout d'un nouveau rôle</h4>
+                <ul>
+                    <li>Le bouton "Ajouter", situé en haut à droite, permet la création d'un nouveau rôle personnalisé.</li>
+                    <li>Le formulaire d'ajout permet de spécifier :
+                        <ul>
+                            <li>Le nom du rôle (ex : Responsable RH, Manager, Technicien)</li>
+                            <li>Des permissions (selon configuration avancée)</li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <h4>c) Modification d'un rôle existant</h4>
+                <ul>
+                    <li>L'option "Éditer" permet de modifier le nom ou les paramètres d'un rôle.</li>
+                    <li>Pratique en cas de changement d'organisation interne ou d'ajout de nouvelles responsabilités à un poste.</li>
+                </ul>
+
+                <h4>d) Suppression d'un rôle</h4>
+                <ul>
+                    <li>Le bouton "Supprimer" permet de retirer un rôle devenu obsolète.</li>
+                    <li>Une fenêtre de confirmation est habituellement affichée pour éviter toute suppression accidentelle.</li>
+                </ul>
+            </article>
+
+            <article class="article">
+                <h3>2.4 Exemples de rôles dans Movelys</h3>
+                <p>
+                    D'après l'image ci-dessus fournie, deux rôles sont présents dans le système :
+                </p>
+                <ul>
+                    <li><strong>Admin</strong> : rôle avec tous les droits d'administration et de supervision.</li>
+                    <li><strong>Caissier</strong> : probablement restreint à la gestion des ventes, de la caisse ou des paiements.</li>
+                </ul>
+                <p>
+                    Ces rôles peuvent être adaptés selon la structure de l'entreprise utilisatrice de Movelys.
+                </p>
+            </article>
+
+            <article class="article">
+                <h3>2.5 Outils de gestion supplémentaires</h3>
+                <ul>
+                    <li><strong>Recherche rapide</strong> : une barre de recherche permet de retrouver facilement un rôle spécifique.</li>
+                    <li><strong>Pagination & affichage</strong> : les rôles peuvent être consultés par page, avec le nombre d'éléments affichés personnalisable (ex : 10, 25, etc.).</li>
+                </ul>
+            </article>
+
+            <article class="article">
+                <h3>2.6 Cas d'usage</h3>
+                <table class="usage-table">
+                    <thead>
+                        <tr>
+                            <th>Cas d'usage</th>
+                            <th>Action</th>
+                            <th>Résultat attendu</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Créer un nouveau rôle "Commercial"</td>
+                            <td>Cliquer sur "Ajouter", saisir le nom</td>
+                            <td>Un nouveau rôle apparaît dans la liste</td>
+                        </tr>
+                        <tr>
+                            <td>Modifier le nom du rôle "Caissier"</td>
+                            <td>Cliquer sur "Éditer", changer le nom</td>
+                            <td>Le rôle est mis à jour dans le système</td>
+                        </tr>
+                        <tr>
+                            <td>Supprimer un rôle obsolète</td>
+                            <td>Cliquer sur "Supprimer", confirmer</td>
+                            <td>Le rôle est retiré et n'est plus disponible</td>
+                        </tr>
+                        <tr>
+                            <td>Rechercher un rôle spécifique</td>
+                            <td>Utiliser le champ "Rechercher"</td>
+                            <td>Le système filtre les résultats en temps réel</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </article>
+
+            <article class="article">
+                <h3>2.7 Intégration avec la gestion des utilisateurs</h3>
+                <p>
+                    Chaque <strong>utilisateur de Movelys est associé à un</strong> <strong>rôle. Cette liaison permet :</strong>
+                </p>
+                <ul>
+                    <li>D'automatiser la gestion des droits selon la fonction</li>
+                    <li>D'uniformiser les profils d'utilisateurs</li>
+                    <li>De simplifier la maintenance du système, en évitant la gestion individuelle des autorisations</li>
+                </ul>
+                <p>
+                    Par exemple :
+                </p>
+                <p>
+                    Si le rôle "Caissier" a accès uniquement aux modules de vente et de caisse, tous les utilisateurs assignés à ce rôle seront automatiquement restreints à ces sections.
+                </p>
+            </article>
+
+            <article class="article">
+                <h3>2.8 Importance de cette fonctionnalité</h3>
+                <p>
+                    La gestion des rôles est un pilier de la sécurité et de l'organisation dans Movelys. Elle permet de :
+                </p>
+                <ul>
+                    <li>Protéger les données sensibles</li>
+                    <li>Définir des niveaux hiérarchiques clairs</li>
+                    <li>Gérer efficacement les accès lors de l'arrivée ou du départ d'un employé</li>
+                    <li>Adapter facilement l'application à différents modèles d'entreprises</li>
+                </ul>
+            </article>
+        </section>
+
+        <section class="section">
+            <h2>3. Commissionnaires de vente</h2>
+
+            <article class="article">
+                <h3>3.1 Présentation générale</h3>
+                <p>
+                    La section <strong>"Commissionnaires de vente" de l'application</strong> <strong>Movelys est conçue pour gérer les agents ou représentants commerciaux rémunérés à la commission. Elle permet d'organiser, de suivre et de contrôler les informations relatives à ces partenaires externes ou internes, tout en assurant une transparence dans le calcul et la gestion des commissions.
+                </p>
+            </article>
+
+            <article class="article">
+                <h3>3.2 Objectifs de la fonctionnalité</h3>
+                <ul>
+                    <li>Centraliser les informations relatives aux commissionnaires.</li>
+                    <li>Suivre les performances et les contacts des agents commerciaux.</li>
+                    <li>Définir un pourcentage de commission spécifique à chaque individu.</li>
+                    <li>Fournir des outils d'exportation et de visualisation avancés.</li>
+                    <li>Faciliter la gestion RH et commerciale liée aux ventes externes.</li>
+                </ul>
+            </article>
+
+            <article class="article">
+                <h3>3.3 Composants de l'interface</h3>
+                <p>
+                    L'interface de gestion des commissionnaires de vente est composée d'un tableau structuré avec les champs suivants :
+                </p>
+                <table class="component-table">
+                    <thead>
+                        <tr>
+                            <th>Champ</th>
+                            <th>Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Nom</td>
+                            <td>Le nom du commissionnaire (personne ou entité)</td>
+                        </tr>
+                        <tr>
+                            <td>Messagerie électronique</td>
+                            <td>L'adresse email pour la communication directe</td>
+                        </tr>
+                        <tr>
+                            <td>Numéro de contact</td>
+                            <td>Numéro de téléphone mobile ou fixe</td>
+                        </tr>
+                        <tr>
+                            <td>Adresse</td>
+                            <td>Lieu de résidence ou siège social</td>
+                        </tr>
+                        <tr>
+                            <td>Pourcentage de la commission de vente (%)</td>
+                            <td>Taux de rémunération par vente réalisée</td>
+                        </tr>
+                        <tr>
+                            <td>Action</td>
+                            <td>Boutons d'édition et de suppression pour chaque enregistrement</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p>
+                    Chaque ligne représente un commissionnaire, et les données peuvent être modifiées ou supprimées individuellement.
+                </p>
+
+                <div class="image-placeholder">
+                    <p>Illustration de l'interface</p>
+                </div>
+            </article>
+
+            <article class="article">
+                <h3>3.4 Actions disponibles</h3>
+                
+                <h4>a) Ajout d'un commissionnaire</h4>
+                <ul>
+                    <li>Un bouton "Ajouter", bien visible en haut à droite, permet d'enregistrer un nouveau commissionnaire.</li>
+                    <li>Le formulaire inclut :
+                        <ul>
+                            <li>Préfix</li>
+                            <li>Premier nom</li>
+                            <li>Second nom</li>
+                            <li>Email</li>
+                            <li>Numéro de contact</li>
+                            <li>Adresse</li>
+                            <li>Pourcentage de commission de vente (%)</li>
+                        </ul>
+                    </li>
+                    <li>Après validation, l'enregistrement est automatiquement intégré au tableau.</li>
+                </ul>
+
+                <h4>b) Modification d'un commissionnaire</h4>
+                <ul>
+                    <li>Le bouton "Éditer" (généralement avec une icône de crayon) permet de modifier les informations d'un commissionnaire existant.</li>
+                    <li>Pratique en cas de changement de coordonnées ou de pourcentage de commission.</li>
+                </ul>
+
+                <h4>c) Suppression</h4>
+                <ul>
+                    <li>Le bouton "Supprimer", en rouge, supprime l'enregistrement de façon permanente après confirmation.</li>
+                </ul>
+            </article>
+
+            <article class="article">
+                <h3>3.5 Outils de gestion de la table</h3>
+                <p>
+                    L'interface met à disposition plusieurs outils interactifs et professionnels pour la manipulation des données :
+                </p>
+                <table class="component-table">
+                    <thead>
+                        <tr>
+                            <th>Fonctionnalité</th>
+                            <th>Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Nombre d'entrées par page</td>
+                            <td>Permet à l'utilisateur de choisir combien d'éléments afficher (ex : 10, 25, 50, 100)</td>
+                        </tr>
+                        <tr>
+                            <td>Recherche dynamique</td>
+                            <td>Une barre de recherche filtre les données en temps réel</td>
+                        </tr>
+                        <tr>
+                            <td>Export CSV / Excel</td>
+                            <td>Génère des fichiers téléchargeables contenant les données actuelles</td>
+                        </tr>
+                        <tr>
+                            <td>Impression</td>
+                            <td>Produit une version imprimable du tableau</td>
+                        </tr>
+                        <tr>
+                            <td>Visibilité des colonnes</td>
+                            <td>Permet d'afficher/masquer certaines colonnes pour plus de lisibilité</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </article>
+
+            <article class="article">
+                <h3>3.6 Cas d'usage</h3>
+                <table class="usage-table">
+                    <thead>
+                        <tr>
+                            <th>Cas d'usage</th>
+                            <th>Action</th>
+                            <th>Résultat attendu</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Ajouter un nouveau représentant</td>
+                            <td>Cliquer sur "Ajouter", remplir les champs</td>
+                            <td>Le commissionnaire est visible dans la liste</td>
+                        </tr>
+                        <tr>
+                            <td>Modifier un pourcentage de commission</td>
+                            <td>Cliquer sur "Éditer", mettre à jour le champ concerné</td>
+                            <td>Le nouveau pourcentage est appliqué</td>
+                        </tr>
+                        <tr>
+                            <td>Supprimer un contact inactif</td>
+                            <td>Cliquer sur "Supprimer", confirmer</td>
+                            <td>Le commissionnaire est retiré du tableau</td>
+                        </tr>
+                        <tr>
+                            <td>Exporter les données</td>
+                            <td>Cliquer sur "Exporter CSV" ou "Excel"</td>
+                            <td>Un fichier est généré pour usage externe</td>
+                        </tr>
+                        <tr>
+                            <td>Rechercher par nom</td>
+                            <td>Utiliser la barre de recherche</td>
+                            <td>Le tableau se filtre automatiquement</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </article>
+
+            <article class="article">
+                <h3>3.7 Importance de cette fonctionnalité</h3>
+                <p>
+                    La section <strong>Commissionnaires de vente joue un rôle stratégique dans la gestion commerciale et les relations partenaires. Elle permet :
+                </p>
+                <ul>
+                    <li>Une <strong>gestion transparente des commissions et paiements dus.</strong></li>
+                    <li>Une centralisation des données personnelles et contractuelles.</li>
+                    <li>Un gain de temps pour les responsables commerciaux et comptables.</li>
+                    <li>Une traçabilité des partenaires externes impliqués dans les ventes.</li>
+                </ul>
+                <p>
+                    Cette fonctionnalité est particulièrement utile pour les entreprises collaborant avec des représentants indépendants ou des agents commerciaux sur le terrain.
+                </p>
+            </article>
+        </section>
+
+        <section class="section">
+            <h2>Conclusion</h2>
+            <p>
+                La gestion des utilisateurs est essentielle pour garantir une utilisation sûre et organisée de Movelys. Elle permet à l'entreprise de donner à chaque collaborateur l'accès dont il a besoin, tout en protégeant les informations sensibles. En centralisant les rôles et permissions, Movelys renforce la sécurité, améliore la productivité et soutient la bonne gouvernance de l'ensemble des opérations internes.
+            </p>
+        </section>
+    </div>

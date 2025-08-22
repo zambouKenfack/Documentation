@@ -1,0 +1,240 @@
+---
+
+import '../styles/global1.css';
+---
+
+<div class="container">
+
+     <header class="header">
+        <h1>Gestion des Ajustement de stock dans Movelys</h1>
+    </header>
+
+    <!-- Section Introduction -->
+    <section class="introduction">
+
+        <h2>Introduction</h2>
+        <p>
+            La gestion des ajustements de stocks est une fonction critique pour assurer l'exactitude et la
+            fiabilité des données d'inventaire au sein de toute entreprise. Dans l'application <strong>Movelys</strong>, cette
+            fonctionnalité a été pensée pour offrir un contrôle rigoureux et transparent sur toutes les
+            modifications manuelles ou automatiques des quantités en stock, qu’elles soient dues à des
+            erreurs d’inventaire, à des pertes, à des casses, ou à des mouvements non enregistrés.
+        </p>
+        <p>
+            Le module « Ajustement de stock » de Movelys permet aux utilisateurs de corriger les écarts
+            entre le stock physique réel et le stock enregistré dans le système. Chaque ajustement peut
+            être classé selon son type (normal ou anormal), associé à un emplacement, à un utilisateur
+            <strong>responsable</strong>, et justifié par une raison précise. Toutes les opérations sont tracées, horodatées
+            et accessibles via un historique détaillé, garantissant une <strong>traçabilité complète</strong> et une
+            <strong>conformité aux normes de gestion</strong>.
+        </p>
+        <p>
+            En offrant une interface simple, rapide et interconnectée avec les autres modules (produits,
+            transferts, ventes, etc.), Movelys permet d’éviter les erreurs comptables, d’identifier les écarts
+            récurrents, et d’améliorer le processus de réconciliation des stocks. L’entreprise bénéficie
+            ainsi d’une meilleure maîtrise de ses ressources, d’une prise de décision plus éclairée et d’une
+            performance logistique renforcée.
+        </p>
+    </section>
+
+    <!-- Section 1 : Ajustements des stocks de liste -->
+    <section class="section-1">
+        <h2>1) Ajustements des stocks de liste</h2>
+
+        <article class="subsection">
+            <h3>1.1) Objectif de la section</h3>
+            <p>
+                L’interface <strong>Ajustements des stocks</strong> permet de centraliser et suivre toutes les corrections
+                <strong>manuelles</strong> apportées aux quantités de stock.
+                Ces ajustements sont essentiels pour :
+            </p>
+            <ul>
+                <li>Réconcilier le stock théorique (dans le système) avec le stock physique réel,</li>
+                <li>Rectifier des erreurs d’inventaire, des pertes, vols, produits périmés ou anomalies d’entrée,</li>
+                <li>Maintenir un inventaire <strong>fiable, vérifiable et cohérent</strong> avec la réalité du terrain.</li>
+            </ul>
+        </article>
+
+        <article class="subsection">
+            <h3>1.2) Structure générale de l’interface</h3>
+            <p>
+                Cette page prend la forme d’un tableau dynamique affichant la liste de toutes les opérations
+                d’ajustement déjà enregistrées dans Movelys.
+            </p>
+            <p>Les différents champs de cette interface sont :</p>
+            <ul>
+                <li>Action</li>
+                <li>Date</li>
+                <li>Numéro de référence</li>
+                <li>Emplacement</li>
+                <li>Type de réglage</li>
+                <li>Montant total</li>
+                <li>Montant total recouvre</li>
+                <li>Raison</li>
+                <li>Ajouter par</li>
+            </ul>
+
+            <p>Comme fonction nous avons :</p>
+            <table class="component-table">
+                <tr>
+                    <th>Outil</th>
+                    <th>Description</th>
+                </tr>
+                <tr>
+                    <td>Barre de recherche</td>
+                    <td>Permet de rechercher un ajustement par référence, date, emplacement, etc.</td>
+                </tr>
+                <tr>
+                    <td>Exporter CSV / Excel</td>
+                    <td>Génère un fichier tableur pour exploitation externe</td>
+                </tr>
+                <tr>
+                    <td>Imprimer</td>
+                    <td>Imprime la liste des ajustements</td>
+                </tr>
+                <tr>
+                    <td>Exporter PDF</td>
+                    <td>Génère un document PDF contenant la liste actuelle</td>
+                </tr>
+                <tr>
+                    <td>Visibilité des colonnes</td>
+                    <td>Active ou désactive certaines colonnes selon les préférences de l'utilisateur</td>
+                </tr>
+                <tr>
+                    <td>Ajouter</td>
+                    <td>Permet d’enregistrer un <strong>nouvel ajustement de stock</strong></td>
+                </tr>
+            </table>
+
+            <div class="image-placeholder"><p>Illustration de l'interface</p>
+                <img src="/images/ajustement1.png" alt="Description de l'image" width="900" height="600" style="max-width:100%;height:auto;border-radius:8px;" />
+                </div>
+        </article>
+
+        <article class="subsection">
+            <h3>1.3) Rôles et permissions</h3>
+            <table class="component-table">
+                <tr>
+                    <th>Rôle utilisateur</th>
+                    <th>Droit d’accès</th>
+                </tr>
+                <tr>
+                    <td>Administrateur</td>
+                    <td>Accès complet à toutes les actions</td>
+                </tr>
+                <tr>
+                    <td>Responsable logistique</td>
+                    <td>Consultation et modification</td>
+                </tr>
+                <tr>
+                    <td>Agent de stock / magasinier</td>
+                    <td>Création d’ajustements uniquement</td>
+                </tr>
+                <tr>
+                    <td>Utilisateur restreint</td>
+                    <td>Aucun accès ou lecture seule</td>
+                </tr>
+            </table>
+        </article>
+    </section>
+
+    <!-- Section 2 : Ajouter un ajustement de stock -->
+    <section class="section-2">
+        <h2>2) Ajouter un ajustement de stock</h2>
+
+        <article class="subsection">
+            <h3>2.1) Objectif de l’interface</h3>
+            <p>
+                L’interface Ajouter un ajustement de stock permet aux responsables de stock ou agents
+                autorisés de modifier manuellement le niveau de stock réel pour un ou plusieurs produits
+                dans un emplacement donné.
+            </p>
+            <p>
+                Cette fonctionnalité est essentielle pour :
+            </p>
+            <ul>
+                <li>Corriger les erreurs d’inventaire ou de saisie,</li>
+                <li>Répercuter les pertes, casses, ou écarts physiques,</li>
+                <li>Mettre à jour le stock en cas d’erreur de livraison ou d’oubli de réception.</li>
+            </ul>
+        </article>
+
+        <article class="subsection">
+            <h3>2.2) Structure générale du formulaire</h3>
+            <p>
+                Le formulaire est divisé en trois grandes sections fonctionnelles :
+            </p>
+
+            <h4>A. Informations générales de l’ajustement</h4>
+            <ul>
+                <li>Emplacement de l’entreprise</li>
+                <li>Numéro de référence</li>
+                <li>Date</li>
+                <li>Type de réglage</li>
+            </ul>
+            <p>
+                Ces champs garantissent la traçabilité complète de l'opération dans les audits internes.
+            </p>
+
+            <h4>B. Liste des produits à ajuster</h4>
+            <p>
+                Cette section permet d’ajouter un ou plusieurs produits. Il suffit juste d’effectuer une
+                recherche d’un produit déjà présent dans la base de données et l’ajouter en stock.
+            </p>
+
+            <h4>C. Actions et finalisation</h4>
+            <p>
+                Ce formulaire permet de renseigner quelques informations supplémentaire (Montant total
+                recouvré : Raison;) enfin de finaliser le transfert.
+            </p>
+
+             <div class="image-placeholder"><p>Illustration de l'interface</p>
+                <img src="/images/ajustement2.png" alt="Description de l'image" width="900" height="600" style="max-width:100%;height:auto;border-radius:8px;" />
+                </div>
+        </article>
+
+        <article class="subsection">
+            <h3>2.3) Permissions et sécurité</h3>
+            <table class="component-table">
+                <tr>
+                    <th>Rôle</th>
+                    <th>Accès</th>
+                </tr>
+                <tr>
+                    <td>Administrateur</td>
+                    <td>Accès complet à tous les ajustements</td>
+                </tr>
+                <tr>
+                    <td>Responsable stock</td>
+                    <td>Peut créer, éditer et supprimer</td>
+                </tr>
+                <tr>
+                    <td>Magasinier / Agent stock</td>
+                    <td>Création d’ajustement uniquement</td>
+                </tr>
+                <tr>
+                    <td>Utilisateur restreint</td>
+                    <td>Aucun accès ou lecture seule (selon configuration)</td>
+                </tr>
+            </table>
+        </article>
+    </section>
+
+    <!-- Conclusion -->
+    <section class="conclusion">
+        <h2>Conclusion</h2>
+        <p>
+            Avec le module d’ajustement de stocks de Movelys, les entreprises disposent d’un outil fiable,
+            structuré et sécurisé pour <strong>maintenir l’exactitude de leur inventaire en toutes circonstances.</strong>
+            Ce système permet non seulement de corriger les erreurs rapidement, mais aussi d’en analyser
+            les causes afin de mettre en place des actions correctives durables.
+        </p>
+        <p>
+            En assurant une visibilité totale sur les modifications de stock et en facilitant les contrôles
+            internes, Movelys transforme les ajustements de stocks en un véritable <strong>levier de contrôle de
+            qualité et d’optimisation logistique.</strong> C’est une solution indispensable pour toute
+            organisation souhaitant fiabiliser sa gestion de stock, limiter les pertes, et garantir l'intégrité
+            de ses données commerciales.
+        </p>
+    </section>
+</div>

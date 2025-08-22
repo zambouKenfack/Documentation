@@ -1,0 +1,1629 @@
+---
+import '../styles/global1.css';
+---
+
+<div class="container">
+    <header class="header">
+        <h1>Gestion des Produits dans Movelys</h1>
+    </header>
+
+    <section class="section">
+        <h2>Introduction</h2>
+        <p>
+            La gestion des produits constitue un pilier fondamental de toute solution de gestion d'entreprise, et Movelys répond à cette exigence avec puissance, précision et flexibilité. Ce module permet aux utilisateurs de centraliser l'ensemble des informations relatives aux produits de leur enregistrement initial à leur cycle de vie complet, en passant par la gestion des stocks, des prix, des catégories, des emplacements et bien plus encore.
+        </p>
+        <p>
+            Grâce à une interface intuitive et des fonctionnalités avancées, le module « Produits » de Movelys permet d'enregistrer, classer et suivre les articles avec une grande rigueur. Il prend en charge la gestion multi-sites, le suivi des prix d'achat et de vente, le stock en temps réel, les références (SKU), les catégories, les marques, les unités de mesure, les taxes, ainsi que les informations spécifiques à chaque produit.
+        </p>
+        <p>
+            Ce système s'intègre parfaitement aux autres modules de Movelys tels que les achats, les ventes, les transferts de stock et les rapports. Ainsi, chaque produit devient une entité traçable et contrôlée, favorisant une gestion commerciale fluide, une meilleure visibilité sur les marges et une prise de décision stratégique plus efficace.
+        </p>
+    </section>
+
+    <!-- Section 1: Gestion de la liste des produits -->
+    <section class="section">
+        <h2>1) Gestion de la liste des produits</h2>
+
+            <article class="article">
+                <h3>1.1) Fonction générale</h3>
+                <p>
+                    La gestion de la liste des produits est le pilier fondamental du module Stock et Catalogue de l'application Movelys. Elle constitue un point de contrôle centralisé où les utilisateurs peuvent visualiser, voir les rapports sur les actions, organiser, filtrer, mettre à jour et exporter l'ensemble des produits enregistrés dans le système.
+                </p>
+            </article>
+
+            <article class="article">
+                <h3>1.2) Structure de l'interface</h3>
+                <p>L'interface se compose de deux sections :</p>
+                <ul>
+                    <li>Section des filtres</li>
+                    <li>Section tableau des produits</li>
+                </ul>
+
+                <h4>1.2.1) Section des filtres</h4>
+                <table class="component-table">
+                    <thead>
+                        <tr>
+                            <th>Champ</th>
+                            <th>Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Type de produit</td>
+                            <td>Filtre selon le type de produit (ex. : produit simple, composé, service, etc.)</td>
+                        </tr>
+                        <tr>
+                            <td>Catégorie</td>
+                            <td>Permet de filtrer les produits par catégorie</td>
+                        </tr>
+                        <tr>
+                            <td>Unité</td>
+                            <td>Filtre les produits par unité de mesure</td>
+                        </tr>
+                        <tr>
+                            <td>Taxe</td>
+                            <td>Filtre selon la taxe associée au produit</td>
+                        </tr>
+                        <tr>
+                            <td>Marque</td>
+                            <td>Filtre selon la marque</td>
+                        </tr>
+                        <tr>
+                            <td>Emplacement de l'entreprise</td>
+                            <td>Permet de filtrer les produits selon leur site de stockage</td>
+                        </tr>
+                        <tr>
+                            <td>Non destiné à la vente</td>
+                            <td>Affiche uniquement les produits non destinés à la vente</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h4>1.2.2) Section tableau des produits</h4>
+                <table class="component-table">
+                    <thead>
+                        <tr>
+                            <th>Colonne</th>
+                            <th>Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Image du produit</td>
+                            <td>Affiche la photo du produit</td>
+                        </tr>
+                        <tr>
+                            <td>Action</td>
+                            <td>Menu déroulant avec options d'action</td>
+                        </tr>
+                        <tr>
+                            <td>Produit</td>
+                            <td>Nom commercial du produit</td>
+                        </tr>
+                        <tr>
+                            <td>Emplacement</td>
+                            <td>Lieu de stockage ou de vente</td>
+                        </tr>
+                        <tr>
+                            <td>Lot</td>
+                            <td>Numéro de lot ou référence</td>
+                        </tr>
+                        <tr>
+                            <td>Prix d'achat unitaire</td>
+                            <td>Prix unitaire d'achat</td>
+                        </tr>
+                        <tr>
+                            <td>Prix de vente</td>
+                            <td>Prix de vente proposé</td>
+                        </tr>
+                        <tr>
+                            <td>Stock actuel</td>
+                            <td>Quantité disponible</td>
+                        </tr>
+                        <tr>
+                            <td>Type de produit</td>
+                            <td>Type de produit</td>
+                        </tr>
+                        <tr>
+                            <td>Catégorie</td>
+                            <td>Catégorie du produit</td>
+                        </tr>
+                        <tr>
+                            <td>Marque</td>
+                            <td>Marque du produit</td>
+                        </tr>
+                        <tr>
+                            <td>Taxe</td>
+                            <td>Taxe applicable</td>
+                        </tr>
+                        <tr>
+                            <td>SKU</td>
+                            <td>Référence unique du produit</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h4>1.2.2.1) Menu "Actions"</h4>
+                <table class="component-table">
+                    <thead>
+                        <tr>
+                            <th>Action</th>
+                            <th>Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Étiquettes</td>
+                            <td>Imprimer ou générer des étiquettes</td>
+                        </tr>
+                        <tr>
+                            <td>Voir</td>
+                            <td>Voir les détails complets</td>
+                        </tr>
+                        <tr>
+                            <td>Modifier</td>
+                            <td>Modifier les informations</td>
+                        </tr>
+                        <tr>
+                            <td>Supprimer</td>
+                            <td>Supprimer le produit</td>
+                        </tr>
+                        <tr>
+                            <td>Ajouter/modifier stock</td>
+                            <td>Gérer le stock initial</td>
+                        </tr>
+                        <tr>
+                            <td>Historique du stock</td>
+                            <td>Afficher l'historique</td>
+                        </tr>
+                        <tr>
+                            <td>Dupliquer</td>
+                            <td>Créer un nouveau produit par duplication</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </article>
+
+            <article class="article">
+                <h3>1.3) Boutons d'action</h3>
+                <table class="component-table">
+                    <thead>
+                        <tr>
+                            <th>Bouton</th>
+                            <th>Utilité</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Supprimer la sélection</td>
+                            <td>Supprimer les produits sélectionnés</td>
+                        </tr>
+                        <tr>
+                            <td>Ajouter à l'emplacement</td>
+                            <td>Ajouter à un site de stockage</td>
+                        </tr>
+                        <tr>
+                            <td>Retirer de l'emplacement</td>
+                            <td>Retirer d'un site</td>
+                        </tr>
+                        <tr>
+                            <td>Désactiver la sélection</td>
+                            <td>Rendre invisibles à la vente</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </article>
+
+            <article class="article">
+                <h3>1.4) Fonctionnalités disponibles</h3>
+                <ul>
+                    <li>Export CSV/Excel/PDF</li>
+                    <li>Impression directe</li>
+                    <li>Visibilité des colonnes</li>
+                    <li>Recherche dynamique</li>
+                    <li>Pagination et nombre d'entrées par page</li>
+                </ul>
+                <div class="image-placeholder">Illustration de l'interface</div>
+            </article>
+
+            <article class="article">
+                <h3>1.5) Intégration avec les autres modules</h3>
+                <ul>
+                    <li>Achats</li>
+                    <li>Ventes</li>
+                    <li>Stocks</li>
+                    <li>Statistiques</li>
+                </ul>
+            </article>
+
+            <article class="article">
+                <h3>1.6) Avantages</h3>
+                <ul>
+                    <li>Centralisation</li>
+                    <li>Gain de temps</li>
+                    <li>Contrôle</li>
+                    <li>Productivité</li>
+                </ul>
+            </article>
+        </section>
+
+        <!-- Section 2: Gestion de l'ajout d'un produit -->
+        <section class="section">
+            <h2>2) Gestion de l'ajout d'un produit</h2>
+
+            <article class="article">
+                <h3>2.1) Fonction générale</h3>
+                <p>Permet de créer un nouveau produit avec toutes les informations essentielles.</p>
+            </article>
+
+            <article class="article">
+                <h3>2.2) Description de l'interface</h3>
+                <table class="component-table">
+                    <thead>
+                        <tr>
+                            <th>Champ</th>
+                            <th>Description</th>
+                            <th>Obligatoire</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Nom du produit</td>
+                            <td>Désignation commerciale</td>
+                            <td>Oui</td>
+                        </tr>
+                        <tr>
+                            <td>SKU/Référence</td>
+                            <td>Code unique interne</td>
+                            <td>Oui</td>
+                        </tr>
+                        <tr>
+                            <td>Code-barres</td>
+                            <td>Pour lecture automatique</td>
+                            <td>Oui</td>
+                        </tr>
+                        <tr>
+                            <td>Prix de vente</td>
+                            <td>Prix aux clients</td>
+                            <td>Oui</td>
+                        </tr>
+                        <tr>
+                            <td>Prix d'achat</td>
+                            <td>Coût d'approvisionnement</td>
+                            <td>Non</td>
+                        </tr>
+                        <tr>
+                            <td>Unité</td>
+                            <td>Unité de mesure</td>
+                            <td>Oui</td>
+                        </tr>
+                        <tr>
+                            <td>Catégorie</td>
+                            <td>Classement du produit</td>
+                            <td>Oui</td>
+                        </tr>
+                        <tr>
+                            <td>Marque</td>
+                            <td>Fabricant ou distributeur</td>
+                            <td>Non</td>
+                        </tr>
+                        <tr>
+                            <td>Quantité en stock</td>
+                            <td>Quantité initiale</td>
+                            <td>Recommandé</td>
+                        </tr>
+                        <tr>
+                            <td>Stock d'alerte</td>
+                            <td>Seuil minimum</td>
+                            <td>Recommandé</td>
+                        </tr>
+                        <tr>
+                            <td>Image du produit</td>
+                            <td>Photo du produit</td>
+                            <td>Non</td>
+                        </tr>
+                        <tr>
+                            <td>Description</td>
+                            <td>Informations techniques</td>
+                            <td>Non</td>
+                        </tr>
+                        <tr>
+                            <td>Statut</td>
+                            <td>Actif/Inactif</td>
+                            <td>Oui</td>
+                        </tr>
+                        <tr>
+                            <td>Taxe/TVA</td>
+                            <td>Taux applicable</td>
+                            <td>Optionnel</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="image-placeholder">Illustration de l'interface</div>
+            </article>
+
+            <article class="article">
+                <h3>2.3) Fonctionnalités intégrées</h3>
+                <h4>2.3.1. Enregistrement intelligent</h4>
+                <p>Ajout immédiat à la base après validation</p>
+                
+                <h4>2.3.2. Vérification automatique</h4>
+                <p>Contrôle des champs obligatoires et détection de doublons</p>
+                
+                <h4>2.3.3. Télécharger l'image</h4>
+                <p>Glisser-déposer ou téléverser une image</p>
+            </article>
+
+            <article class="article">
+                <h3>2.4) Intégration avec les autres modules</h3>
+                <table class="component-table">
+                    <thead>
+                        <tr>
+                            <th>Module</th>
+                            <th>Impact</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Ventes</td>
+                            <td>Produit sélectionnable pour devis/factures</td>
+                        </tr>
+                        <tr>
+                            <td>Achat</td>
+                            <td>Peut être commandé</td>
+                        </tr>
+                        <tr>
+                            <td>Stock</td>
+                            <td>Stock initialisé et suivi</td>
+                        </tr>
+                        <tr>
+                            <td>Impression</td>
+                            <td>Code-barres exploitables</td>
+                        </tr>
+                        <tr>
+                            <td>Statistiques</td>
+                            <td>Ventes et mouvements traçables</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </article>
+
+            <article class="article">
+                <h3>2.5) Sécurité et droits d'accès</h3>
+                <table class="component-table">
+                    <thead>
+                        <tr>
+                            <th>Rôle</th>
+                            <th>Droit</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Admin</td>
+                            <td>Accès complet</td>
+                        </tr>
+                        <tr>
+                            <td>Responsable stock</td>
+                            <td>Ajout et édition</td>
+                        </tr>
+                        <tr>
+                            <td>Commercial</td>
+                            <td>Lecture uniquement</td>
+                        </tr>
+                        <tr>
+                            <td>Comptable</td>
+                            <td>Visualisation sans modification des prix</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </article>
+
+            <article class="article">
+                <h3>2.6) Avantages</h3>
+                <ul>
+                    <li>Simplicité d'utilisation</li>
+                    <li>Interaction directe</li>
+                    <li>Connexion fluide</li>
+                    <li>Réduction des erreurs</li>
+                </ul>
+            </article>
+        </section>
+
+        <!-- Section 3: Gestion de la mise à jour du prix -->
+        <section class="section">
+            <h2>3) Gestion de la mise à jour du prix</h2>
+
+            <article class="article">
+                <h3>3.1) Fonction générale</h3>
+                <p>Permet de modifier rapidement les prix de vente des produits existants.</p>
+            </article>
+
+            <article class="article">
+                <h3>3.2) Description de l'interface</h3>
+                <p>Bouton "prix des produits à l'exportation" pour extraire tous les prix dans un fichier Excel.</p>
+                <p>Après modification, import du fichier via bouton "envoyer".</p>
+                <div class="image-placeholder">Illustration de l'interface</div>
+            </article>
+
+            <article class="article">
+                <h3>3.3) Intégration avec les autres modules</h3>
+                <table class="component-table">
+                    <thead>
+                        <tr>
+                            <th>Module</th>
+                            <th>Impact</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Facturation/Ventes</td>
+                            <td>Nouveau prix utilisé pour les documents</td>
+                        </tr>
+                        <tr>
+                            <td>Gestion des stocks</td>
+                            <td>Valorisation recalculée</td>
+                        </tr>
+                        <tr>
+                            <td>Statistiques</td>
+                            <td>Calculs avec nouveaux prix</td>
+                        </tr>
+                        <tr>
+                            <td>Étiquettes</td>
+                            <td>Affiche le nouveau prix</td>
+                        </tr>
+                        <tr>
+                            <td>Groupes de prix</td>
+                            <td>S'applique au tarif standard</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </article>
+
+            <article class="article">
+                <h3>3.4) Sécurité et gestion des accès</h3>
+                <table class="component-table">
+                    <thead>
+                        <tr>
+                            <th>Rôle</th>
+                            <th>Accès</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Administrateur</td>
+                            <td>Accès total</td>
+                        </tr>
+                        <tr>
+                            <td>Responsable des ventes</td>
+                            <td>Autorisé selon politique</td>
+                        </tr>
+                        <tr>
+                            <td>Comptable</td>
+                            <td>Visualisation uniquement</td>
+                        </tr>
+                        <tr>
+                            <td>Employé commercial</td>
+                            <td>Lecture seule</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </article>
+
+            <article class="article">
+                <h3>3.5) Avantages</h3>
+                <table class="component-table">
+                    <thead>
+                        <tr>
+                            <th>Avantage</th>
+                            <th>Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Gain de temps</td>
+                            <td>Modification groupée</td>
+                        </tr>
+                        <tr>
+                            <td>Vue centralisée</td>
+                            <td>Accès à plusieurs produits</td>
+                        </tr>
+                        <tr>
+                            <td>Sécurité</td>
+                            <td>Contrôle des saisies</td>
+                        </tr>
+                        <tr>
+                            <td>Adaptabilité</td>
+                            <td>Répond aux besoins métier</td>
+                        </tr>
+                        <tr>
+                            <td>Réactivité</td>
+                            <td>Ajustement en temps réel</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </article>
+        </section>
+
+        <!-- Sections 4 à 12 suivent le même modèle -->
+        <!-- Section 4: Gestion des impressions des étiquettes -->
+        <section class="section">
+            <h2>4) Gestion des impressions des étiquettes</h2>
+            <article class="article">
+                <h3>4.1) Fonction générale</h3>
+                <p>Générer, configurer et imprimer des étiquettes produits.</p>
+            </article>
+
+            <article class="article">
+                <h3>4.2) Description de l'interface</h3>
+                <p>Deux sections principales :</p>
+                <ul>
+                    <li>Ajouter des produits pour générer des étiquettes</li>
+                    <li>Informations à afficher sur les étiquettes</li>
+                </ul>
+                <div class="image-placeholder">Illustration de l'interface</div>
+            </article>
+
+            <article class="article">
+                <h3>4.3) Lancement de l'impression</h3>
+                <p>Bouton "Aperçu" puis impression via imprimante standard.</p>
+            </article>
+
+            <article class="article">
+                <h3>4.4) Intégration avec les autres modules</h3>
+                <table class="component-table">
+                    <thead>
+                        <tr>
+                            <th>Module</th>
+                            <th>Interaction</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Catalogue produits</td>
+                            <td>Utilise les informations produits</td>
+                        </tr>
+                        <tr>
+                            <td>Stocks</td>
+                            <td>Identification des emplacements</td>
+                        </tr>
+                        <tr>
+                            <td>Vente</td>
+                            <td>Lecture rapide du code-barres</td>
+                        </tr>
+                        <tr>
+                            <td>Variations produits</td>
+                            <td>Étiquette par variante</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </article>
+
+            <article class="article">
+                <h3>4.5) Gestion des permissions</h3>
+                <table class="component-table">
+                    <thead>
+                        <tr>
+                            <th>Rôle</th>
+                            <th>Autorisation</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Administrateur</td>
+                            <td>Accès complet</td>
+                        </tr>
+                        <tr>
+                            <td>Responsable magasin</td>
+                            <td>Accès autorisé</td>
+                        </tr>
+                        <tr>
+                            <td>Vendeur</td>
+                            <td>Lecture seule</td>
+                        </tr>
+                        <tr>
+                            <td>Stagiaire</td>
+                            <td>Pas d'accès</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </article>
+
+            <article class="article">
+                <h3>4.6) Avantages clés</h3>
+                <table class="component-table">
+                    <thead>
+                        <tr>
+                            <th>Avantage</th>
+                            <th>Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Gain de temps</td>
+                            <td>Étiquetage rapide et en masse</td>
+                        </tr>
+                        <tr>
+                            <td>Identification précise</td>
+                            <td>Codes-barres garantissent la traçabilité</td>
+                        </tr>
+                        <tr>
+                            <td>Professionnalisme</td>
+                            <td>Rendu soigné</td>
+                        </tr>
+                        <tr>
+                            <td>Synchronisation</td>
+                            <td>Mises à jour immédiates</td>
+                        </tr>
+                        <tr>
+                            <td>Compatibilité</td>
+                            <td>Fonctionne avec imprimantes standards</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </article>
+        </section>
+
+        <!-- Section 5: Gestion des variations -->
+        <section class="section">
+            <h2>5) Gestion des variations</h2>
+
+            <article class="article">
+                <h3>5.1) Fonction générale</h3>
+                <p>Gérer les différentes déclinaisons d'un produit (tailles, couleurs, modèles...).</p>
+            </article>
+
+            <article class="article">
+                <h3>5.2) Description de l'interface</h3>
+                <p>Champs : variations, valeurs et action. Bouton "Ajouter" pour créer des variations.</p>
+                <div class="image-placeholder">Illustration de l'interface</div>
+            </article>
+
+            <article class="article">
+                <h3>5.3) Fonctionnalités principales</h3>
+                <ul>
+                    <li>Export CSV/Excel/PDF</li>
+                    <li>Impression directe</li>
+                    <li>Visibilité des colonnes</li>
+                    <li>Recherche dynamique</li>
+                    <li>Pagination</li>
+                </ul>
+            </article>
+
+            <article class="article">
+                <h3>5.4) Intégration dans les modules</h3>
+                <table class="component-table">
+                    <thead>
+                        <tr>
+                            <th>Module</th>
+                            <th>Comportement</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Ventes</td>
+                            <td>Apparaît comme produit distinct</td>
+                        </tr>
+                        <tr>
+                            <td>Achats</td>
+                            <td>Associé à fournisseur spécifique</td>
+                        </tr>
+                        <tr>
+                            <td>Stocks</td>
+                            <td>Suivi par déclinaison</td>
+                        </tr>
+                        <tr>
+                            <td>Étiquettes</td>
+                            <td>Code-barres et prix propres</td>
+                        </tr>
+                        <tr>
+                            <td>Statistiques</td>
+                            <td>Rapports par variation</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </article>
+
+            <article class="article">
+                <h3>5.6) Permissions et sécurité</h3>
+                <table class="component-table">
+                    <thead>
+                        <tr>
+                            <th>Rôle</th>
+                            <th>Accès</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Administrateur</td>
+                            <td>Accès complet</td>
+                        </tr>
+                        <tr>
+                            <td>Responsable produit</td>
+                            <td>Ajout/modification</td>
+                        </tr>
+                        <tr>
+                            <td>Employé</td>
+                            <td>Lecture seule</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </article>
+
+            <article class="article">
+                <h3>5.7) Avantages</h3>
+                <table class="component-table">
+                    <thead>
+                        <tr>
+                            <th>Avantage</th>
+                            <th>Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Modularité</td>
+                            <td>Gère des centaines de déclinaisons</td>
+                        </tr>
+                        <tr>
+                            <td>Organisation claire</td>
+                            <td>Pas besoin de produits séparés</td>
+                        </tr>
+                        <tr>
+                            <td>Suivi précis</td>
+                            <td>Inventaire et prix par déclinaison</td>
+                        </tr>
+                        <tr>
+                            <td>Étiquetage facilité</td>
+                            <td>Étiquette spécifique par variante</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </article>
+        </section>
+
+        <!-- Sections 6 à 12 continuent sur le même modèle -->
+        <!-- Section 6: Gestion des importations des produits -->
+        <section class="section">
+            <h2>6) Gestion des importations des produits</h2>
+
+            <article class="article">
+                <h3>6.1) Fonction générale</h3>
+                <p>Importer en masse des produits à partir d'un fichier externe.</p>
+            </article>
+
+            <article class="article">
+                <h3>6.2) Description de l'interface</h3>
+                <p>3 zones fonctionnelles :</p>
+                <ol>
+                    <li>Téléchargement du modèle</li>
+                    <li>Remplissage en ligne</li>
+                    <li>Importation du fichier</li>
+                </ol>
+                <div class="image-placeholder">Illustration de l'interface</div>
+            </article>
+
+            <article class="article">
+                <h3>6.3) Fonctionnalités techniques</h3>
+                <h4>6.3.1) Vérification automatique</h4>
+                <p>Contrôle des champs obligatoires et formats</p>
+                
+                <h4>6.3.2) Importation en lot</h4>
+                <p>Création ou mise à jour des produits</p>
+            </article>
+
+            <article class="article">
+                <h3>6.4) Intégration avec les autres modules</h3>
+                <table class="component-table">
+                    <thead>
+                        <tr>
+                            <th>Module</th>
+                            <th>Utilisation</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Ventes</td>
+                            <td>Sélection dans devis/factures</td>
+                        </tr>
+                        <tr>
+                            <td>Achats</td>
+                            <td>Commande via SKU importé</td>
+                        </tr>
+                        <tr>
+                            <td>Stocks</td>
+                            <td>Suivi des quantités</td>
+                        </tr>
+                        <tr>
+                            <td>Étiquettes</td>
+                            <td>Génération à partir des données</td>
+                        </tr>
+                        <tr>
+                            <td>Statistiques</td>
+                            <td>Intégration dans les rapports</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </article>
+
+            <article class="article">
+                <h3>6.5) Permissions et contrôle d'accès</h3>
+                <table class="component-table">
+                    <thead>
+                        <tr>
+                            <th>Rôle</th>
+                            <th>Accès</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Administrateur</td>
+                            <td>Oui</td>
+                        </tr>
+                        <tr>
+                            <td>Responsable stock</td>
+                            <td>Selon configuration</td>
+                        </tr>
+                        <tr>
+                            <td>Employé</td>
+                            <td>Non</td>
+                        </tr>
+                        <tr>
+                            <td>Invité</td>
+                            <td>Aucun accès</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </article>
+
+            <article class="article">
+                <h3>6.6) Avantages</h3>
+                <table class="component-table">
+                    <thead>
+                        <tr>
+                            <th>Avantage</th>
+                            <th>Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Gain de temps</td>
+                            <td>Ajout massif rapide</td>
+                        </tr>
+                        <tr>
+                            <td>Évolutivité</td>
+                            <td>Adapté aux catalogues volumineux</td>
+                        </tr>
+                        <tr>
+                            <td>Facilité</td>
+                            <td>Modèle simple éditable dans Excel</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </article>
+        </section>
+
+        <!-- Section 7: Importation du stock d'ouverture -->
+        <section class="section">
+            <h2>7) Importation du stock d'ouverture</h2>
+
+            <article class="article">
+                <h3>7.1) Fonction générale</h3>
+                <p>Enregistrer l'état initial des stocks lors de la mise en service.</p>
+            </article>
+
+            <article class="article">
+                <h3>7.2) Description de l'interface</h3>
+                <p>Deux sections :</p>
+                <ol>
+                    <li>Téléchargement du modèle</li>
+                    <li>Importation du fichier rempli</li>
+                </ol>
+                <div class="image-placeholder">Illustration de l'interface</div>
+            </article>
+
+            <article class="article">
+                <h3>7.3) Fonctionnement technique</h3>
+                <h4>7.3.1. Étape de vérification</h4>
+                <p>Validation de chaque ligne et contrôle des cohérences</p>
+                
+                <h4>7.3.2. Importation effective</h4>
+                <p>Quantités saisies deviennent le stock initial</p>
+            </article>
+
+            <article class="article">
+                <h3>7.4) Intégration avec les modules</h3>
+                <table class="component-table">
+                    <thead>
+                        <tr>
+                            <th>Module</th>
+                            <th>Impact</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Ventes</td>
+                            <td>Produits disponibles avec stock mis à jour</td>
+                        </tr>
+                        <tr>
+                            <td>Achat</td>
+                            <td>Déclenchement de réapprovisionnements</td>
+                        </tr>
+                        <tr>
+                            <td>Alerte de stock</td>
+                            <td>Seuils d'alerte actifs</td>
+                        </tr>
+                        <tr>
+                            <td>Rapports</td>
+                            <td>État initial visible dans les tableaux</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </article>
+
+            <article class="article">
+                <h3>7.5) Permissions et contrôle d'accès</h3>
+                <table class="component-table">
+                    <thead>
+                        <tr>
+                            <th>Rôle</th>
+                            <th>Accès</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Administrateur</td>
+                            <td>Accès total</td>
+                        </tr>
+                        <tr>
+                            <td>Responsable stock</td>
+                            <td>Autorisé sous validation</td>
+                        </tr>
+                        <tr>
+                            <td>Comptable</td>
+                            <td>Pour valorisation uniquement</td>
+                        </tr>
+                        <tr>
+                            <td>Commercial</td>
+                            <td>Aucun accès</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </article>
+
+            <article class="article">
+                <h3>7.6) Avantages clés</h3>
+                <table class="component-table">
+                    <thead>
+                        <tr>
+                            <th>Avantage</th>
+                            <th>Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Gain de temps</td>
+                            <td>Saisie groupée</td>
+                        </tr>
+                        <tr>
+                            <td>Stock structuré</td>
+                            <td>Pas de saisie manuelle</td>
+                        </tr>
+                        <tr>
+                            <td>Suivi des coûts</td>
+                            <td>Calcul de la valeur du stock</td>
+                        </tr>
+                        <tr>
+                            <td>Importation sécurisée</td>
+                            <td>Contrôle des erreurs</td>
+                        </tr>
+                        <tr>
+                            <td>Base saine</td>
+                            <td>Indicateurs précis</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </article>
+        </section>
+
+        <!-- Section 8: Gestion des groupes de prix de vente -->
+        <section class="section">
+            <h2>8) Gestion des groupes de prix de vente</h2>
+
+            <article class="article">
+                <h3>8.1) Fonction générale</h3>
+                <p>Définir plusieurs niveaux tarifaires selon le type de client.</p>
+            </article>
+
+            <article class="article">
+                <h3>8.2) Description de l'interface</h3>
+                <p>Tableau listant les groupes tarifaires avec champs : Nom, Description, Action.</p>
+                <div class="image-placeholder">Illustration de l'interface</div>
+            </article>
+
+            <article class="article">
+                <h3>8.3) Fonctionnalités</h3>
+                <ul>
+                    <li>Export CSV/Excel/PDF</li>
+                    <li>Impression directe</li>
+                    <li>Visibilité des colonnes</li>
+                    <li>Recherche dynamique</li>
+                    <li>Pagination</li>
+                </ul>
+            </article>
+
+            <article class="article">
+                <h3>8.4) Droits d'accès</h3>
+                <table class="component-table">
+                    <thead>
+                        <tr>
+                            <th>Rôle</th>
+                            <th>Accès</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Administrateur</td>
+                            <td>Création, édition, suppression</td>
+                        </tr>
+                        <tr>
+                            <td>Responsable commercial</td>
+                            <td>Modification des prix</td>
+                        </tr>
+                        <tr>
+                            <td>Agent de vente</td>
+                            <td>Consultation uniquement</td>
+                        </tr>
+                        <tr>
+                            <td>Comptable</td>
+                            <td>Lecture pour suivi des marges</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </article>
+
+            <article class="article">
+                <h3>8.5) Avantages</h3>
+                <table class="component-table">
+                    <thead>
+                        <tr>
+                            <th>Avantage</th>
+                            <th>Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Flexibilité commerciale</td>
+                            <td>Différents tarifs par clientèle</td>
+                        </tr>
+                        <tr>
+                            <td>Personnalisation</td>
+                            <td>Offre tarifaire adaptée</td>
+                        </tr>
+                        <tr>
+                            <td>Facile à gérer</td>
+                            <td>Interface intuitive</td>
+                        </tr>
+                        <tr>
+                            <td>Gain de temps</td>
+                            <td>Application automatique</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </article>
+        </section>
+
+        <!-- Section 9: Gestion des unités -->
+        <section class="section">
+            <h2>9) Gestion des unités</h2>
+
+            <article class="article">
+                <h3>9.1) Fonction générale</h3>
+                <p>Définir et gérer les unités de mesure utilisées pour les produits.</p>
+            </article>
+
+            <article class="article">
+                <h3>9.2) Description de l'interface</h3>
+                <p>Tableau listant les unités avec champs : Nom, Nom abrégé, Autoriser les décimaux, Action.</p>
+                <div class="image-placeholder">Illustration de l'interface</div>
+            </article>
+
+            <article class="article">
+                <h3>9.3) Fonctionnalités principales</h3>
+                <ul>
+                    <li>Export CSV/Excel/PDF</li>
+                    <li>Impression directe</li>
+                    <li>Visibilité des colonnes</li>
+                    <li>Recherche dynamique</li>
+                    <li>Pagination</li>
+                </ul>
+            </article>
+
+            <article class="article">
+                <h3>9.4) Utilité métier</h3>
+                <table class="component-table">
+                    <thead>
+                        <tr>
+                            <th>Secteur</th>
+                            <th>Unités typiques</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Vente au détail</td>
+                            <td>Pièce, paquet, lot</td>
+                        </tr>
+                        <tr>
+                            <td>Agroalimentaire</td>
+                            <td>Litre, kilogramme, unité</td>
+                        </tr>
+                        <tr>
+                            <td>Matériaux/BTP</td>
+                            <td>Mètre, tonne, sac</td>
+                        </tr>
+                        <tr>
+                            <td>Pharmaceutique</td>
+                            <td>Boîte, gélule, flacon</td>
+                        </tr>
+                        <tr>
+                            <td>Textile</td>
+                            <td>Unité, douzaine, rouleau</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </article>
+
+            <article class="article">
+                <h3>9.5) Intégration dans les modules</h3>
+                <table class="component-table">
+                    <thead>
+                        <tr>
+                            <th>Module</th>
+                            <th>Rôle de l'unité</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Produits</td>
+                            <td>Lié à une unité principale</td>
+                        </tr>
+                        <tr>
+                            <td>Ventes/Facturation</td>
+                            <td>Quantités exprimées dans l'unité</td>
+                        </tr>
+                        <tr>
+                            <td>Achat</td>
+                            <td>Commandes respectent les unités</td>
+                        </tr>
+                        <tr>
+                            <td>Stocks</td>
+                            <td>Mouvements suivis par unité</td>
+                        </tr>
+                        <tr>
+                            <td>Étiquettes</td>
+                            <td>Impression de l'unité</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </article>
+
+            <article class="article">
+                <h3>9.6) Contrôle d'accès</h3>
+                <table class="component-table">
+                    <thead>
+                        <tr>
+                            <th>Rôle</th>
+                            <th>Accès</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Administrateur</td>
+                            <td>Création, modification, suppression</td>
+                        </tr>
+                        <tr>
+                            <td>Responsable stock</td>
+                            <td>Utilisation des unités existantes</td>
+                        </tr>
+                        <tr>
+                            <td>Agent de vente</td>
+                            <td>Lecture uniquement</td>
+                        </tr>
+                        <tr>
+                            <td>Utilisateur invité</td>
+                            <td>Aucun accès</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </article>
+
+            <article class="article">
+                <h3>9.7) Avantages</h3>
+                <table class="component-table">
+                    <thead>
+                        <tr>
+                            <th>Avantage</th>
+                            <th>Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Standardisation</td>
+                            <td>Uniformité dans la saisie</td>
+                        </tr>
+                        <tr>
+                            <td>Lisibilité accrue</td>
+                            <td>Abréviations claires</td>
+                        </tr>
+                        <tr>
+                            <td>Réduction des erreurs</td>
+                            <td>Évite les incohérences</td>
+                        </tr>
+                        <tr>
+                            <td>Adaptée à tout secteur</td>
+                            <td>Personnalisable</td>
+                        </tr>
+                        <tr>
+                            <td>Réutilisable</td>
+                            <td>Assignable à plusieurs produits</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </article>
+        </section>
+
+        <!-- Section 10: Gestion des catégories de produits -->
+        <section class="section">
+            <h2>10) Gestion des catégories de produits</h2>
+
+            <article class="article">
+                <h3>10.1) Fonction générale</h3>
+                <p>Structurer et classer les produits en groupes logiques.</p>
+            </article>
+
+            <article class="article">
+                <h3>10.2) Description de l'interface</h3>
+                <p>Tableau hiérarchique avec champs : Catégorie, Code, Description, Action.</p>
+                <div class="image-placeholder">Illustration de l'interface</div>
+            </article>
+
+            <article class="article">
+                <h3>10.3) Fonctionnalités</h3>
+                <ul>
+                    <li>Export CSV/Excel/PDF</li>
+                    <li>Impression directe</li>
+                    <li>Visibilité des colonnes</li>
+                    <li>Recherche dynamique</li>
+                    <li>Pagination</li>
+                </ul>
+            </article>
+
+            <article class="article">
+                <h3>10.4) Utilité métier</h3>
+                <table class="component-table">
+                    <thead>
+                        <tr>
+                            <th>Utilité</th>
+                            <th>Détail</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Navigation rapide</td>
+                            <td>Filtrer par type/secteur</td>
+                        </tr>
+                        <tr>
+                            <td>Analyse statistique</td>
+                            <td>Rapports par famille</td>
+                        </tr>
+                        <tr>
+                            <td>Présentation uniforme</td>
+                            <td>Structure des documents</td>
+                        </tr>
+                        <tr>
+                            <td>Application de règles</td>
+                            <td>Taxes/promotions par catégorie</td>
+                        </tr>
+                        <tr>
+                            <td>Support e-commerce</td>
+                            <td>Synchronisation avec site</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </article>
+
+            <article class="article">
+                <h3>10.5) Intégration dans les modules</h3>
+                <table class="component-table">
+                    <thead>
+                        <tr>
+                            <th>Module</th>
+                            <th>Interaction</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Produits</td>
+                            <td>Rattachement à une catégorie</td>
+                        </tr>
+                        <tr>
+                            <td>Facturation</td>
+                            <td>Classement des articles</td>
+                        </tr>
+                        <tr>
+                            <td>Achats</td>
+                            <td>Gestion par famille produit</td>
+                        </tr>
+                        <tr>
+                            <td>Statistiques</td>
+                            <td>Analyse par catégorie</td>
+                        </tr>
+                        <tr>
+                            <td>Importation</td>
+                            <td>Assignation automatique</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </article>
+
+            <article class="article">
+                <h3>10.6) Gestion des droits</h3>
+                <table class="component-table">
+                    <thead>
+                        <tr>
+                            <th>Rôle</th>
+                            <th>Accès</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Administrateur</td>
+                            <td>Pleins droits</td>
+                        </tr>
+                        <tr>
+                            <td>Responsable catalogue</td>
+                            <td>Ajout/modification</td>
+                        </tr>
+                        <tr>
+                            <td>Agent de vente</td>
+                            <td>Lecture seule</td>
+                        </tr>
+                        <tr>
+                            <td>Utilisateur invité</td>
+                            <td>Aucun accès</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </article>
+
+            <article class="article">
+                <h3>10.7) Avantages</h3>
+                <table class="component-table">
+                    <thead>
+                        <tr>
+                            <th>Avantage</th>
+                            <th>Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Organisation claire</td>
+                            <td>Classement en familles</td>
+                        </tr>
+                        <tr>
+                            <td>Recherche rapide</td>
+                            <td>Filtres puissants</td>
+                        </tr>
+                        <tr>
+                            <td>Analyses précises</td>
+                            <td>Segmentation des données</td>
+                        </tr>
+                        <tr>
+                            <td>Cohérence multicanal</td>
+                            <td>Structure unifiée</td>
+                        </tr>
+                        <tr>
+                            <td>Utilisation universelle</td>
+                            <td>Applicable à tous secteurs</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </article>
+        </section>
+
+        <!-- Section 11: Gestion des marques -->
+        <section class="section">
+            <h2>11) Gestion des marques</h2>
+
+            <article class="article">
+                <h3>11.1) Fonction générale</h3>
+                <p>Enregistrer et associer des marques commerciales aux produits.</p>
+            </article>
+
+            <article class="article">
+                <h3>11.2) Description de l'interface</h3>
+                <p>Tableau avec champs : Marque, Note, Action. Bouton "Ajouter une marque".</p>
+                <div class="image-placeholder">Illustration de l'interface</div>
+            </article>
+
+            <article class="article">
+                <h3>11.3) Fonctionnalités principales</h3>
+                <ul>
+                    <li>Export CSV/Excel/PDF</li>
+                    <li>Impression directe</li>
+                    <li>Visibilité des colonnes</li>
+                    <li>Recherche dynamique</li>
+                </ul>
+            </article>
+
+            <article class="article">
+                <h3>11.4) Intégration avec les modules</h3>
+                <table class="component-table">
+                    <thead>
+                        <tr>
+                            <th>Module</th>
+                            <th>Interaction</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Produits</td>
+                            <td>Association à une marque</td>
+                        </tr>
+                        <tr>
+                            <td>Achats</td>
+                            <td>Correspondance avec fournisseur</td>
+                        </tr>
+                        <tr>
+                            <td>Vente</td>
+                            <td>Affichage sur documents</td>
+                        </tr>
+                        <tr>
+                            <td>Statistiques</td>
+                            <td>Analyse par marque</td>
+                        </tr>
+                        <tr>
+                            <td>Importation</td>
+                            <td>Assignation automatique</td>
+                        </tr>
+                        <tr>
+                            <td>Étiquettes</td>
+                            <td>Impression du nom/logo</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </article>
+
+            <article class="article">
+                <h3>11.5) Gestion des accès</h3>
+                <table class="component-table">
+                    <thead>
+                        <tr>
+                            <th>Rôle</th>
+                            <th>Accès</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Administrateur</td>
+                            <td>Plein accès</td>
+                        </tr>
+                        <tr>
+                            <td>Responsable produit</td>
+                            <td>Ajout/modification</td>
+                        </tr>
+                        <tr>
+                            <td>Agent de vente</td>
+                            <td>Lecture seule</td>
+                        </tr>
+                        <tr>
+                            <td>Utilisateur invité</td>
+                            <td>Aucun accès</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </article>
+
+            <article class="article">
+                <h3>11.6) Avantages</h3>
+                <table class="component-table">
+                    <thead>
+                        <tr>
+                            <th>Avantage</th>
+                            <th>Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Organisation</td>
+                            <td>Classement clair par marque</td>
+                        </tr>
+                        <tr>
+                            <td>Recherche facilitée</td>
+                            <td>Filtres rapides</td>
+                        </tr>
+                        <tr>
+                            <td>Personnalisation</td>
+                            <td>Visible sur documents</td>
+                        </tr>
+                        <tr>
+                            <td>Analyse stratégique</td>
+                            <td>Évaluation des ventes</td>
+                        </tr>
+                        <tr>
+                            <td>Gestion fournisseur</td>
+                            <td>Lien produit-fournisseur-marque</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </article>
+        </section>
+
+        <!-- Section 12: Gestion des garanties -->
+        <section class="section">
+            <h2>12) Gestion des garanties</h2>
+
+            <article class="article">
+                <h3>12.1) Fonction générale</h3>
+                <p>Configurer et affecter des durées de garantie aux produits.</p>
+            </article>
+
+            <article class="article">
+                <h3>12.2) Description de l'interface</h3>
+                <p>Liste structurée avec champs : Nom, Description, Durée, Action.</p>
+                <div class="image-placeholder">Illustration de l'interface</div>
+            </article>
+
+            <article class="article">
+                <h3>12.3) Fonctionnalités</h3>
+                <ul>
+                    <li>Export CSV/Excel/PDF</li>
+                    <li>Impression directe</li>
+                    <li>Visibilité des colonnes</li>
+                    <li>Recherche dynamique</li>
+                </ul>
+            </article>
+
+            <article class="article">
+                <h3>12.4) Contrôle d'accès</h3>
+                <table class="component-table">
+                    <thead>
+                        <tr>
+                            <th>Rôle</th>
+                            <th>Accès</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Administrateur</td>
+                            <td>Création, modification, suppression</td>
+                        </tr>
+                        <tr>
+                            <td>Responsable produit</td>
+                            <td>Affectation et consultation</td>
+                        </tr>
+                        <tr>
+                            <td>Technicien SAV</td>
+                            <td>Lecture et validation</td>
+                        </tr>
+                        <tr>
+                            <td>Stagiaire</td>
+                            <td>Aucun accès</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </article>
+        </section>
+
+        <!-- Conclusion -->
+        <section class="section">
+            <h2>Conclusion</h2>
+            <p>
+                Le module de gestion des produits de Movelys est bien plus qu'un simple répertoire d'articles : il est un outil stratégique au service de la performance de votre entreprise. En garantissant une vue claire, complète et structurée de l'ensemble de vos produits, il facilite l'automatisation des processus, l'optimisation des stocks et la cohérence des données dans l'ensemble de vos opérations.
+            </p>
+            <p>
+                Grâce à ses nombreuses fonctionnalités interconnectées, ce module assure une gestion professionnelle, fiable et évolutive de votre inventaire. Il contribue directement à améliorer la rentabilité, la réactivité commerciale et la satisfaction client.
+            </p>
+            <p>
+                Adopter la gestion des produits via Movelys, c'est choisir l'efficacité, la traçabilité et la maîtrise totale de votre catalogue produit.
+            </p>
+        </section>
+    </div>

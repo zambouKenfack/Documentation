@@ -1,0 +1,2018 @@
+---
+import '../styles/global1.css';
+---
+
+<div class="container">
+    <header class="header">
+        <h1>Gestion des Ventes</h1>
+    </header>
+        <!-- Section INTRODUCTION -->
+        <section class="section">
+            <h2 id="introduction">Introduction</h2>
+            <p>La gestion des ventes constitue l'un des piliers fondamentaux de la performance commerciale d'une entreprise. Avec Movelys, cette fonction est entièrement digitalisée et optimisée grâce à un module puissant, intuitif et interconnecté. Conçu pour répondre aux besoins des entreprises de toutes tailles, ce module permet de suivre en temps réel chaque transaction de vente, depuis l'enregistrement de la commande jusqu'au paiement final.</p>
+            
+            <p>L'application offre une interface fluide pour la création de factures, l'ajout de produits ou services vendus, l'application de remises, de taxes, la gestion des paiements partiels ou complets, ainsi que le suivi précis des clients. Chaque opération est enregistrée avec rigueur, assurant une traçabilité complète et une transparence dans toutes les étapes du cycle de vente.</p>
+            
+            <p>Movelys permet également une analyse approfondie de l'activité commerciale grâce à des rapports détaillés, offrant une visibilité globale sur les performances, les marges, les clients les plus actifs, et les produits les plus vendus. En reliant la gestion des ventes avec les modules de stock, de contacts et de finances, Movelys offre une vue unifiée, essentielle à la prise de décision stratégique.</p>
+        </section>
+
+        <!-- Section 1) Tous les ventes -->
+        <section class="section">
+            <h2 id="tous-les-ventes">1) Tous les ventes</h2>
+            
+            <h3 id="fonction-generale">1.1) Fonction générale</h3>
+            <p>La section <strong>Tous les ventes</strong> constituent le <strong>tableau central de gestion commerciale</strong> dans Movelys. Elle regroupe l'ensemble des ventes effectuées dans le système, qu'il s'agisse de ventes directes, par point de vente (POS), de devis transformés, ou de commandes enregistrées par d'autres canaux (importation, brouillons, retours, etc.).</p>
+            <p>Elle permet un <strong>suivi précis, rapide et organisé de chaque transaction client</strong>, du premier enregistrement jusqu'au paiement complet et à la livraison.</p>
+            
+            <h3 id="interface-outils">1.2) Interface et outils disponibles</h3>
+            <p>L'interface de cette section repose sur un <strong>tableau dynamique filtrable et personnalisable</strong>, doté de plusieurs fonctions de traitement.</p>
+            
+            <h4>Fonctions disponibles</h4>
+            <ul>
+                <li>Nombre d'entrées par page : elle Permet d'afficher 10, 25, 50 ou 100 ventes par écran</li>
+                <li><strong>Recherche rapide :</strong> la Barre de recherche filtrant les résultats instantanément (par client, numéro de vente, statut, etc.)</li>
+                <li><strong>Export CSV / Excel :</strong> elle permet le Téléchargement des données pour usage externe</li>
+                <li><strong>Impression :</strong> elle Génère une version imprimable de la liste</li>
+                <li><strong>Visibilité des colonnes :</strong> elle Permet d'afficher/masquer certains champs</li>
+                <li><strong>Ajouter une vente :</strong> elle Accès direct au formulaire de création d'une nouvelle vente</li>
+            </ul>
+            
+            <div class="image-placeholder"><p>Illustration de l'interface</p>
+                <img src="/images/vendre1.png" alt="Description de l'image" width="900" height="600" style="max-width:100%;height:auto;border-radius:8px;" />
+                </div>
+            
+            <h3 id="fonctionnalites-cles">1.3) Fonctionnalités clés</h3>
+            <ul>
+                <li><strong>Tri par colonne :</strong> permet d'ordonner les ventes par date, client, statut ou montant.</li>
+                <li><strong>Filtres multiples :</strong> possibilité de croiser plusieurs filtres (ex. : ventes impayées d'un mois donné).</li>
+                <li><strong>Consultation détaillée :</strong> chaque ligne de vente donne accès à un <strong>détail complet de la transaction.</strong></li>
+                <li><strong>Statut interactif :</strong> possibilité de changer le statut d'une vente (passer de brouillon a finalisé, etc.).</li>
+            </ul>
+            
+            <h3 id="integration-modules">1.4) Intégration avec les autres modules</h3>
+            <table class="component-table">
+                <tr>
+                    <th>Module lié</th>
+                    <th>Rôle</th>
+                </tr>
+                <tr>
+                    <td>Produits</td>
+                    <td>Mise à jour automatique du stock à chaque vente validée</td>
+                </tr>
+                <tr>
+                    <td>Clients</td>
+                    <td>Mise à jour de l'historique client, solde dû, remises</td>
+                </tr>
+                <tr>
+                    <td>Stocks</td>
+                    <td>Diminution automatique des quantités vendues</td>
+                </tr>
+                <tr>
+                    <td>Rapports</td>
+                    <td>Alimentation des indicateurs de chiffre d'affaires et marges</td>
+                </tr>
+            </table>
+            
+            <h3 id="droits-acces">1.5) Droits et accès</h3>
+            <table class="component-table">
+                <tr>
+                    <th>Utilisateur</th>
+                    <th>Accès recommandé</th>
+                </tr>
+                <tr>
+                    <td>Administrateur</td>
+                    <td>Tous droits (modification, suppression, export)</td>
+                </tr>
+                <tr>
+                    <td>Commercial / vendeur</td>
+                    <td>Accès à ses propres ventes ou à toutes selon permissions</td>
+                </tr>
+                <tr>
+                    <td>Comptable</td>
+                    <td>Accès en lecture ou pour export comptable</td>
+                </tr>
+                <tr>
+                    <td>Stagiaire / invité</td>
+                    <td>Lecture ou actions limitées selon profil</td>
+                </tr>
+            </table>
+        </section>
+
+        <!-- Section 2) Ajouter une vente -->
+        <section class="section">
+            <h2 id="ajouter-vente">2) Ajouter une vente</h2>
+            
+            <h3 id="objectif-fonctionnalite">2.1) Objectif de la fonctionnalité</h3>
+            <p>La section Ajouter une vente permet de créer une nouvelle transaction commerciale avec un client. Elle constitue l'une des fonctions les plus centrales de Movelys, car elle enregistre :</p>
+            <ul>
+                <li>Le contenu de la vente (produits/services),</li>
+                <li>Les conditions commerciales (remises, taxes, paiements),</li>
+                <li>Les relations client (nouveau ou existant),</li>
+                <li>Et les impacts opérationnels (stocks, factures, rapports, etc.).</li>
+            </ul>
+            
+            <h3 id="presentation-interface">2.2) Présentation de l'interface</h3>
+            <p>L'interface se compose de Sections fonctionnels qui sont :</p>
+            
+            <h4>❖ La Section des informations générales de la vente :</h4>
+            <p>Elle regroupe les éléments administratifs clés d'une transaction, ceux qui définissent le <strong>cadre de la vente qui sont :</strong></p>
+            
+            <h5>1. Client</h5>
+            <p>Ce champ permet de <strong>lier la vente à un client existant de la base de données, ou d'ajouter un nouveau client si nécessaire.</strong> Cela permet :</p>
+            <ul>
+                <li>De suivre l'historique de ses achats,</li>
+                <li>De générer des factures personnalisées,</li>
+                <li>De gérer des conditions commerciales spécifiques (remises, paiement différé, etc.).</li>
+            </ul>
+            <p><strong>Pourquoi c'est important :</strong> Sans identification du client, il est impossible de gérer un crédit, d'envoyer un reçu personnalisé ou de retrouver la vente plus tard.</p>
+            
+            <h5>2. Durée de paie (ou délai de paiement)</h5>
+            <p>Champ optionnel permettant de définir dans <strong>combien de jours le paiement devra être effectué.</strong> Exemples :</p>
+            <ul>
+                <li>0 jours (paiement comptant),</li>
+                <li>15 jours (Net 15),</li>
+                <li>30 jours (Net 30),</li>
+            </ul>
+            <p>Cela active une gestion à crédit, et aide le système à suivre les créances clients et les relances.</p>
+            
+            <h5>3. Date de vente</h5>
+            <p>C'est la date à laquelle la transaction est enregistrée (ou censée avoir lieu). Par défaut, Movelys propose la date du jour, mais celle-ci peut être modifiée en fonction :</p>
+            <ul>
+                <li>D'une commande rétroactive,</li>
+                <li>D'un report administratif.</li>
+            </ul>
+            <p>Cette date est utilisée dans la comptabilité, les rapports de vente, et les rapports fiscaux.</p>
+            
+            <h5>4. Schéma de facturation</h5>
+            <p>Terme utilisé pour désigner le <strong>modèle de numérotation automatique ou manuelle des factures.</strong> Un schéma de facturation peut être :</p>
+            <ul>
+                <li><strong>Standard (par exemple : INV-2025-001),</strong></li>
+                <li><strong>Personnalisé (par client ou type de vente),</strong></li>
+            </ul>
+            <p>Il permet d'organiser les factures de manière uniforme et traçable.</p>
+            
+            <h5>5. Numéro de la facture</h5>
+            <p>Numéro unique qui identifie la vente (ou brouillon) dans le système. Il peut être :</p>
+            <ul>
+                <li><strong>Généré automatiquement par le système en suivant le schéma,</strong></li>
+                <li>Ou saisi manuellement par l'utilisateur (si autorisé).</li>
+            </ul>
+            <p>Ce numéro est crucial pour l'archivage, la facturation légale et le suivi comptable.</p>
+            
+            <h5>6. Joindre un document</h5>
+            <p>Option permettant d'ajouter un fichier annexe à la vente. Exemples :</p>
+            <ul>
+                <li>Bon de commande client,</li>
+                <li>Preuve de paiement anticipé,</li>
+                <li>Conditions commerciales spécifiques,</li>
+                <li>Facture externe ou devis signé.</li>
+            </ul>
+            <p>Les formats supportés sont souvent : PDF, cvs, DOCX, png.</p>
+            <p>Utile pour justifier une vente ou pour joindre tout document contractuel lié à cette transaction.</p>
+            
+            <h4>Résumé : À quoi sert cette section ?</h4>
+            <p>La section "Informations générales" permet de :</p>
+            <ul>
+                <li>Identifier précisément la vente et le client concerné,</li>
+                <li>Définir le cadre juridique et commercial de la transaction,</li>
+                <li>Garantir la cohérence des données de vente dans l'ensemble du système Movelys.</li>
+            </ul>
+            
+            <h4>❖ Section pour l'ajout d'un produit</h4>
+            <p>Dans cette section on peut ajouter un produit et également faire la recherche d'un produit déjà présent dans la base de données enfin de l'ajouter dans la table</p>
+            
+            <h4>❖ Section des paramètres de la vente</h4>
+            <p>Elle regroupe les champs servant à ajuster les conditions tarifaires, appliquer des remises, gérer la taxation et insérer des notes internes ou clients sur la vente.</p>
+            
+            <h5>1. Type de remise</h5>
+            <p>Ce champ définit le mode d'application de la remise sur la vente. Les types les plus courants sont :</p>
+            <ul>
+                <li><strong>Pourcentage (%) : réduction proportionnelle (ex. 10 %)</strong></li>
+                <li><strong>Montant fixe : réduction en valeur absolue (ex. 5 000 FCFA)</strong></li>
+            </ul>
+            <p>Il détermine comment sera calculée la remise sur le montant total ou sur chaque article.</p>
+            
+            <h5>2. Montant de la remise</h5>
+            <p>Ce champ précise le montant ou le pourcentage de remise à appliquer selon le type choisi. Exemples :</p>
+            <ul>
+                <li>Si le type est %, saisir "10" appliquera une réduction de 10% sur la commande.</li>
+                <li>Si le type est montant, saisir "2000" déduira 2000 FCFA du total brut.</li>
+            </ul>
+            <p>Permet d'offrir un avantage client ou d'appliquer une politique commerciale (soldes, promotions, geste commercial).</p>
+            
+            <h5>3. Taux de commande (parfois appelé ''Commande Tax'' ou ''TVA de la commande'')</h5>
+            <p>C'est le taux de taxe appliqué à l'ensemble de la commande. Il est défini :</p>
+            <ul>
+                <li>Soit automatiquement selon le pays ou la configuration par défaut (ex. 18%),</li>
+                <li>Soit sélectionné manuellement (si plusieurs taux sont possibles selon les produits ou clients).</li>
+            </ul>
+            <p>Ce taux est utilisé pour le calcul automatique de la TVA ou de toute taxe réglementaire, et sera intégré à la facture.</p>
+            
+            <h5>4. Note de vente</h5>
+            <p>Champ libre permettant d'ajouter des informations textuelles à la vente. Exemples d'usage :</p>
+            <ul>
+                <li>Instruction spéciale pour la livraison ou la facturation,</li>
+                <li>Condition commerciale spécifique,</li>
+                <li>Mention d'un accord verbal ou d'un engagement client,</li>
+                <li>Note interne pour suivi par un collègue.</li>
+            </ul>
+            <p>Cette note peut apparaître sur le ticket client, la facture, ou rester en interne selon la configuration.</p>
+            
+            <h4>Résumé : Rôle de cette section</h4>
+            <p>La section ''Paramètres de la vente'' est essentielle pour :</p>
+            <ul>
+                <li>Personnaliser les conditions tarifaires,</li>
+                <li>Respecter la réglementation fiscale (taxes),</li>
+                <li>Faciliter la communication interne ou avec le client.</li>
+            </ul>
+            <p>Elle donne au vendeur une souplesse de négociation contrôlée, tout en conservant une <strong>traçabilité complète.</strong></p>
+            
+            <h4>❖ Section d'information d'expédition et logistique</h4>
+            <p>Elle regroupe tous les éléments nécessaires à la préparation, l'expédition, la livraison et le <strong>suivi physique de la commande.</strong> Elle est activée dès qu'un produit doit être livré physiquement au client.</p>
+            
+            <h5>1. Détails d'expédition</h5>
+            <p>Champ global servant à :</p>
+            <ul>
+                <li>Décrire brièvement les modalités d'expédition,</li>
+                <li>Indiquer un numéro de suivi,</li>
+                <li>Mentionner une spécificité (ex. : express, groupée, sur rendez-vous...).</li>
+            </ul>
+            <p>Sert de résumé visible pour le vendeur ou la logistique.</p>
+            
+            <h5>2. Adresse de livraison</h5>
+            <p>Adresse exacte à laquelle les produits doivent être livrés. Elle peut être :</p>
+            <ul>
+                <li>Sélectionnée depuis la fiche client (adresse enregistrée),</li>
+                <li>Saisie manuellement (adresse temporaire ou différente).</li>
+            </ul>
+            <p>Cette adresse est obligatoire si une livraison est prévue. Elle est utilisée pour les documents, étiquettes et calculs de zone.</p>
+            
+            <h5>3. Frais d'expédition</h5>
+            <p>Montant à facturer au client pour couvrir les frais de transport ou d'envoi. Ce champ peut être :</p>
+            <ul>
+                <li>Saisi manuellement,</li>
+                <li>Ou calculé automatiquement selon un module externe (zones, poids, transporteur).</li>
+            </ul>
+            <p>Le montant s'ajoute au total TTC de la commande.</p>
+            
+            <h5>4. Statut de l'expédition</h5>
+            <p>Statut logistique actuel de la commande. Exemples :</p>
+            <ul>
+                <li>Non expédiée,</li>
+                <li>En attente de livraison,</li>
+                <li>En cours de livraison,</li>
+                <li>Livrée,</li>
+                <li>Annulée.</li>
+            </ul>
+            <p>Ce statut évolue avec le suivi logistique. Il est crucial pour le SAV, la traçabilité et les relances.</p>
+            
+            <h5>5. Livré à</h5>
+            <p>Nom de la personne qui réceptionne la commande à l'adresse de livraison. Ce champ est utile si le destinataire n'est pas le client initial (ex. : assistant, réceptionniste, entreprise tierce).</p>
+            <p>Cela évite les erreurs de réception ou de confusion sur place.</p>
+            
+            <h5>6. Livreur</h5>
+            <p>Nom ou identifiant du livreur en charge de la commande. Il peut s'agir :</p>
+            <ul>
+                <li>D'un employé interne (logistique),</li>
+                <li>D'un transporteur partenaire,</li>
+                <li>Ou d'une société externe</li>
+            </ul>
+            <p>Ce champ facilite le suivi de responsabilité et les réclamations éventuelles.</p>
+            
+            <h5>7. Documents d'expédition</h5>
+            <p>Fichiers liés à la livraison : bon de livraison (BL), bordereau transporteur, accusé de réception, etc. Formats acceptés : PDF, images, Excel, Word…</p>
+            <p>Ces documents assurent une <strong>preuve de livraison, un suivi administratif et juridique complet.</strong></p>
+            
+            <h5>Bouton : Ajouter des dépenses supplémentaires</h5>
+            <p>Ce bouton permet d'enregistrer des <strong>dépenses associées à la commande, mais non facturées au client.</strong> Exemples de dépenses :</p>
+            <ul>
+                <li>Frais d'emballage,</li>
+                <li>Manutention,</li>
+                <li>Commission de transport,</li>
+                <li>Achat d'accessoires liés à l'expédition.</li>
+            </ul>
+            
+            <h5>À quoi ça sert ?</h5>
+            <ul>
+                <li>Pour suivre la rentabilité réelle de la commande,</li>
+                <li>Affecter ces coûts dans la comptabilité analytique,</li>
+                <li>Gérer un journal des dépenses logistiques par vente.</li>
+            </ul>
+            <p>Ces dépenses n'impactent pas le total client, mais enrichissent les rapports de coûts <strong>internes.</strong></p>
+            
+            <h4>Rôle de cette section</h4>
+            <p>La section logistique permet une <strong>gestion complète de la chaîne de livraison, depuis la saisie de l'adresse jusqu'au suivi post-livraison.</strong> Elle est indispensable dans toute entreprise qui effectue des <strong>livraisons physiques, car elle :</strong></p>
+            <ul>
+                <li>Garantit la traçabilité,</li>
+                <li>Optimise les coûts logistiques,</li>
+                <li>Facilite la communication entre équipes (vente, stock, transport).</li>
+            </ul>
+            
+            <h4>❖ Section sur les détails de paiement</h4>
+            <p>Cette section permet d'enregistrer les <strong>modalités financières exactes liées à une transaction.</strong> Elle est cruciale pour assurer la <strong>traçabilité comptable, la bonne gestion de la trésorerie et</strong> la <strong>cohérence des rapports financiers.</strong></p>
+            
+            <h5>1. Quantité</h5>
+            <p>Dans le contexte d'un paiement, ce champ peut porter plusieurs significations selon le type de formulaire.</p>
+            <ul>
+                <li>Si le paiement est lié à plusieurs articles vendus, la quantité correspond au nombre <strong>d'articles facturés (souvent automatique depuis la section produits).</strong></li>
+                <li>Dans un formulaire de <strong>paiement échelonné, ce champ peut indiquer le nombre de</strong> <strong>paiements partiels enregistrés ou autorisés.</strong></li>
+                <li>En contexte de <strong>paiement partiel ou multi-mode, il peut représenter la</strong> <strong>quantité de</strong> <strong>produits couverte par un acompte.</strong></li>
+            </ul>
+            <p><strong>Objectif :</strong> S'assurer que le montant payé correspond à une ou plusieurs quantités précises de produit(s), ou d'étapes de règlement.</p>
+            
+            <h5>2. Mode de paiement</h5>
+            <p>Le mode de paiement définit la méthode utilisée par le client pour régler la transaction. Les options les plus courantes incluent :</p>
+            <ul>
+                <li><strong>Espèces :</strong> Paiement en numéraire.</li>
+                <li><strong>Virement bancaire :</strong> Paiement effectué par transfert depuis un compte bancaire.</li>
+                <li><strong>Carte bancaire :</strong> Paiement via un terminal de paiement électronique (POS).</li>
+                <li><strong>Chèque :</strong> Paiement différé par chèque papier.</li>
+                <li><strong>Crédit client :</strong> Paiement à échéance ultérieure (compte client débiteur).</li>
+                <li><strong>Paiement mobile :</strong> Ex. : Orange Money, Moov Money, MTN Mobile Money...</li>
+            </ul>
+            <p><strong>Objectif :</strong> Permettre à l'entreprise de suivre les flux financiers par méthode, ce qui est utile pour la comptabilité, la caisse, les audits et les remboursements.</p>
+            
+            <h5>3. Note de paiement</h5>
+            <p>La note de paiement est un champ libre destiné à saisir toute information complémentaire <strong>ou justification liée à la transaction financière.</strong> Exemples :</p>
+            <ul>
+                <li>"Acompte réglé par virement, solde prévu sous 7 jours."</li>
+                <li>"Paiement par deux personnes différentes."</li>
+                <li>"Règlement partiel, remise en attente."</li>
+                <li>"Montant réduit suite à une remise commerciale exceptionnelle."</li>
+            </ul>
+            <p><strong>Objectif :</strong> Conserver une trace écrite pour mieux expliquer certaines opérations de paiement, éviter les litiges, et faciliter les vérifications comptables.</p>
+            
+            <h5>4. Date de paiement</h5>
+            <p>C'est la date effective à laquelle le paiement a été réalisé ou enregistré dans le système. Deux cas de figure :</p>
+            <ul>
+                <li>Si le paiement est immédiat : cette date est souvent égale à la date de la vente ou de la facture.</li>
+                <li>Si le paiement est différé ou échelonné : cette date est choisie manuellement et peut être future ou passée (en cas de régularisation).</li>
+            </ul>
+            <p><strong>Objectif :</strong> Cette date est utilisée pour :</p>
+            <ul>
+                <li>Les rapports de vente ou de trésorerie par période,</li>
+                <li>L'établissement des échéanciers,</li>
+                <li>Les relances en cas de paiement en attente.</li>
+            </ul>
+            
+             <div class="image-placeholder"><p>Illustration de l'interface</p>
+                <img src="/images/vendre2.png" alt="Description de l'image" width="900" height="600" style="max-width:100%;height:auto;border-radius:8px;" />
+                </div>
+            
+            
+            <h3 id="integration-modules-vente">2.3) Intégration dans les modules Movelys</h3>
+            <table class="component-table">
+                <tr>
+                    <th>Module concerné</th>
+                    <th>Effets</th>
+                </tr>
+                <tr>
+                    <td>Stock</td>
+                    <td>Déduction automatique des produits vendus</td>
+                </tr>
+                <tr>
+                    <td>Clientèle</td>
+                    <td>Mise à jour du solde et historique client</td>
+                </tr>
+                <tr>
+                    <td>Rapports</td>
+                    <td>Actualisation des ventes, marges, et taxes</td>
+                </tr>
+                <tr>
+                    <td>Impression / PDF</td>
+                    <td>Génération de facture conforme à l'identité de l'entreprise</td>
+                </tr>
+            </table>
+            
+            <h3 id="permissions-securite">2.4) Permissions et sécurité</h3>
+            <table class="component-table">
+                <tr>
+                    <th>Rôle</th>
+                    <th>Accès</th>
+                </tr>
+                <tr>
+                    <td>Administrateur</td>
+                    <td>Plein accès (ajout, modification, suppression)</td>
+                </tr>
+                <tr>
+                    <td>Commercial / vendeur</td>
+                    <td>Ajout et suivi des ventes</td>
+                </tr>
+                <tr>
+                    <td>Comptable</td>
+                    <td>Suivi des paiements et montants</td>
+                </tr>
+                <tr>
+                    <td>Invité / Stagiaire</td>
+                    <td>Aucun accès ou accès lecture seule</td>
+                </tr>
+            </table>
+            
+            <p>Grâce à cette interface fluide, l'utilisateur peut réaliser des ventes en toute autonomie, tout en conservant un haut niveau de contrôle et de transparence.</p>
+        </section>
+
+
+        <!-- Section 3) Liste pos -->
+        <section class="section">
+            <h2 id="liste-pos">3) Liste pos</h2>
+            
+            <h3 id="presentation-generale-pos">3.1) Présentation générale</h3>
+            <p>La section <strong>Liste POS (Point of Sale) permet à l'utilisateur de consulter, filtrer, trier et gérer</strong> toutes les <strong>ventes réalisées via l'interface POS.</strong> Cette vue centralise les transactions de caisse effectuées en boutique, au comptoir ou sur tout point de vente physique équipé de Movelys.</p>
+            <p>Elle constitue un outil essentiel pour :</p>
+            <ul>
+                <li>Effectuer un suivi journalier ou périodique des ventes en caisse,</li>
+                <li><strong>Réconcilier les montants encaissés,</strong></li>
+                <li>Vérifier les transactions effectuées par les caissiers,</li>
+                <li>Et générer des rapports ou impressions comptables.</li>
+            </ul>
+            
+            <h3 id="presentation-interface-pos">3.1) Présentation de l'interface</h3>
+            <p>La <strong>Liste POS se présente sous la forme d'un tableau interactif avec de nombreux outils de</strong> contrôle et d'export.</p>
+            
+            <table class="component-table">
+                <tr>
+                    <th>Outils disponibles</th>
+                    <th>Description</th>
+                </tr>
+                <tr>
+                    <td>Exporter CSV / Excel</td>
+                    <td>Pour analyser les ventes POS dans un tableur</td>
+                </tr>
+                <tr>
+                    <td>Imprimer</td>
+                    <td>Pour impression de la liste ou des tickets individuels</td>
+                </tr>
+                <tr>
+                    <td>Colonnes personnalisables</td>
+                    <td>Cacher ou afficher certains champs</td>
+                </tr>
+                <tr>
+                    <td>Recherche rapide</td>
+                    <td>Filtrer par client, référence, date, montant ou vendeur</td>
+                </tr>
+                <tr>
+                    <td>Filtres</td>
+                    <td>Très utile pour les clôtures de caisse</td>
+                </tr>
+                <tr>
+                    <td>Ajouter</td>
+                    <td>Redirection vers l'interface d'ajouter une POS</td>
+                </tr>
+            </table>
+            
+             <div class="image-placeholder"><p>Illustration de l'interface</p>
+                <img src="/images/vendre3.png" alt="Description de l'image" width="900" height="600" style="max-width:100%;height:auto;border-radius:8px;" />
+                </div>
+            
+            
+            <h3 id="integration-modules-pos">3.2) Intégration avec les autres modules</h3>
+            <table class="component-table">
+                <tr>
+                    <th>Module lié</th>
+                    <th>Rôle</th>
+                </tr>
+                <tr>
+                    <td>Produits / Stock</td>
+                    <td>Mise à jour des stocks au moment de la vente POS</td>
+                </tr>
+                <tr>
+                    <td>Clients</td>
+                    <td>Historique de ventes s'il s'agit d'un client enregistré</td>
+                </tr>
+                <tr>
+                    <td>Rapports</td>
+                    <td>Inclusion dans les KPI de ventes, taux de paiement, etc.</td>
+                </tr>
+                <tr>
+                    <td>Garantie</td>
+                    <td>Possibilité de retourner un article à partir d'une vente POS</td>
+                </tr>
+            </table>
+            
+            <h3 id="permissions-roles-pos">3.3) Permissions et rôles utilisateurs</h3>
+            <table class="component-table">
+                <tr>
+                    <th>Rôle</th>
+                    <th>Accès à la Liste POS</th>
+                </tr>
+                <tr>
+                    <td>Administrateur</td>
+                    <td>Tous droits</td>
+                </tr>
+                <tr>
+                    <td>Caissier</td>
+                    <td>Accès à ses propres ventes, parfois lecture seule sur les autres</td>
+                </tr>
+                <tr>
+                    <td>Responsable point de vente</td>
+                    <td>Suivi complet, annulation, édition</td>
+                </tr>
+                <tr>
+                    <td>Comptable</td>
+                    <td>Consultation à des fins de rapprochement</td>
+                </tr>
+                <tr>
+                    <td>Invité / Stagiaire</td>
+                    <td>Aucun accès autorisé</td>
+                </tr>
+            </table>
+        </section>
+
+        <!-- Section 4) Pos -->
+        <section class="section">
+            <h2 id="pos">4) Pos</h2>
+            
+            <h3 id="objectif-interface-pos">4.1) Objectif de la fonctionnalité & interface</h3>
+            <p>Le formulaire POS (Point Of Sale) de Movelys permet la saisie rapide et complète d'une <strong>vente physique en magasin.</strong> Il est conçu pour optimiser le travail du caissier ou du vendeur sur un point de vente physique, en fournissant une interface :</p>
+            <ul>
+                <li><strong>Intuitive et ergonomique,</strong></li>
+                <li>Capable de gérer des transactions complexes (remises, livraisons, taxes),</li>
+                <li>Et intégrée directement avec la gestion des stocks, des clients, et de la caisse.</li>
+            </ul>
+            <p>L'objectif est de permettre :</p>
+            <ul>
+                <li>La vente directe de produits en stock,</li>
+                <li>L'encaissement rapide,</li>
+                <li>La génération de tickets clients,</li>
+                <li>Le suivi des transactions POS.</li>
+            </ul>
+            
+             <div class="image-placeholder"><p>Illustration de l'interface</p>
+                <img src="/images/vendre4.png" alt="Description de l'image" width="900" height="600" style="max-width:100%;height:auto;border-radius:8px;" />
+                </div>
+            
+            
+            <h3 id="fonctionnement-formulaire-pos">4.2) Fonctionnement du formulaire POS</h3>
+            
+            <h4>4.2.1. Début de transaction</h4>
+            <h5>A. Sélection de l'emplacement</h5>
+            <p>Un menu en haut de page affiche l'emplacement actuel (ex. : <em>Senteur & Vitalité</em>), ce qui est crucial dans un environnement multi-magasins. Il permet de savoir dans quel lieu l'opération est enregistrée et d'affecter les mouvements de <strong>stock à cet emplacement.</strong></p>
+            
+            <h5>B. Date et heure de la vente</h5>
+            <p>Affichage dynamique de l'horodatage pour :</p>
+            <ul>
+                <li>Faciliter le suivi des ventes en temps réel,</li>
+                <li>Dater précisément chaque transaction.</li>
+            </ul>
+            
+            <h4>4.2.2. Identification du client</h4>
+            <p>Le système propose par défaut un client anonyme ("Client sans rendez-vous"). Un bouton (+) permet d'ajouter un nouveau client manuellement ou de sélectionner un client existant.</p>
+            <p><strong>Avantage :</strong> si un client est identifié, la vente sera liée à son compte pour permettre un meilleur suivi (historique d'achats, crédit, fidélité).</p>
+            
+            <h4>4.2.3. Ajout de produits</h4>
+            <p>L'interface propose plusieurs façons d'ajouter des articles au panier :</p>
+            <ul>
+                <li>Par saisie du nom, code produit, ou scan code-barres,</li>
+                <li>Ou via sélection directe dans le catalogue visuel à droite.</li>
+            </ul>
+            <p>Chaque produit ajouté s'affiche dans un tableau interactif comportant :</p>
+            <ul>
+                <li>Nom du produit,</li>
+                <li>Quantité à vendre (modifiable),</li>
+                <li>Prix unitaire et sous-total,</li>
+                <li>Icône de suppression.</li>
+            </ul>
+            <p>Les produits sont automatiquement décrémentés du stock à validation de la vente.</p>
+            
+            <h4>4.2.4. Gestion des totaux</h4>
+            <h5>A. Remise</h5>
+            <ul>
+                <li>Une remise globale peut être appliquée (montant ou pourcentage).</li>
+                <li>Éditable via une icône stylo.</li>
+            </ul>
+            
+            <h5>B. Taxe de commande (Commande Taxe)</h5>
+            <ul>
+                <li>Ajout de la taxe (TVA ou autre) à la totalité de la commande.</li>
+                <li>Le système peut être configuré avec différents types de taxes selon l'emplacement.</li>
+            </ul>
+            
+            <h5>C. Livraison</h5>
+            <ul>
+                <li>Coût optionnel ajouté à la commande si livraison prévue.</li>
+            </ul>
+            <p>Chaque champ est modifiable dynamiquement, avec mise à jour en temps réel du total.</p>
+            
+            <h3 id="catalogue-produits">4.3) Catalogue produits (Bloc droit)</h3>
+            <p>L'affichage par catégorie et marque permet une recherche rapide. Chaque produit affiche :</p>
+            <ul>
+                <li>Prix unitaire,</li>
+                <li>Type de la remise,</li>
+                <li>Montant de la remise,</li>
+                <li>Description,</li>
+            </ul>
+            <p>Un simple clic ajoute automatiquement le produit au panier de vente.</p>
+            
+            <h3 id="paiement-finalisation">4.3) Paiement & finalisation</h3>
+            <p>La section inférieure de l'écran contient tous les modes de paiement et d'action.</p>
+            
+            <table class="component-table">
+                <tr>
+                    <th>Bouton</th>
+                    <th>Fonction</th>
+                </tr>
+                <tr>
+                    <td>Brouillon</td>
+                    <td>Enregistre la vente sans validation finale</td>
+                </tr>
+                <tr>
+                    <td>Citation</td>
+                    <td>Génère un devis (non contractuel)</td>
+                </tr>
+                <tr>
+                    <td>Suspendre</td>
+                    <td>Garde la vente temporairement en pause</td>
+                </tr>
+                <tr>
+                    <td>Vente à crédit</td>
+                    <td>Enregistre une dette client</td>
+                </tr>
+                <tr>
+                    <td>Paiement multiple</td>
+                    <td>Permet de répartir le paiement sur plusieurs modes</td>
+                </tr>
+                <tr>
+                    <td>Carte / Argent</td>
+                    <td>Paiement unique selon le type sélectionné</td>
+                </tr>
+                <tr>
+                    <td>Annuler (rouge)</td>
+                    <td>Supprime la transaction en cours</td>
+                </tr>
+                <tr>
+                    <td>Total payable</td>
+                    <td>Affiche en temps réel le montant à encaisser</td>
+                </tr>
+            </table>
+            
+            <h3 id="fonctionnalites-additionnelles">4.5) Fonctionnalités additionnelles</h3>
+            <table class="component-table">
+                <tr>
+                    <th>Fonction</th>
+                    <th>Description</th>
+                </tr>
+                <tr>
+                    <td>Bouton dépenses</td>
+                    <td>Ajout rapide d'une dépense depuis le même poste de vente</td>
+                </tr>
+                <tr>
+                    <td>Transactions récentes</td>
+                    <td>Affiche les ventes précédentes effectuées par le caissier</td>
+                </tr>
+                <tr>
+                    <td>Synchronisation / Historique</td>
+                    <td>Permet la consultation et mise à jour des ventes POS passées</td>
+                </tr>
+                <tr>
+                    <td>Paramètres</td>
+                    <td>Configuration des options POS (ex. : taxes, format ticket, etc.)</td>
+                </tr>
+            </table>
+            
+            <h3 id="permissions-roles-pos-form">4.6) Permissions et rôles utilisateurs</h3>
+            <table class="component-table">
+                <tr>
+                    <th>Rôle</th>
+                    <th>Droit sur le formulaire POS</th>
+                </tr>
+                <tr>
+                    <td>Administrateur</td>
+                    <td>Plein accès (vente, remboursement, configuration)</td>
+                </tr>
+                <tr>
+                    <td>Caissier</td>
+                    <td>Accès à la vente, modification du panier, encaissement</td>
+                </tr>
+                <tr>
+                    <td>Manager de magasin</td>
+                    <td>Supervision, clôture de caisse, validation différée</td>
+                </tr>
+                <tr>
+                    <td>Stagiaire / Invité</td>
+                    <td>Aucun accès</td>
+                </tr>
+            </table>
+        </section>
+
+        <!-- Section 5) Ajouter un brouillon -->
+        <section class="section">
+            <h2 id="ajouter-brouillon">5) Ajouter un brouillon</h2>
+            
+            <h3 id="presentation-generale-brouillon">5.1) Présentation générale</h3>
+            <p>La fonctionnalité « Ajouter un brouillon » permet à l'utilisateur de créer une <strong>vente temporaire non finalisée</strong>, stockée dans le système pour être complétée, validée ou modifiée ultérieurement.</p>
+            <p>Ce module est idéal pour gérer :</p>
+            <ul>
+                <li>Des <strong>commandes en attente de validation</strong>,</li>
+                <li>Des ventes <strong>partiellement payées ou à confirmer</strong>,</li>
+                <li>Ou des préparations de commande dans un processus en plusieurs étapes.</li>
+            </ul>
+            
+            <h3 id="objectifs-brouillon">5.2) Objectifs de la fonctionnalité</h3>
+            <ul>
+                <li>Permettre la <strong>flexibilité dans la gestion des ventes</strong> incomplètes.</li>
+                <li>Offrir un espace de travail temporaire avant confirmation définitive.</li>
+                <li>Aider à la <strong>coordination entre les commerciaux et la comptabilité</strong>.</li>
+                <li>Réduire les erreurs en prenant le temps de <strong>vérifier les informations avant finalisation</strong>.</li>
+            </ul>
+            
+            <h3 id="presentation-interface-brouillon">5.3) Présentation de l'interface</h3>
+            <p>Le formulaire est identique à celui d'une vente classique, à la différence que le <strong>statut par défaut est "Brouillon"</strong>. Elle est divisée en 4 sections</p>
+            
+            <h4>❖ La Section des informations générales de la vente :</h4>
+            <p>Elle regroupe les éléments administratifs clés d'une transaction, ceux qui définissent le <strong>cadre de la vente qui sont :</strong></p>
+            
+            <h5>1. Client</h5>
+            <p>Ce champ permet de <strong>lier la vente à un client existant de la base de données, ou d'ajouter un nouveau client si nécessaire.</strong> Cela permet :</p>
+            <ul>
+                <li>De suivre l'historique de ses achats,</li>
+                <li>De générer des factures personnalisées,</li>
+                <li>De gérer des conditions commerciales spécifiques (remises, paiement différé, etc.).</li>
+            </ul>
+            <p><strong>Pourquoi c'est important :</strong> Sans identification du client, il est impossible de gérer un crédit, d'envoyer un reçu personnalisé ou de retrouver la vente plus tard.</p>
+            
+            <h5>2. Durée de paie (ou délai de paiement)</h5>
+            <p>Champ optionnel permettant de définir dans combien de jours le paiement devra être effectué. Exemples :</p>
+            <ul>
+                <li>0 jours (paiement comptant),</li>
+                <li>15 jours (Net 15),</li>
+                <li>30 jours (Net 30),</li>
+            </ul>
+            <p>Cela active une gestion à crédit, et aide le système à suivre les créances clients et les relances.</p>
+            
+            <h5>3. Date de vente</h5>
+            <p>C'est la date à laquelle la transaction est enregistrée (ou censée avoir lieu). Par défaut, Movelys propose la date du jour, mais celle-ci peut être modifiée en fonction :</p>
+            <ul>
+                <li>D'une commande rétroactive,</li>
+                <li>D'un report administratif.</li>
+            </ul>
+            <p>Cette date est utilisée dans la comptabilité, les rapports de vente, et les rapports fiscaux.</p>
+            
+            <h5>4. Schéma de facturation</h5>
+            <p>Terme utilisé pour désigner le <strong>modèle de numérotation automatique ou manuelle des</strong> factures. Un schéma de facturation peut être :</p>
+            <ul>
+                <li><strong>Standard (par exemple : INV-2025-001),</strong></li>
+                <li><strong>Personnalisé (par client ou type de vente),</strong></li>
+            </ul>
+            <p>Il permet d'organiser les factures de manière uniforme et traçable.</p>
+            
+            <h5>5. Numéro de la facture</h5>
+            <p>Numéro unique qui identifie la vente (ou brouillon) dans le système. Il peut être :</p>
+            <ul>
+                <li><strong>Généré automatiquement par le système en suivant le schéma,</strong></li>
+                <li>Ou saisi manuellement par l'utilisateur (si autorisé).</li>
+            </ul>
+            <p>Ce numéro est crucial pour l'archivage, la facturation légale et le suivi comptable.</p>
+            
+            <h5>6. Joindre un document</h5>
+            <p>Option permettant d'ajouter un fichier annexe à la vente. Exemples :</p>
+            <ul>
+                <li>Bon de commande client,</li>
+                <li>Preuve de paiement anticipé,</li>
+                <li>Conditions commerciales spécifiques,</li>
+                <li>Facture externe ou devis signé.</li>
+            </ul>
+            <p>Les formats supportés sont souvent : PDF, cvs, DOCX, png.</p>
+            <p>Utile pour justifier une vente ou pour joindre tout document contractuel lié à cette transaction.</p>
+            
+            <h4>Résumé : À quoi sert cette section ?</h4>
+            <p>La section "Informations générales" permet de :</p>
+            <ul>
+                <li>Identifier précisément la vente et le client concerné,</li>
+                <li>Définir le cadre juridique et commercial de la transaction,</li>
+                <li>Garantir la cohérence des données de vente dans l'ensemble du système Movelys.</li>
+            </ul>
+            
+            <h4>❖ Section pour l'ajout d'un produit</h4>
+            <p>Dans cette section on peut ajouter un produit et également faire la recherche d'un produit déjà présent dans la base de données enfin de l'ajouter dans la table</p>
+            
+            <h4>❖ Section des paramètres de la vente</h4>
+            <p>Elle regroupe les champs servant à ajuster les conditions tarifaires, appliquer des remises, gérer la taxation et insérer des notes internes ou clients sur la vente.</p>
+            
+            <h5>1. Type de remise</h5>
+            <p>Ce champ définit le mode d'application de la remise sur la vente. Les types les plus courants sont :</p>
+            <ul>
+                <li><strong>Pourcentage (%) : réduction proportionnelle (ex. 10 %)</strong></li>
+                <li><strong>Montant fixe : réduction en valeur absolue (ex. 5 000 FCFA)</strong></li>
+            </ul>
+            <p>Il détermine comment sera calculée la remise sur le montant total ou sur chaque article.</p>
+            
+            <h5>2. Montant de la remise</h5>
+            <p>Ce champ précise le montant ou le pourcentage de remise à appliquer selon le type choisi. Exemples :</p>
+            <ul>
+                <li>Si le type est %, saisir "10" appliquera une réduction de 10% sur la commande.</li>
+                <li>Si le type est montant, saisir "2000" déduira 2000 FCFA du total brut.</li>
+            </ul>
+            <p>Permet d'offrir un avantage client ou d'appliquer une politique commerciale (soldes, promotions, geste commercial).</p>
+            
+            <h5>3. Taux de commande (parfois appelé ''Commande Taxe'' ou ''TVA de la commande'')</h5>
+            <p>C'est le taux de taxe appliqué à l'ensemble de la commande. Il est défini :</p>
+            <ul>
+                <li>Soit automatiquement selon le pays ou la configuration par défaut (ex. 18%),</li>
+                <li>Soit sélectionné manuellement (si plusieurs taux sont possibles selon les produits ou clients).</li>
+            </ul>
+            <p>Ce taux est utilisé pour le calcul automatique de la TVA ou de toute taxe réglementaire, et sera intégré à la facture.</p>
+            
+            <h5>4. Note de vente</h5>
+            <p>Champ libre permettant d'ajouter des informations textuelles à la vente. Exemples d'usage :</p>
+            <ul>
+                <li>Instruction spéciale pour la livraison ou la facturation,</li>
+                <li>Condition commerciale spécifique,</li>
+                <li>Mention d'un accord verbal ou d'un engagement client,</li>
+                <li>Note interne pour suivi par un collègue.</li>
+            </ul>
+            <p>Cette note peut apparaître sur le <strong>ticket client, la facture, ou rester en</strong> <strong>interne selon la</strong> configuration.</p>
+            
+            <h4>Résumé : Rôle de cette section</h4>
+            <p>La section "Paramètres de la vente" est essentielle pour :</p>
+            <ul>
+                <li>Personnaliser les conditions tarifaires,</li>
+                <li>Respecter la réglementation fiscale (taxes),</li>
+                <li>Faciliter la communication interne ou avec le client.</li>
+            </ul>
+            <p>Elle donne au vendeur une <strong>souplesse de négociation contrôlée, tout en conservant une</strong> <strong>traçabilité complète.</strong></p>
+            
+            <h4>❖ Section d'information d'expédition et logistique</h4>
+            <p>Elle regroupe tous les éléments nécessaires à la préparation, l'expédition, la livraison et le <strong>suivi physique de la commande.</strong> Elle est activée dès qu'un produit doit être livré physiquement au client.</p>
+            
+            <h5>1. Détails d'expédition</h5>
+            <p>Champ global servant à :</p>
+            <ul>
+                <li>Décrire brièvement les modalités d'expédition,</li>
+                <li>Indiquer un numéro de suivi,</li>
+                <li>Mentionner une spécificité (ex. : express, groupée, sur rendez-vous...).</li>
+            </ul>
+            <p>Sert de résumé visible pour le vendeur ou la logistique.</p>
+            
+            <h5>2. Adresse de livraison</h5>
+            <p>Adresse exacte à laquelle les produits doivent être livrés. Elle peut être :</p>
+            <ul>
+                <li>Sélectionnée depuis la fiche client (adresse enregistrée),</li>
+                <li>Saisie manuellement (adresse temporaire ou différente).</li>
+            </ul>
+            <p>Cette adresse est obligatoire si une livraison est prévue. Elle est utilisée pour les documents, étiquettes et calculs de zone.</p>
+            
+            <h5>3. Frais d'expédition</h5>
+            <p>Montant à facturer au client pour couvrir les frais de transport ou d'envoi. Ce champ peut être :</p>
+            <ul>
+                <li>Saisi manuellement,</li>
+                <li>Ou calculé automatiquement selon un module externe (zones, poids, transporteur).</li>
+            </ul>
+            <p>Le montant s'ajoute au total TTC de la commande.</p>
+            
+            <h5>4. Statut de l'expédition</h5>
+            <p>Statut logistique actuel de la commande. Exemples :</p>
+            <ul>
+                <li>Non expédiée,</li>
+                <li>En attente de livraison,</li>
+                <li>En cours de livraison,</li>
+                <li>Livrée,</li>
+                <li>Annulée.</li>
+            </ul>
+            <p>Ce statut évolue avec le suivi logistique. Il est crucial pour le SAV, la traçabilité et les relances.</p>
+            
+            <h5>5. Livré à</h5>
+            <p>Nom de la personne qui réceptionne la commande à l'adresse de livraison. Ce champ est utile si le destinataire n'est pas le client initial (ex. : assistant, réceptionniste, entreprise tierce).</p>
+            <p>Cela évite les erreurs de réception ou de confusion sur place.</p>
+            
+            <h5>6. Livreur</h5>
+            <p>Nom ou identifiant du livreur en charge de la commande. Il peut s'agir :</p>
+            <ul>
+                <li>D'un employé interne (logistique),</li>
+                <li>D'un transporteur partenaire,</li>
+                <li>Ou d'une société externe</li>
+            </ul>
+            <p>Ce champ facilite le suivi de responsabilité et les réclamations éventuelles.</p>
+            
+            <h5>7. Documents d'expédition</h5>
+            <p>Fichiers liés à la livraison : bon de livraison (BL), bordereau transporteur, accusé de réception, etc. Formats acceptés : PDF, images, Excel, Word…</p>
+            <p>Ces documents assurent une <strong>preuve de livraison, un suivi administratif et juridique complet.</strong></p>
+            
+            <h5>Bouton : Ajouter des dépenses supplémentaires</h5>
+            <p>Ce bouton permet d'enregistrer des <strong>dépenses associées à la commande, mais non facturées au client.</strong> Exemples de dépenses :</p>
+            <ul>
+                <li>Frais d'emballage,</li>
+                <li>Manutention,</li>
+                <li>Commission de transport,</li>
+                <li>Achat d'accessoires liés à l'expédition.</li>
+            </ul>
+            
+            <h5>À quoi ça sert ?</h5>
+            <ul>
+                <li>Pour suivre la rentabilité réelle de la commande,</li>
+                <li>Affecter ces coûts dans la comptabilité analytique,</li>
+                <li>Gérer un journal des dépenses logistiques par vente.</li>
+            </ul>
+            <p>Ces dépenses n'impactent pas le total client, mais enrichissent les rapports de coûts <strong>internes.</strong></p>
+            
+            <h4>Rôle de cette section</h4>
+            <p>La section logistique permet une <strong>gestion complète de la chaîne de livraison, depuis la saisie de l'adresse jusqu'au suivi post-livraison.</strong> Elle est indispensable dans toute entreprise qui effectue des <strong>livraisons physiques, car elle :</strong></p>
+            <ul>
+                <li>Garantit la traçabilité,</li>
+                <li>Optimise les coûts logistiques,</li>
+                <li>Facilite la communication entre équipes (vente, stock, transport).</li>
+            </ul>
+            
+             <div class="image-placeholder"><p>Illustration de l'interface</p>
+                <img src="/images/vendre5.png" alt="Description de l'image" width="900" height="600" style="max-width:100%;height:auto;border-radius:8px;" />
+                </div>
+            
+            <h3 id="integration-modules-brouillon">5.4) Intégration avec les autres modules</h3>
+            <table class="component-table">
+                <tr>
+                    <th>Module</th>
+                    <th>Interaction</th>
+                </tr>
+                <tr>
+                    <td>Produits / Stock</td>
+                    <td>Aucun impact tant que le brouillon n'est pas validé</td>
+                </tr>
+                <tr>
+                    <td>Clients</td>
+                    <td>Historique temporaire visible dans la fiche client</td>
+                </tr>
+                <tr>
+                    <td>Expéditions</td>
+                    <td>Aucune expédition créée avant validation</td>
+                </tr>
+                <tr>
+                    <td>Rapports</td>
+                    <td>Non inclus dans les statistiques tant que non finalisé</td>
+                </tr>
+            </table>
+            
+            <h3 id="permissions-brouillon">5.5) Permissions recommandées</h3>
+            <table class="component-table">
+                <tr>
+                    <th>Rôle utilisateur</th>
+                    <th>Accès</th>
+                </tr>
+                <tr>
+                    <td>Administrateur</td>
+                    <td>Création, édition, suppression</td>
+                </tr>
+                <tr>
+                    <td>Responsable commercial</td>
+                    <td>Création et suivi des brouillons</td>
+                </tr>
+                <tr>
+                    <td>Vendeur</td>
+                    <td>Création de brouillons uniquement</td>
+                </tr>
+                <tr>
+                    <td>Comptable / SAV</td>
+                    <td>Aucun accès requis sauf lecture</td>
+                </tr>
+                <tr>
+                    <td>Invité / Externe</td>
+                    <td>Interdit</td>
+                </tr>
+            </table>
+        </section>
+
+        <!-- Section 6) Listes des brouillons -->
+        <section class="section">
+            <h2 id="liste-brouillons">6) Listes des brouillons</h2>
+            
+            <h3 id="objectif-section-brouillons">6.1) Objectif de la section</h3>
+            <p>La <strong>Liste des brouillons est une interface essentielle qui permet de</strong> <strong>centraliser, visualiser, gérer et reprendre toutes les ventes enregistrées à l'état de brouillon.</strong> Elle permet aux utilisateurs de :</p>
+            <ul>
+                <li>Retrouver une vente temporairement suspendue,</li>
+                <li>Modifier ou finaliser une commande,</li>
+                <li>Supprimer une saisie incomplète,</li>
+                <li>Générer une facture à partir d'une commande préparée.</li>
+            </ul>
+            <p><strong>Important :</strong> les ventes en brouillon n'ont aucun impact comptable ni logistique tant qu'elles ne sont pas finalisées.</p>
+            
+            <h3 id="structure-interface-brouillons">6.2) Structure de l'interface</h3>
+            <p>La page se présente sous la forme d'un tableau dynamique, accompagné d'outils de recherche, de tri, de filtres et d'exportation.</p>
+            
+            <h4>Outils disponibles en haut de la page :</h4>
+            <table class="component-table">
+                <tr>
+                    <th>Fonction</th>
+                    <th>Description</th>
+                </tr>
+                <tr>
+                    <td>Barre de recherche</td>
+                    <td>Permet de filtrer les brouillons par client, référence, vendeur ou date</td>
+                </tr>
+                <tr>
+                    <td>Exporter CSV / Excel/PDF</td>
+                    <td>Génère un fichier exportable des brouillons pour analyse externe</td>
+                </tr>
+                <tr>
+                    <td>Imprimer</td>
+                    <td>Imprime la liste courante ou un brouillon sélectionné</td>
+                </tr>
+                <tr>
+                    <td>Visibilité des colonnes</td>
+                    <td>Activer ou désactiver l'affichage de certaines colonnes</td>
+                </tr>
+                <tr>
+                    <td>Filtrage par période</td>
+                    <td>Permet de limiter l'affichage aux brouillons d'une date ou période spécifique</td>
+                </tr>
+            </table>
+            
+            <h4>Colonnes principales du tableau</h4>
+            <p>Chaque ligne du tableau représente un <strong>brouillon de vente unique. Nous avons :</strong></p>
+            <ul>
+                <li>La Date,</li>
+                <li>Le numéro de la référence,</li>
+                <li>Nom du client,</li>
+                <li>Numéro de contact,</li>
+                <li>Emplacement,</li>
+                <li>Total articles,</li>
+                <li>Ajouter par et action.</li>
+            </ul>
+            
+             <div class="image-placeholder"><p>Illustration de l'interface</p>
+                <img src="/images/vendre6.png" alt="Description de l'image" width="900" height="600" style="max-width:100%;height:auto;border-radius:8px;" />
+                </div>
+            
+            <h3 id="regles-gestion-permissions">6.3) Règles de gestion et permissions</h3>
+            <table class="component-table">
+                <tr>
+                    <th>Rôle</th>
+                    <th>Accès à la Liste des brouillons</th>
+                </tr>
+                <tr>
+                    <td>Administrateur</td>
+                    <td>Consultation, modification, suppression de tous les brouillons</td>
+                </tr>
+                <tr>
+                    <td>Caissier / Vendeur</td>
+                    <td>Consultation et édition de ses propres brouillons</td>
+                </tr>
+                <tr>
+                    <td>Manager POS / Responsable magasin</td>
+                    <td>Plein contrôle sur tous les brouillons du point de vente</td>
+                </tr>
+                <tr>
+                    <td>Stagiaire / Utilisateur restreint</td>
+                    <td>Accès refusé, sauf lecture contrôlée</td>
+                </tr>
+            </table>
+        </section>
+
+        <!-- Section 7) Ajouter un devis -->
+        <section class="section">
+            <h2 id="ajouter-devis">7) Ajouter un devis</h2>
+            
+            <h3 id="objectif-devis">7.1) Objectif de la fonctionnalité</h3>
+            <p>La fonctionnalité Ajouter un devis permet aux utilisateurs de créer une proposition <strong>commerciale formelle à l'attention d'un client avant toute validation de vente.</strong></p>
+            <p>Le devis a plusieurs objectifs :</p>
+            <ul>
+                <li><strong>Formaliser une offre de prix,</strong></li>
+                <li>Permettre au client de réfléchir ou négocier avant achat,</li>
+                <li>Conserver une trace écrite et numérotée de la proposition,</li>
+                <li>Faciliter la conversion directe du devis en commande après validation.</li>
+            </ul>
+            
+            <h3 id="presentation-interface-devis">7.2) Présentation de l'interface</h3>
+            <p>L'interface se compose de 4 sections fonctionnels qui sont :</p>
+            
+            <h4>❖ La Section des informations générales de la vente :</h4>
+            <p>Elle regroupe les éléments administratifs clés d'une transaction, ceux qui définissent le <strong>cadre de la vente qui sont :</strong></p>
+            
+            <h5>1. Client</h5>
+            <p>Ce champ permet de lier la vente à un client existant de la base de données, ou d'ajouter un <strong>nouveau client si nécessaire.</strong> Cela permet :</p>
+            <ul>
+                <li>De suivre l'historique de ses achats,</li>
+                <li>De générer des factures personnalisées,</li>
+                <li>De gérer des conditions commerciales spécifiques (remises, paiement différé, etc.).</li>
+            </ul>
+            <p><strong>Pourquoi c'est important :</strong> Sans identification du client, il est impossible de gérer un crédit, d'envoyer un reçu personnalisé ou de retrouver la vente plus tard.</p>
+            
+            <h5>2. Durée de paie (ou délai de paiement)</h5>
+            <p>Champ optionnel permettant de définir dans combien de jours le paiement devra être effectué. Exemples :</p>
+            <ul>
+                <li>0 jours (paiement comptant),</li>
+                <li>15 jours (Net 15),</li>
+                <li>30 jours (Net 30),</li>
+            </ul>
+            <p>Cela active une gestion à crédit, et aide le système à suivre les créances clients et les relances.</p>
+            
+            <h5>3. Date de vente</h5>
+            <p>C'est la date à laquelle la transaction est enregistrée (ou censée avoir lieu). Par défaut, Movelys propose la date du jour, mais celle-ci peut être modifiée en fonction :</p>
+            <ul>
+                <li>D'une commande rétroactive,</li>
+                <li>D'un report administratif.</li>
+            </ul>
+            <p>Cette date est utilisée dans la comptabilité, les rapports de vente, et les rapports fiscaux.</p>
+            
+            <h5>4. Schéma de facturation</h5>
+            <p>Terme utilisé pour désigner le <strong>modèle de numérotation automatique ou manuelle des</strong> factures. Un schéma de facturation peut être :</p>
+            <ul>
+                <li><strong>Standard (par exemple : INV-2025-001),</strong></li>
+                <li><strong>Personnalisé (par client ou type de vente),</strong></li>
+            </ul>
+            <p>Il permet d'organiser les factures de manière uniforme et traçable.</p>
+            
+            <h5>5. Numéro de la facture</h5>
+            <p>Numéro unique qui identifie la vente (ou brouillon) dans le système. Il peut être :</p>
+            <ul>
+                <li><strong>Généré automatiquement par le système en suivant le schéma,</strong></li>
+                <li>Ou saisi manuellement par l'utilisateur (si autorisé).</li>
+            </ul>
+            <p>Ce numéro est crucial pour l'archivage, la facturation légale et le suivi comptable.</p>
+            
+            <h5>6. Joindre un document</h5>
+            <p>Option permettant d'ajouter un fichier annexe à la vente. Exemples :</p>
+            <ul>
+                <li>Bon de commande client,</li>
+                <li>Preuve de paiement anticipé,</li>
+                <li>Conditions commerciales spécifiques,</li>
+                <li>Facture externe ou devis signé.</li>
+            </ul>
+            <p>Les formats supportés sont souvent : PDF, cvs, DOCX, png.</p>
+            <p>Utile pour justifier une vente ou pour joindre tout document contractuel lié à cette transaction.</p>
+            
+            <h4>Résumé : À quoi sert cette section ?</h4>
+            <p>La section "Informations générales" permet de :</p>
+            <ul>
+                <li>Identifier précisément la vente et le client concerné,</li>
+                <li>Définir le cadre juridique et commercial de la transaction,</li>
+                <li>Garantir la cohérence des données de vente dans l'ensemble du système Movelys.</li>
+            </ul>
+            
+            <h4>❖ Section pour l'ajout d'un produit</h4>
+            <p>Dans cette section on peut ajouter un produit et également faire la recherche d'un produit déjà présent dans la base de données enfin de l'ajouter dans la table</p>
+            
+            <h4>❖ Section des paramètres de la vente</h4>
+            <p>Elle regroupe les champs servant à ajuster les conditions tarifaires, appliquer des remises, gérer la taxation et insérer des notes internes ou clients sur la vente.</p>
+            
+            <h5>1. Type de remise</h5>
+            <p>Ce champ définit le mode d'application de la remise sur la vente. Les types les plus courants sont :</p>
+            <ul>
+                <li><strong>Pourcentage (%) : réduction proportionnelle (ex. 10 %)</strong></li>
+                <li><strong>Montant fixe : réduction en valeur absolue (ex. 5 000 FCFA)</strong></li>
+            </ul>
+            <p>Il détermine comment sera calculée la remise sur le montant total ou sur chaque article.</p>
+            
+            <h5>2. Montant de la remise</h5>
+            <p>Ce champ précise le montant ou le pourcentage de remise à appliquer selon le type choisi. Exemples :</p>
+            <ul>
+                <li>Si le type est %, saisir "10" appliquera une réduction de 10% sur la commande.</li>
+                <li>Si le type est montant, saisir "2000" déduira 2000 FCFA du total brut.</li>
+            </ul>
+            <p>Permet d'offrir un avantage client ou d'appliquer une politique commerciale (soldes, promotions, geste commercial).</p>
+            
+            <h5>3. Taux de commande (parfois appelé ''Commande Taxe'' ou ''TVA de la commande'')</h5>
+            <p>C'est le taux de taxe appliqué à l'ensemble de la commande. Il est défini :</p>
+            <ul>
+                <li>Soit automatiquement selon le pays ou la configuration par défaut (ex. 18%),</li>
+                <li>Soit sélectionné manuellement (si plusieurs taux sont possibles selon les produits ou clients).</li>
+            </ul>
+            <p>Ce taux est utilisé pour le calcul automatique de la TVA ou de toute taxe réglementaire, et sera intégré à la facture.</p>
+            
+            <h5>4. Note de vente</h5>
+            <p>Champ libre permettant d'ajouter des informations textuelles à la vente. Exemples d'usage :</p>
+            <ul>
+                <li>Instruction spéciale pour la livraison ou la facturation,</li>
+                <li>Condition commerciale spécifique,</li>
+                <li>Mention d'un accord verbal ou d'un engagement client,</li>
+                <li>Note interne pour suivi par un collègue.</li>
+            </ul>
+            <p>Cette note peut apparaître sur le ticket client, la facture, ou rester en interne selon la configuration.</p>
+            
+            <h4>Résumé : Rôle de cette section</h4>
+            <p>La section "Paramètres de la vente" est essentielle pour :</p>
+            <ul>
+                <li>Personnaliser les conditions tarifaires,</li>
+                <li>Respecter la réglementation fiscale (taxes),</li>
+                <li>Faciliter la communication interne ou avec le client.</li>
+            </ul>
+            <p>Elle donne au vendeur une souplesse de négociation contrôlée, tout en conservant une <strong>traçabilité complète.</strong></p>
+            
+            <h4>❖ Section d'information d'expédition et logistique</h4>
+            <p>Elle regroupe tous les éléments nécessaires à la préparation, l'expédition, la livraison et le <strong>suivi physique de la commande.</strong> Elle est activée dès qu'un produit doit être livré physiquement au client.</p>
+            
+            <h5>1. Détails d'expédition</h5>
+            <p>Champ global servant à :</p>
+            <ul>
+                <li>Décrire brièvement les modalités d'expédition,</li>
+                <li>Indiquer un numéro de suivi,</li>
+                <li>Mentionner une spécificité (ex. : express, groupée, sur rendez-vous...).</li>
+            </ul>
+            <p>Sert de résumé visible pour le vendeur ou la logistique.</p>
+            
+            <h5>2. Adresse de livraison</h5>
+            <p>Adresse exacte à laquelle les produits doivent être livrés. Elle peut être :</p>
+            <ul>
+                <li>Sélectionnée depuis la fiche client (adresse enregistrée),</li>
+                <li>Saisie manuellement (adresse temporaire ou différente).</li>
+            </ul>
+            <p>Cette adresse est obligatoire si une livraison est prévue. Elle est utilisée pour les documents, étiquettes et calculs de zone.</p>
+            
+            <h5>3. Frais d'expédition</h5>
+            <p>Montant à facturer au client pour couvrir les frais de transport ou d'envoi. Ce champ peut être :</p>
+            <ul>
+                <li>Saisi manuellement,</li>
+                <li>Ou calculé automatiquement selon un module externe (zones, poids, transporteur).</li>
+            </ul>
+            <p>Le montant s'ajoute au total TTC de la commande.</p>
+            
+            <h5>4. Statut de l'expédition</h5>
+            <p>Statut logistique actuel de la commande. Exemples :</p>
+            <ul>
+                <li>Non expédiée,</li>
+                <li>En attente de livraison,</li>
+                <li>En cours de livraison,</li>
+                <li>Livrée,</li>
+                <li>Annulée.</li>
+            </ul>
+            <p>Ce statut évolue avec le suivi logistique. Il est crucial pour le SAV, la traçabilité et les relances.</p>
+            
+            <h5>5. Livré à</h5>
+            <p>Nom de la personne qui réceptionne la commande à l'adresse de livraison. Ce champ est utile si le destinataire n'est pas le client initial (ex. : assistant, réceptionniste, entreprise tierce).</p>
+            <p>Cela évite les erreurs de réception ou de confusion sur place.</p>
+            
+            <h5>6. Livreur</h5>
+            <p>Nom ou identifiant du livreur en charge de la commande. Il peut s'agir :</p>
+            <ul>
+                <li>D'un employé interne (logistique),</li>
+                <li>D'un transporteur partenaire,</li>
+                <li>Ou d'une société externe</li>
+            </ul>
+            <p>Ce champ facilite le suivi de responsabilité et les réclamations éventuelles.</p>
+            
+            <h5>7. Documents d'expédition</h5>
+            <p>Fichiers liés à la livraison : bon de livraison (BL), bordereau transporteur, accusé de réception, etc. Formats acceptés : PDF, images, Excel, Word…</p>
+            <p>Ces documents assurent une <strong>preuve de livraison, un suivi administratif et juridique complet.</strong></p>
+            
+            <h5>Bouton : Ajouter des dépenses supplémentaires</h5>
+            <p>Ce bouton permet d'enregistrer des <strong>dépenses associées à la commande, mais non facturées au client.</strong> Exemples de dépenses :</p>
+            <ul>
+                <li>Frais d'emballage,</li>
+                <li>Manutention,</li>
+                <li>Commission de transport,</li>
+                <li>Achat d'accessoires liés à l'expédition.</li>
+            </ul>
+            
+            <h5>À quoi ça sert ?</h5>
+            <ul>
+                <li>Pour suivre la rentabilité réelle de la commande,</li>
+                <li>Affecter ces coûts dans la comptabilité analytique,</li>
+                <li>Gérer un journal des dépenses logistiques par vente.</li>
+            </ul>
+            <p>Ces dépenses n'impactent pas le total client, mais enrichissent les rapports de coûts <strong>internes.</strong></p>
+            
+            <h4>Rôle de cette section</h4>
+            <p>La section logistique permet une gestion complète de la chaîne de livraison, depuis la saisie de l'adresse jusqu'au suivi post-livraison. Elle est indispensable dans toute entreprise qui effectue des <strong>livraisons physiques, car elle :</strong></p>
+            <ul>
+                <li>Garantit la traçabilité,</li>
+                <li>Optimise les coûts logistiques,</li>
+                <li>Facilite la communication entre équipes (vente, stock, transport).</li>
+            </ul>
+            
+             <div class="image-placeholder"><p>Illustration de l'interface</p>
+                <img src="/images/vendre7.png" alt="Description de l'image" width="900" height="600" style="max-width:100%;height:auto;border-radius:8px;" />
+                </div>
+            
+            <p>L'interface de cette page se présente comme suit :</p>
+            
+            <h3 id="suivi-conversion-devis">7.3) Suivi et conversion du devis</h3>
+            <p>Une fois enregistré, le devis peut :</p>
+            <ul>
+                <li>Être <strong>consulté à tout moment depuis la liste des devis,</strong></li>
+                <li>Être <strong>modifié si encore en attente,</strong></li>
+                <li>Être <strong>converti en commande / facture en un clic (sans ressaisie).</strong></li>
+            </ul>
+            <p>Le système conserve l'historique de toutes les modifications, avec un journal d'activité lié au client.</p>
+            
+            <h3 id="permissions-roles-devis">7.4) Permissions et rôles</h3>
+            <table class="component-table">
+                <tr>
+                    <th>Rôle utilisateur</th>
+                    <th>Accès à "Ajouter un devis"</th>
+                </tr>
+                <tr>
+                    <td>Administrateur</td>
+                    <td>Accès total</td>
+                </tr>
+                <tr>
+                    <td>Vendeur / commercial</td>
+                    <td>Création et modification</td>
+                </tr>
+                <tr>
+                    <td>Responsable commercial</td>
+                    <td>Supervision, validation, conversion</td>
+                </tr>
+                <tr>
+                    <td>Utilisateur restreint / invité</td>
+                    <td>Aucun accès</td>
+                </tr>
+            </table>
+        </section>
+
+        <!-- Section 8) Citation de liste -->
+        <section class="section">
+            <h2 id="citation-liste">8) Citation de liste</h2>
+            
+            <h3 id="objectif-section-citation">8.1) Objectif de la section</h3>
+            <p>La Liste des citations est l'interface centrale où sont affichés, suivis et gérés tous les devis <strong>(ou propositions commerciales) créés dans le système.</strong></p>
+            <p>Elle permet aux utilisateurs :</p>
+            <ul>
+                <li>De retrouver rapidement un devis selon différents critères,</li>
+                <li>D'effectuer des actions sur chaque proposition (visualiser, modifier, envoyer, supprimer),</li>
+                <li>De transformer facilement un devis en <strong>commande ou vente validée.</strong></li>
+            </ul>
+            <p>Cette interface constitue un <strong>pont entre la négociation commerciale et la conversion en</strong> <strong>vente réelle.</strong></p>
+            
+            <h3 id="structure-interface-citation">8.2) Structure générale de l'interface</h3>
+            <p>L'interface se présente sous la forme d'un tableau interactif, avec des outils puissants de recherche, filtrage, exportation et actions groupées.</p>
+            
+            <h4>Outils disponibles en haut :</h4>
+            <table class="component-table">
+                <tr>
+                    <th>Outil</th>
+                    <th>Fonction</th>
+                </tr>
+                <tr>
+                    <td>Recherche rapide</td>
+                    <td>Par nom de client, référence, date, vendeur…</td>
+                </tr>
+                <tr>
+                    <td>Export CSV / Excel</td>
+                    <td>Génère un fichier tableur de tous les devis listés</td>
+                </tr>
+                <tr>
+                    <td>Imprimer</td>
+                    <td>Permet d'imprimer les devis sélectionnés ou toute la liste</td>
+                </tr>
+                <tr>
+                    <td>Colonnes visibles</td>
+                    <td>Active ou désactive les colonnes selon l'utilisateur</td>
+                </tr>
+                <tr>
+                    <td>Filtrage par date</td>
+                    <td>Affiche uniquement les devis sur une période donnée</td>
+                </tr>
+            </table>
+            
+            <h4>Colonnes principales du tableau</h4>
+            <p>Comme colonne principale Nous avons :</p>
+            <p>La Date, le numéro de la référence, nom du client, numéro de contact, emplacement, total articles, ajouter par et action.</p>
+            
+             <div class="image-placeholder"><p>Illustration de l'interface</p>
+                <img src="/images/vendre8.png" alt="Description de l'image" width="900" height="600" style="max-width:100%;height:auto;border-radius:8px;" />
+                </div>
+            
+            
+            <h3 id="permissions-roles-citation">8.4) Permissions et rôles utilisateurs</h3>
+            <table class="component-table">
+                <tr>
+                    <th>Rôle</th>
+                    <th>Accès à la Liste des citations</th>
+                </tr>
+                <tr>
+                    <td>Administrateur</td>
+                    <td>Voir, modifier, supprimer, convertir tous les devis</td>
+                </tr>
+                <tr>
+                    <td>Vendeur / Commercial</td>
+                    <td>Voir et gérer ses propres devis</td>
+                </tr>
+                <tr>
+                    <td>Responsable des ventes</td>
+                    <td>Supervision et contrôle des devis de toute l'équipe</td>
+                </tr>
+                <tr>
+                    <td>Stagiaire / limité</td>
+                    <td>Aucun accès ou lecture seule (selon configuration)</td>
+                </tr>
+            </table>
+        </section>
+
+
+        <!-- Section 9) Liste vendre retour -->
+        <section class="section">
+            <h2 id="liste-vendre-retour">9) Liste vendre retour</h2>
+            
+            <h3 id="objectif-fonctionnalite-retour">9.1) Objectif de la fonctionnalité</h3>
+            <p>L'interface <strong>Vendre Retour permet de gérer toutes les opérations de retour de produits</strong> <strong>par les clients après une vente initiale.</strong></p>
+            <p>Elle a pour objectifs de :</p>
+            <ul>
+                <li>Suivre les produits retournés pour remboursement ou échange,</li>
+                <li>Conserver un historique structuré des retours liés à chaque facture,</li>
+                <li>Faciliter la gestion des avoirs, remboursements ou réajustements de stock.</li>
+            </ul>
+            <p>Le retour est toujours lié à une vente initiale et doit être traité avec rigueur pour éviter les erreurs comptables ou logistiques.</p>
+            
+            <h3 id="structure-interface-retour">9.2) Structure de l'interface</h3>
+            <p>L'interface se divise en deux parties principales :</p>
+            
+            <h4>A. Section de filtres avancés (haut de page)</h4>
+            <p>Cette section permet de filtrer dynamiquement les résultats affichés dans le tableau selon des critères spécifiques.</p>
+            
+            <table class="component-table">
+                <tr>
+                    <th>Champ</th>
+                    <th>Description</th>
+                </tr>
+                <tr>
+                    <td>Emplacement de l'entreprise</td>
+                    <td>Permet de filtrer les retours par site ou point de vente (utile pour les entreprises multi-agences)</td>
+                </tr>
+                <tr>
+                    <td>Client</td>
+                    <td>Affiche uniquement les retours liés à un client spécifique</td>
+                </tr>
+                <tr>
+                    <td>Plage de dates</td>
+                    <td>Permet de sélectionner une période précise pour les retours enregistrés</td>
+                </tr>
+                <tr>
+                    <td>Utilisateur</td>
+                    <td>Filtre les retours effectués par un vendeur ou opérateur donné</td>
+                </tr>
+            </table>
+            
+            <p>Ces filtres sont essentiels pour analyser les retours par période, client ou agent, et faciliter les audits ou vérifications internes.</p>
+            
+            <h4>B. Tableau de gestion des retours</h4>
+            <p>Affiche les données enregistrées pour chaque retour validé. Chaque ligne représente un retour unique lié à une vente passée.</p>
+            
+            <h5>Détail des colonnes du tableau</h5>
+            <table class="component-table">
+                <tr>
+                    <th>Colonne</th>
+                    <th>Fonction</th>
+                </tr>
+                <tr>
+                    <td>Date</td>
+                    <td>Date de création du retour dans le système</td>
+                </tr>
+                <tr>
+                    <td>N° de facture</td>
+                    <td>Référence de la facture initiale liée au retour</td>
+                </tr>
+                <tr>
+                    <td>Vente Parent</td>
+                    <td>Identifiant de la vente originale à laquelle se rattache le retour</td>
+                </tr>
+                <tr>
+                    <td>Nom du client</td>
+                    <td>Client ayant effectué le retour</td>
+                </tr>
+                <tr>
+                    <td>Emplacement</td>
+                    <td>Lieu (magasin, agence) où le retour a été enregistré</td>
+                </tr>
+                <tr>
+                    <td>Statut du paiement</td>
+                    <td>Indique si un remboursement est dû, effectué ou partiel</td>
+                </tr>
+                <tr>
+                    <td>Montant total</td>
+                    <td>Valeur totale des produits retournés</td>
+                </tr>
+                <tr>
+                    <td>Paiement dû</td>
+                    <td>Montant encore à rembourser au client (si applicable)</td>
+                </tr>
+                <tr>
+                    <td>Action</td>
+                    <td>Boutons pour afficher, modifier ou supprimer le retour (selon permissions)</td>
+                </tr>
+            </table>
+            
+             <div class="image-placeholder"><p>Illustration de l'interface</p>
+                <img src="/images/vendre9.png" alt="Description de l'image" width="900" height="600" style="max-width:100%;height:auto;border-radius:8px;" />
+                </div>
+            
+            <h3 id="fonctions-supplementaires-retour">9.3) Fonctions supplémentaires</h3>
+            <p>Au-dessus du tableau figurent plusieurs <strong>outils d'exploitation :</strong></p>
+            
+            <table class="component-table">
+                <tr>
+                    <th>Bouton</th>
+                    <th>Fonction</th>
+                </tr>
+                <tr>
+                    <td>Exporter CSV / Excel</td>
+                    <td>Permet d'exporter la liste des retours au format tableur</td>
+                </tr>
+                <tr>
+                    <td>Imprimer</td>
+                    <td>Génère une version imprimable de la liste</td>
+                </tr>
+                <tr>
+                    <td>Visibilité des colonnes</td>
+                    <td>Choix d'affichage des colonnes du tableau selon l'utilisateur</td>
+                </tr>
+                <tr>
+                    <td>Exporter le PDF</td>
+                    <td>Génère un document PDF du tableau actuel</td>
+                </tr>
+                <tr>
+                    <td>Barre de recherche</td>
+                    <td>Recherche directe par numéro, client ou mot-clé</td>
+                </tr>
+            </table>
+            
+            <h3 id="permissions-controle-acces">9.4) Permissions et contrôle d'accès</h3>
+            <table class="component-table">
+                <tr>
+                    <th>Rôle utilisateur</th>
+                    <th>Droits</th>
+                </tr>
+                <tr>
+                    <td>Administrateur</td>
+                    <td>Voir, modifier et supprimer tous les retours</td>
+                </tr>
+                <tr>
+                    <td>Caissier / vendeur</td>
+                    <td>Voir et créer ses propres retours</td>
+                </tr>
+                <tr>
+                    <td>Manager des ventes</td>
+                    <td>Supervision globale, gestion des litiges</td>
+                </tr>
+                <tr>
+                    <td>Utilisateur restreint</td>
+                    <td>Aucun accès ou lecture seule</td>
+                </tr>
+            </table>
+        </section>
+
+        <!-- Section 10) Expéditions -->
+        <section class="section">
+            <h2 id="expeditions">10) Expéditions</h2>
+            
+            <h3 id="presentation-generale-expeditions">10.1) Présentation générale</h3>
+            <p>La section <strong>Expéditions</strong> dans Movelys est conçue pour <strong>suivre</strong>, <strong>organiser et gérer toutes les opérations logistiques</strong> liées à la livraison des produits vendus. Elle constitue une <strong>interface essentielle pour les équipes de préparation, d'expédition et de suivi des commandes clients</strong>, garantissant une traçabilité fluide entre la vente et la réception finale par le client.</p>
+            
+            <h3 id="objectifs-expeditions">10.2) Objectifs de la fonctionnalité</h3>
+            <ul>
+                <li>Assurer une <strong>traçabilité complète</strong> des livraisons de commandes.</li>
+                <li>Suivre le <strong>statut de chaque expédition</strong> (en cours, partielle, terminée, annulée).</li>
+                <li>Gérer les <strong>transporteurs</strong>, lieux de livraison, documents de transport, etc.</li>
+                <li>Connecter les livraisons aux ventes sources et aux clients associés.</li>
+            </ul>
+            
+            <h3 id="presentation-interface-expeditions">10.3) Présentation de l'interface</h3>
+            <p>La section Expéditions est affichée sous forme de tableau interactif, avec les options classiques de filtrage, recherche et export.</p>
+            
+            <h4>A. Barre d'action (gestion des résultats)</h4>
+            <table class="component-table">
+                <tr>
+                    <th>Élément</th>
+                    <th>Description</th>
+                </tr>
+                <tr>
+                    <td>Pagination</td>
+                    <td>Affichage par lot de 10, 25, 50, 100 lignes</td>
+                </tr>
+                <tr>
+                    <td>Recherche rapide</td>
+                    <td>Filtrage par client, transporteur, référence, etc.</td>
+                </tr>
+                <tr>
+                    <td>Export CSV / Excel</td>
+                    <td>Extraction des données de livraison</td>
+                </tr>
+                <tr>
+                    <td>Impression</td>
+                    <td>Impression de la liste ou des documents de transport</td>
+                </tr>
+                <tr>
+                    <td>Visibilité des colonnes</td>
+                    <td>Masquage ou affichage de champs personnalisés</td>
+                </tr>
+                <tr>
+                    <td>Ajouter une expédition</td>
+                    <td>Lien vers le formulaire de création d'une nouvelle livraison</td>
+                </tr>
+            </table>
+            
+            <h4>B. Filtres de recherche (filtrage avancé)</h4>
+            <p>Permet de filtrer les données d'expédition selon plusieurs critères :</p>
+            
+            <table class="component-table">
+                <tr>
+                    <th>Champ</th>
+                    <th>Description</th>
+                </tr>
+                <tr>
+                    <td>Emplacement de l'entreprise</td>
+                    <td>Filtrer selon le site ou l'agence de l'entreprise (ex : Paris, Lyon).</td>
+                </tr>
+                <tr>
+                    <td>Client</td>
+                    <td>Sélection d'un client spécifique.</td>
+                </tr>
+                <tr>
+                    <td>Plage de dates</td>
+                    <td>Période sur laquelle les expéditions sont à afficher. (Ex : 01/01/2025 - 31/12/2025)</td>
+                </tr>
+                <tr>
+                    <td>Utilisateur</td>
+                    <td>L'utilisateur responsable (ou opérateur) de l'expédition.</td>
+                </tr>
+                <tr>
+                    <td>Statut du paiement</td>
+                    <td>Filtrer par statut de paiement (Payé, Non payé, Partiellement payé, etc.).</td>
+                </tr>
+                <tr>
+                    <td>Statut de livraison</td>
+                    <td>Statut de la livraison (Livré, En transit, Annulé…).</td>
+                </tr>
+                <tr>
+                    <td>Livreur</td>
+                    <td>Filtrer par prestataire/livreur (ex : DHL, FedEx, livreur interne).</td>
+                </tr>
+            </table>
+            
+            <h4>C. Tableau des résultats</h4>
+            <p>Un tableau dynamique qui liste les expéditions correspondant aux filtres sélectionnés.</p>
+            
+            <table class="component-table">
+                <tr>
+                    <th>Action</th>
+                    <th>Boutons d'action (ex : voir, modifier, supprimer).</th>
+                </tr>
+                <tr>
+                    <td>Date</td>
+                    <td>Date de l'expédition ou de création.</td>
+                </tr>
+                <tr>
+                    <td>N° de facture</td>
+                    <td>Référence associée à l'expédition.</td>
+                </tr>
+                <tr>
+                    <td>Nom du client</td>
+                    <td>Nom de l'acheteur/client.</td>
+                </tr>
+                <tr>
+                    <td>Numéro de contact</td>
+                    <td>Numéro de téléphone ou autre moyen de contact.</td>
+                </tr>
+                <tr>
+                    <td>Emplacement</td>
+                    <td>Site d'origine de l'expédition.</td>
+                </tr>
+                <tr>
+                    <td>Livreur</td>
+                    <td>Nom du livreur ou transporteur.</td>
+                </tr>
+                <tr>
+                    <td>Statut de l'expédition</td>
+                    <td>Statut actuel (en attente, expédié, annulé…).</td>
+                </tr>
+                <tr>
+                    <td>Statut du paiement</td>
+                    <td>Indique si la facture a été réglée.</td>
+                </tr>
+            </table>
+            
+             <div class="image-placeholder"><p>Illustration de l'interface</p>
+                <img src="/images/vendre10.png" alt="Description de l'image" width="900" height="600" style="max-width:100%;height:auto;border-radius:8px;" />
+                </div>
+            
+            <h3 id="integration-modules-expeditions">10.4) Intégration avec les autres modules</h3>
+            <table class="component-table">
+                <tr>
+                    <th>Module lié</th>
+                    <th>Rôle</th>
+                </tr>
+                <tr>
+                    <td>Ventes</td>
+                    <td>Chaque livraison est liée à une commande client</td>
+                </tr>
+                <tr>
+                    <td>Stocks</td>
+                    <td>Sortie automatique de stock selon les produits envoyés</td>
+                </tr>
+                <tr>
+                    <td>Clients</td>
+                    <td>Historique de livraison accessible depuis la fiche client</td>
+                </tr>
+                <tr>
+                    <td>Rapports</td>
+                    <td>Suivi des livraisons par période, produit, transporteur, etc.</td>
+                </tr>
+            </table>
+            
+            <h3 id="permissions-utilisateur-expeditions">10.5) Permissions utilisateur</h3>
+            <table class="component-table">
+                <tr>
+                    <th>Profil</th>
+                    <th>Droits</th>
+                </tr>
+                <tr>
+                    <td>Administrateur</td>
+                    <td>Tous droits (création, modification, suppression)</td>
+                </tr>
+                <tr>
+                    <td>Logistique / Magasinier</td>
+                    <td>Création et validation d'expédition</td>
+                </tr>
+                <tr>
+                    <td>Commercial / Service client</td>
+                    <td>Consultation ou réédition du bon de livraison</td>
+                </tr>
+                <tr>
+                    <td>Comptable</td>
+                    <td>Lecture seule ou aucun accès</td>
+                </tr>
+                <tr>
+                    <td>Invité / Stagiaire</td>
+                    <td>Aucun accès recommandé</td>
+                </tr>
+            </table>
+        </section>
+
+        <!-- Section 11) Préférentiels -->
+        <section class="section">
+            <h2 id="preferentiels">11) Préférentiels</h2>
+            
+            <h3 id="presentation-generale-preferentiels">11.1) Présentation générale</h3>
+            <p>La section <strong>Préférentiel</strong> de Movelys permet à l'entreprise de configurer des <strong>conditions commerciales personnalisées pour certains clients, groupes de clients ou produits.</strong> Elle est conçue pour appliquer des remises automatiques, des prix spéciaux ou des offres <strong>personnalisées, en fonction de critères définis à l'avance.</strong></p>
+            <p>Ce module joue un rôle clé dans la <strong>fidélisation des clients, la gestion des campagnes commerciales, et la souplesse des négociations tarifaires.</strong></p>
+            
+            <h3 id="objectifs-preferentiels">11.2) Objectifs de la fonctionnalité</h3>
+            <ul>
+                <li>Définir des <strong>prix spécifiques ou des réductions ciblées.</strong></li>
+                <li>Appliquer automatiquement les préférentiels lors des ventes.</li>
+                <li>Gérer les promotions, les prix dégressifs ou les tarifs VIP.</li>
+                <li>Contrôler la cohérence des pratiques commerciales par client.</li>
+            </ul>
+            
+            <h3 id="presentation-interface-preferentiels">11.3) Présentation de l'interface</h3>
+            <p>L'interface est organisée en tableau de préférences tarifaires, contenant tous les éléments configurés manuellement ou automatiquement.</p>
+            
+            <h4>Fonctions disponibles</h4>
+            <h5>A. Barre d'action (outils principaux)</h5>
+            <table class="component-table">
+                <tr>
+                    <th>Élément</th>
+                    <th>Fonction</th>
+                </tr>
+                <tr>
+                    <td>Bouton "Ajouter" (en haut à droite, bleu)</td>
+                    <td>Permet d'ajouter un nouveau rabais via un formulaire de saisie.</td>
+                </tr>
+                <tr>
+                    <td>Exporter CSV</td>
+                    <td>Exporte la liste des rabais au format .csv.</td>
+                </tr>
+                <tr>
+                    <td>Exporter Excel</td>
+                    <td>Exporte au format .xlsx.</td>
+                </tr>
+                <tr>
+                    <td>Imprimer</td>
+                    <td>Lance l'impression de la liste visible.</td>
+                </tr>
+                <tr>
+                    <td>Visibilité des colonnes</td>
+                    <td>Affiche/masque les colonnes du tableau.</td>
+                </tr>
+                <tr>
+                    <td>Exporter le PDF</td>
+                    <td>Généré un fichier PDF des données visibles.</td>
+                </tr>
+                <tr>
+                    <td>Champ de recherche</td>
+                    <td>Recherche rapide dans le tableau.</td>
+                </tr>
+            </table>
+            
+            <h5>B. Tableau des rabais</h5>
+            <p>Le tableau liste les différents rabais définis dans le système, chacun associé à plusieurs critères.</p>
+            
+            <table class="component-table">
+                <tr>
+                    <th>Colonne</th>
+                    <th>Description</th>
+                </tr>
+                <tr>
+                    <td>Case à cocher</td>
+                    <td>Permet la sélection multiple pour désactiver des rabais.</td>
+                </tr>
+                <tr>
+                    <td>Nom</td>
+                    <td>Nom de la promotion ou rabais.</td>
+                </tr>
+                <tr>
+                    <td>À partir de</td>
+                    <td>Date de début de validité de la remise.</td>
+                </tr>
+                <tr>
+                    <td>Se termine à</td>
+                    <td>Date de fin de validité.</td>
+                </tr>
+                <tr>
+                    <td>Montant de la remise</td>
+                    <td>Montant ou pourcentage appliqué. (Ex : -10%, -5€)</td>
+                </tr>
+                <tr>
+                    <td>Priorité</td>
+                    <td>Priorité d'application (utile si plusieurs rabais s'appliquent à un produit).</td>
+                </tr>
+                <tr>
+                    <td>Marque</td>
+                    <td>Marque des produits concernés.</td>
+                </tr>
+                <tr>
+                    <td>Catégorie</td>
+                    <td>Catégorie de produits visée par la remise.</td>
+                </tr>
+                <tr>
+                    <td>Produits</td>
+                    <td>Produits spécifiques concernés (s'il y en a).</td>
+                </tr>
+                <tr>
+                    <td>Emplacement</td>
+                    <td>Point de vente ou agence où s'applique le rabais.</td>
+                </tr>
+                <tr>
+                    <td>Action</td>
+                    <td>Boutons d'action (modifier, supprimer, activer/désactiver).</td>
+                </tr>
+            </table>
+            
+            <h5>C. Bouton "Désactiver la sélection"</h5>
+            <p>Permet de désactiver les rabais sélectionnés dans le tableau à l'aide des cases à cocher. Très utile pour une gestion en masse.</p>
+            
+             <div class="image-placeholder"><p>Illustration de l'interface</p>
+                <img src="/images/vendre11.png" alt="Description de l'image" width="900" height="600" style="max-width:100%;height:auto;border-radius:8px;" />
+                </div>
+            
+            <h3 id="integration-modules-preferentiels">11.4) Intégration avec les autres modules</h3>
+            <table class="component-table">
+                <tr>
+                    <th>Module</th>
+                    <th>Interaction</th>
+                </tr>
+                <tr>
+                    <td>Ventes</td>
+                    <td>Application automatique du tarif ou remise</td>
+                </tr>
+                <tr>
+                    <td>Clients</td>
+                    <td>Visualisation des préférentiels dans la fiche client</td>
+                </tr>
+                <tr>
+                    <td>Devis / Brouillons</td>
+                    <td>Pré remplissage des prix personnalisés</td>
+                </tr>
+                <tr>
+                    <td>Produits</td>
+                    <td>Historique de prix spécial pour analyse</td>
+                </tr>
+                <tr>
+                    <td>Rapports</td>
+                    <td>Indicateurs sur remises accordées, marges ajustées, etc.</td>
+                </tr>
+            </table>
+            
+            <h3 id="gestion-permissions-preferentiels">11.5) Gestion des permissions</h3>
+            <table class="component-table">
+                <tr>
+                    <th>Rôle utilisateur</th>
+                    <th>Accès recommandé</th>
+                </tr>
+                <tr>
+                    <td>Administrateur</td>
+                    <td>Accès complet (création, édition, suppression)</td>
+                </tr>
+                <tr>
+                    <td>Responsable commercial</td>
+                    <td>Création et modification</td>
+                </tr>
+                <tr>
+                    <td>Vendeur / utilisateur standard</td>
+                    <td>Lecture seule (selon configuration)</td>
+                </tr>
+                <tr>
+                    <td>Invité / externe</td>
+                    <td>Aucun accès autorisé</td>
+                </tr>
+            </table>
+        </section>
+
+        <!-- Section 12) Ventes à l'importation -->
+        <section class="section">
+            <h2 id="ventes-importation">12) Ventes à l'importation</h2>
+            
+            <h3 id="presentation-generale-importation">12.1) Présentation générale</h3>
+            <p>La fonctionnalité <strong>Ventes à l'importation</strong> permet aux utilisateurs de <strong>charger en masse des données de ventes</strong> à partir d'un fichier externe (CSV ou Excel), plutôt que de les saisir une par une manuellement. C'est un outil essentiel dans les contextes suivants :</p>
+            <ul>
+                <li>Migration de données depuis un ancien système,</li>
+                <li>Intégration de ventes issues d'un autre canal (e-commerce, ERP, etc.),</li>
+                <li>Rattrapage de saisies historiques,</li>
+                <li>Automatisation de processus réguliers.</li>
+            </ul>
+            
+            <h3 id="objectifs-importation">12.2) Objectifs</h3>
+            <ul>
+                <li>Gagner du temps dans la saisie de ventes multiples.</li>
+                <li>Éviter les <strong>erreurs manuelles</strong> de duplication ou d'omission.</li>
+                <li>Assurer une <strong>intégration fluide</strong> entre différentes sources de données.</li>
+                <li>Permettre une <strong>mise à jour rapide de la base de ventes.</strong></li>
+            </ul>
+            
+            <h3 id="interface-etapes-importation">12.3) Interface et étapes de l'importation</h3>
+            <p>Le module suit une logique en plusieurs étapes guidées, garantissant une importation fiable et bien structurée.</p>
+            
+            <h4>A. Téléchargement du modèle</h4>
+            <ul>
+                <li>L'utilisateur peut télécharger un <strong>modèle CSV ou Excel avec les</strong> <strong>colonnes attendues</strong> (référence, client, date, produits, quantités, montants, statut de paiement, etc.).</li>
+                <li>Ce modèle est fourni pour standardiser le format des données à importer.</li>
+            </ul>
+            
+            <h4>B. Téléversement du fichier</h4>
+            <ul>
+                <li>Une fois le modèle rempli, l'utilisateur sélectionne le fichier à importer.</li>
+                <li>Le système vérifie la validité des données : doublons, format incorrect, champs manquants, erreurs de codage (ex. : mauvais séparateur).</li>
+            </ul>
+            
+            <h4>C. Aperçu de l'import</h4>
+            <ul>
+                <li>Avant validation finale, l'utilisateur visualise un <strong>aperçu des ventes détectées.</strong></li>
+                <li>Les lignes erronées sont mises en évidence avec un message d'erreur clair pour correction.</li>
+            </ul>
+            
+            <h4>D. Importation finale</h4>
+            <ul>
+                <li>Une fois le fichier validé, les ventes sont intégrées à la base de données, apparaissent dans la liste des ventes, et déclenchent :
+                    <ul>
+                        <li>Les mouvements de stock,</li>
+                        <li>La mise à jour des clients,</li>
+                        <li>La génération de rapports.</li>
+                    </ul>
+                </li>
+            </ul>
+            
+            <h4>E) Téléchargement</h4>
+            <p>Une fois l'importation terminer vous pouvez télécharger le fichier le fichier et réviser pour voir si tous ont les mises à jour ont bien été appliquer.</p>
+            <p>Sans oublier cette interface présente aussi des instructions à suivre enfin de réaliser l'importation.</p>
+            
+             <div class="image-placeholder"><p>Illustration de l'interface</p>
+                <img src="/images/vendre12.png" alt="Description de l'image" width="900" height="600" style="max-width:100%;height:auto;border-radius:8px;" />
+                </div>
+            
+            
+            <h3 id="integrations-automatiques-importation">12.4) Intégrations automatiques</h3>
+            <table class="component-table">
+                <tr>
+                    <th>Module impacté</th>
+                    <th>Effets</th>
+                </tr>
+                <tr>
+                    <td>Stock</td>
+                    <td>Déduction des produits vendus automatiquement</td>
+                </tr>
+                <tr>
+                    <td>Clients</td>
+                    <td>Mise à jour ou création de clients s'ils n'existent pas</td>
+                </tr>
+                <tr>
+                    <td>Comptabilité</td>
+                    <td>Génération de revenus, écritures de créances</td>
+                </tr>
+                <tr>
+                    <td>Produits</td>
+                    <td>Statistiques de vente actualisées</td>
+                </tr>
+                <tr>
+                    <td>Rapports</td>
+                    <td>Chiffres de ventes intégrés dans les tableaux de bord</td>
+                </tr>
+            </table>
+            
+            <h3 id="permissions-recommandees-importation">12.5) Permissions recommandées</h3>
+            <table class="component-table">
+                <tr>
+                    <th>Utilisateur</th>
+                    <th>Accès</th>
+                </tr>
+                <tr>
+                    <td>Administrateur</td>
+                    <td>Chargement et validation complète</td>
+                </tr>
+                <tr>
+                    <td>Responsable commercial</td>
+                    <td>Téléversement sous supervision</td>
+                </tr>
+                <tr>
+                    <td>Utilisateur standard</td>
+                    <td>Accès limité ou restreint</td>
+                </tr>
+                <tr>
+                    <td>Invité / Externe</td>
+                    <td>Aucun accès autorisé</td>
+                </tr>
+            </table>
+        </section>
+
+        <!-- Section Conclusion -->
+        <section class="section">
+            <h2 id="conclusion">Conclusion</h2>
+            <p>Le module de gestion des ventes de Movelys permet aux entreprises de piloter leurs activités commerciales avec précision, fiabilité et efficacité. En automatisant les tâches chronophages, en sécurisant les données et en offrant une vision claire de la performance des ventes, Movelys devient un allié incontournable pour développer l'activité, fidéliser la clientèle et maximiser les revenus.</p>
+            <p>En centralisant toutes les informations relatives aux ventes, Movelys simplifie le quotidien des équipes commerciales tout en fournissant aux dirigeants des outils d'aide à la décision puissants. Grâce à ce module, la vente devient un processus fluide, maîtrisé et orienté vers la croissance.</p>
+        </section>
+</div>

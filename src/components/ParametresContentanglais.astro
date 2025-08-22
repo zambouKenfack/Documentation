@@ -1,0 +1,2132 @@
+---
+import '../styles/global1.css';
+---
+
+<div class="container">
+
+     <header class="header">
+        <h1>Settings Management in Movelys</h1>
+    </header>
+    <!-- Introduction -->
+    <section class="section">
+        <h2>Introduction</h2>
+        <p>The flexibility and adaptability of a management application largely depend on how its settings can be configured. With this in mind, <strong>Movelys integrates a comprehensive, structured, and highly customizable</strong> settings module, allowing each company to tailor the tool to its specific operational, legal, and commercial needs.</p>
+        
+        <p>The settings module acts as the <strong>system's configuration hub, providing a centralized interface</strong> to define the fundamental rules of the application. It allows for configuring general company information (company name, logo, contact details, currencies, date and time formats), tax preferences, units of measurement, payment methods, tax rates, languages, printing preferences, invoicing options, and many other essential elements.</p>
+        
+        <p>Thanks to this fine-grained configuration, Movelys ensures global consistency, local regulatory compliance (especially for tax aspects), and advanced customization of the user experience. Administrators thus have full control over the elements structuring their team's work environment while ensuring better integration of modules (sales, purchases, products, inventory, reports, etc.).</p>
+    </section>
+
+    <!-- 1) Company Settings -->
+    <section class="section">
+        <h2>1) Company Settings</h2>
+        
+        <h3>1.1) General Function</h3>
+        <p>The <strong>Company Settings interface in Movelys allows the administrator to configure the</strong> company's general settings to ensure smooth operation of all functionalities.</p>
+        <p>These settings affect the entire system and must be configured before any serious use of the platform.</p>
+        
+        <h3>1.2) Navigation</h3>
+        <p>The left menu displays the different categories of settings:</p>
+        <ul>
+            <li>Business</li>
+        </ul>
+        <p>This section groups the main information related to the company. Here is the detail <strong>field by field:</strong></p>
+        
+        <table class="component-table">
+            <tr>
+                <th>Field</th>
+                <th>Example Value</th>
+                <th>Purpose / Description</th>
+            </tr>
+            <tr>
+                <td>Company Name</td>
+                <td>Scent & Vitality</td>
+                <td>Name displayed on interfaces, invoices, reports, emails, etc.</td>
+            </tr>
+            <tr>
+                <td>Implementation Date</td>
+                <td>01/01/1970</td>
+                <td>Start date of system usage. Used for history and accounting periods.</td>
+            </tr>
+            <tr>
+                <td>Default Profit Percentage</td>
+                <td>25.00</td>
+                <td>Default profit margin applied to products (if none is specified).</td>
+            </tr>
+            <tr>
+                <td>Currency</td>
+                <td>Cameroon - CFA Franc (FCFA)</td>
+                <td>Primary currency used in all transactions.</td>
+            </tr>
+            <tr>
+                <td>Currency Symbol Placement</td>
+                <td>Before amount</td>
+                <td>Customization of display: "FCFA 1,000" or "1,000 FCFA".</td>
+            </tr>
+            <tr>
+                <td>Time Zone</td>
+                <td>Europe/Paris</td>
+                <td>Defines local time for operations, reports, backups, etc.</td>
+            </tr>
+            <tr>
+                <td>Upload Logo</td>
+                <td>"Browse..." button</td>
+                <td>Allows adding the official logo to display on documents (invoices, quotes, etc.).</td>
+            </tr>
+            <tr>
+                <td>Fiscal Year Start Month</td>
+                <td>January</td>
+                <td>Starting month of the fiscal year for financial statements.</td>
+            </tr>
+            <tr>
+                <td>Inventory Accounting Method</td>
+                <td>FIFO (First In, First Out)</td>
+                <td>Determines the order of product removal from inventory. Affects valuation and reports.</td>
+            </tr>
+            <tr>
+                <td>Transaction Edit Days</td>
+                <td>30</td>
+                <td>Number of days during which a transaction can be modified.</td>
+            </tr>
+            <tr>
+                <td>Date Format</td>
+                <td>dd/mm/yyyy</td>
+                <td>Defines how dates are displayed throughout the system.</td>
+            </tr>
+            <tr>
+                <td>Time Format</td>
+                <td>24-hour clock</td>
+                <td>Choice between 12-hour (AM/PM) or 24-hour (00:00-23:59) format.</td>
+            </tr>
+            <tr>
+                <td>Currency Precision</td>
+                <td>2</td>
+                <td>Number of decimal places for amounts (e.g., 1,000.00 FCFA).</td>
+            </tr>
+            <tr>
+                <td>Quantity Precision</td>
+                <td>2</td>
+                <td>Number of decimal places for quantities (e.g., 1.25 kg).</td>
+            </tr>
+        </table>
+        
+        <h4>• Tax</h4>
+        <p>This section groups the main information related to the company. Here is the detail <strong>field by field:</strong></p>
+        
+        <table class="component-table">
+            <tr>
+                <th>Field</th>
+                <th>Example / Info</th>
+                <th>Purpose / Description</th>
+            </tr>
+            <tr>
+                <td>Tax 1 Name</td>
+                <td>VAT / GST / Others</td>
+                <td>Name of the first applied tax (e.g., VAT, GST, Sales Tax).</td>
+            </tr>
+            <tr>
+                <td>VAT Number 1</td>
+                <td>(Ex: FR12345678901)</td>
+                <td>Company's tax identification number for this tax (VAT 1).</td>
+            </tr>
+            <tr>
+                <td>Tax 2 Name</td>
+                <td>VAT / GST / Local Tax</td>
+                <td>Name of a second tax if applicable (used for double taxation or regional taxes).</td>
+            </tr>
+            <tr>
+                <td>VAT Number 2</td>
+                <td>(Ex: CM987654321)</td>
+                <td>Tax identification number linked to the second tax.</td>
+            </tr>
+            <tr>
+                <td>Enable Online Tax in Purchases and Sales</td>
+                <td>Checkbox</td>
+                <td>If enabled, automatically applies taxes during purchases and sales.</td>
+            </tr>
+        </table>
+        
+        <p><strong>Notes:</strong></p>
+        <ul>
+            <li>You can <strong>leave the fields related to the second tax empty if your business does not</strong> require double taxation.</li>
+            <li>These settings affect invoicing, tax reports, and the <strong>legal compliance of your company.</strong></li>
+        </ul>
+        
+        <h4>• Product</h4>
+        <p>This section groups the main information related to the company. Here is the detail <strong>field by field:</strong></p>
+        
+        <table class="component-table">
+            <tr>
+                <th>Field / Option</th>
+                <th>Type / Example</th>
+                <th>Purpose / Description</th>
+            </tr>
+            <tr>
+                <td>SKU Prefix</td>
+                <td>Example: PROD-</td>
+                <td>Automatic prefix for product references (SKU = Stock Keeping Unit).</td>
+            </tr>
+            <tr>
+                <td>Enable Product Expiry</td>
+                <td>Dropdown menu</td>
+                <td>Allows setting an expiration date for products (e.g., food items).</td>
+            </tr>
+            <tr>
+                <td>Enable Brands</td>
+                <td>Checked box</td>
+                <td>Allows associating each product with a brand (useful for filtering, reports, etc.).</td>
+            </tr>
+            <tr>
+                <td>Enable Price and Tax Information</td>
+                <td>Checked box</td>
+                <td>Enables display and management of prices and taxes directly in product sheets.</td>
+            </tr>
+            <tr>
+                <td>Enable Racks</td>
+                <td>Unchecked box</td>
+                <td>Allows specifying the location (rack) of products in the warehouse or store.</td>
+            </tr>
+            <tr>
+                <td>Enable Warranty</td>
+                <td>Unchecked box</td>
+                <td>Adds a field to define a warranty duration for the product.</td>
+            </tr>
+            <tr>
+                <td>Enable Categories</td>
+                <td>Checked box</td>
+                <td>Allows classifying products by main category.</td>
+            </tr>
+            <tr>
+                <td>Enable Subcategories</td>
+                <td>Checked box</td>
+                <td>Allows an additional level of organization: subcategories.</td>
+            </tr>
+            <tr>
+                <td>Default Unit</td>
+                <td>Dropdown list (kg, pcs, etc.)</td>
+                <td>Defines the primary unit used for the product.</td>
+            </tr>
+            <tr>
+                <td>Enable Subunits</td>
+                <td>Unchecked box</td>
+                <td>Allows using secondary units (e.g., pack → bottle).</td>
+            </tr>
+            <tr>
+                <td>Enable Product Line</td>
+                <td>Unchecked box</td>
+                <td>Adds a "product line" field, useful for segmenting items by range.</td>
+            </tr>
+            <tr>
+                <td>Enable Position</td>
+                <td>Unchecked box</td>
+                <td>Adds a field to indicate a precise storage location in the warehouse.</td>
+            </tr>
+            <tr>
+                <td>Is Product Image Required?</td>
+                <td>Unchecked box</td>
+                <td>Makes uploading an image mandatory when creating a product.</td>
+            </tr>
+        </table>
+        
+        <h4>• Contact</h4>
+        <p>This section groups the main information related to the company. Here is the detail <strong>field by field:</strong></p>
+        
+        <table class="component-table">
+            <tr>
+                <th>Field</th>
+                <th>Example / Expected Value</th>
+                <th>Purpose / Description</th>
+            </tr>
+            <tr>
+                <td>Default Credit Limit</td>
+                <td>100,000 FCFA</td>
+                <td>Defines the maximum credit amount a customer can use by default in the system.</td>
+            </tr>
+        </table>
+        
+        <h4>• Sales</h4>
+        <p>This section groups the main information related to the company. Here is the detail <strong>field by field:</strong></p>
+        
+        <h5>Sales Configuration Settings</h5>
+        <table class="component-table">
+            <tr>
+                <th>Field / Option</th>
+                <th>Example / Value</th>
+                <th>Purpose / Description</th>
+            </tr>
+            <tr>
+                <td>Default Sales Discount</td>
+                <td>0.00%</td>
+                <td>Percentage discount automatically applied to all sales.</td>
+            </tr>
+            <tr>
+                <td>Default Sales Tax</td>
+                <td>None</td>
+                <td>Tax automatically added to sold products.</td>
+            </tr>
+            <tr>
+                <td>Sales Item Addition Method</td>
+                <td>Add or Increase Quantity</td>
+                <td>Defines how products are added to the cart (add or update quantity).</td>
+            </tr>
+            <tr>
+                <td>Amount Rounding Method</td>
+                <td>None / Round to 0.05, etc.</td>
+                <td>Applies a rounding rule to sales amounts.</td>
+            </tr>
+            <tr>
+                <td>Selling Price is Minimum Selling Price</td>
+                <td>(Option)</td>
+                <td>Prevents selling at a price lower than the defined minimum price.</td>
+            </tr>
+            <tr>
+                <td>Allow Overselling</td>
+                <td>(Option)</td>
+                <td>Allows selling a product even if stock is insufficient.</td>
+            </tr>
+            <tr>
+                <td>Enable Customer Order</td>
+                <td>Unchecked box</td>
+                <td>Enables generating customer orders before invoicing.</td>
+            </tr>
+            <tr>
+                <td>Is Payment Term Required?</td>
+                <td>Unchecked box</td>
+                <td>Adds a field to define a payment term for customers.</td>
+            </tr>
+        </table>
+        
+        <h5>Sales Commission Settings</h5>
+        <table class="component-table">
+            <tr>
+                <th>Field / Option</th>
+                <th>Example / Value</th>
+                <th>Purpose / Description</th>
+            </tr>
+            <tr>
+                <td>Sales Commission</td>
+                <td>Enable / Disable</td>
+                <td>Enables commission management on sales.</td>
+            </tr>
+            <tr>
+                <td>Commission Calculation Type</td>
+                <td>Invoice Value / Profit Margin</td>
+                <td>Determines the commission calculation base (total amount or profit).</td>
+            </tr>
+            <tr>
+                <td>Is a Commission Agent Required?</td>
+                <td>Unchecked box</td>
+                <td>Requires selecting a commission agent for each sale.</td>
+            </tr>
+        </table>
+        
+        <h5>Payment Link and Integrations</h5>
+        <table class="component-table">
+            <tr>
+                <th>Field / Option</th>
+                <th>Example / Value</th>
+                <th>Purpose / Description</th>
+            </tr>
+            <tr>
+                <td>Enable Payment Link</td>
+                <td>Unchecked box</td>
+                <td>Allows sending a payment link to the customer (e.g., for remote payment).</td>
+            </tr>
+        </table>
+        
+        <h5>Payment Gateways</h5>
+        <table class="component-table">
+            <tr>
+                <th>Gateway</th>
+                <th>Field</th>
+                <th>Purpose</th>
+            </tr>
+            <tr>
+                <td>Razorpay</td>
+                <td>Key ID / Secret Key</td>
+                <td>Integration with Razorpay (for India).</td>
+            </tr>
+            <tr>
+                <td>Stripe</td>
+                <td>Public Key / Secret Key</td>
+                <td>Allows Stripe integration for online payments.</td>
+            </tr>
+        </table>
+        
+        <h4>• POS (Point of Sale)</h4>
+        <p>This section groups the main information related to the company. Here is the detail <strong>field by field:</strong></p>
+        
+        <h5>Defined Operations and Shortcuts:</h5>
+        <table class="component-table">
+            <tr>
+                <th>Operation</th>
+                <th>Keyboard Shortcut</th>
+            </tr>
+            <tr>
+                <td>Quick Payment</td>
+                <td>shift + e</td>
+            </tr>
+            <tr>
+                <td>Pay and Checkout</td>
+                <td>shift + p</td>
+            </tr>
+            <tr>
+                <td>Draft</td>
+                <td>shift + d</td>
+            </tr>
+            <tr>
+                <td>Cancel</td>
+                <td>shift + c</td>
+            </tr>
+            <tr>
+                <td>Go to Product Quantity</td>
+                <td>f2</td>
+            </tr>
+            <tr>
+                <td>Balance</td>
+                <td>(empty)</td>
+            </tr>
+            <tr>
+                <td>Edit Discount</td>
+                <td>shift + i</td>
+            </tr>
+            <tr>
+                <td>Edit Order Tax</td>
+                <td>shift + t</td>
+            </tr>
+            <tr>
+                <td>Add Payment Line</td>
+                <td>shift + r</td>
+            </tr>
+            <tr>
+                <td>Finalize Payment</td>
+                <td>shift + f</td>
+            </tr>
+            <tr>
+                <td>Add New Product</td>
+                <td>f4</td>
+            </tr>
+        </table>
+        <p>You can modify these shortcuts according to your preferences, using the listed keys (ctrl, shift, alt, etc.).</p>
+        
+<h5>Point of Sale Settings</h5>
+<p>These are options that allow you to customize the behavior of the Point of Sale interface. Here’s what each option means:</p>
+        
+<table class="component-table">
+    <tr>
+        <th>Option</th>
+        <th>Description</th>
+    </tr>
+    <tr>
+        <td>Disable Multiple Payments</td>
+        <td>Prohibits multiple payments in a single transaction.</td>
+    </tr>
+    <tr>
+        <td>Disable Draft</td>
+        <td>Prevents temporary saving of incomplete sales.</td>
+    </tr>
+    <tr>
+        <td>Disable Quick Payment</td>
+        <td>Removes the fast payment option.</td>
+    </tr>
+    <tr>
+        <td>Hide Product Suggestions</td>
+        <td>Hides automatic product recommendations.</td>
+    </tr>
+    <tr>
+        <td>Hide Recent Transactions</td>
+        <td>Prevents the display of recent sales on the screen.</td>
+    </tr>
+    <tr>
+        <td>Disable Discount</td>
+        <td>Deactivates applying discounts to sales.</td>
+    </tr>
+    <tr>
+        <td>Disable Order Tax</td>
+        <td>Removes automatic addition of VAT or other taxes.</td>
+    </tr>
+    <tr>
+        <td>Editable Subtotal</td>
+        <td>Allows manual modification of the subtotal.</td>
+    </tr>
+    <tr>
+        <td>Disable Sale Suspension</td>
+        <td>Removes the option to put a sale on hold.</td>
+    </tr>
+    <tr>
+        <td>Enable Transaction Date on POS Screen</td>
+        <td>Displays the sale date on the main screen.</td>
+    </tr>
+    <tr>
+        <td>Enable Service Staff in Product Range</td>
+        <td>Links products to staff members for sales tracking.</td>
+    </tr>
+    <tr>
+        <td>Is Service Staff Required?</td>
+        <td>Makes selecting a staff member mandatory for each sale.</td>
+    </tr>
+    <tr>
+        <td>Disable Credit Sale Button</td>
+        <td>Prohibits the ability to make a credit sale.</td>
+    </tr>
+    <tr>
+        <td>Enable Scale</td>
+        <td>Activates the use of an integrated weighing scale.</td>
+    </tr>
+    <tr>
+        <td>Show Invoice Template</td>
+        <td>Displays a preview of the invoice layout.</td>
+    </tr>
+    <tr>
+        <td>Show Invoice Layout Dropdown</td>
+        <td>Allows selecting an invoice style.</td>
+    </tr>
+    <tr>
+        <td>Print Suspended Invoice</td>
+        <td>Allows printing even a suspended invoice.</td>
+    </tr>
+    <tr>
+        <td>Show Prices on Product Suggestion Tooltip</td>
+        <td>Adds prices to the tooltips of suggested products.</td>
+    </tr>
+</table>
+        
+<h5>Scale Barcode Settings</h5>
+<p>Configures how to <strong>read a</strong> <strong>barcode generated by a scale (e.g., in a fruit/vegetable</strong> store for weighted items).</p>
+        
+<table class="component-table">
+    <tr>
+        <th>Field</th>
+        <th>Description</th>
+    </tr>
+    <tr>
+        <td>Prefix</td>
+        <td>The first digits of the barcode to identify it as a weight (e.g., 20).</td>
+    </tr>
+    <tr>
+        <td>Product Length</td>
+        <td>Number of digits representing the product ID.</td>
+    </tr>
+    <tr>
+        <td>Whole Quantity Length</td>
+        <td>Number of digits used for the whole part of the weight.</td>
+    </tr>
+    <tr>
+        <td>Fractional Quantity Length</td>
+        <td>Number of digits used for the decimal part of the weight.</td>
+    </tr>
+</table>
+        
+<p><strong>Example: A barcode 2 0 0 1 2 3 0 0 4 5 0 0 can be interpreted as follows:</strong></p>
+<ul>
+    <li>2 0 = prefix</li>
+    <li>0 1 2 3 0 = product ID (5 digits)</li>
+    <li>0 4 5 0 0 = weight 4.500 kg (4 digits for whole, 3 for decimal)</li>
+</ul>
+        
+<h4>• Display Screen</h4>
+<p>This section groups the main information related to the company. Here is the detail <strong>field by field:</strong></p>
+        
+<h5>Customer Display Screen Settings</h5>
+<table class="component-table">
+    <tr>
+        <th>Element</th>
+        <th>Description</th>
+    </tr>
+    <tr>
+        <td>Enable Customer Display Screen</td>
+        <td>Allows displaying a customer screen (typically on a second monitor or mirrored tab).</td>
+    </tr>
+    <tr>
+        <td>Display Screen Header</td>
+        <td>Rich text area (WYSIWYG editor) to write a custom message that will appear on the customer screen.</td>
+    </tr>
+    <tr>
+        <td>Carousel Image 1 to 10</td>
+        <td>Allows uploading up to 10 images to be displayed in rotation (carousel) on the customer screen.</td>
+    </tr>
+    <tr>
+        <td>Browse (upload)</td>
+        <td>Button to select and upload an image. Replaces the previous image if one exists.</td>
+    </tr>
+</table>
+        
+<p><strong>Important Notes:</strong></p>
+<ul>
+    <li>The customer display screen only works if:
+        <ul>
+            <li>The browser used for the POS and the customer screen is the same.</li>
+            <li>The customer screen is opened in a new tab and mirrored on another <strong>monitor.</strong></li>
+        </ul>
+    </li>
+    <li>The <strong>image carousel is often used for</strong> <strong>promotions, offers, or visual branding</strong> on the customer screen.</li>
+</ul>
+        
+<h4>• Purchases</h4>
+<p>This section groups the main information related to the company. Here is the detail <strong>field by field:</strong></p>
+        
+<table class="component-table">
+    <tr>
+        <th>Option</th>
+        <th>Description</th>
+        <th>Status</th>
+    </tr>
+    <tr>
+        <td>Enable Product Price Modification from Purchase Screen</td>
+        <td>Allows modifying a product's price directly from the purchase screen.</td>
+        <td>Active</td>
+    </tr>
+    <tr>
+        <td>Enable Batch Number</td>
+        <td>Enables batch number management (useful for traceability, expiration, etc.).</td>
+        <td>Disabled</td>
+    </tr>
+    <tr>
+        <td>Enable Purchase Request</td>
+        <td>Activates internal purchase requests before placing orders (approval workflow).</td>
+        <td>Disabled</td>
+    </tr>
+    <tr>
+        <td>Enable Purchase Status</td>
+        <td>Displays purchase statuses (ordered, received, canceled, etc.) for better purchase cycle management.</td>
+        <td>Active</td>
+    </tr>
+    <tr>
+        <td>Enable Purchase Order</td>
+        <td>Enables the use of purchase orders in the purchase module.</td>
+        <td>Disabled</td>
+    </tr>
+</table>
+        
+<p><strong>Note:</strong><br>
+These options are useful for customizing the procurement process according to your needs.</p>
+        
+<h4>• Payment</h4>
+<p>This section groups the main information related to the company. Here is the detail <strong>field by field:</strong></p>
+        
+<table class="component-table">
+    <tr>
+        <th>Field / Option</th>
+        <th>Description</th>
+        <th>Example / Status</th>
+    </tr>
+    <tr>
+        <td>Denominations</td>
+        <td>List of available cash denominations, separated by commas.</td>
+        <td>100,200,500,2000</td>
+    </tr>
+    <tr>
+        <td>Enable Cash Denomination On</td>
+        <td>Indicates where this feature is enabled (e.g., Point of Sale screen).</td>
+        <td>Point of Sale screen</td>
+    </tr>
+    <tr>
+        <td>Enable Cash Denomination for Payment Methods</td>
+        <td>Limits the payment methods affected by cash denomination.</td>
+        <td>(Empty field here)</td>
+    </tr>
+    <tr>
+        <td>Strict Control</td>
+        <td>If checked, enforces the exact use of defined denominations.</td>
+        <td>(Not enabled)</td>
+    </tr>
+</table>
+        
+<h4>• Dashboard</h4>
+<p>This section groups the main information related to the company. Here is the detail <strong>field by field:</strong></p>
+        
+<table class="component-table">
+    <tr>
+        <th>Field</th>
+        <th>Description</th>
+        <th>Example Value</th>
+    </tr>
+    <tr>
+        <td>Show Stock Expiration Alert For</td>
+        <td>Defines the number of days before a product's expiration date to display an alert.</td>
+        <td>30 days</td>
+    </tr>
+</table>
+        
+<p><strong>Purpose:</strong><br>
+Allows receiving a <strong>preventive alert for products approaching their expiration</strong> date, facilitating <strong>perishable stock management.</strong></p>
+        
+<h4>• System</h4>
+<p>This section groups the main information related to the company. Here is the detail <strong>field by field:</strong></p>
+        
+<table class="component-table">
+    <tr>
+        <th>Element</th>
+        <th>Description</th>
+        <th>Selected Value</th>
+    </tr>
+    <tr>
+        <td>Theme Color</td>
+        <td>Choice of theme color</td>
+        <td>Green</td>
+    </tr>
+    <tr>
+        <td>Default Data Table Page Entries</td>
+        <td>Number of entries displayed per page in a data table</td>
+        <td>25</td>
+    </tr>
+    <tr>
+        <td>Display Option</td>
+        <td>Display of help text</td>
+        <td>Enabled (box checked)</td>
+    </tr>
+</table>
+        
+<h4>• Prefixes</h4>
+<p>This section groups the main information related to the company. Here is the detail <strong>field by field:</strong></p>
+        
+<table class="component-table">
+    <tr>
+        <th>Term</th>
+        <th>Abbreviation</th>
+        <th>Explanation</th>
+    </tr>
+    <tr>
+        <td>Purchase</td>
+        <td>PO</td>
+        <td>Purchase Order: Official document issued to order goods or services.</td>
+    </tr>
+    <tr>
+        <td>Purchase Order</td>
+        <td></td>
+        <td>Document detailing items, quantities, and agreed prices for a purchase.</td>
+    </tr>
+    <tr>
+        <td>Sales Return</td>
+        <td>CN</td>
+        <td>Credit Note: Document used to record a return or sale cancellation.</td>
+    </tr>
+    <tr>
+        <td>Purchase Payment</td>
+        <td>PP</td>
+        <td>Payment made to settle a purchase order.</td>
+    </tr>
+    <tr>
+        <td>Business Location</td>
+        <td>BL</td>
+        <td>Physical location or address of the business.</td>
+    </tr>
+    <tr>
+        <td>Draft</td>
+        <td></td>
+        <td>Temporary or unfinalized document, in preparation.</td>
+    </tr>
+    <tr>
+        <td>Purchase Return</td>
+        <td></td>
+        <td>Process or document related to returning purchased products, e.g., due to defects.</td>
+    </tr>
+    <tr>
+        <td>Stock Transfer</td>
+        <td>ST</td>
+        <td>Movement or transfer of stock from one location to another.</td>
+    </tr>
+    <tr>
+        <td>Expense</td>
+        <td>EP</td>
+        <td>Amount spent for various costs, other than direct purchases.</td>
+    </tr>
+    <tr>
+        <td>Sales Payment</td>
+        <td>SP</td>
+        <td>Payment received for a completed sale.</td>
+    </tr>
+    <tr>
+        <td>Username</td>
+        <td></td>
+        <td>Identifier or name of the person using the system or performing an operation.</td>
+    </tr>
+    <tr>
+        <td>Customer Order</td>
+        <td></td>
+        <td>Official request placed by a customer to obtain a product or service.</td>
+    </tr>
+    <tr>
+        <td>Purchase Request</td>
+        <td></td>
+        <td>Internal request to acquire a product or service before placing a purchase order.</td>
+    </tr>
+    <tr>
+        <td>Stock Adjustment</td>
+        <td>SA</td>
+        <td>Correction or update of stock to reflect physical or accounting reality.</td>
+    </tr>
+    <tr>
+        <td>Contacts</td>
+        <td>CO</td>
+        <td>Information about people or businesses to contact (suppliers, customers, etc.).</td>
+    </tr>
+    <tr>
+        <td>Expense Payment</td>
+        <td></td>
+        <td>Settlement of incurred expenses (e.g., overhead costs).</td>
+    </tr>
+    <tr>
+        <td>Subscription Number</td>
+        <td></td>
+        <td>Number associated with a subscription or periodic contract.</td>
+    </tr>
+</table>
+        
+<h4>• Email Settings</h4>
+<p>This section groups the main information related to the company. Here is the detail <strong>field by field:</strong></p>
+        
+<table class="component-table">
+    <tr>
+        <th>Field</th>
+        <th>Description</th>
+        <th>Example</th>
+    </tr>
+    <tr>
+        <td>Mail Driver</td>
+        <td>Type of protocol used for sending emails</td>
+        <td>SMTP, PHP mail, sendmail</td>
+    </tr>
+    <tr>
+        <td>Host</td>
+        <td>SMTP server address</td>
+        <td>smtp.example.com</td>
+    </tr>
+    <tr>
+        <td>Port</td>
+        <td>Port used to connect to the SMTP server</td>
+        <td>587, 465</td>
+    </tr>
+    <tr>
+        <td>Username</td>
+        <td>Username to log in to the SMTP server</td>
+        <td>user@example.com</td>
+    </tr>
+    <tr>
+        <td>Password</td>
+        <td>Password associated with this user account</td>
+        <td>*********</td>
+    </tr>
+    <tr>
+        <td>Encryption</td>
+        <td>Type of security for the connection</td>
+        <td>TLS, SSL</td>
+    </tr>
+    <tr>
+        <td>Sender Address</td>
+        <td>Email address that will appear as the sender</td>
+        <td>no-reply@example.com</td>
+    </tr>
+    <tr>
+        <td>Sender Name</td>
+        <td>Name that will appear as the sender in emails</td>
+        <td>Company Name</td>
+    </tr>
+</table>
+<p>The "Send test email" button is used to verify that the configuration is working correctly by sending a test message.</p>
+
+<h4>• SMS Settings</h4>
+<p>This section contains the main information related to the company. Here's the detailed <strong>field-by-field breakdown:</strong></p>
+
+<table class="component-table">
+    <tr>
+        <th>Field</th>
+        <th>Description</th>
+    </tr>
+    <tr>
+        <td>SMS Service</td>
+        <td>Selection of SMS service provider (e.g., Twilio, Nexmo, Other).</td>
+    </tr>
+    <tr>
+        <td>URL</td>
+        <td>API URL of the SMS service.</td>
+    </tr>
+    <tr>
+        <td>Send to parameter name</td>
+        <td>Name of the API parameter where the destination number will be placed.</td>
+    </tr>
+    <tr>
+        <td>Message parameter name</td>
+        <td>Name of the API parameter where the message content will be placed.</td>
+    </tr>
+    <tr>
+        <td>Request method</td>
+        <td>HTTP method used to send the request (e.g., POST, GET, PUBLISH - here "PUBLISH" is selected).</td>
+    </tr>
+    <tr>
+        <td>Header key 1, 2, 3</td>
+        <td>HTTP header keys if required by the API (e.g., Authorization, Content-Type).</td>
+    </tr>
+    <tr>
+        <td>Header value 1, 2, 3</td>
+        <td>Values corresponding to the header keys.</td>
+    </tr>
+    <tr>
+        <td>Parameter key 1 to 10</td>
+        <td>Names of additional parameters required by the API (e.g., token, API key, sender ID).</td>
+    </tr>
+    <tr>
+        <td>Parameter value 1 to 10</td>
+        <td>Values corresponding to the parameter keys.</td>
+    </tr>
+    <tr>
+        <td>Test number</td>
+        <td>Phone number to send a test SMS to.</td>
+    </tr>
+    <tr>
+        <td>Send test SMS (button)</td>
+        <td>Button to send a test SMS and validate the configuration.</td>
+    </tr>
+</table>
+
+<h4>• Reward Points Settings</h4>
+<p>This section contains the main information related to the company. Here's the detailed <strong>field-by-field breakdown:</strong></p>
+
+<h5>Reward Points Settings Table</h5>
+<table class="component-table">
+    <tr>
+        <th>Category</th>
+        <th>Field</th>
+        <th>Description</th>
+    </tr>
+    <tr>
+        <td>General</td>
+        <td>Enable reward points</td>
+        <td>Check this box to activate the reward points system in your store.</td>
+    </tr>
+    <tr>
+        <td>General</td>
+        <td>Reward points display name</td>
+        <td>Custom name for points visible to customers (e.g., "Credit", "Point", "Stars").</td>
+    </tr>
+</table>
+
+<h5>Points Earning Settings</h5>
+<table class="component-table">
+    <tr>
+        <th>Field</th>
+        <th>Description</th>
+    </tr>
+    <tr>
+        <td>Amount spent per unit point</td>
+        <td>Amount the customer must spend to earn 1 point. Example: 1.00 = 1 point per €1.</td>
+    </tr>
+    <tr>
+        <td>Minimum order total to earn reward</td>
+        <td>The minimum order amount required for the customer to start accumulating points.</td>
+    </tr>
+    <tr>
+        <td>Maximum points per order</td>
+        <td>Cap on the number of points a customer can earn per order (optional).</td>
+    </tr>
+</table>
+
+<h5>Points Redemption Settings</h5>
+<table class="component-table">
+    <tr>
+        <th>Field</th>
+        <th>Description</th>
+    </tr>
+    <tr>
+        <td>Redemption amount per unit point</td>
+        <td>Amount (in €) that 1 point is worth when used. Example: 1 point = €1.</td>
+    </tr>
+    <tr>
+        <td>Minimum order total to redeem points</td>
+        <td>The minimum amount the order must reach for points redemption to be possible.</td>
+    </tr>
+    <tr>
+        <td>Minimum redemption points</td>
+        <td>Minimum number of points the customer must have to use them.</td>
+    </tr>
+    <tr>
+        <td>Maximum redemption points per order</td>
+        <td>Cap on points usable per order. Leave blank if you don't want a limit.</td>
+    </tr>
+    <tr>
+        <td>Reward points expiration period</td>
+        <td>Duration before points automatically expire (in months or years).</td>
+    </tr>
+</table>
+
+<h4>• Modules</h4>
+<p>This section contains the main information related to the company. Here's the detailed <strong>field-by-field breakdown:</strong></p>
+
+<table class="component-table">
+    <tr>
+        <th>Module</th>
+        <th>Status (checked/unchecked)</th>
+        <th>Description</th>
+    </tr>
+    <tr>
+        <td>Purchases</td>
+        <td>Enabled</td>
+        <td>Allows management of purchases from suppliers.</td>
+    </tr>
+    <tr>
+        <td>Add a sale</td>
+        <td>Enabled</td>
+        <td>Enables the ability to manually add a sale in the system.</td>
+    </tr>
+    <tr>
+        <td>POS (Point of Sale)</td>
+        <td>Enabled</td>
+        <td>Activates the cash register interface for real-time sales.</td>
+    </tr>
+    <tr>
+        <td>Stock transfers</td>
+        <td>Enabled</td>
+        <td>Allows moving stock from one warehouse or point of sale to another.</td>
+    </tr>
+    <tr>
+        <td>Stock adjustment</td>
+        <td>Enabled</td>
+        <td>Allows manual stock adjustments (e.g., losses, errors, inventory).</td>
+    </tr>
+    <tr>
+        <td>Expense</td>
+        <td>Enabled</td>
+        <td>Allows management of business-related expenses (e.g., rent, electricity, etc.).</td>
+    </tr>
+    <tr>
+        <td>Account</td>
+        <td>Disabled</td>
+        <td>Management of specific customer or supplier accounts.</td>
+    </tr>
+    <tr>
+        <td>Tables</td>
+        <td>Disabled</td>
+        <td>Table management (essential for restaurants/cafes).</td>
+    </tr>
+    <tr>
+        <td>Modifiers</td>
+        <td>Disabled</td>
+        <td>Allows adding modifiers to products (e.g., no sugar, extra cheese).</td>
+    </tr>
+    <tr>
+        <td>Service staff</td>
+        <td>Disabled</td>
+        <td>Management of front-of-house staff (useful for restaurants).</td>
+    </tr>
+    <tr>
+        <td>Enable reservations</td>
+        <td>Disabled</td>
+        <td>Allows customers to book a table.</td>
+    </tr>
+    <tr>
+        <td>Kitchen (For restaurants)</td>
+        <td>Disabled</td>
+        <td>Activates the kitchen module to manage kitchen orders.</td>
+    </tr>
+    <tr>
+        <td>Enable subscription</td>
+        <td>Disabled</td>
+        <td>For selling subscriptions or recurring services.</td>
+    </tr>
+    <tr>
+        <td>Service types</td>
+        <td>Disabled</td>
+        <td>Allows defining different service types (e.g., dine-in, takeaway, delivery).</td>
+    </tr>
+</table>
+
+<p><strong>Currently enabled modules:</strong></p>
+<ul>
+    <li>Purchases</li>
+    <li>Add a sale</li>
+    <li>POS (Point of Sale)</li>
+    <li>Stock transfers</li>
+    <li>Stock adjustment</li>
+    <li>Expense</li>
+</ul>
+
+<p>If you run a <strong>retail business, this configuration is suitable.</strong></p>
+<p>But if you run a restaurant, you should probably also enable:</p>
+<ul>
+    <li>Tables</li>
+    <li>Kitchen</li>
+    <li>Modifiers</li>
+    <li>Service types</li>
+    <li>Reservations (if you accept reservations)</li>
+</ul>
+
+<h4>• Custom Labels</h4>
+<p>This section contains the main information related to the company. Here's the detailed <strong>field-by-field breakdown:</strong></p>
+
+<h5>Custom Payments</h5>
+<table class="component-table">
+    <tr>
+        <th>Field name</th>
+        <th>Description</th>
+    </tr>
+    <tr>
+        <td>Custom payment 1 to 7</td>
+        <td>Allows defining additional custom payment methods (e.g., "Gift check", "Voucher", "Crypto", etc.)</td>
+    </tr>
+</table>
+
+<h5>Custom Contact Fields</h5>
+<table class="component-table">
+    <tr>
+        <th>Field name</th>
+        <th>Description</th>
+    </tr>
+    <tr>
+        <td>Custom field 1 to 10</td>
+        <td>Add fields for customers/suppliers: e.g., "Loyalty number", "Birthday", "Manager name", etc.</td>
+    </tr>
+</table>
+
+<h5>Custom Product Fields</h5>
+<table class="component-table">
+    <tr>
+        <th>Field name</th>
+        <th>Description</th>
+    </tr>
+    <tr>
+        <td>Custom field 1 to 20</td>
+        <td>Add information specific to your products, such as: "Color", "Size", "Warranty", "Series", "Country of origin", etc.</td>
+    </tr>
+    <tr>
+        <td>Field type</td>
+        <td>Allows defining the data type: SMS, Datepicker, dropdown list, etc.</td>
+    </tr>
+</table>
+
+<h5>Custom Location Fields</h5>
+<table class="component-table">
+    <tr>
+        <th>Field name</th>
+        <th>Description</th>
+    </tr>
+    <tr>
+        <td>Custom field 1 to 4</td>
+        <td>Location or store-specific information: "Manager name", "Geographic area", etc.</td>
+    </tr>
+</table>
+
+<h5>Custom User Fields</h5>
+<table class="component-table">
+    <tr>
+        <th>Field name</th>
+        <th>Description</th>
+    </tr>
+    <tr>
+        <td>Custom field 1 to 4</td>
+        <td>Add user information: e.g., "Specific role", "Department", etc.</td>
+    </tr>
+</table>
+
+<h5>Custom Purchase Fields</h5>
+<table class="component-table">
+    <tr>
+        <th>Field name</th>
+        <th>Description</th>
+    </tr>
+    <tr>
+        <td>Custom field 1 to 4</td>
+        <td>Fields added during a purchase (e.g., "Preferred supplier", "Supplier order number")</td>
+    </tr>
+    <tr>
+        <td>Is required</td>
+        <td>Requires the user to fill this field during a purchase</td>
+    </tr>
+</table>
+
+<h5>Custom Purchase Shipping Fields</h5>
+<table class="component-table">
+    <tr>
+        <th>Field name</th>
+        <th>Description</th>
+    </tr>
+    <tr>
+        <td>Custom field 1 to 5</td>
+        <td>Fields for purchase shipping management (e.g., "Tracking number", "Carrier name", etc.)</td>
+    </tr>
+    <tr>
+        <td>Is required</td>
+        <td>Defines whether the field must be filled</td>
+    </tr>
+</table>
+
+<h5>Custom Sale Fields</h5>
+<table class="component-table">
+    <tr>
+        <th>Field name</th>
+        <th>Description</th>
+    </tr>
+    <tr>
+        <td>Custom field 1 to 4</td>
+        <td>Additional fields for sales, for example: "Customer reference", "Salesperson name"</td>
+    </tr>
+    <tr>
+        <td>Is required</td>
+        <td>Makes the field mandatory during sale</td>
+    </tr>
+</table>
+
+<h5>Custom Sale Shipping Fields</h5>
+<table class="component-table">
+    <tr>
+        <th>Field name</th>
+        <th>Description</th>
+    </tr>
+    <tr>
+        <td>Custom field 1 to 5</td>
+        <td>Information for sale shipping: "Carrier", "Delivery time", etc.</td>
+    </tr>
+    <tr>
+        <td>Is required</td>
+        <td>Makes the field mandatory</td>
+    </tr>
+    <tr>
+        <td>Is default for contact</td>
+        <td>Defines if the value is automatically used from customer data</td>
+    </tr>
+</table>
+
+<h5>Custom Service Type Fields</h5>
+<table class="component-table">
+    <tr>
+        <th>Field name</th>
+        <th>Description</th>
+    </tr>
+    <tr>
+        <td>Custom field 1 to 6</td>
+        <td>Fields to fill for services (e.g., "Duration", "Service provider", "Service location", etc.)</td>
+    </tr>
+</table>
+
+<p><strong>Note: This menu allows navigation between different configuration sections of</strong> the application.</p>
+
+<h3>❖ Button: Update Settings</h3>
+<ul>
+    <li><strong>Function: Saves all entered or modified settings.</strong></li>
+    <li><strong>Type: Critical action → any changes here can impact the entire</strong> application.</li>
+</ul>
+
+<h4>Search function (at the top of the section)</h4>
+<p>Allows quickly searching for a setting in different sections without manually browsing them.</p>
+
+       <div class="image-placeholder">
+                <p>Interface Illustration</p>
+                <img src="/image/parametre1.png" alt="Description de l'image" width="900" height="600" style="max-width:100%;height:auto;border-radius:8px;" />
+        </div>
+</section>
+
+<!-- 2) Business Locations -->
+<section class="section">
+    <h2>2) Business Locations</h2>
+    
+    <h3>2.1) Interface Purpose</h3>
+    <p>The <strong>Business Locations interface in Movelys</strong> allows the administrator to manage physical sites or commercial divisions of their business. Each location can have its own billing settings, price groups, invoice layouts, etc.</p>
+    <p>It is essential for cases of multiple branches, subsidiaries, or geographically distributed points of sale.</p>
+    
+    <h3>2.2) General Presentation</h3>
+    
+    <h4>2.2.1) Locations Table</h4>
+    <p>The central table displays all commercial locations registered in the system. Each row corresponds to a unique location.</p>
+    
+    <p><strong>Visible fields and their explanation:</strong></p>
+    
+    <ol>
+        <li><strong>Name</strong>
+            <ul>
+                <li><strong>Example:</strong> Scent & Vitality</li>
+                <li><strong>Description:</strong> Name of the location or site. It may be similar to or different from the main company name.</li>
+            </ul>
+        </li>
+        <li><strong>Location ID</strong>
+            <ul>
+                <li><strong>Example:</strong> Ref. BL0001</li>
+                <li><strong>Purpose:</strong> Unique identifier automatically or manually assigned to each site. Serves as reference in reports, APIs, etc.</li>
+            </ul>
+        </li>
+        <li><strong>Landmark</strong>
+            <ul>
+                <li><strong>Example:</strong> Rue de Vieuville DREUX, France</li>
+                <li><strong>Description:</strong> Detailed address or geographical landmark to locate the site.</li>
+            </ul>
+        </li>
+        <li><strong>City</strong>
+            <ul>
+                <li><strong>Example:</strong> Paris</li>
+                <li><strong>Description:</strong> City where the location is situated.</li>
+            </ul>
+        </li>
+        <li><strong>Postal Code</strong>
+            <ul>
+                <li><strong>Example:</strong> 33045</li>
+                <li><strong>Description:</strong> Postal code linked to the physical location.</li>
+            </ul>
+        </li>
+        <li><strong>State/Region</strong>
+            <ul>
+                <li><strong>Example:</strong> IDF (Île-de-France)</li>
+                <li><strong>Purpose:</strong> Administrative region, useful for geographical or tax classification.</li>
+            </ul>
+        </li>
+        <li><strong>Country</strong>
+            <ul>
+                <li><strong>Example:</strong> France</li>
+                <li><strong>Purpose:</strong> Country of establishment, useful for taxation, currencies, or other commercial rules.</li>
+            </ul>
+        </li>
+        <li><strong>Price Group</strong>
+            <ul>
+                <li><strong>Example:</strong> Default</li>
+                <li><strong>Description:</strong> Default price group applied for this location.</li>
+                <li><strong>Note:</strong> Useful if prices vary by point of sale (e.g., wholesale vs retail prices).</li>
+            </ul>
+        </li>
+        <li><strong>Billing System</strong>
+            <ul>
+                <li><strong>Example:</strong> Default</li>
+                <li><strong>Description:</strong> Billing model used for this location.</li>
+                <li><strong>Note:</strong> Can be customized according to each site's specific policies.</li>
+            </ul>
+        </li>
+        <li><strong>Point of Sale Invoice Layout</strong>
+            <ul>
+                <li><strong>Example:</strong> Default</li>
+                <li><strong>Purpose:</strong> Format/design used to print or send invoices generated at the point of sale (POS).</li>
+            </ul>
+        </li>
+        <li><strong>Sale Invoice Layout</strong>
+            <ul>
+                <li><strong>Example:</strong> Default</li>
+                <li><strong>Purpose:</strong> Specific format used for classic invoices outside POS (orders, converted quotes, etc.)</li>
+            </ul>
+        </li>
+        <li><strong>Action Buttons</strong>
+            <p>In the Action column, each row contains management options:</p>
+            <p><strong>Edit</strong></p>
+            <ul>
+                <li><strong>Purpose:</strong> Opens a form to modify information for the selected location.</li>
+                <li><strong>Usage example:</strong> change address, billing system, etc.</li>
+            </ul>
+            <p><strong>Settings</strong></p>
+            <ul>
+                <li><strong>Purpose:</strong> Quick access to advanced settings specific to the location.</li>
+            </ul>
+            <p><strong>Disable Location</strong></p>
+            <ul>
+                <li><strong>Purpose:</strong> Allows temporarily or permanently disabling a site without deleting it.</li>
+                <li><strong>Effect:</strong> The location becomes inactive for sales but remains in history.</li>
+            </ul>
+        </li>
+    </ol>
+    
+    <h3>❖ "Add" Button</h3>
+    <p>Allows registering a new business location in the application.</p>
+    
+    <h3>❖ Search Bar</h3>
+    <p>Allows filtering locations by keywords (name, city, ID, etc.)</p>
+    
+    <div class="image-placeholder">
+                <p>Interface Illustration</p>
+                <img src="/image/parametre2.png" alt="Description de l'image" width="900" height="600" style="max-width:100%;height:auto;border-radius:8px;" />
+        </div>
+</section>
+
+<!-- 3) Billing Settings -->
+<section class="section">
+    <h2>3) Billing Settings</h2>
+    
+    <h3>3.1) Interface Purpose</h3>
+    <p>The <strong>Billing Settings</strong> interface allows defining <strong>invoice numbering schemes</strong> as well as the <strong>layout of billing-related documents</strong>.</p>
+    <p>It plays an essential role in:</p>
+    <ul>
+        <li>Organizing and tracking invoices,</li>
+        <li>Complying with accounting standards,</li>
+        <li>Customizing the billing process,</li>
+        <li>Clarity for customers and tax administration.</li>
+    </ul>
+    
+    <h3>3.2) General Presentation</h3>
+    
+    <h4>Available Tabs</h4>
+    <p>At the top of the central section, there are <strong>two tabs:</strong></p>
+    
+    <h5>1. Billing Schemes</h5>
+    <ul>
+        <li>Manages <strong>invoice numbering rules.</strong></li>
+        <li>Allows creating different custom billing schemes.</li>
+    </ul>
+    
+    <h5>2. Invoice Layouts</h5>
+    <ul>
+        <li>Manages the <strong>design and print format of invoices. It also allows adding</strong> a new invoice layout.</li>
+    </ul>
+    
+    <h3>3.3) Billing Schemes Table</h3>
+    <p>This table displays the list of all billing schemes defined in the system.</p>
+    
+    <h4>Table Columns and Their Meaning:</h4>
+    
+    <ol>
+        <li><strong>Name</strong>
+            <ul>
+                <li><strong>Example value:</strong> Default</li>
+                <li><strong>Description:</strong> Name of the billing scheme. This can be "Default" or a custom name (e.g., "Export Invoice", "POS Invoice", etc.)</li>
+                <li><strong>Badge:</strong> Default (indicates this scheme is currently used as the main template)</li>
+            </ul>
+        </li>
+        <li><strong>Prefix</strong>
+            <ul>
+                <li><strong>Value:</strong> Empty field in the screenshot (but can contain text like INV, FAC, etc.)</li>
+                <li><strong>Purpose:</strong> Allows starting each invoice with a specific prefix (useful for quickly identifying invoice type or origin).</li>
+                <li><strong>Example:</strong> INV-0001, POS-0256</li>
+            </ul>
+        </li>
+        <li><strong>Numbering Type</strong>
+            <ul>
+                <li><strong>Value:</strong> Sequential</li>
+                <li><strong>Description:</strong> Indicates the invoice number generation mode.</li>
+                <li><strong>Sequential:</strong> Increments the number from the last recorded invoice (e.g., 0001 → 0002 → 0003).</li>
+                <li>Other types (not visible here) may exist depending on the system: date-based, alphanumeric, etc.</li>
+            </ul>
+        </li>
+        <li><strong>Start From</strong>
+            <ul>
+                <li><strong>Value:</strong> 1</li>
+                <li><strong>Purpose:</strong> Determines what number the first invoice in this scheme will start from.</li>
+                <li><strong>Example:</strong> If "Start From = 1", the first generated invoice will be 0001.</li>
+            </ul>
+        </li>
+        <li><strong>Number of Invoices</strong>
+            <ul>
+                <li><strong>Value:</strong> 26</li>
+                <li><strong>Description:</strong> Indicates the total number of invoices generated using this scheme.</li>
+                <li><strong>Purpose:</strong> Statistical tracking of scheme usage.</li>
+            </ul>
+        </li>
+        <li><strong>Number of Digits</strong>
+            <ul>
+                <li><strong>Value:</strong> 4</li>
+                <li><strong>Description:</strong> Defines the length of the invoice number (excluding prefix).</li>
+                <li><strong>Example:</strong>
+                    <ul>
+                        <li>If "number of digits" = 4 → 0001,0026,0099</li>
+                        <li>If = 6 → 000001, etc.</li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li><strong>Available Actions ("Action" column)</strong>
+            <p>For each billing scheme, you can perform the following actions:</p>
+            <p><strong>Edit</strong></p>
+            <ul>
+                <li>Allows modifying scheme settings:
+                    <ul>
+                        <li>Prefix</li>
+                        <li>Numbering type</li>
+                        <li>Starting point</li>
+                        <li>Number of digits</li>
+                    </ul>
+                </li>
+            </ul>
+            <p><strong>Delete</strong></p>
+            <ul>
+                <li>Purpose: Delete a scheme if it's no longer used.</li>
+                <li><strong>Note: The button is disabled because this is the default scheme, which cannot be</strong> deleted while active.</li>
+            </ul>
+            <p><strong>Set as Default</strong></p>
+            <ul>
+                <li>Used to define a scheme as default for all new invoices.</li>
+                <li>Disabled here, as this scheme is already set as default.</li>
+            </ul>
+        </li>
+    </ol>
+    
+    <h3>❖ "Add" Button</h3>
+    <p>Allows creating a new custom billing scheme.</p>
+    <p>The user can specify:</p>
+    <ul>
+        <li>The scheme name</li>
+        <li>The numbering type</li>
+    </ul>
+    
+    <h3>Search Bar</h3>
+    <p>Allows filtering schemes by keyword (name, prefix, etc.), which is useful when there are many schemes.</p>
+    
+    <div class="image-placeholder">
+                <p>Interface Illustration</p>
+                <img src="/image/parametre3.png" alt="Description de l'image" width="900" height="600" style="max-width:100%;height:auto;border-radius:8px;" />
+        </div>
+</section>
+
+<!-- 4) Barcode Interface -->
+<section class="section">
+    <h2>4) Barcode Interface</h2>
+    
+    <h3>4.1) Interface Purpose</h3>
+    <p>This interface allows managing barcode settings that will be used to print labels, stickers or identify products and documents.</p>
+    <p>It is essential if you want to:<br>
+    Generate custom barcodes.<br>
+    Configure label sheet formats.<br>
+    Organize stock tracking or retail sales.</p>
+    
+    <h3>4.2) General Presentation</h3>
+    
+    <h3>❖ Settings List</h3>
+    <p>This section displays the list of all registered settings for adhesive label sheets.</p>
+    
+    <h4>Displayed Table</h4>
+    <p>The table contains the following columns:</p>
+    
+    <table class="component-table">
+        <tr>
+            <th>Column Name</th>
+            <th>Clear Description</th>
+        </tr>
+        <tr>
+            <td>Sticker sheet setting name</td>
+            <td>The name assigned to a specific setting (e.g., "A4 Label", etc.).</td>
+        </tr>
+        <tr>
+            <td>Sticker sheet setting description</td>
+            <td>A detailed description of the sheet format or dimensions.</td>
+        </tr>
+        <tr>
+            <td>Action</td>
+            <td>The action buttons to manage each setting.</td>
+        </tr>
+    </table>
+    
+    <h3>❖ "Add New Setting" Button</h3>
+    <p>Opens the form to create a new label setting.</p>
+    <p>It contains the following information:</p>
+    
+    <table class="component-table">
+        <tr>
+            <th>Field</th>
+            <th>Description</th>
+        </tr>
+        <tr>
+            <td>Sticker sheet setting name</td>
+            <td>Name you assign to this label sheet template (e.g., "3x8 Labels", "A4 Format", etc.).</td>
+        </tr>
+        <tr>
+            <td>Sticker sheet setting description</td>
+            <td>Free description of the setting (e.g., usage, special format, dedicated printer).</td>
+        </tr>
+        <tr>
+            <td>Continuous feed or rolls</td>
+            <td>Check if you use continuous roll labels rather than sheets (often used with thermal printers).</td>
+        </tr>
+        <tr>
+            <td>Additional top margin (in inches)</td>
+            <td>Space to add above the first row of labels (to prevent printing from starting too high).</td>
+        </tr>
+        <tr>
+            <td>Additional left margin (in inches)</td>
+            <td>Space to add to the left of the first column of labels (for horizontal centering or specific margins).</td>
+        </tr>
+        <tr>
+            <td>Sticker width (in inches)</td>
+            <td>Width of a single label (not the sheet) – in inches.</td>
+        </tr>
+        <tr>
+            <td>Sticker height (in inches)</td>
+            <td>Height of a single label, also in inches.</td>
+        </tr>
+        <tr>
+            <td>Paper width (in inches)</td>
+            <td>Total width of the label sheet (e.g., 8.27 inches for A4).</td>
+        </tr>
+        <tr>
+            <td>Paper height (in inches)</td>
+            <td>Total height of the sheet (e.g., 11.69 inches for A4).</td>
+        </tr>
+        <tr>
+            <td>Stickers per row</td>
+            <td>Number of labels side by side per line (e.g., 3 labels per line on an A4 sheet).</td>
+        </tr>
+        <tr>
+            <td>Distance between two rows (in inches)</td>
+            <td>Vertical space between two lines of labels (if there's space between each row).</td>
+        </tr>
+        <tr>
+            <td>Distance between two columns (in inches)</td>
+            <td>Horizontal space between two columns of labels (useful if labels aren't joined).</td>
+        </tr>
+        <tr>
+            <td>Number of stickers per sheet</td>
+            <td>Total number of printable labels on a single sheet (calculated automatically based on dimensions or to be filled manually).</td>
+        </tr>
+        <tr>
+            <td>Set as default</td>
+            <td>If checked, this setting will be automatically used for label printing (without having to reselect it each time).</td>
+        </tr>
+        <tr>
+            <td>Save (button)</td>
+            <td>Saves the defined settings for later reuse.</td>
+        </tr>
+    </table>
+    
+    <p><strong>Note about units:</strong></p>
+    <p>All dimensional fields are expressed in inches (1 inch = 2.54 cm).<br>
+    If your measurements are in millimeters, divide them by 25.4 to convert to inches.</p>
+    
+    <h3>Search Bar</h3>
+    <p>Allows filtering settings by keyword. Easily find a specific format when you've created multiple ones.</p>
+    
+    <div class="image-placeholder">
+                <p>Interface Illustration</p>
+                <img src="/image/parametre4.png" alt="Description de l'image" width="900" height="600" style="max-width:100%;height:auto;border-radius:8px;" />
+        </div>
+</section>
+
+<!-- 5) Printers -->
+<section class="section">
+    <h2>5) Printers</h2>
+    
+    <h3>5.1) Interface Purpose</h3>
+    <p>The <strong>Printers</strong> interface in Movelys allows <strong>managing printers configured</strong> in the Movelys system. These printers are used notably for:</p>
+    <ul>
+        <li>Printing invoices,</li>
+        <li>Printing receipts (POS),</li>
+        <li>Generating labels or accounting reports.</li>
+    </ul>
+    <p>It's an essential interface for commercial or industrial environments connected to thermal, network or local printers.</p>
+    
+    <h3>5.2) General Presentation</h3>
+    
+    <h4>Printers Table</h4>
+    <table class="component-table">
+        <tr>
+            <th>Column Name</th>
+            <th>Professional Technical Description</th>
+        </tr>
+        <tr>
+            <td>Printer name</td>
+            <td>The name assigned to the printer (custom label to identify it in Movelys).</td>
+        </tr>
+        <tr>
+            <td>Connection type</td>
+            <td>Method of printer connection with Movelys: USB, IP, Bluetooth, Cloud, etc.</td>
+        </tr>
+        <tr>
+            <td>Capability profile</td>
+            <td>Specifies the printer's technical capabilities (e.g., Ticket, A4, Label, etc.).</td>
+        </tr>
+        <tr>
+            <td>Characters per line</td>
+            <td>Maximum number of printable characters on a single line. Useful parameter for POS printing.</td>
+        </tr>
+        <tr>
+            <td>IP Address</td>
+            <td>Network address of the printer (in case of TCP/IP connected printer).</td>
+        </tr>
+        <tr>
+            <td>Port</td>
+            <td>Network port or logical port used for connection (e.g., 9100, 631, COM3…).</td>
+        </tr>
+        <tr>
+            <td>Path</td>
+            <td>Local or UNC path to the printer (e.g., /dev/USB/lp0 or \\SERVER\EPSON).</td>
+        </tr>
+        <tr>
+            <td>Action</td>
+            <td>Allows editing or deleting a printer. (No button visible here as no printer added)</td>
+        </tr>
+    </table>
+    <h3>❖ "Add Printer" Button</h3>
+<p>Allows launching a configuration form for a new printer.</p>
+<p>When adding, the typical fields to complete are:</p>
+
+<table class="component-table">
+    <tr>
+        <th>Field</th>
+        <th>Description</th>
+    </tr>
+    <tr>
+        <td>Printer name</td>
+        <td>A custom name to easily identify this printer (e.g., "Cash register printer 1", "Kitchen", etc.).</td>
+    </tr>
+    <tr>
+        <td>Connection type</td>
+        <td>The connection mode used for the printer. Possible options: • Network (via IP) • USB (local connection) • Bluetooth.</td>
+    </tr>
+    <tr>
+        <td>Capability profile</td>
+        <td>Selection of a predefined printer capability profile (e.g., default, high performance, thermal, etc.).</td>
+    </tr>
+    <tr>
+        <td>Characters per line</td>
+        <td>Maximum number of characters the printer can print on a single line (important for receipt layout).</td>
+    </tr>
+    <tr>
+        <td>IP Address</td>
+        <td>Printer IP address if network-connected. Example: 192.168.1.100.</td>
+    </tr>
+    <tr>
+        <td>Port</td>
+        <td>Port used to communicate with the printer. Default: 9100, which is standard for network printers.</td>
+    </tr>
+    <tr>
+        <td>"Save" button</td>
+        <td>Saves the settings of the added printer.</td>
+    </tr>
+</table>
+
+<p><strong>Important technical notes:</strong></p>
+<ul>
+    <li><strong>Fields marked with an asterisk (*) are mandatory.</strong></li>
+    <li>If using a <strong>network printer, ensure the IP address is static</strong> to avoid disconnections.</li>
+    <li>The number of characters per line varies by printer type (thermal receipt ≈ 32-48 characters; A4 ≈ 80-100+).</li>
+    <li>Port 9100 is commonly used for printers via RAW/JetDirect protocol.</li>
+</ul>
+
+<h3>Search Bar</h3>
+<p>Allows dynamically filtering printers listed in the table by keyword (e.g., EPSON, TSP143, etc.)</p>
+
+        <div class="image-placeholder">
+                <p>Interface Illustration</p>
+                <img src="/image/parametre5.png" alt="Description de l'image" width="900" height="600" style="max-width:100%;height:auto;border-radius:8px;" />
+        </div>
+</section>
+
+<!-- 6) Tax Rates -->
+<section class="section">
+    <h2>6) Tax Rates</h2>
+    
+    <h3>6.1) Interface Purpose</h3>
+    <p>The <strong>Tax Rates interface allows administrators or accountants to:</strong></p>
+    <ul>
+        <li>Create and manage different tax rates (VAT, local taxes, eco-contribution, etc.).</li>
+        <li>Organize <strong>tax groups, meaning a</strong> <strong>combination of multiple taxes</strong> <strong>applied simultaneously to a product or transaction.</strong></li>
+    </ul>
+    
+    <h3>6.2) Interface Structure</h3>
+    <p>The screen is divided into two main sections:</p>
+    <ol>
+        <li><strong>All your tax rates (simple rates)</strong></li>
+        <li><strong>Tax groups (combination of multiple rates)</strong></li>
+    </ol>
+    
+    <h4>1) Section: All Your Tax Rates</h4>
+    
+    <h5>Description</h5>
+    <p>Allows managing <strong>individual tax rates, such as:</strong></p>
+    <ul>
+        <li>VAT 19.25%</li>
+        <li>VAT 0%</li>
+        <li>Eco tax 3%</li>
+        <li>Local tax 5%, etc.</li>
+    </ul>
+    
+    <h5>Interface Components</h5>
+    
+    <p><strong>Simple Taxes Table</strong></p>
+    <table class="component-table">
+        <tr>
+            <th>Column</th>
+            <th>Function</th>
+        </tr>
+        <tr>
+            <td>Name</td>
+            <td>Name assigned to the tax (e.g., Standard VAT, Local Tax)</td>
+        </tr>
+        <tr>
+            <td>Tax Rate %</td>
+            <td>The percentage applied (e.g., 19.25%, 5%, 0%)</td>
+        </tr>
+        <tr>
+            <td>Action</td>
+            <td>Buttons to edit or delete a rate (not visible as empty here)</td>
+        </tr>
+    </table>
+    
+    <p><strong>Current Status: No rates registered (No data available in the table)</strong></p>
+    
+    <p><strong>"Add" Button</strong></p>
+    <p>Typical fields to enter:</p>
+    <ul>
+        <li>Tax name</li>
+        <li>Tax rate %</li>
+    </ul>
+    
+    <p><strong>Search Bar</strong></p>
+    <p>Allows dynamically filtering the list of registered taxes.</p>
+    
+    <h3>❖ Data Controls</h3>
+    <table class="component-table">
+        <tr>
+            <th>Button</th>
+            <th>Function</th>
+        </tr>
+        <tr>
+            <td>Export CSV</td>
+            <td>Downloads table data in .csv format</td>
+        </tr>
+        <tr>
+            <td>Export Excel</td>
+            <td>Downloads data in Excel .xlsx format</td>
+        </tr>
+        <tr>
+            <td>Print</td>
+            <td>Directly prints the list</td>
+        </tr>
+        <tr>
+            <td>Column Visibility</td>
+            <td>Shows/hides certain table columns</td>
+        </tr>
+        <tr>
+            <td>Export PDF</td>
+            <td>Generates a PDF file of the tax list</td>
+        </tr>
+    </table>
+    
+    <ul>
+        <li><strong>Pagination</strong>
+            <ul>
+                <li>Allows navigation between record pages if their number exceeds the defined threshold.</li>
+                <li>Visible controls: Previous and Next</li>
+            </ul>
+        </li>
+        <li><strong>Row Display Selector</strong>
+            <ul>
+                <li><strong>Field:</strong> Show [25] Entries</li>
+                <li>Sets how many rows are visible in the table per page (25 by default).</li>
+            </ul>
+        </li>
+    </ul>
+    
+    <h4>2) Section: Tax Groups</h4>
+    
+    <h5>Description</h5>
+    <p>This section allows creating tax groups, meaning sets of multiple rates applied in parallel to a product or sale.</p>
+    <p>Example:<br>
+    A product may be subject to:<br>
+    VAT 19.25%<br>
+    Municipal tax 1.75%<br>
+    Total applied via a tax group.</p>
+    
+    <h5>Interface Components</h5>
+    
+    <p><strong>Tax Groups Table</strong></p>
+    <table class="component-table">
+        <tr>
+            <th>Column</th>
+            <th>Function</th>
+        </tr>
+        <tr>
+            <td>Name</td>
+            <td>Group name (e.g., France Taxes 2025, VAT + Eco Tax)</td>
+        </tr>
+        <tr>
+            <td>Tax Rate %</td>
+            <td>Total sum of percentages composing the group</td>
+        </tr>
+        <tr>
+            <td>Sub-taxes</td>
+            <td>List of individual taxes included in the group</td>
+        </tr>
+        <tr>
+            <td>Action</td>
+            <td>Buttons to edit or delete the group (none here)</td>
+        </tr>
+    </table>
+    
+    <p><strong>Current Status: No groups registered.</strong></p>
+    
+    <p><strong>"Add" Button</strong></p>
+    <ul>
+        <li>Allows adding a new tax group.</li>
+        <li>Typical fields:
+            <ul>
+                <li>Name</li>
+                <li>Sub-taxes</li>
+            </ul>
+        </li>
+    </ul>
+    
+    <p><strong>Search Bar</strong></p>
+    <p>Allows filtering existing tax groups.</p>
+    
+    <h3>❖ Data Controls</h3>
+    <table class="component-table">
+        <tr>
+            <th>Button</th>
+            <th>Function</th>
+        </tr>
+        <tr>
+            <td>Export CSV</td>
+            <td>Exports group list to CSV</td>
+        </tr>
+        <tr>
+            <td>Export Excel</td>
+            <td>Exports to Excel format</td>
+        </tr>
+        <tr>
+            <td>Print</td>
+            <td>Direct printing of the list</td>
+        </tr>
+        <tr>
+            <td>Column Visibility</td>
+            <td>Manages displayed columns</td>
+        </tr>
+        <tr>
+            <td>Export PDF</td>
+            <td>Generates PDF of the table</td>
+        </tr>
+    </table>
+    
+    <ul>
+        <li><strong>Pagination</strong>
+            <ul>
+                <li>Allows navigation between record pages if their number exceeds the defined threshold.</li>
+                <li>Visible controls: Previous and Next</li>
+            </ul>
+        </li>
+        <li><strong>Row Display Selector</strong>
+            <ul>
+                <li><strong>Field:</strong> Show [25] Entries</li>
+                <li>Sets how many rows are visible in the table per page (25 by default).</li>
+            </ul>
+        </li>
+    </ul>
+    
+    <div class="image-placeholder">
+                <p>Interface Illustration</p>
+                <img src="/image/parametre6.png" alt="Description de l'image" width="900" height="600" style="max-width:100%;height:auto;border-radius:8px;" />
+        </div>
+</section>
+
+<!-- 7) Subscription Plans -->
+<section class="section">
+    <h2>7) Subscription Plans</h2>
+    
+    <h3>7.1) Interface Purpose</h3>
+    <p>The <strong>Subscription Plans</strong> interface in Movelys allows users to <strong>subscribe, view or manage a monthly subscription</strong> to the Movelys application. This system is based on <strong>plans</strong> (or "packages") according to business volume and company type (SME, large enterprise, multi-location businesses...).</p>
+    
+    <h3>7.2) General Presentation</h3>
+    <p>The screen is divided into three main sections:</p>
+    <ol>
+        <li><strong>Active subscription status</strong></li>
+        <li><strong>History/details of subscriptions</strong></li>
+        <li>Choice and presentation of packages (plans)</li>
+    </ol>
+    
+    <h4>1) Top Block: Active Subscription</h4>
+    <p>"No active subscription found"<br>
+    This means the user currently has no active subscription in use.</p>
+    
+    <h4>2) Central Section: List of Existing Subscriptions</h4>
+    <p>This section displays all past or current subscriptions (whether active, expired or pending).</p>
+    
+    <h3>❖ Entry Control Bar</h3>
+    <ul>
+        <li><strong>Show:</strong> Selector for number of visible entries (25 by default).</li>
+        <li><strong>Search:</strong> Search field to filter subscriptions by keyword.</li>
+    </ul>
+    
+    <h3>❖ Available Action Buttons</h3>
+    <table class="component-table">
+        <tr>
+            <th>Button</th>
+            <th>Function</th>
+        </tr>
+        <tr>
+            <td>Export CSV</td>
+            <td>Exports group list to CSV</td>
+        </tr>
+        <tr>
+            <td>Export Excel</td>
+            <td>Exports to Excel format</td>
+        </tr>
+        <tr>
+            <td>Print</td>
+            <td>Direct printing of the list</td>
+        </tr>
+        <tr>
+            <td>Column Visibility</td>
+            <td>Manages displayed columns</td>
+        </tr>
+        <tr>
+            <td>Export PDF</td>
+            <td>Generates PDF of the table</td>
+        </tr>
+    </table>
+    
+    <p>These tools allow exporting or printing the subscription list for archiving or reporting.</p>
+    
+    <h4>Subscription Data Table</h4>
+    <table class="component-table">
+        <tr>
+            <th>Column</th>
+            <th>Technical Description</th>
+        </tr>
+        <tr>
+            <td>Package name</td>
+            <td>The name of the subscribed plan</td>
+        </tr>
+        <tr>
+            <td>Start date</td>
+            <td>Date when subscription was activated</td>
+        </tr>
+        <tr>
+            <td>Trial end date</td>
+            <td>If trial period active, end date</td>
+        </tr>
+        <tr>
+            <td>End date</td>
+            <td>Plan validity end</td>
+        </tr>
+        <tr>
+            <td>Price</td>
+            <td>Amount paid for subscription</td>
+        </tr>
+        <tr>
+            <td>Paid via</td>
+            <td>Payment method used</td>
+        </tr>
+        <tr>
+            <td>Transaction Id</td>
+            <td>Unique payment reference</td>
+        </tr>
+        <tr>
+            <td>Status</td>
+            <td>Subscription status</td>
+        </tr>
+        <tr>
+            <td>Created at</td>
+            <td>Entry creation date in database</td>
+        </tr>
+        <tr>
+            <td>Created by</td>
+            <td>Name of responsible admin or user</td>
+        </tr>
+        <tr>
+            <td>Action</td>
+            <td>View button to see full details of this subscription.</td>
+        </tr>
+    </table>
+    
+    <h4>3) Bottom Section: Available Plan Offers</h4>
+    <p>This section allows users to choose among <strong>3 monthly subscription packages.</strong></p>
+    
+    <h5>Package 1: Basic</h5>
+    <table class="component-table">
+        <tr>
+            <th>Detail</th>
+            <th>Description</th>
+        </tr>
+        <tr>
+            <td>1 Location</td>
+            <td>Only one business or site managed</td>
+        </tr>
+        <tr>
+            <td>1 User</td>
+            <td>Only one user manages the account</td>
+        </tr>
+        <tr>
+            <td>250 Products</td>
+            <td>Maximum number of products</td>
+        </tr>
+        <tr>
+            <td>Unlimited invoices</td>
+            <td>No billing limit</td>
+        </tr>
+        <tr>
+            <td>7-day trial</td>
+            <td>Free trial period</td>
+        </tr>
+        <tr>
+            <td>Price: 5,000 FCFA/month</td>
+            <td>Economic plan for small businesses</td>
+        </tr>
+        <tr>
+            <td>Button: Pay and subscribe</td>
+            <td>Starts subscription procedure</td>
+        </tr>
+    </table>
+    
+    <p><strong>Target: Small shops, neighborhood businesses, independent users.</strong></p>
+    
+    <h5>Package 2: Standard</h5>
+    <table class="component-table">
+        <tr>
+            <th>Detail</th>
+            <th>Description</th>
+        </tr>
+        <tr>
+            <td>3 Locations</td>
+            <td>Up to 3 sites/branches</td>
+        </tr>
+        <tr>
+            <td>6 Users</td>
+            <td>6 managed user accounts</td>
+        </tr>
+        <tr>
+            <td>1,000 Products</td>
+            <td>Higher management capacity</td>
+        </tr>
+        <tr>
+            <td>Unlimited invoices</td>
+            <td>No billing limit</td>
+        </tr>
+        <tr>
+            <td>Price: 15,000 FCFA/month</td>
+            <td>Optimal cost/volume ratio</td>
+        </tr>
+        <tr>
+            <td>Button: Pay and subscribe</td>
+            <td>Starts subscription procedure</td>
+        </tr>
+    </table>
+    
+    <p>Target: SMEs with multiple points of sale or multi-user teams.</p>
+    
+    <h5>Package 3: Premium</h5>
+    <table class="component-table">
+        <tr>
+            <th>Detail</th>
+            <th>Description</th>
+        </tr>
+        <tr>
+            <td>Unlimited locations</td>
+            <td>No ceiling on number of managed sites</td>
+        </tr>
+        <tr>
+            <td>25 users</td>
+            <td>Management of many employees</td>
+        </tr>
+        <tr>
+            <td>Unlimited products</td>
+            <td>No inventory limit</td>
+        </tr>
+        <tr>
+            <td>Unlimited invoices</td>
+            <td>No billing limit</td>
+        </tr>
+        <tr>
+            <td>Price: 35,000 FCFA/month</td>
+            <td>High-end package</td>
+        </tr>
+        <tr>
+            <td>Button: Pay and subscribe</td>
+            <td>Starts subscription procedure</td>
+        </tr>
+    </table>
+    
+    <p><strong>Target: Large companies, store chains, businesses with wide deployment.</strong></p>
+    
+    <div class="image-placeholder">
+                <p>Interface Illustration</p>
+                <img src="/image/parametre7.png" alt="Description de l'image" width="900" height="600" style="max-width:100%;height:auto;border-radius:8px;" />
+        </div>
+</section>
+
+<!-- Conclusion -->
+<section class="section">
+    <h2>Conclusion</h2>
+    <p>Movelys' settings management module provides businesses with a <strong>centralized and intelligent configuration framework, essential for optimal use of</strong> the application. By allowing definition, customization and control of each fundamental aspect of the system, this module helps create a tailored working environment that complies with the organization's internal and external requirements.</p>
+    
+    <p>It constitutes the <strong>strategic anchor point of the tool, ensuring all operations –</strong> from billing to inventory management – execute according to company-specific rules and standards. Thanks to this configuration flexibility, Movelys becomes a truly modular, scalable management tool aligned with field practices.</p>
+    
+    <p>Effectively configuring settings in Movelys means laying solid foundations for a high-performance, coherent information system perfectly adapted to daily realities.</p>
+</section>
+</div>

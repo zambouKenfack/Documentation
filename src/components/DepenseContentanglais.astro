@@ -1,0 +1,551 @@
+---
+
+import '../styles/global1.css';
+---
+<div class="container">
+
+        <header class="header">
+                <h1>Expense Management</h1>
+            </header>
+    <!-- Introduction Section -->
+    <section class="introduction">
+        <h2>Introduction</h2>
+        <p>
+            Expense management is a key element of financial performance and effective business management. The expense management module integrated into the Movelys application allows organizations to track, control, and analyze in real-time all their operational financial outflows: purchases unrelated to products, service payments, operational expenses, or exceptional charges.
+        </p>
+        <p>
+            This module provides a simple yet powerful interface to accurately record expenses by associating them with categories (e.g., transport, electricity, maintenance), suppliers, payment methods, supporting documents (attached files), and custom notes. Each expense is automatically linked to the fiscal year and can be integrated into financial reports for a comprehensive view of the company's economic health.
+        </p>
+        <p>
+            Thanks to its flexibility, Movelys also enables multi-location and multi-user tracking while ensuring complete traceability and secure centralization of information. This facilitates strategic decision-making, cost control, and the preparation of audits or management reports.
+        </p>
+    </section>
+
+    <!-- Section 1: List Expenses -->
+    <section class="section-1">
+        <h2>1) List Expenses</h2>
+
+        <article class="subsection">
+            <h3>1.1) Interface Purpose</h3>
+            <p>
+                The "Expense" interface is designed to help businesses centralize, track, and <strong>analyze all outgoing payments related to their daily operations. It ensures effective budget management by providing complete visibility on:</strong>
+            </p>
+            <ul>
+                <li>Operational expenses,</li>
+                <li>Completed or pending payments,</li>
+                <li>One-time or recurring charges.</li>
+            </ul>
+            <p>
+                This page also offers powerful filtering, exporting, and <strong>accounting management</strong> tools.
+            </p>
+        </article>
+
+        <article class="subsection">
+            <h3>1.2) General Interface Structure</h3>
+            <p>
+                The screen consists of two main areas:
+            </p>
+            <ul>
+                <li><strong>Filter bar and advanced search</strong></li>
+                <li><strong>Table of recorded expenses</strong></li>
+            </ul>
+
+            <h4>1.2.1) Filter Bar – Top Section</h4>
+            <p>
+                This section allows users to <strong>dynamically filter</strong> the table data based on several criteria. It is useful for targeting specific expense types or performing detailed analyses.
+            </p>
+            <table class="component-table">
+                <tr>
+                    <th>Field</th>
+                    <th>Function</th>
+                </tr>
+                <tr>
+                    <td>Business Location</td>
+                    <td>Select the site related to the expense (e.g., headquarters, store, warehouse)</td>
+                </tr>
+                <tr>
+                    <td>Expense For</td>
+                    <td>Indicates the purpose or recipient of the expense</td>
+                </tr>
+                <tr>
+                    <td>Added By</td>
+                    <td>Displays only expenses entered by a specific user</td>
+                </tr>
+                <tr>
+                    <td>Expense Category</td>
+                    <td>General classification of the expense (e.g., logistics, communication, HR...)</td>
+                </tr>
+                <tr>
+                    <td>Subcategory</td>
+                    <td>More specific detail of the expense (e.g., fuel, internet, salaries...)</td>
+                </tr>
+                <tr>
+                    <td>Contact</td>
+                    <td>Name or entity that received the payment (supplier, service provider, etc.)</td>
+                </tr>
+                <tr>
+                    <td>Date Range</td>
+                    <td>Chronological filter (default: from 01/01/2025 to 12/31/2025)</td>
+                </tr>
+                <tr>
+                    <td>Payment Status</td>
+                    <td>Displays paid, partially paid, or unpaid expenses</td>
+                </tr>
+            </table>
+            <p>
+                <strong>Goal:</strong> Provide <strong>precise and targeted search</strong> capabilities, suitable for accounting analysis, periodic reporting, and transaction verification.
+            </p>
+
+            <h4>1.2.2) Expense Table – Central Section</h4>
+            <p>
+                This section lists all expenses already recorded in the system, displayed as <strong>rows of data organized in columns</strong>.
+            </p>
+            <h5>Main Table Columns</h5>
+            <table class="component-table">
+                <tr>
+                    <th>Column</th>
+                    <th>Description</th>
+                </tr>
+                <tr>
+                    <td>Action</td>
+                    <td>Allows viewing, editing, or deleting an expense entry</td>
+                </tr>
+                <tr>
+                    <td>Date</td>
+                    <td>Expense recording date</td>
+                </tr>
+                <tr>
+                    <td>Reference Number</td>
+                    <td>Unique transaction ID (automatically generated or manually entered)</td>
+                </tr>
+                <tr>
+                    <td>Recurring Details</td>
+                    <td>Indicates if the expense is one-time or recurring (subscription, contract, etc.)</td>
+                </tr>
+                <tr>
+                    <td>Expense Category</td>
+                    <td>Primary classification of the expense</td>
+                </tr>
+                <tr>
+                    <td>Subcategory</td>
+                    <td>More specific detail of the expense</td>
+                </tr>
+                <tr>
+                    <td>Location</td>
+                    <td>Internal site or department to which the expense is allocated</td>
+                </tr>
+                <tr>
+                    <td>Payment Status</td>
+                    <td>Indicates if the expense is paid, partially paid, or unpaid</td>
+                </tr>
+                <tr>
+                    <td>Tax</td>
+                    <td>VAT or other applicable tax (if configured)</td>
+                </tr>
+                <tr>
+                    <td>Total Amount</td>
+                    <td>Total expense amount, including taxes</td>
+                </tr>
+                <tr>
+                    <td>Amount Due</td>
+                    <td>Remaining amount to be paid if partially or deferred</td>
+                </tr>
+                <tr>
+                    <td>Expense For</td>
+                    <td>Internal beneficiary or cost center (e.g., department, service)</td>
+                </tr>
+                <tr>
+                    <td>Contact</td>
+                    <td>Third party involved in the transaction (e.g., supplier, service provider)</td>
+                </tr>
+                <tr>
+                    <td>Expense Note</td>
+                    <td>Free-text field for additional details (justification, observations)</td>
+                </tr>
+                <tr>
+                    <td>Added By</td>
+                    <td>Name of the user who recorded the expense</td>
+                </tr>
+            </table>
+            <p>
+                These columns provide a comprehensive view of each expense entry, facilitating easy auditing and verification.
+            </p>
+             <div class="image-placeholder">
+                <p>Interface Illustration</p>
+                <img src="/image/depense1.png" alt="Description de l'image" width="900" height="600" style="max-width:100%;height:auto;border-radius:8px;" />
+            </div>
+        </article>
+
+        <article class="subsection">
+            <h3>1.3) Quick Action Buttons</h3>
+            <table class="component-table">
+                <tr>
+                    <th>Button</th>
+                    <th>Function</th>
+                </tr>
+                <tr>
+                    <td>Add</td>
+                    <td>Allows manual creation of a new expense</td>
+                </tr>
+                <tr>
+                    <td>Import Fees</td>
+                    <td>Adds fees related to product imports (customs, transit, etc.)</td>
+                </tr>
+                <tr>
+                    <td>Export CSV / Excel</td>
+                    <td>Exports data for analysis in spreadsheet format</td>
+                </tr>
+                <tr>
+                    <td>Print</td>
+                    <td>Prints the current list of expenses</td>
+                </tr>
+                <tr>
+                    <td>Export PDF</td>
+                    <td>Generates a PDF report of displayed expenses</td>
+                </tr>
+                <tr>
+                    <td>Column Visibility</td>
+                    <td>Shows or hides certain columns based on user preference</td>
+                </tr>
+            </table>
+        </article>
+
+        <article class="subsection">
+            <h3>1.4) Access Control and Roles</h3>
+            <table class="component-table">
+                <tr>
+                    <th>Role</th>
+                    <th>Expense Management Access</th>
+                </tr>
+                <tr>
+                    <td>Administrator</td>
+                    <td>Creation, modification, deletion, export</td>
+                </tr>
+                <tr>
+                    <td>Accountant / Finance</td>
+                    <td>Read and export, expense entry</td>
+                </tr>
+                <tr>
+                    <td>Department Head</td>
+                    <td>Read-only or restricted access to certain categories</td>
+                </tr>
+                <tr>
+                    <td>Standard User</td>
+                    <td>No access or limited access based on permissions</td>
+                </tr>
+            </table>
+        </article>
+    </section>
+
+    <!-- Section 2: Add an Expense -->
+    <section class="section-2">
+        <h2>2) Add an Expense</h2>
+
+        <article class="subsection">
+            <h3>2.1) Section Purpose</h3>
+            <p>
+                The "Add an Expense" interface allows users to record any cash outflow related to business activities (operational expenses, professional fees, miscellaneous charges, etc.).
+            </p>
+            <p>
+                It ensures rigorous tracking of expenses for proper accounting, <strong>optimized budget management, and complete traceability of each financial transaction.</strong>
+            </p>
+        </article>
+
+        <article class="subsection">
+            <h3>2.2) General Form Structure</h3>
+            <p>
+                The form consists of three functional blocks:
+            </p>
+            <ul>
+                <li><strong>General expense information</strong></li>
+                <li><strong>Recurrence settings (optional)</strong></li>
+                <li>Add an associated payment</li>
+            </ul>
+
+            <h4>2.2.1) General Expense Information</h4>
+            <table class="component-table">
+                <tr>
+                    <th>Field</th>
+                    <th>Description</th>
+                </tr>
+                <tr>
+                    <td>Business Location</td>
+                    <td>Select the site related to the expense (store, warehouse, headquarters, etc.)</td>
+                </tr>
+                <tr>
+                    <td>Expense Category</td>
+                    <td>Primary classification of the expense (e.g., Communication, Transport, Supplies)</td>
+                </tr>
+                <tr>
+                    <td>Subcategory</td>
+                    <td>More specific detail of the expense (e.g., Internet, fuel, stationery...)</td>
+                </tr>
+                <tr>
+                    <td>Reference Number</td>
+                    <td>Unique expense identifier. If empty, it will be automatically generated by the system</td>
+                </tr>
+                <tr>
+                    <td>Date</td>
+                    <td>Effective date of the expense. Auto-filled but modifiable</td>
+                </tr>
+                <tr>
+                    <td>Attach Document</td>
+                    <td>Supporting document for the expense (invoice, receipt, etc.). Supported formats: PDF, DOCX, JPEG, PNG (max 5 MB)</td>
+                </tr>
+                <tr>
+                    <td>Expense For</td>
+                    <td>Internal beneficiary (employee, department) or payment destination</td>
+                </tr>
+                <tr>
+                    <td>Contact</td>
+                    <td>Third party involved (supplier, service provider)</td>
+                </tr>
+                <tr>
+                    <td>Applicable Taxes</td>
+                    <td>VAT or other tax related to the expense. Selected from a predefined list</td>
+                </tr>
+                <tr>
+                    <td>Total Amount</td>
+                    <td>Total expense amount including taxes</td>
+                </tr>
+                <tr>
+                    <td>Expense Note</td>
+                    <td>Free-text field for additional details or justification</td>
+                </tr>
+                <tr>
+                    <td>Is This a Reimbursement?</td>
+                    <td>Indicates if the expense corresponds to a reimbursement of an advance or personal purchase made by an employee</td>
+                </tr>
+            </table>
+            <p>
+                These fields ensure accounting consistency, budget justification, and complete traceability.
+            </p>
+
+            <h4>2.2.2) Recurrence Settings (Optional)</h4>
+            <p>
+                This section allows users to indicate if the expense is recurring, i.e., it repeats at a defined frequency.
+            </p>
+            <table class="component-table">
+                <tr>
+                    <th>Field</th>
+                    <th>Description</th>
+                </tr>
+                <tr>
+                    <td>Is This Recurring?</td>
+                    <td>Enables automatic generation of this expense at a set frequency</td>
+                </tr>
+                <tr>
+                    <td>Recurrence Interval</td>
+                    <td>Selects the repetition unit (days, weeks, months, years)</td>
+                </tr>
+                <tr>
+                    <td>Number of Repetitions</td>
+                    <td>Number of times the expense will repeat. If empty, recurrence is unlimited</td>
+                </tr>
+            </table>
+            <p>
+                Example use cases: Monthly internet subscription, rent, regular service contracts.
+            </p>
+
+            <h4>2.2.3) Add an Associated Payment</h4>
+            <p>
+                This section allows immediate recording of the payment associated with the expense, avoiding separate entry via the payment journal.
+            </p>
+            <table class="component-table">
+                <tr>
+                    <th>Field</th>
+                    <th>Description</th>
+                </tr>
+                <tr>
+                    <td>Amount</td>
+                    <td>Amount paid (can be partial if the rest is on credit)</td>
+                </tr>
+                <tr>
+                    <td>Paid On</td>
+                    <td>Effective payment date</td>
+                </tr>
+                <tr>
+                    <td>Payment Method</td>
+                    <td>Options: cash, card, bank transfer, check, mobile money, etc.</td>
+                </tr>
+                <tr>
+                    <td>Payment Note</td>
+                    <td>Comment on the payment (e.g., "Partial transfer made", "Balance due in 15 days")</td>
+                </tr>
+            </table>
+            <p>
+                The system automatically calculates the "Amount Due" by subtracting the paid amount from the total.
+            </p>
+        </article>
+
+        <article class="subsection">
+            <h3>Validation Button</h3>
+            <p>
+                <strong>Save Button:</strong> Records the expense with or without immediate payment. It then becomes visible in the expense list.
+            </p>
+            <div class="image-placeholder">
+                <p>Interface Illustration</p>
+                <img src="/image/depense2.png" alt="Description de l'image" width="900" height="600" style="max-width:100%;height:auto;border-radius:8px;" />
+            </div>
+        </article>
+
+        <article class="subsection">
+            <h3>2.3) Related Permissions</h3>
+            <table class="component-table">
+                <tr>
+                    <th>User Role</th>
+                    <th>Access</th>
+                </tr>
+                <tr>
+                    <td>Administrator</td>
+                    <td>Full rights</td>
+                </tr>
+                <tr>
+                    <td>Accountant / Finance</td>
+                    <td>Creation, editing, payment</td>
+                </tr>
+                <tr>
+                    <td>Administrative Staff</td>
+                    <td>Creation only</td>
+                </tr>
+                <tr>
+                    <td>Standard User</td>
+                    <td>No access</td>
+                </tr>
+            </table>
+        </article>
+    </section>
+
+    <!-- Section 3: Expense Categories -->
+    <section class="section-3">
+        <h2>3) Expense Categories</h2>
+
+        <article class="subsection">
+            <h3>3.1) Interface Purpose</h3>
+            <p>
+                The "Expense Categories" section allows users to organize, classify, and <strong>structure the types of expenses incurred by the business. It forms the analytical backbone of expense management, enabling:</strong>
+            </p>
+            <ul>
+                <li>Detailed accounting tracking,</li>
+                <li>Precise reporting by category,</li>
+                <li>Better budget analysis,</li>
+                <li>And clarity when recording expenses.</li>
+            </ul>
+        </article>
+
+        <article class="subsection">
+            <h3>3.2) Interface Structure</h3>
+            <p>
+                The interface consists of two blocks:
+            </p>
+            <ul>
+                <li>Top bar: Action tools</li>
+                <li>Main table: List of recorded categories</li>
+            </ul>
+
+            <h4>3.2.1) Control and Action Tools</h4>
+            <p>
+                <strong>Add Button</strong>
+            </p>
+            <ul>
+                <li><strong>Function:</strong> Opens a form to register a new expense <strong>category.</strong></li>
+                <li><strong>Role:</strong> Structure expenses by logical families (e.g., Transport, Supplies, Rent...).</li>
+            </ul>
+
+            <table class="component-table">
+                <tr>
+                    <th>Button</th>
+                    <th>Purpose</th>
+                </tr>
+                <tr>
+                    <td>Export CSV</td>
+                    <td>Exports data in raw format (readable in Excel or a text editor)</td>
+                </tr>
+                <tr>
+                    <td>Export Excel</td>
+                    <td>Generates a well-formatted Excel file</td>
+                </tr>
+                <tr>
+                    <td>Print</td>
+                    <td>Directly prints the displayed list</td>
+                </tr>
+                <tr>
+                    <td>Column Visibility</td>
+                    <td>Dynamically shows/hides certain table columns</td>
+                </tr>
+                <tr>
+                    <td>Export PDF</td>
+                    <td>Generates a PDF document of the category list</td>
+                </tr>
+            </table>
+
+            <p>
+                <strong>Search Bar</strong>
+            </p>
+            <ul>
+                <li>Filters displayed categories by name or code.</li>
+                <li>Useful for large databases with dozens of expense items.</li>
+            </ul>
+
+            <h4>3.2.2) Category Management Table</h4>
+            <p>
+                This dynamic table displays the different expense categories recorded in the <strong>system.</strong>
+            </p>
+            <table class="component-table">
+                <tr>
+                    <th>Column</th>
+                    <th>Description</th>
+                </tr>
+                <tr>
+                    <td>Category Name</td>
+                    <td>Name visible when recording an expense (e.g., Communication, Maintenance, HR, Advertising)</td>
+                </tr>
+                <tr>
+                    <td>Category Code</td>
+                    <td>Unique identifier (often alphanumeric) for quick internal indexing</td>
+                </tr>
+                <tr>
+                    <td>Action</td>
+                    <td>Quick actions: edit or delete a specific category</td>
+                </tr>
+            </table>
+            <div class="image-placeholder">
+                <p>Interface Illustration</p>
+                <img src="/image/depense3.png" alt="Description de l'image" width="900" height="600" style="max-width:100%;height:auto;border-radius:8px;" />
+            </div>
+        </article>
+
+        <article class="subsection">
+            <h3>3.3) Recommended Permissions</h3>
+            <table class="component-table">
+                <tr>
+                    <th>User Role</th>
+                    <th>Access to This Section</th>
+                </tr>
+                <tr>
+                    <td>Administrator</td>
+                    <td>Creation, modification, deletion</td>
+                </tr>
+                <tr>
+                    <td>Finance Manager</td>
+                    <td>Creation & editing</td>
+                </tr>
+                <tr>
+                    <td>Data Entry Staff / Standard User</td>
+                    <td>Read-only or restricted access</td>
+                </tr>
+            </table>
+        </article>
+    </section>
+
+    <!-- Conclusion -->
+    <section class="conclusion">
+        <h2>Conclusion</h2>
+        <p>
+            The Movelys expense management module provides businesses with an efficient, organized, and professional solution to <strong>control their expenses</strong>. By centralizing all expense-related data and making it accessible and usable, it enables better cost anticipation, rigorous budget tracking, and overall improvement in financial governance.
+        </p>
+        <p>
+            With Movelys, expenses are not just recorded: they are analyzed, classified, and used as a lever for optimization. It is an essential tool for enhancing financial transparency, controlling outflows, and supporting long-term business profitability.
+        </p>
+    </section>
+</div>

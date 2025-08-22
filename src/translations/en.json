@@ -1,0 +1,46 @@
+{
+  "languages": {
+    "fr": "French",
+    "en": "English"
+  },
+  "search": {
+    "placeholder": "Search...",
+    "results": "Results for: {term}",
+    "noResults": "No results found for: {term}",
+    "found": "{count} result(s) found"
+  },
+  "theme": {
+    "toggle": "Toggle theme"
+  },
+  "hero": {
+    "title": "Transform Your Business Management with Movelys",
+    "intro": "Welcome to the official documentation of Movelys, a professional web solution designed to help businesses efficiently manage their sales, purchases, inventory, and more, all from a unified, modern, and secure environment.",
+    "description1": "Movelys was designed to meet the real needs of organizations looking to optimize their internal processes while centralizing all their business data. With an intuitive interface and interconnected modules, the application facilitates the daily management of commercial, logistical, and financial operations, while improving productivity, information reliability, and strategic decision-making.",
+    "description2": "The main goal of Movelys is to provide an all-in-one platform, allowing businesses to precisely manage their key activities, including:",
+    "objective": "It aims to solve several common issues faced by SMEs and large companies:",
+    "automation_benefits": "By automating these processes, Movelys helps reduce manual errors, minimize operational losses, and streamline communication between departments. The application thus enables significant time savings, better visibility on activities, and more rigorous organization.",
+    "target_audience": "Movelys is designed for all organizations that need to track and optimize their internal workflows, whether they are small and medium-sized enterprises (SMEs), large corporations, or multi-site organizations. User profiles are varied:",
+    "roles_benefits": "Thanks to a role and permission management system, each user accesses only the modules dedicated to them, ensuring security, simplicity, and efficiency.",
+    "cta": "View the documentation",
+    "lists": {
+      "features": [
+        "Sales management: track commercial transactions, generate invoices, manage clients and payments.",
+        "Purchase processing: supplier orders, delivery tracking, and cost control.",
+        "Inventory management: real-time visibility, adjustments, warehouse transfers, and threshold alerts.",
+        "Expense tracking, contact management, and detailed reporting for performance monitoring and strategic decision-making."
+      ],
+      "roles": [
+        "Administrators: full access to manage settings, users, modules, and global configurations.",
+        "Sales managers: oversee sales, customer relationships, targets, and margins.",
+        "Purchasing agents: create and track supplier orders, manage timelines, quantities, and costs.",
+        "Stock managers / warehouse staff: handle product movements, adjustments, transfers, and inventory.",
+        "Accountants and finance: analyze expenses, generate financial reports, and track transactions."
+      ]
+    }
+  },
+  "footer": {
+    "copyright": "© {year} Movelys. All rights reserved.",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service"
+  }
+}

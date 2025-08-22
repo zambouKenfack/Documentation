@@ -1,0 +1,216 @@
+---
+
+import '../styles/global1.css';
+
+---
+
+<div class="container">
+
+     <header class="header">
+        <h1>Stock Adjustment Management in Movelys</h1>
+    </header>
+
+    <!-- Introduction Section -->
+    <section class="introduction">
+
+        <h2>Introduction</h2>
+        <p>
+            Stock adjustment management is a critical function for ensuring the accuracy and reliability of inventory data within any company. In the <strong>Movelys</strong> application, this functionality has been designed to provide rigorous and transparent control over all manual or automatic modifications of stock quantities, whether due to inventory errors, losses, damages, or unrecorded movements.
+        </p>
+        <p>
+            Movelys' "Stock Adjustment" module allows users to correct discrepancies between actual physical stock and system-recorded stock. Each adjustment can be classified by type (normal or abnormal), associated with a location, a <strong>responsible</strong> user, and justified by a specific reason. All operations are tracked, timestamped, and accessible via detailed history, ensuring <strong>complete traceability</strong> and <strong>compliance with management standards</strong>.
+        </p>
+        <p>
+            By offering a simple, fast interface interconnected with other modules (products, transfers, sales, etc.), Movelys helps prevent accounting errors, identify recurring discrepancies, and improve stock reconciliation processes. Companies thus gain better control of their resources, more informed decision-making, and enhanced logistical performance.
+        </p>
+    </section>
+
+    <!-- Section 1: Stock Adjustment List -->
+    <section class="section-1">
+        <h2>1) Stock Adjustment List</h2>
+
+        <article class="subsection">
+            <h3>1.1) Purpose of This Section</h3>
+            <p>
+                The <strong>Stock Adjustments</strong> interface centralizes and tracks all <strong>manual</strong> corrections made to stock quantities.
+                These adjustments are essential for:
+            </p>
+            <ul>
+                <li>Reconciling theoretical stock (in the system) with actual physical stock,</li>
+                <li>Correcting inventory errors, losses, thefts, expired products, or entry anomalies,</li>
+                <li>Maintaining <strong>reliable, verifiable, and consistent</strong> inventory that matches on-ground reality.</li>
+            </ul>
+        </article>
+
+        <article class="subsection">
+            <h3>1.2) General Interface Structure</h3>
+            <p>
+                This page displays a dynamic table listing all stock adjustment operations already recorded in Movelys.
+            </p>
+            <p>The different fields in this interface are:</p>
+            <ul>
+                <li>Action</li>
+                <li>Date</li>
+                <li>Reference Number</li>
+                <li>Location</li>
+                <li>Adjustment Type</li>
+                <li>Total Amount</li>
+                <li>Total Recovered Amount</li>
+                <li>Reason</li>
+                <li>Added By</li>
+            </ul>
+
+            <p>Available functions include:</p>
+            <table class="component-table">
+                <tr>
+                    <th>Tool</th>
+                    <th>Description</th>
+                </tr>
+                <tr>
+                    <td>Search Bar</td>
+                    <td>Allows searching for adjustments by reference, date, location, etc.</td>
+                </tr>
+                <tr>
+                    <td>Export CSV/Excel</td>
+                    <td>Generates a spreadsheet file for external use</td>
+                </tr>
+                <tr>
+                    <td>Print</td>
+                    <td>Prints the adjustment list</td>
+                </tr>
+                <tr>
+                    <td>Export PDF</td>
+                    <td>Generates a PDF document of the current list</td>
+                </tr>
+                <tr>
+                    <td>Column Visibility</td>
+                    <td>Shows or hides columns based on user preferences</td>
+                </tr>
+                <tr>
+                    <td>Add</td>
+                    <td>Allows recording a <strong>new stock adjustment</strong></td>
+                </tr>
+            </table>
+
+            <div class="image-placeholder">
+                <p>Interface Illustration</p>
+                <img src="/image/ajustement1.png" alt="Description de l'image" width="900" height="600" style="max-width:100%;height:auto;border-radius:8px;" />
+            </div>
+        </article>
+
+        <article class="subsection">
+            <h3>1.3) Roles and Permissions</h3>
+            <table class="component-table">
+                <tr>
+                    <th>User Role</th>
+                    <th>Access Rights</th>
+                </tr>
+                <tr>
+                    <td>Administrator</td>
+                    <td>Full access to all actions</td>
+                </tr>
+                <tr>
+                    <td>Logistics Manager</td>
+                    <td>Viewing and modification</td>
+                </tr>
+                <tr>
+                    <td>Warehouse Staff</td>
+                    <td>Adjustment creation only</td>
+                </tr>
+                <tr>
+                    <td>Restricted User</td>
+                    <td>No access or read-only</td>
+                </tr>
+            </table>
+        </article>
+    </section>
+
+    <!-- Section 2: Add a Stock Adjustment -->
+    <section class="section-2">
+        <h2>2) Add a Stock Adjustment</h2>
+
+        <article class="subsection">
+            <h3>2.1) Interface Purpose</h3>
+            <p>
+                The Add Stock Adjustment interface allows authorized inventory managers or staff to manually modify actual stock levels for one or more products at a given location.
+            </p>
+            <p>
+                This functionality is essential for:
+            </p>
+            <ul>
+                <li>Correcting inventory or entry errors,</li>
+                <li>Accounting for losses, damages, or physical discrepancies,</li>
+                <li>Updating stock in case of delivery errors or missed receipts.</li>
+            </ul>
+        </article>
+
+        <article class="subsection">
+            <h3>2.2) General Form Structure</h3>
+            <p>
+                The form is divided into three main functional sections:
+            </p>
+
+            <h4>A. General Adjustment Information</h4>
+            <ul>
+                <li>Company Location</li>
+                <li>Reference Number</li>
+                <li>Date</li>
+                <li>Adjustment Type</li>
+            </ul>
+            <p>
+                These fields ensure complete traceability of the operation for internal audits.
+            </p>
+
+            <h4>B. Products to Adjust List</h4>
+            <p>
+                This section allows adding one or more products. Users simply need to search for a product already in the database and add it to stock.
+            </p>
+
+            <h4>C. Actions and Finalization</h4>
+            <p>
+                This form allows entering additional information (Total Recovered Amount: Reason;) to finalize the transfer.
+            </p>
+ <div class="image-placeholder">
+                <p>Interface Illustration</p>
+                <img src="/image/ajustement2.png" alt="Description de l'image" width="900" height="600" style="max-width:100%;height:auto;border-radius:8px;" />
+            </div>
+        </article>
+
+        <article class="subsection">
+            <h3>2.3) Permissions and Security</h3>
+            <table class="component-table">
+                <tr>
+                    <th>Role</th>
+                    <th>Access</th>
+                </tr>
+                <tr>
+                    <td>Administrator</td>
+                    <td>Full access to all adjustments</td>
+                </tr>
+                <tr>
+                    <td>Inventory Manager</td>
+                    <td>Can create, edit, and delete</td>
+                </tr>
+                <tr>
+                    <td>Warehouse Staff</td>
+                    <td>Adjustment creation only</td>
+                </tr>
+                <tr>
+                    <td>Restricted User</td>
+                    <td>No access or read-only (depending on configuration)</td>
+                </tr>
+            </table>
+        </article>
+    </section>
+
+    <!-- Conclusion -->
+    <section class="conclusion">
+        <h2>Conclusion</h2>
+        <p>
+            With Movelys' stock adjustment module, companies have a reliable, structured, and secure tool to <strong>maintain inventory accuracy in all circumstances.</strong> This system not only allows quick error correction but also helps analyze root causes to implement lasting corrective actions.
+        </p>
+        <p>
+            By providing complete visibility on stock modifications and facilitating internal controls, Movelys transforms stock adjustments into a true <strong>lever for quality control and logistical optimization.</strong> It's an indispensable solution for any organization looking to improve stock management reliability, limit losses, and ensure the integrity of commercial data.
+        </p>
+    </section>
+</div>

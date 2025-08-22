@@ -1,0 +1,46 @@
+{
+  "languages": {
+    "fr": "Français",
+    "en": "Anglais"
+  },
+  "search": {
+    "placeholder": "Rechercher...",
+    "results": "Résultats pour : {term}",
+    "noResults": "Aucun résultat trouvé pour : {term}",
+    "found": "{count} résultat(s) trouvé(s)"
+  },
+  "theme": {
+    "toggle": "Changer de thème"
+  },
+  "hero": {
+    "title": "Transformez votre gestion d'entreprise avec Movelys",
+    "intro": "Bienvenue dans la documentation officielle de Movelys, une solution web professionnelle conçue pour permettre aux entreprises de gérer efficacement leurs ventes, leurs achats, leurs stocks, et bien plus encore, à partir d'un environnement unifié, moderne et sécurisé.",
+    "description1": "Movelys a été pensée pour répondre aux besoins réels des organisations soucieuses d'optimiser leurs processus internes tout en centralisant l'ensemble de leurs données métiers. Grâce à une interface intuitive et des modules interconnectés, l'application facilite la gestion quotidienne des opérations commerciales, logistiques et financières, tout en améliorant la productivité, la fiabilité des informations et la prise de décision stratégique.",
+    "description2": "L'objectif principal de Movelys est de fournir une plateforme tout-en-un, permettant aux entreprises de piloter avec précision leurs activités clés, à savoir :",
+    "objective": "Elle vise à résoudre plusieurs problématiques fréquentes rencontrées dans les PME et grandes entreprises :",
+    "automation_benefits": "En automatisant ces processus, Movelys aide à réduire les erreurs manuelles, à minimiser les pertes opérationnelles, et à fluidifier la communication entre les services. L'application permet ainsi un gain de temps significatif, une meilleure visibilité sur l'activité et une organisation plus rigoureuse.",
+    "target_audience": "Movelys s'adresse à toutes les structures ayant besoin de suivre et d'optimiser leurs flux internes, qu'il s'agisse de petites et moyennes entreprises (PME), de grandes entreprises, ou d'organisations multi-sites. Les profils utilisateurs sont variés :",
+    "roles_benefits": "Grâce à un système de gestion des rôles et permissions, chaque utilisateur accède uniquement aux modules qui lui sont dédiés, garantissant ainsi sécurité, simplicité et efficacité.",
+    "cta": "Commencer",
+    "lists": {
+      "features": [
+        "La gestion des ventes : suivi des transactions commerciales, génération de factures, gestion des clients et encaissements.",
+        "Le traitement des achats : commandes fournisseurs, suivi des livraisons, contrôle des coûts d'approvisionnement.",
+        "La gestion des stocks : visualisation en temps réel, ajustements, transferts entre entrepôts, alertes de seuils.",
+        "La gestion des dépenses, des contacts, et la production de rapports détaillés pour le suivi des performances et l'aide à la décision."
+      ],
+      "roles": [
+        "Administrateurs : ont un accès complet pour gérer les paramètres, utilisateurs, modules et configurations globales.",
+        "Responsables commerciaux : supervisent les ventes, les relations client, les objectifs et les marges.",
+        "Agents d'achat : créent et suivent les commandes fournisseurs, gèrent les délais, les quantités et les coûts.",
+        "Gestionnaires de stock / Magasiniers : s'occupent des mouvements de produits, des ajustements, transferts et inventaires.",
+        "Comptables et financiers : analysent les dépenses, génèrent les rapports financiers et suivent les transactions."
+      ]
+    }
+  },
+  "footer": {
+    "copyright": "© {year} Movelys. Tous droits réservés.",
+    "privacy": "Politique de confidentialité",
+    "terms": "Conditions d'utilisation"
+  }
+}

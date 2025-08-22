@@ -1,0 +1,425 @@
+---
+import '../styles/global1.css';
+---
+
+<div class="container">
+    <header class="header">
+        <h1>Contact Management in Movelys</h1>
+    </header>
+    <section class="section">
+        <h2>Introduction</h2>
+        <p>
+            Contact management is an essential component of any effective business management system. In Movelys, this feature has been designed to enable accurate, structured, and centralized tracking of all the company's business relationships, whether they involve customers, suppliers, prospects, or partners.
+        </p>
+        <p>
+            With an intuitive and flexible interface, users can record, view, and update complete contact records, including key information such as contact details, tax data, payment terms, outstanding balances, and transaction history. Movelys also allows categorizing contacts according to specific groups and automating certain actions, such as sending notifications or invoices.
+        </p>
+        <p>
+            This structured management of contacts promotes better communication, faster decision-making, and improved customer/supplier relationships. It thus serves as a solid foundation for optimizing the commercial, accounting, and operational performance of the company.
+        </p>
+    </section>
+    <section class="section">
+        <h2>1. Supplier Management</h2>
+        <article class="article">
+            <h3>1.1 General Function</h3>
+            <p>
+                The suppliers section allows the user to create, modify, and track the data of business partners who provide goods or services to the company. This section is structured as a table and includes all the necessary functionalities for effective administration of this category of actors.
+            </p>
+        </article>
+        <article class="article">
+            <h3>1.2 Interface Structure</h3>
+            <p>This interface consists of two sections:</p>
+            <ul>
+                <li>A search filter area</li>
+                <li>A table listing the suppliers</li>
+            </ul>
+            <h4>1.2.1 Search Filters</h4>
+            <p>This section allows filtering suppliers based on various criteria:</p>
+            <h5>Checkboxes:</h5>
+            <ul>
+                <li><strong>Outstanding Purchase</strong>: Filter suppliers with pending purchases for payment.</li>
+                <li><strong>Purchase Returns</strong>: Suppliers related to product returns.</li>
+                <li><strong>Advance Balance</strong>: Suppliers with advance payments.</li>
+                <li><strong>Opening Balance</strong>: Suppliers with initial balances.</li>
+            </ul>
+            <h5>Dropdown Menus:</h5>
+            <ul>
+                <li><strong>Assigned To</strong>: Allows selecting an internal user or service to whom the supplier is assigned.</li>
+                <li><strong>Status</strong>: Filter based on the supplier's status (active, inactive, etc.).</li>
+            </ul>
+        </article>
+        <article class="article">
+            <h3>1.2.2 Main Table</h3>
+            <p>This table displays the suppliers registered in the system with the following columns:</p>
+            <table class="component-table">
+                <thead>
+                    <tr>
+                        <th>Column</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Action</td>
+                        <td>Action button to modify, delete, or view details.</td>
+                    </tr>
+                    <tr>
+                        <td>Contact ID</td>
+                        <td>Unique identifier of the supplier.</td>
+                    </tr>
+                    <tr>
+                        <td>Company Name</td>
+                        <td>Commercial name or legal name of the company.</td>
+                    </tr>
+                    <tr>
+                        <td>Name</td>
+                        <td>The name of the associated person.</td>
+                    </tr>
+                    <tr>
+                        <td>Email Address</td>
+                        <td>Email address of the supplier.</td>
+                    </tr>
+                    <tr>
+                        <td>Tax Identification Number</td>
+                        <td>Used for the legal/tax identification of the supplier.</td>
+                    </tr>
+                    <tr>
+                        <td>Payment Terms</td>
+                        <td>Payment period granted.</td>
+                    </tr>
+                    <tr>
+                        <td>Opening Balance</td>
+                        <td>Initial balance at the time of integration.</td>
+                    </tr>
+                    <tr>
+                        <td>Advance Balance</td>
+                        <td>Amount paid in advance.</td>
+                    </tr>
+                    <tr>
+                        <td>Added</td>
+                        <td>Date the supplier was added to the system.</td>
+                    </tr>
+                    <tr>
+                        <td>Address</td>
+                        <td>Contains physical or electronic addresses.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </article>
+        <article class="article">
+            <h3>1.3 Main Functionality</h3>
+            <ul>
+                <li><strong>Export CSV / Excel / PDF</strong>: allows generating reports on users in the desired format.</li>
+                <li><strong>Direct Printing</strong>: a print button is available to produce a paper version of the list.</li>
+                <li><strong>Column Visibility</strong>: allows hiding or displaying certain columns according to preferences.</li>
+                <li><strong>Dynamic Search</strong>: a quick search field facilitates locating a specific user.</li>
+                <li><strong>Pagination & Number of Entries Per Page</strong>: the user can navigate between pages and choose how many records to display per page (e.g., 10, 25, 50, etc.).</li>
+            </ul>
+            <div class="image-placeholder">
+                <p>Interface Illustration</p>
+                <img src="/image/contact1.png" alt="Description de l'image" width="900" height="600" style="max-width:100%;height:auto;border-radius:8px;" />
+            </div>
+        </article>
+        <article class="article">
+            <h3>1.4 Adding a Supplier</h3>
+            <p>Clicking the "Add" button opens a modal window with the following fields:</p>
+            <h4>Contact Type</h4>
+            <p>This is used to classify the nature of the relationship you have with the person or company.</p>
+            <h5>Common Examples:</h5>
+            <ul>
+                <li><strong>Supplier</strong>: A person or company that provides you with goods or services.</li>
+                <li><strong>Client</strong>: A person or company that you sell goods or services to.</li>
+            </ul>
+            <h4>Contact ID</h4>
+            <p>This is a unique identifier automatically or manually assigned to each contact in the system.</p>
+            <h4>Phone Number</h4>
+            <p>This is the main phone number for the contact, used for quickly reaching a person.</p>
+            <h4>Alternative Contact Number</h4>
+            <p>This is a second phone number you can use if the first one does not answer.</p>
+            <h4>Landline</h4>
+            <p>This is the contact's landline number, usually that of the office or headquarters.</p>
+            <h4>Email</h4>
+            <p>This is the contact's email address.</p>
+            <h4>Assigned To</h4>
+            <p>This field indicates which internal user (employee) is associated with this contact.</p>
+            <p>The user enters the information and then clicks "Save" to add the supplier to the database.</p>
+            <p>This functionality allows for easily integrating a new partner without leaving the main page.</p>
+        </article>
+        <article class="article">
+            <h3>Additional Detail: "More Information"</h3>
+            <p>This allows displaying additional fields that can be filled out to register a supplier with all possible information.</p>
+           <div class="image-placeholder">
+                <p>Interface Illustration</p>
+                <img src="/image/contact2.png" alt="Description de l'image" width="900" height="600" style="max-width:100%;height:auto;border-radius:8px;" />
+            </div>
+        </article>
+    </section>
+    <section class="section">
+        <h2>2. Customer Management</h2>
+        <article class="article">
+            <h3>2.1 General Function</h3>
+            <p>
+                Customer management in Movelys allows referencing, organizing, and viewing all the clients of a company. This can include individuals, businesses, or any other type of client with whom commercial transactions are conducted.
+            </p>
+        </article>
+        <article class="article">
+            <h3>2.2 Interface Structure</h3>
+            <p>This consists of two sections:</p>
+            <ul>
+                <li>A search filter area</li>
+                <li>A table listing the customers</li>
+            </ul>
+            <h4>2.2.1 Search Filter Area</h4>
+            <p>This section allows filtering customers based on various criteria:</p>
+            <h5>Checkboxes (additional filtering options):</h5>
+            <ul>
+                <li><strong>Sell on Credit</strong>: Displays customers to whom goods are sold with a payment delay.</li>
+                <li><strong>Return Sale</strong>: Displays customers associated with product returns.</li>
+                <li><strong>Advance Balance</strong>: Customers who pay in advance or have pre-paid credit.</li>
+                <li><strong>Opening Balance</strong>: Filter based on the customer's opening accounting balance.</li>
+            </ul>
+            <h5>Dropdown Lists:</h5>
+            <ul>
+                <li><strong>No Sales Since</strong>: Allows filtering customers to whom no sales have been made for a certain period.</li>
+                <li><strong>Customer Group</strong>: Allows filtering by customer segment (e.g., individuals, businesses, etc.).</li>
+                <li><strong>Assigned To</strong>: Allows filtering based on the sales agent or responsible person to whom the customer is assigned.</li>
+                <li><strong>Status</strong>: Filtering based on the customer's status (active, inactive, suspended, etc.).</li>
+            </ul>
+        </article>
+        <article class="article">
+    <h3>2.2.2 Customer List Table</h3>
+    <p>Each row represents a customer. Here are the displayed columns:</p>
+    <table class="component-table">
+        <thead>
+            <tr>
+                <th>Column</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Action</td>
+                <td>An Actions button that allows modifying or deleting a customer.</td>
+            </tr>
+            <tr>
+                <td>Contact ID</td>
+                <td>Unique identifier of the customer in the database.</td>
+            </tr>
+            <tr>
+                <td>Company Name</td>
+                <td>Name of the customer's company.</td>
+            </tr>
+            <tr>
+                <td>Name</td>
+                <td>Name of the customer or contact person.</td>
+            </tr>
+            <tr>
+                <td>Email Address</td>
+                <td>Email address of the customer.</td>
+            </tr>
+            <tr>
+                <td>Tax Identification Number</td>
+                <td>Number used for tax purposes.</td>
+            </tr>
+            <tr>
+                <td>Credit Limit</td>
+                <td>Maximum credit amount granted to the customer.</td>
+            </tr>
+            <tr>
+                <td>Payment Terms</td>
+                <td>Payment period granted to the customer.</td>
+            </tr>
+            <tr>
+                <td>Opening Balance</td>
+                <td>Initial balance of the customer (e.g., upon data import).</td>
+            </tr>
+            <tr>
+                <td>Advance Balance</td>
+                <td>Amount available if the customer has paid in advance.</td>
+            </tr>
+            <tr>
+                <td>Added</td>
+                <td>Date the customer was added to the database.</td>
+            </tr>
+            <tr>
+                <td>Customer Group</td>
+                <td>Category or segment of the customer (e.g., resellers, VIPs, etc.).</td>
+            </tr>
+            <tr>
+                <td>Address</td>
+                <td>Physical address of the customer.</td>
+            </tr>
+            <tr>
+                <td>Mobile</td>
+                <td>Mobile phone number of the customer.</td>
+            </tr>
+            <tr>
+                <td>Total Sale Due</td>
+                <td>Total amount still owed by the customer.</td>
+            </tr>
+            <tr>
+                <td>Total Sale Yield Due</td>
+                <td>Total sum of unpaid sales.</td>
+            </tr>
+            <tr>
+                <td>Custom Field 1 to 10</td>
+                <td>Free field for specific information according to the company's needs.</td>
+            </tr>
+        </tbody>
+    </table>
+</article>
+<article class="article">
+    <h3>2.3 Main Functionality:</h3>
+    <ul>
+        <li><strong>Export CSV / Excel / PDF</strong>: allows generating reports on users in the desired format.</li>
+        <li><strong>Direct Printing</strong>: a print button is available to produce a paper version of the list.</li>
+        <li><strong>Column Visibility</strong>: allows hiding or displaying certain columns according to preferences.</li>
+        <li><strong>Dynamic Search</strong>: a quick search field facilitates locating a specific user.</li>
+        <li><strong>Pagination & Number of Entries Per Page</strong>: the user can navigate between pages and choose how many records to display per page (e.g., 10, 25, 50, etc.).</li>
+    </ul>
+    <div class="image-placeholder">
+                <p>Interface Illustration</p>
+                <img src="/image/contact3.png" alt="Description de l'image" width="900" height="600" style="max-width:100%;height:auto;border-radius:8px;" />
+            </div>
+</article>
+<article class="article">
+    <h3>2.4 Adding a Customer</h3>
+    <p>The addition is done through a modal form with the following fields:</p>
+    <h4>Contact Type</h4>
+    <p>This is used to classify the nature of the relationship you have with the person or company.</p>
+    <h5>Common Examples:</h5>
+    <ul>
+        <li><strong>Supplier</strong>: A person or company that provides you with goods or services.</li>
+        <li><strong>Client</strong>: A person or company to whom you sell goods or services.</li>
+    </ul>
+    <h4>Contact ID</h4>
+    <p>This is a unique identifier automatically or manually assigned to each contact in the system.</p>
+    <h4>Phone Number</h4>
+    <p>This is the main phone number for the contact. It is used to quickly reach a person.</p>
+    <h4>Alternative Contact Number</h4>
+    <p>This is a second phone number you can use if the first one does not answer.</p>
+    <h4>Landline</h4>
+    <p>This is the contact's landline number, usually that of the office or headquarters.</p>
+    <h4>Email</h4>
+    <p>This is the contact's email address.</p>
+    <h4>Assigned To</h4>
+    <p>This field indicates which internal user (employee) is associated with this contact.</p>
+    <h4>Customer Group</h4>
+    <p>This is a custom category allowing the grouping of several clients with common characteristics.</p>
+    <p>After validation, the record is visible in the list with other clients.</p>
+</article>
+<article class="article">
+    <h3>More Information on a Client</h3>
+    <p>The "More Information" option allows displaying additional fields that can be filled out to register a client with all possible information.</p>
+    <div class="image-placeholder">
+                <p>Interface Illustration</p>
+                <img src="/image/contact4.png" alt="Description de l'image" width="900" height="600" style="max-width:100%;height:auto;border-radius:8px;" />
+            </div>
+</article>
+</section>
+<section class="section">
+    <h2>3. Customer Group Management</h2>
+    <article class="article">
+        <h3>3.1 General Function</h3>
+        <p>
+            The <strong>Customer Groups</strong> feature allows classifying customers into logical categories to facilitate their management. This enables applying different commercial policies, sending targeted offers, or filtering reports more quickly.
+        </p>
+    </article>
+    <article class="article">
+        <h3>3.2 Interface</h3>
+        <p>This section presents a simple table with:</p>
+        <ul>
+            <li>An interactive table listing the registered customer groups, composed of the following fields:
+                <ul>
+                    <li><strong>Customer Group Name</strong>: The name given to a specific group of customers who share common characteristics, purchasing behaviors, or commercial conditions.</li>
+                    <li><strong>Percentage Calculation (%)</strong>: Used to apply <strong>discounts, margins, or commissions</strong> based on customer groups or commercial policies.</li>
+                    <li><strong>Price Group</strong>: A pricing category that can be associated with one or more customers based on their group.</li>
+                    <li><strong>Edit or Delete Actions</strong>: Functions accessible via the "Actions" button to modify or delete the information of a customer or customer group.</li>
+                </ul>
+            </li>
+            <li>Quick <strong>Action Buttons</strong>:
+                <ul>
+                    <li><strong>Export CSV / Excel / PDF</strong>: allows generating reports on users in the desired format.</li>
+                    <li><strong>Direct Printing</strong>: a print button is available to produce a paper version of the list.</li>
+                    <li><strong>Column Visibility</strong>: allows hiding or displaying certain columns according to preferences.</li>
+                    <li><strong>Dynamic Search</strong>: a quick search field facilitates locating a specific user.</li>
+                    <li><strong>Pagination & Number of Entries Per Page</strong>: the user can navigate between pages and choose how many records to display per page (e.g., 10, 25, 50, etc.).</li>
+                </ul>
+            </li>
+        </ul>
+        <div class="image-placeholder">
+                <p>Interface Illustration</p>
+                <img src="/image/contact5.png" alt="Description de l'image" width="900" height="600" style="max-width:100%;height:auto;border-radius:8px;" />
+            </div>
+    </article>
+    <article class="article">
+        <h3>3.3 Adding a Group</h3>
+        <p>When the user clicks on <strong>"Add", a minimalist form appears:</strong></p>
+        <ul>
+            <li><strong>Customer Group Name</strong>: Required (e.g., VIP Clients, Individuals, Businesses)</li>
+            <li><strong>Price Calculation Type</strong></li>
+            <li><strong>Calculation Percentage (%)</strong></li>
+        </ul>
+        <p>Once validated, the group is recorded and can be used in customer profiles.</p>
+    </article>
+    <article class="article">
+        <h3>3.4 Using Groups</h3>
+        <p>Groups can then be used:</p>
+        <ul>
+            <li>To <strong>filter customers in views</strong></li>
+            <li>To apply specific pricing conditions</li>
+            <li>To <strong>segment the customer base during communication campaigns or statistical analysis</strong></li>
+        </ul>
+    </article>
+</section>
+<section class="section">
+    <h2>4. Importing Contacts</h2>
+    <article class="article">
+        <h3>4.1 Purpose of the Feature</h3>
+        <p>
+            The contact import feature allows for the bulk insertion of customer or supplier data from an external file, typically a CSV or Excel file. This is particularly useful during data migration or initial integration.
+        </p>
+    </article>
+    <article class="article">
+        <h3>4.2 Interface</h3>
+        <p>It presents a simple interface with:</p>
+        <ul>
+            <li>An "Import" button</li>
+            <li>A file upload form</li>
+            <li>A preview interface for the data to be imported</li>
+            <li>Validation actions</li>
+        </ul>
+        <div class="image-placeholder">
+                <p>Interface Illustration</p>
+                <img src="/image/contact6.png" alt="Description de l'image" width="900" height="600" style="max-width:100%;height:auto;border-radius:8px;" />
+            </div>
+    </article>
+    <article class="article">
+        <h3>4.3 Import Process</h3>
+        <ol>
+            <li>Download the modeled file</li>
+            <li><strong>Fill in the file</strong></li>
+            <li><strong>Select the file to import</strong></li>
+            <li><strong>Validate the import by clicking the send button</strong></li>
+            <li>The contacts are inserted into the database and automatically classified according to the available columns.</li>
+        </ol>
+    </article>
+    <article class="article">
+        <h3>4.4 Benefits</h3>
+        <ul>
+            <li><strong>Significant time savings</strong></li>
+            <li><strong>Reduction of manual errors</strong></li>
+            <li><strong>Mass update in one click</strong></li>
+        </ul>
+    </article>
+</section>
+<section class="section">
+    <h2>Conclusion</h2>
+    <p>
+        By centralizing all data related to business partners in a single, efficient module, Movelys significantly simplifies contact management. The company can thus effectively track the evolution of its business relationships with efficiency, reliability, and professionalism.
+    </p>
+    <p>
+        With powerful search tools, clear data organization, and smooth synchronization with other modules (sales, purchases, billing, etc.), Movelys enhances the quality of customer service and improves the overall performance of the company. Contact management thus becomes not only an operational tool but also a strategic lever for growth.
+    </p>
+</section>
+</div>

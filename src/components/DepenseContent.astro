@@ -1,0 +1,570 @@
+---
+
+import '../styles/global1.css';
+---
+<div class="container">
+
+        <header class="header">
+                <h1>Gestion des depenses</h1>
+            </header>
+    <!-- Section Introduction -->
+    <section class="introduction">
+        <h2>Introduction</h2>
+        <p>
+            La gestion des dépenses est un élément clé de la performance financière et du bon pilotage
+            d’une entreprise. Le module de gestion des dépenses intégré à l’application Movelys permet
+            aux organisations de suivre, contrôler et analyser en temps réel toutes leurs sorties financières
+            liées à l’exploitation : achats non liés à des produits, paiements de services, frais
+            opérationnels, ou charges exceptionnelles.
+        </p>
+        <p>
+            Ce module offre une interface simple mais puissante pour enregistrer les dépenses avec
+            précision, en y associant des catégories (ex. : transport, électricité, maintenance), des
+            fournisseurs, des modes de paiement, des justificatifs (fichiers joints), ainsi que des notes
+            personnalisées. Chaque dépense est automatiquement reliée à l'exercice comptable et peut
+            être intégrée dans les rapports financiers pour une visibilité globale sur la santé économique
+            de l’entreprise.
+        </p>
+        <p>
+            Grâce à sa flexibilité, Movelys permet également un suivi multi-emplacements et multiutilisateurs, tout en assurant une traçabilité complète et une centralisation sécurisée des
+            informations. Cela facilite la prise de décision stratégique, la maîtrise des coûts et la
+            préparation des audits ou rapports de gestion.
+        </p>
+    </section>
+
+    <!-- Section 1 : Énumérer les dépenses -->
+    <section class="section-1">
+        <h2>1) Énumérer les dépenses</h2>
+
+        <article class="subsection">
+            <h3>1.1) Objectif de l’interface</h3>
+            <p>
+                L’interface « Dépense » est conçue pour permettre aux entreprises de centraliser, suivre et
+                <strong>analyser toutes les sorties d’argent liées à leur fonctionnement quotidien. Elle garantit un</strong>
+                <strong>pilotage budgétaire efficace en fournissant une visibilité complète sur :</strong>
+            </p>
+            <ul>
+                <li>Les dépenses opérationnelles,</li>
+                <li>Les paiements effectués ou en attente,</li>
+                <li>Les charges ponctuelles ou récurrentes.</li>
+            </ul>
+            <p>
+                Cette page offre également des outils puissants de filtrage, d’exportation, et de gestion
+                <strong>comptable.</strong>
+            </p>
+        </article>
+
+        <article class="subsection">
+            <h3>1.2) Structure générale de l’interface</h3>
+            <p>
+                L’écran se compose de deux zones principales :
+            </p>
+            <ul>
+                <li><strong>Barre de filtres et recherche avancée</strong></li>
+                <li><strong>Tableau de gestion des dépenses enregistrées</strong></li>
+            </ul>
+
+            <h4>1.2.1) Barre de filtres – Zone supérieure</h4>
+            <p>
+                Cette section permet de <strong>filtrer dynamiquement</strong> les données du tableau selon plusieurs critères. Elle est utile pour cibler un type de dépense précis ou effectuer des analyses spécifiques.
+            </p>
+            <table class="component-table">
+                <tr>
+                    <th>Champ</th>
+                    <th>Fonction</th>
+                </tr>
+                <tr>
+                    <td>Emplacement de l’entreprise</td>
+                    <td>Sélection du site concerné par la dépense (ex. : siège, magasin, entrepôt)</td>
+                </tr>
+                <tr>
+                    <td>Dépenses pour</td>
+                    <td>Permet d’indiquer pour quel usage ou personne la dépense a été effectuée</td>
+                </tr>
+                <tr>
+                    <td>Ajouté par</td>
+                    <td>Affiche uniquement les dépenses saisies par un utilisateur spécifique</td>
+                </tr>
+                <tr>
+                    <td>Catégorie de dépenses</td>
+                    <td>Classement général de la dépense (ex. : logistique, communication, RH…)</td>
+                </tr>
+                <tr>
+                    <td>Sous-catégorie</td>
+                    <td>Affinage de la nature de la dépense (ex. : carburant, internet, salaires…)</td>
+                </tr>
+                <tr>
+                    <td>Contact</td>
+                    <td>Nom ou structure ayant reçu le paiement (fournisseur, prestataire, etc.)</td>
+                </tr>
+                <tr>
+                    <td>Plage de dates</td>
+                    <td>Filtre chronologique (du 01/01/2025 au 31/12/2025 par défaut)</td>
+                </tr>
+                <tr>
+                    <td>Statut du paiement</td>
+                    <td>Affiche les dépenses payées, partiellement payées ou impayées</td>
+                </tr>
+            </table>
+            <p>
+                <strong>But :</strong> Offrir une capacité de <strong>recherche fine et ciblée</strong>, adaptée à l’analyse comptable, aux rapports périodiques et à la vérification des transactions.
+            </p>
+
+            <h4>1.2.2) Tableau des dépenses – Zone centrale</h4>
+            <p>
+                Cette section liste l’ensemble des dépenses déjà enregistrées dans le système, sous forme de <strong>lignes de données organisées en colonnes</strong>.
+            </p>
+            <h5>Colonnes principales du tableau</h5>
+            <table class="component-table">
+                <tr>
+                    <th>Colonne</th>
+                    <th>Description</th>
+                </tr>
+                <tr>
+                    <td>Action</td>
+                    <td>Permet de visualiser, modifier ou supprimer une ligne de dépense</td>
+                </tr>
+                <tr>
+                    <td>Date</td>
+                    <td>Date d’enregistrement de la dépense</td>
+                </tr>
+                <tr>
+                    <td>N° de référence</td>
+                    <td>Numéro unique de transaction (généré automatiquement ou saisi manuellement)</td>
+                </tr>
+                <tr>
+                    <td>Détails récurrents</td>
+                    <td>Indique si la dépense est ponctuelle ou répétée (abonnement, contrat, etc.)</td>
+                </tr>
+                <tr>
+                    <td>Catégorie de dépense</td>
+                    <td>Classification principale de la charge</td>
+                </tr>
+                <tr>
+                    <td>Sous-catégorie</td>
+                    <td>Détail plus spécifique de la dépense</td>
+                </tr>
+                <tr>
+                    <td>Emplacement</td>
+                    <td>Lieu ou structure interne à laquelle la dépense est affectée</td>
+                </tr>
+                <tr>
+                    <td>Statut du paiement</td>
+                    <td>Affiche si la dépense a été payée, partiellement ou non payée</td>
+                </tr>
+                <tr>
+                    <td>Taxe</td>
+                    <td>TVA ou autre taxe applicable (si configurée)</td>
+                </tr>
+                <tr>
+                    <td>Montant total</td>
+                    <td>Somme globale de la dépense, taxes comprises</td>
+                </tr>
+                <tr>
+                    <td>Paiement dû</td>
+                    <td>Montant restant à régler si paiement partiel ou différé</td>
+                </tr>
+                <tr>
+                    <td>Charge pour</td>
+                    <td>Entité bénéficiaire ou centre de coût imputé (ex. : service, département)</td>
+                </tr>
+                <tr>
+                    <td>Contact</td>
+                    <td>Tiers impliqué dans la transaction (ex. : fournisseur, prestataire)</td>
+                </tr>
+                <tr>
+                    <td>Note de frais</td>
+                    <td>Détail libre saisi par l'utilisateur (justification, observations)</td>
+                </tr>
+                <tr>
+                    <td>Ajouté par</td>
+                    <td>Nom de l'utilisateur ayant enregistré la dépense</td>
+                </tr>
+            </table>
+            <p>
+                Ces colonnes offrent une vue exhaustive de chaque ligne de dépense, favorisant un audit et
+                une vérification simples et rapides.
+            </p>
+            <div class="image-placeholder"><p>Illustration de l'interface</p>
+                <img src="/images/depense1.png" alt="Description de l'image" width="900" height="600" style="max-width:100%;height:auto;border-radius:8px;" />
+                </div>
+        </article>
+
+        <article class="subsection">
+            <h3>1.3) Boutons d’action rapide</h3>
+            <table class="component-table">
+                <tr>
+                    <th>Bouton</th>
+                    <th>Fonction</th>
+                </tr>
+                <tr>
+                    <td>Ajouter</td>
+                    <td>Permet de créer une nouvelle dépense manuellement</td>
+                </tr>
+                <tr>
+                    <td>Frais d’importation</td>
+                    <td>Sert à ajouter des frais liés à l’importation de produits (douanes, transit, etc.)</td>
+                </tr>
+                <tr>
+                    <td>Exporter CSV / Excel</td>
+                    <td>Pour exporter les données et les analyser sous forme de tableur</td>
+                </tr>
+                <tr>
+                    <td>Imprimer</td>
+                    <td>Permet d’imprimer la liste actuelle des dépenses</td>
+                </tr>
+                <tr>
+                    <td>Exporter le PDF</td>
+                    <td>Génère un rapport PDF des dépenses affichées</td>
+                </tr>
+                <tr>
+                    <td>Visibilité des colonnes</td>
+                    <td>Active ou masque certaines colonnes selon l'utilisateur</td>
+                </tr>
+            </table>
+        </article>
+
+        <article class="subsection">
+            <h3>1.4) Contrôle d’accès et rôles</h3>
+            <table class="component-table">
+                <tr>
+                    <th>Rôle</th>
+                    <th>Accès à la gestion des dépenses</th>
+                </tr>
+                <tr>
+                    <td>Administrateur</td>
+                    <td>Création, modification, suppression, export</td>
+                </tr>
+                <tr>
+                    <td>Comptable / Financier</td>
+                    <td>Lecture et export, saisie de dépenses</td>
+                </tr>
+                <tr>
+                    <td>Chef de service</td>
+                    <td>Lecture seule ou accès restreint à certaines catégories</td>
+                </tr>
+                <tr>
+                    <td>Utilisateur standard</td>
+                    <td>Aucun accès ou accès limité selon permissions</td>
+                </tr>
+            </table>
+        </article>
+    </section>
+
+    <!-- Section 2 : Ajouter une dépense -->
+    <section class="section-2">
+        <h2>2) Ajouter une dépense</h2>
+
+        <article class="subsection">
+            <h3>2.1) Objectif de la section</h3>
+            <p>
+                L’interface « Ajouter une dépense » permet à l’utilisateur d’enregistrer toute sortie de trésorerie liée à l’activité de l’entreprise (frais de fonctionnement, frais professionnels, charges diverses, etc.).
+            </p>
+            <p>
+                Elle garantit un suivi rigoureux des charges pour une bonne tenue de la comptabilité, un
+                <strong>pilotage budgétaire optimisé et une traçabilité complète de chaque transaction financière.</strong>
+            </p>
+        </article>
+
+        <article class="subsection">
+            <h3>2.2) Structure générale du formulaire</h3>
+            <p>
+                Le formulaire se compose de trois blocs fonctionnels :
+            </p>
+            <ul>
+                <li><strong>Informations générales de la dépense</strong></li>
+                <li><strong>Paramètres de récurrence (optionnels)</strong></li>
+                <li>Ajout d’un paiement associé</li>
+            </ul>
+
+            <h4>2.2.1) Informations générales de la dépense</h4>
+            <table class="component-table">
+                <tr>
+                    <th>Champ</th>
+                    <th>Description</th>
+                </tr>
+                <tr>
+                    <td>Emplacement de l'entreprise</td>
+                    <td>Sélection du site concerné par la dépense (magasin, entrepôt, siège, etc.)</td>
+                </tr>
+                <tr>
+                    <td>Catégorie de dépenses</td>
+                    <td>Classification principale de la dépense (ex. : Communication, Transport, Fournitures)</td>
+                </tr>
+                <tr>
+                    <td>Sous-catégorie</td>
+                    <td>Précision complémentaire à la catégorie (ex. : Internet, carburant, papeterie...)</td>
+                </tr>
+                <tr>
+                    <td>N° de référence</td>
+                    <td>Identifiant unique de la dépense. Si vide, il sera généré automatiquement par le système</td>
+                </tr>
+                <tr>
+                    <td>Date</td>
+                    <td>Date effective de la dépense. Elle est automatiquement renseignée mais modifiable</td>
+                </tr>
+                <tr>
+                    <td>Joindre le document</td>
+                    <td>Pièce justificative de la dépense (facture, reçu, etc.). Formats supportés : PDF, DOCX, JPEG, PNG (5 Mo max)</td>
+                </tr>
+                <tr>
+                    <td>Dépenses pour</td>
+                    <td>Nom du bénéficiaire interne (salarié, service) ou destination du paiement</td>
+                </tr>
+                <tr>
+                    <td>Frais de contact</td>
+                    <td>Permet de spécifier un tiers impliqué (fournisseur, prestataire)</td>
+                </tr>
+                <tr>
+                    <td>Taxes applicables</td>
+                    <td>TVA ou toute autre taxe liée à la dépense. Sélection depuis une liste prédéfinie</td>
+                </tr>
+                <tr>
+                    <td>Montant total</td>
+                    <td>Montant global TTC de la dépense</td>
+                </tr>
+                <tr>
+                    <td>Note de frais</td>
+                    <td>Champ libre pour insérer une explication ou une description de la dépense</td>
+                </tr>
+                <tr>
+                    <td>Est-ce un remboursement ?</td>
+                    <td>Permet d’indiquer si la dépense correspond à un remboursement d'avance ou d'achat personnel effectué par un employé</td>
+                </tr>
+            </table>
+            <p>
+                Tous ces champs assurent la cohérence comptable, la justification budgétaire et la traçabilité complète.
+            </p>
+
+            <h4>2.2.2) Paramètres de récurrence (optionnels)</h4>
+            <p>
+                Cette section permet d’indiquer si la dépense est récurrente, c’est-à-dire qu’elle se répète à une fréquence déterminée.
+            </p>
+            <table class="component-table">
+                <tr>
+                    <th>Champ</th>
+                    <th>Description</th>
+                </tr>
+                <tr>
+                    <td>Est-ce récurrent ?</td>
+                    <td>Active la génération automatique de cette dépense selon une fréquence</td>
+                </tr>
+                <tr>
+                    <td>Intervalle récurrent</td>
+                    <td>Choix de l'unité de répétition (jours, semaines, mois, années)</td>
+                </tr>
+                <tr>
+                    <td>Nombre de répétitions</td>
+                    <td>Nombre de fois que la dépense sera répétée. Si vide, la récurrence est illimitée</td>
+                </tr>
+            </table>
+            <p>
+                Exemple d’usage : abonnement internet mensuel, loyer, contrats de prestation réguliers.
+            </p>
+
+            <h4>2.2.3) Ajout d’un paiement associé</h4>
+            <p>
+                Cette zone permet d’enregistrer immédiatement le paiement associé à la dépense. Elle permet d’éviter un enregistrement séparé via le journal de paiement.
+            </p>
+            <table class="component-table">
+                <tr>
+                    <th>Champ</th>
+                    <th>Description</th>
+                </tr>
+                <tr>
+                    <td>Quantité</td>
+                    <td>Montant payé (peut être partiel si le reste est à crédit)</td>
+                </tr>
+                <tr>
+                    <td>Payé le</td>
+                    <td>Date effective du règlement</td>
+                </tr>
+                <tr>
+                    <td>Mode de paiement</td>
+                    <td>Moyens : espèces, carte, virement, chèque, mobile money, etc.</td>
+                </tr>
+                <tr>
+                    <td>Note de paiement</td>
+                    <td>Commentaire sur le paiement (ex. : "Virement partiel effectué", "Solde à régler dans 15 jours")</td>
+                </tr>
+            </table>
+            <p>
+                Le système calcule automatiquement le "Paiement dû" en soustrayant le montant payé du total.
+            </p>
+        </article>
+
+        <article class="subsection">
+            <h3>Bouton de validation</h3>
+            <p>
+                <strong>Bouton sauvegarder :</strong> Enregistre la dépense avec ou sans paiement immédiat. Elle est
+                ensuite visible dans la liste des dépenses.
+            </p>
+            <div class="image-placeholder"><p>Illustration de l'interface</p>
+                <img src="/images/depense2.png" alt="Description de l'image" width="900" height="600" style="max-width:100%;height:auto;border-radius:8px;" />
+                </div>
+        </article>
+
+        <article class="subsection">
+            <h3>2.3) Permissions liées</h3>
+            <table class="component-table">
+                <tr>
+                    <th>Rôle utilisateur</th>
+                    <th>Accès</th>
+                </tr>
+                <tr>
+                    <td>Administrateur</td>
+                    <td>Tous droits</td>
+                </tr>
+                <tr>
+                    <td>Comptable / Finance</td>
+                    <td>Création, édition, paiement</td>
+                </tr>
+                <tr>
+                    <td>Agent administratif</td>
+                    <td>Création uniquement</td>
+                </tr>
+                <tr>
+                    <td>Utilisateur standard</td>
+                    <td>Aucun accès</td>
+                </tr>
+            </table>
+        </article>
+    </section>
+
+    <!-- Section 3 : Catégories de dépenses -->
+    <section class="section-3">
+        <h2>3) Catégories de dépenses</h2>
+
+        <article class="subsection">
+            <h3>3.1) Objectif de cette interface</h3>
+            <p>
+                La section « Catégories de dépenses » permet à l’utilisateur d’organiser, classifier et
+                <strong>structurer les types de charges encourues par l’entreprise. Elle constitue la colonne</strong>
+                <strong>vertébrale analytique de la gestion des dépenses, car elle permet :</strong>
+            </p>
+            <ul>
+                <li>Un suivi comptable détaillé,</li>
+                <li>La génération de rapports précis par catégorie,</li>
+                <li>Une meilleure analyse budgétaire,</li>
+                <li>Et une clarté lors de l’enregistrement des dépenses.</li>
+            </ul>
+        </article>
+
+        <article class="subsection">
+            <h3>3.2) Structure de l’interface</h3>
+            <p>
+                L’interface se compose de deux blocs :
+            </p>
+            <ul>
+                <li>Barre supérieure : Outils d’action</li>
+                <li>Tableau principal : Liste des catégories enregistrées</li>
+            </ul>
+
+            <h4>3.2.1) Outils de contrôle et d’action</h4>
+            <p>
+                <strong>Bouton Ajouter</strong>
+            </p>
+            <ul>
+                <li><strong>Fonction :</strong> Permet d’ouvrir un formulaire d’enregistrement d’une nouvelle catégorie
+                <strong>de dépense.</strong></li>
+                <li><strong>Rôle :</strong> Structurer les dépenses par familles logiques (ex. : Transport, Fournitures,
+                Loyer...).</li>
+            </ul>
+
+            <table class="component-table">
+                <tr>
+                    <th>Bouton</th>
+                    <th>Utilité</th>
+                </tr>
+                <tr>
+                    <td>Exporter CSV</td>
+                    <td>Exportation des données dans un format brut (lisible dans Excel ou un éditeur texte)</td>
+                </tr>
+                <tr>
+                    <td>Exporter Excel</td>
+                    <td>Génération d’un fichier Excel bien formaté</td>
+                </tr>
+                <tr>
+                    <td>Imprimer</td>
+                    <td>Impression directe de la liste affichée</td>
+                </tr>
+                <tr>
+                    <td>Visibilité des colonnes</td>
+                    <td>Masquer/afficher dynamiquement certaines colonnes du tableau</td>
+                </tr>
+                <tr>
+                    <td>Exporter le PDF</td>
+                    <td>Génération d’un document PDF de la liste des catégories</td>
+                </tr>
+            </table>
+
+            <p>
+                <strong>Barre de recherche</strong>
+            </p>
+            <ul>
+                <li>Permet de filtrer les catégories affichées selon leur nom ou leur code.</li>
+                <li>Utile pour les grandes bases avec plusieurs dizaines de postes de dépenses.</li>
+            </ul>
+
+            <h4>3.2.2) Tableau de gestion des catégories</h4>
+            <p>
+                Ce tableau dynamique affiche les différentes catégories de charges enregistrées dans le
+                <strong>système.</strong>
+            </p>
+            <table class="component-table">
+                <tr>
+                    <th>Colonne</th>
+                    <th>Description</th>
+                </tr>
+                <tr>
+                    <td>Nom de la catégorie</td>
+                    <td>Nom visible lors de l’enregistrement d’une dépense (ex. : Communication, Maintenance, RH, Publicité)</td>
+                </tr>
+                <tr>
+                    <td>Code de catégorie</td>
+                    <td>Identifiant unique (souvent alphanumérique) permettant une indexation interne rapide</td>
+                </tr>
+                <tr>
+                    <td>Action</td>
+                    <td>Accès aux actions rapides : édition ou suppression d’une catégorie spécifique</td>
+                </tr>
+            </table>
+            <div class="image-placeholder"><p>Illustration de l'interface</p>
+                <img src="/images/depense3.png" alt="Description de l'image" width="900" height="600" style="max-width:100%;height:auto;border-radius:8px;" />
+                </div>
+        </article>
+
+        <article class="subsection">
+            <h3>3.3) Permissions recommandées</h3>
+            <table class="component-table">
+                <tr>
+                    <th>Rôle utilisateur</th>
+                    <th>Accès à cette section</th>
+                </tr>
+                <tr>
+                    <td>Administrateur</td>
+                    <td>Création, modification, suppression</td>
+                </tr>
+                <tr>
+                    <td>Responsable Financier</td>
+                    <td>Création & édition</td>
+                </tr>
+                <tr>
+                    <td>Agent de saisie / utilisateur standard</td>
+                    <td>Lecture seule ou accès restreint</td>
+                </tr>
+            </table>
+        </article>
+    </section>
+
+    <!-- Conclusion -->
+    <section class="conclusion">
+        <h2>Conclusion</h2>
+        <p>
+            Le module de gestion des dépenses de Movelys apporte aux entreprises une solution efficace, organisée et professionnelle pour <strong>maîtriser leurs charges</strong>. En centralisant toutes les données liées aux dépenses et en les rendant accessibles et exploitables, il permet une meilleure anticipation des coûts, un suivi rigoureux des postes budgétaires, et une amélioration générale de la gouvernance financière.
+        </p>
+        <p>
+            Avec Movelys, les dépenses ne sont plus simplement enregistrées : elles sont analysées, classifiées et utilisées comme levier d’optimisation. C’est un outil indispensable pour renforcer la transparence financière, contrôler les flux sortants et soutenir la rentabilité à long terme de l’entreprise.
+        </p>
+    </section>
+</div>

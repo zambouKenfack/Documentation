@@ -1,0 +1,264 @@
+---
+import '../styles/global1.css';
+---
+
+<div class="container">
+
+        <header class="header">
+                <h1>Gestion des Modeles de notification</h1>
+            </header>
+    <!-- Section: Introduction -->
+    <section class="introduction">
+        <h2>Introduction</h2>
+        <p>
+            Dans un environnement commercial où la réactivité et la communication sont des atouts
+            majeurs, la gestion des <strong>modèles de notification constitue un outil stratégique essentiel.</strong> Le
+            module dédié de Movelys permet aux entreprises d’automatiser et de personnaliser les
+            messages envoyés à leurs clients, fournisseurs ou utilisateurs internes, tout en assurant une
+            cohérence et une efficacité dans les échanges.
+        </p>
+        <p>
+            Grâce à une interface simple et professionnelle, les utilisateurs peuvent configurer différents
+            types de notifications — par e-mail ou SMS — pour chaque événement clé du cycle de
+            gestion : confirmation de commande, envoi de facture, réception de paiement, alertes de
+            stock, rappels de créance, etc. Chaque modèle peut être rédigé selon le ton et le contenu
+            souhaités, avec la possibilité d’insérer des <strong>variables dynamiques (nom du client, date de</strong>
+            vente, montant dû, etc.), assurant ainsi une personnalisation automatique du message.
+        </p>
+        <p>
+            En permettant de centraliser et de normaliser la communication, Movelys améliore la relation
+            <strong>client, la gestion des délais, et renforce la crédibilité professionnelle de l'entreprise.</strong> Ce
+            module offre ainsi un gain de temps considérable tout en garantissant une diffusion
+            d’informations fiable et automatisée à chaque étape du processus opérationnel.
+        </p>
+    </section>
+
+    <!-- Section 1: Modèles de Notification -->
+    <section class="notification-models">
+        <h2>1) Modèles de Notification</h2>
+
+        <div class="subsection">
+            <h3>1.1) Objectif de cette interface</h3>
+            <p>
+                L’interface <strong>Modèles de notification dans movelys permet de</strong> <strong>configurer, personnaliser et</strong>
+                <strong>automatiser les messages envoyés à vos clients ou fournisseurs.</strong> Ces messages peuvent être
+                envoyés automatiquement lors d’évènements comme une <strong>vente, un paiement, une</strong>
+                <strong>commande, ou une réservation.</strong>
+            </p>
+            <p>Ces messages peuvent être envoyés :</p>
+            <ul>
+                <li>Par e-mail</li>
+                <li>Par SMS</li>
+                <li>Par WhatsApp</li>
+            </ul>
+        </div>
+
+        <div class="subsection">
+            <h3>1.2) Explication section par section</h3>
+
+            <div class="sub-subsection">
+                <h4>1.2.1) Section principale : Modèle général</h4>
+                <p><strong>Titre : Envoyer un grand livre</strong></p>
+                <p>
+                    Cela signifie que le modèle est destiné à l'envoi automatique du grand livre comptable
+                    (rapport de comptes) par e-mail.
+                </p>
+                <ul>
+                    <li>
+                        <strong>Balises disponibles</strong><br>
+                        Ce sont des mots-clés entre accolades comme <code>[business.name]</code> ou <code>[balance due].</code> Quand
+                        le message est envoyé, ces balises sont remplacées automatiquement par les informations de
+                        l'entreprise ou du client. Par exemple :<br>
+                        - <code>[Business.name]</code> → "Senteur & Vitalité"<br>
+                        - <code>[Balance due]</code> → "FCFA 20 000"
+                    </li>
+                    <li>
+                        <strong>Objet de l’e-mail :</strong><br>
+                        C’est le titre de l’e-mail qui s’affichera dans la boîte de réception du destinataire (ex : "Votre
+                        grand livre du mois").
+                    </li>
+                    <li>
+                        <strong>CC (Copie conforme) / BCC (Copie cachée) :</strong><br>
+                        - <strong>CC :</strong> les personnes ajoutées ici verront le message et les autres destinataires.<br>
+                        - <strong>BCC :</strong> les personnes ajoutées ici recevront l’e-mail mais de manière invisible pour
+                        les autres.
+                    </li>
+                    <li>
+                        <strong>Corps de l’e-mail</strong><br>
+                        Zone où vous écrivez le contenu principal du message. C’est ici que vous placez les textes
+                        personnalisés, en utilisant des balises si nécessaire.
+                    </li>
+                </ul>
+            </div>
+
+            <div class="sub-subsection">
+                <h4>1.2.2. Section : Notifications aux clients</h4>
+                <p>
+                    Cette section permet d’envoyer automatiquement un message aux <strong>clients, selon certaines</strong>
+                    actions.
+                </p>
+                <p>❖ <strong>Onglets disponibles :</strong></p>
+                <ul>
+                    <li><strong>Nouvelle vente :</strong> quand un achat est effectué</li>
+                    <li><strong>Paiement reçu :</strong> quand un client paie</li>
+                    <li><strong>Paiement Reminder :</strong> rappel de paiement</li>
+                    <li><strong>Nouvelle réservation :</strong> pour confirmer une réservation</li>
+                    <li><strong>Nouveau devis :</strong> pour envoyer un devis automatiquement</li>
+                </ul>
+                <p>❖ <strong>Détails de chaque champ :</strong></p>
+                <table>
+                    <tr>
+                        <th>Balises disponibles</th>
+                        <th>Liste de balises qu'on peut utiliser pour insérer automatiquement des infos dans le message.</th>
+                    </tr>
+                    <tr>
+                        <th>Objet de l'e-mail</th>
+                        <th>Le titre visible dans la boîte mail du client (ex. "Merci pour votre commande !").</th>
+                    </tr>
+                    <tr>
+                        <th>CC / BCC</th>
+                        <th>Destinataires secondaires visibles (CC) ou invisibles (BCC).</th>
+                    </tr>
+                    <tr>
+                        <th>Corps de l'e-mail</th>
+                        <th>Texte personnalisé, avec balises comme {contact_name}, {total_amount} ...</th>
+                    </tr>
+                    <tr>
+                        <th>SMS Body</th>
+                        <th>Version courte du message envoyée par SMS.</th>
+                    </tr>
+                    <tr>
+                        <th>WhatsApp Texte</th>
+                        <th>Message qui sera envoyé automatiquement via WhatsApp.</th>
+                    </tr>
+                </table>
+                <p>❖ <strong>Options à cocher :</strong></p>
+                <ul>
+                    <li>Auto Send Email : envoi automatique par e-mail</li>
+                    <li>Auto Send SMS : envoi automatique par SMS</li>
+                    <li>Auto Send WhatsApp notification : envoi automatique sur WhatsApp</li>
+                </ul>
+                <p><strong>Exemple de message généré automatiquement :</strong></p>
+                <blockquote>
+                    <em>Cher Jean Dupont,</em><br>
+                    <em>Votre facture #INV-0001 est bien enregistrée.</em><br>
+                    <em>Montant payé : FCFA 15 000</em><br>
+                    <em>Merci de faire affaire avec nous.</em><br>
+                    <em>Senteur & Vitalité</em>
+                </blockquote>
+            </div>
+
+            <div class="sub-subsection">
+                <h4>1.2.3. Section : Notifications aux fournisseurs</h4>
+                <p>
+                    Cette section permet de notifier les fournisseurs automatiquement dans différentes situations.
+                </p>
+                <p>❖ <strong>Onglets disponibles :</strong></p>
+                <ul>
+                    <li><strong>Nouvel ordre :</strong> nouvelle commande</li>
+                    <li><strong>Paiement paye :</strong> paiement effectué au fournisseur</li>
+                    <li><strong>Article reçus :</strong> réception des produits</li>
+                    <li><strong>Articles en attente :</strong> produits en attente</li>
+                    <li><strong>Bon de commande :</strong> commande d’achat</li>
+                </ul>
+                <p>❖ <strong>Éléments à configurer :</strong></p>
+                <table>
+                    <tr>
+                        <th>Champ</th>
+                        <th>Explication</th>
+                    </tr>
+                    <tr>
+                        <td>Balises disponibles</td>
+                        <td>Balises spécifiques aux fournisseurs (ex : {order_ref_number}, {received_amount}, {purchase_custom_field_1} ...)</td>
+                    </tr>
+                    <tr>
+                        <td>Objet de l'e-mail</td>
+                        <td>Exemple : "Nouvelle commande de la part de Senteur & Vitalité"</td>
+                    </tr>
+                    <tr>
+                        <td>CC / BCC</td>
+                        <td>Ajouter d'autres destinataires au besoin</td>
+                    </tr>
+                    <tr>
+                        <td>Corps de l’e-mail</td>
+                        <td>Exemple : "Veuillez livrer la commande réf. 0002 au plus vite."</td>
+                    </tr>
+                    <tr>
+                        <td>Corps du SMS</td>
+                        <td>Message résumé pour SMS (moins long que l’e-mail)</td>
+                    </tr>
+                    <tr>
+                        <td>Texte WhatsApp</td>
+                        <td>Message à envoyer via WhatsApp</td>
+                    </tr>
+                </table>
+                <p>
+                    <strong>Alerte système : un message orange en bas informe que</strong><br>
+                    <em>"le logo de l’entreprise ne fonctionne pas dans les SMS".</em><br>
+                    Cela veut dire que vous pouvez inclure le nom de l’entreprise, mais pas de logo dans un SMS.
+                </p>
+                <p>❖ <strong>Bouton d’action</strong></p>
+                <ul>
+                    <li>
+                        <strong>Sauvegarder :</strong> ce bouton permet d’enregistrer tous les modèles et paramètres que
+                        vous avez définis dans la page.
+                    </li>
+                </ul>
+            </div>
+
+            <div class="sub-subsection">
+                <h4>1.3) Pourquoi cette interface est importante ?</h4>
+                <table>
+                    <tr>
+                        <th>Avantage</th>
+                        <th>Explication</th>
+                    </tr>
+                    <tr>
+                        <td>Gain de temps</td>
+                        <td>Les messages sont envoyés automatiquement sans action manuelle.</td>
+                    </tr>
+                    <tr>
+                        <td>Personnalisation</td>
+                        <td>Chaque client ou fournisseur reçoit un message adapté à sa situation.</td>
+                    </tr>
+                    <tr>
+                        <td>Communication claire</td>
+                        <td>Toutes les personnes reçoivent les bonnes informations au bon moment.</td>
+                    </tr>
+                    <tr>
+                        <td>Multicanal</td>
+                        <td>Possibilité d’envoyer les messages via e-mail, SMS ou WhatsApp.</td>
+                    </tr>
+                    <tr>
+                        <td>Moins d’erreurs</td>
+                        <td>Les balises remplissent automatiquement les bonnes informations.</td>
+                    </tr>
+                </table>
+                <p><strong>Illustration de l’interface :</strong></p>
+                <p>Image ici</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section: Conclusion -->
+    <section class="conclusion">
+        <h2>Conclusion</h2>
+        <p>
+            Le module de gestion des modèles de notification de Movelys s’impose comme un <strong>outil</strong>
+            <strong>puissant de communication automatisée au service de l’efficacité opérationnelle et de la</strong>
+            satisfaction client. En offrant la possibilité de créer, personnaliser et planifier des messages
+            adaptés à chaque situation, Movelys permet à l’entreprise de maintenir une communication
+            fluide, cohérente et professionnelle.
+        </p>
+        <p>
+            Ce système favorise non seulement une meilleure réactivité, mais aussi un <strong>suivi rigoureux</strong>
+            <strong>des processus sans surcharge de travail manuel.</strong> En intégrant les notifications aux autres
+            modules de gestion (ventes, achats, paiements, stocks…), Movelys contribue à renforcer la
+            transparence, la confiance et la productivité.
+        </p>
+        <p>
+            Ainsi, la gestion des notifications devient un levier stratégique de fidélisation, d’organisation
+            interne et d’amélioration continue des performances.
+        </p>
+    </section>
+</div>

@@ -1,0 +1,325 @@
+---
+import '../styles/global1.css';
+import UserManagementContent from '../components/UserManagementContent.astro';
+import ContactContent from '../components/ContactContent.astro';
+import ProduitsContent from '../components/ProduitsContent.astro';
+import AchatsContent from '../components/AchatsContent.astro';
+import VenteContent from '../components/VenteContent.astro';
+import TransfertsContent from '../components/TransfertsContent.astro';
+import AjustementsContent from '../components/AjustementsContent.astro';
+import DepenseContent from '../components/DepenseContent.astro';
+import ModelesContent from '../components/ModelesContent.astro';
+import ParametresContent from '../components/ParametresContent.astro';
+import RapportsContent from '../components/RapportsContent.astro';
+
+const title = 'Documentation';
+const currentPage = 'utilisateur';
+---
+
+<!-- Chargement du script côté client uniquement -->
+<script>
+  import '../scripts/main.js';
+</script>
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{title}</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <a href="/" class="logo">
+          <div class="logo">
+            <img src="/images/logo.png" alt="Movelys Logo" style="height:70px; vertical-align:middle;" />
+          </div> 
+        </a>
+        <nav class="nav">
+            <div class="search-bar">
+          <input type="text" id="searchInput" placeholder="Rechercher..." />
+          <button id="searchButton" aria-label="Rechercher">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+              <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+            </svg>
+          </button>
+        </div>
+        
+            <a href="https://github.com/zamboukenfack/reproduction4" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 .5C5.73.5.5 5.74.5 12.02c0 5.1 3.29 9.43 7.86 10.96.58.11.79-.25.79-.56 0-.28-.01-1.02-.02-2-3.2.7-3.88-1.54-3.88-1.54-.53-1.35-1.29-1.71-1.29-1.71-1.06-.72.08-.7.08-.7 1.17.08 1.79 1.2 1.79 1.2 1.04 1.78 2.73 1.27 3.4.97.1-.75.4-1.27.72-1.56-2.56-.29-5.26-1.28-5.26-5.7 0-1.26.45-2.3 1.19-3.11-.12-.29-.52-1.47.11-3.06 0 0 .97-.31 3.17 1.18.92-.26 1.9-.39 2.88-.39.98 0 1.96.13 2.88.39 2.19-1.49 3.16-1.18 3.16-1.18.63 1.59.23 2.77.12 3.06.74.81 1.19 1.85 1.19 3.11 0 4.43-2.7 5.4-5.28 5.68.41.35.77 1.05.77 2.13 0 1.54-.01 2.77-.01 3.15 0 .31.21.68.8.56 4.57-1.53 7.85-5.86 7.85-10.96C23.5 5.74 18.27.5 12 .5z"/>
+                </svg>
+            </a>
+            <div class="header-actions">
+          
+                <button id="themeToggle" class="icon-button" title="Changer de thème">
+                   <span id="themeIcon">🌙</span>
+                </button>
+        </nav>
+    </header>
+
+    <div id="not-found-msg" style="display:none; color:red; font-weight:bold; margin:16px 0; font-size:1rem; text-align:center;">
+        mot non trouvé
+    </div>
+
+    <div class="page-container">
+        <!-- Section gauche -->
+        <section class="section left-section">
+            <aside class="sidebar">
+                <nav class="sidebar-nav">
+                    <a href="#" data-page="utilisateur" class="sidebar-link active">Gestion des utilisateurs</a>
+                    <a href="#" data-page="contact" class="sidebar-link">Contact</a>
+                    <a href="#" data-page="Produits" class="sidebar-link">Produits</a>
+                    <a href="#" data-page="Achats" class="sidebar-link">Achats</a>
+                    <a href="#" data-page="vente" class="sidebar-link">Vendre</a>
+                    <a href="#" data-page="Transferts" class="sidebar-link">Transferts de stock</a>
+                    <a href="#" data-page="Ajustements" class="sidebar-link">Ajustements des stocks</a>
+                    <a href="#" data-page="Depense" class="sidebar-link">Depense</a>
+                    <a href="#" data-page="Rapports" class="sidebar-link">Rapports</a>
+                    <a href="#" data-page="Modeles" class="sidebar-link">Modeles de notification</a>
+                    <a href="#" data-page="Parametres" class="sidebar-link">Parametres </a>
+                </nav>
+            </aside>
+        </section>
+
+        <!-- Section centrale (plus large) -->
+        <section class="section middle-section" id="content-area">
+            <div id="astro-content-utilisateur">
+                <UserManagementContent />
+            </div>
+            <div id="astro-content-contact" style="display:none">
+                <ContactContent />
+            </div>
+            <div id="astro-content-produits" style="display:none">
+                <ProduitsContent />
+            </div>
+            <div id="astro-content-achats" style="display:none">
+                <AchatsContent />
+            </div>
+            <div id="astro-content-vente" style="display:none">
+                <VenteContent />
+            </div>
+            <div id="astro-content-transferts" style="display:none">
+                <TransfertsContent />
+            </div>
+            <div id="astro-content-ajustements" style="display:none">
+                <AjustementsContent />
+            </div>
+            <div id="astro-content-depense" style="display:none">
+                <DepenseContent />
+            </div>
+            <div id="astro-content-modeles" style="display:none">
+                <ModelesContent />
+            </div>
+            <div id="astro-content-parametres" style="display:none">
+                <ParametresContent />
+            </div>
+            <div id="astro-content-rapports" style="display:none">
+                <RapportsContent />
+            </div>
+        </section>
+
+        <!-- Section droite -->
+        <section class="section right-section" id="right-section">
+           <h1>Sur cette page</h1>
+            <!-- La table des matières sera générée ici -->
+        </section>
+    </div>
+
+<footer class="site-footer">
+    <div class="footer-content">
+        <!-- Logo ou Nom -->
+        <h2>Movelys Documentation</h2>
+
+        <!-- Séparateur -->
+        <hr>
+
+        <!-- Texte -->
+        <p>© 2025 Movelys — Tous droits réservés.</p>
+        <p>Conçu pour une gestion d'entreprise simple, fluide et professionnelle.</p>
+    </div>
+</footer>
+
+    <script type="module">
+        // Gestion du changement de contenu central et de la TOC
+        document.addEventListener('DOMContentLoaded', () => {
+            const links = document.querySelectorAll('.sidebar-link');
+            const contentUtilisateur = document.getElementById('astro-content-utilisateur');
+            const contentContact = document.getElementById('astro-content-contact');
+            const contentProduits = document.getElementById('astro-content-produits');
+            const contentAchats = document.getElementById('astro-content-achats');
+            const contentVente = document.getElementById('astro-content-vente');
+            const contentTransferts = document.getElementById('astro-content-transferts');
+            const contentAjustements = document.getElementById('astro-content-ajustements');
+            const contentDepense = document.getElementById('astro-content-depense');
+            const contentModeles = document.getElementById('astro-content-modeles');
+            const contentParametres = document.getElementById('astro-content-parametres');
+            const contentRapports = document.getElementById('astro-content-rapports');
+            
+            function showContent(page) {
+                // Masquer tout d'abord tous les contenus
+                contentUtilisateur.style.display = 'none';
+                contentContact.style.display = 'none';
+                contentProduits.style.display = 'none';
+                contentAchats.style.display = 'none';
+                if (contentVente) contentVente.style.display = 'none';
+                if (contentTransferts) contentTransferts.style.display = 'none';
+                if (contentAjustements) contentAjustements.style.display = 'none';
+                if (contentDepense) contentDepense.style.display = 'none';
+                if (contentModeles) contentModeles.style.display = 'none';
+                if (contentParametres) contentParametres.style.display = 'none';
+                if (contentRapports) contentRapports.style.display = 'none';
+                
+                // Afficher uniquement le contenu demandé
+                if (page === 'utilisateur') {
+                    contentUtilisateur.style.display = '';
+                } else if (page === 'contact') {
+                    contentContact.style.display = '';
+                } else if (page === 'Produits') {
+                    contentProduits.style.display = '';
+                } else if (page === 'Achats') {
+                    contentAchats.style.display = '';
+                } else if (page === 'vente' && contentVente) {
+                    contentVente.style.display = '';
+                } else if (page === 'Transferts' && contentTransferts) {
+                    contentTransferts.style.display = '';
+                } else if (page === 'Ajustements' && contentAjustements) {
+                    contentAjustements.style.display = '';
+                } else if (page === 'Depense' && contentDepense) {
+                    contentDepense.style.display = '';
+                } else if (page === 'Modeles' && contentModeles) {
+                    contentModeles.style.display = '';
+                } else if (page === 'Parametres' && contentParametres) {
+                    contentParametres.style.display = '';
+                } else if (page === 'Rapports' && contentRapports) {
+                    contentRapports.style.display = '';
+                }
+                
+                // Générer la TOC après changement de contenu
+                if (window.generateTOC) window.generateTOC();
+            }
+            links.forEach(link => {
+                link.addEventListener('click', e => {
+                    e.preventDefault();
+                    links.forEach(l => l.classList.remove('active'));
+                    link.classList.add('active');
+                    showContent(link.dataset.page);
+                });
+            });
+            // Générer la TOC au chargement initial
+            if (window.generateTOC) window.generateTOC();
+        });
+
+
+
+document.addEventListener('DOMContentLoaded', () => {
+  const searchInput = document.getElementById('searchInput');
+  const contentArea = document.getElementById('content-area');
+  const notFoundMsg = document.getElementById('not-found-msg');
+
+  function getVisibleContentDiv() {
+    // Sélectionne le premier div enfant visible dans la section centrale
+    return Array.from(contentArea.children).find(
+      div => div.style.display !== 'none'
+    );
+  }
+
+  function removeHighlights(target) {
+    if (!target) return;
+    // On retire tous les <mark class="highlight">
+    const highlights = target.querySelectorAll('mark.highlight');
+    highlights.forEach(mark => {
+      const parent = mark.parentNode;
+      parent.replaceChild(document.createTextNode(mark.textContent), mark);
+      parent.normalize();
+    });
+  }
+
+  function highlightTerm(target, term) {
+    if (!target || !term) return 0;
+    let count = 0;
+    const regex = new RegExp(`(${term.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')})`, 'gi');
+
+    function walk(node) {
+      if (node.nodeType === 3) { // Text node
+        const matches = node.nodeValue.match(regex);
+        if (matches) {
+          count += matches.length;
+          const span = document.createElement('span');
+          span.innerHTML = node.nodeValue.replace(regex, '<mark class="highlight">$1</mark>');
+          node.parentNode.replaceChild(span, node);
+        }
+      } else if (node.nodeType === 1 && node.nodeName !== 'SCRIPT' && node.nodeName !== 'STYLE') {
+        // Ne pas traiter les balises script/style
+        Array.from(node.childNodes).forEach(walk);
+      }
+    }
+    walk(target);
+    return count;
+  }
+
+  function handleSearch() {
+    const visibleDiv = getVisibleContentDiv();
+    notFoundMsg.style.display = 'none';
+    if (!visibleDiv) return;
+    removeHighlights(visibleDiv);
+    const term = searchInput.value.trim();
+    if (term.length > 0) {
+      const found = highlightTerm(visibleDiv, term);
+      if (found === 0) {
+        notFoundMsg.style.display = 'block';
+      }
+    }
+  }
+
+  searchInput.addEventListener('input', handleSearch);
+
+  // Pour que la recherche fonctionne lors du changement de section
+  const sidebarLinks = document.querySelectorAll('.sidebar-link');
+  sidebarLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      setTimeout(handleSearch, 50); // attend que le contenu soit affiché
+    });
+  });
+});
+
+
+
+
+
+document.addEventListener('DOMContentLoaded', () => {
+  const themeToggle = document.getElementById('themeToggle');
+  const themeIcon = document.getElementById('themeIcon');
+  const root = document.documentElement;
+
+  // Appliquer le thème sauvegardé ou par défaut
+  function applyTheme(theme) {
+    if (theme === 'dark') {
+      root.classList.add('dark-theme');
+      root.classList.remove('light-theme');
+      if (themeIcon) themeIcon.textContent = '☀️';
+    } else {
+      root.classList.remove('dark-theme');
+      root.classList.add('light-theme');
+      if (themeIcon) themeIcon.textContent = '🌙';
+    }
+  }
+
+  // Initialisation au chargement
+  let theme = localStorage.getItem('theme') || 'light';
+  applyTheme(theme);
+
+  if (themeToggle) {
+    themeToggle.addEventListener('click', () => {
+      theme = (theme === 'light') ? 'dark' : 'light';
+      localStorage.setItem('theme', theme);
+      applyTheme(theme);
+    });
+  }
+});
+    </script>
+    <script type="module" src="/src/scripts/main.js"></script>
+</body>
+</html>

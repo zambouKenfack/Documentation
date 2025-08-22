@@ -1,0 +1,2016 @@
+---
+
+import '../styles/global1.css';
+---
+
+<div class="container">
+    <header class="header">
+        <h1>Sales Management</h1>
+    </header>
+        <!-- Section INTRODUCTION -->
+        <section class="section">
+            <h2 id="introduction">Introduction</h2>
+            <p>Sales management is one of the fundamental pillars of a company's commercial performance. With Movelys, this function is fully digitized and optimized through a powerful, intuitive, and interconnected module. Designed to meet the needs of businesses of all sizes, this module allows real-time tracking of every sales transaction, from order registration to final payment.</p>
+            
+            <p>The application provides a fluid interface for creating invoices, adding sold products or services, applying discounts, taxes, managing partial or complete payments, as well as precise customer tracking. Every operation is recorded rigorously, ensuring complete traceability and transparency at all stages of the sales cycle.</p>
+            
+            <p>Movelys also enables in-depth analysis of commercial activity through detailed reports, offering a global view of performance, margins, most active customers, and best-selling products. By linking sales management with inventory, contacts, and finance modules, Movelys provides a unified view essential for strategic decision-making.</p>
+        </section>
+
+        <!-- Section 1) All sales -->
+        <section class="section">
+            <h2 id="all-sales">1) All sales</h2>
+            
+            <h3 id="general-function">1.1) General function</h3>
+            <p>The <strong>All sales</strong> section constitutes the <strong>central dashboard for commercial management</strong> in Movelys. It groups all sales made in the system, whether direct sales, point of sale (POS) transactions, converted quotes, or orders recorded through other channels (import, drafts, returns, etc.).</p>
+            <p>It enables <strong>precise, fast, and organized tracking of each customer transaction</strong>, from initial registration to complete payment and delivery.</p>
+            
+            <h3 id="interface-tools">1.2) Interface and available tools</h3>
+            <p>The interface of this section is based on a <strong>dynamic, filterable, and customizable table</strong>, equipped with several processing functions.</p>
+            
+            <h4>Available functions</h4>
+            <ul>
+                <li>Entries per page: Allows displaying 10, 25, 50, or 100 sales per screen</li>
+                <li><strong>Quick search:</strong> Search bar filtering results instantly (by customer, sale number, status, etc.)</li>
+                <li><strong>CSV/Excel export:</strong> Allows downloading data for external use</li>
+                <li><strong>Print:</strong> Generates a printable version of the list</li>
+                <li><strong>Column visibility:</strong> Allows showing/hiding certain fields</li>
+                <li><strong>Add a sale:</strong> Direct access to the form for creating a new sale</li>
+            </ul>
+            
+            <div class="image-placeholder">
+                <p>Interface Illustration</p>
+                <img src="/image/vente1.png" alt="Description de l'image" width="900" height="600" style="max-width:100%;height:auto;border-radius:8px;" />
+            </div>
+            
+            <h3 id="key-features">1.3) Key features</h3>
+            <ul>
+                <li><strong>Column sorting:</strong> Allows ordering sales by date, customer, status, or amount.</li>
+                <li><strong>Multiple filters:</strong> Ability to combine several filters (e.g., unpaid sales for a given month).</li>
+                <li><strong>Detailed view:</strong> Each sale line provides access to a <strong>complete transaction detail.</strong></li>
+                <li><strong>Interactive status:</strong> Ability to change a sale's status (from draft to finalized, etc.).</li>
+            </ul>
+            
+            <h3 id="module-integration">1.4) Integration with other modules</h3>
+            <table class="component-table">
+                <tr>
+                    <th>Related module</th>
+                    <th>Role</th>
+                </tr>
+                <tr>
+                    <td>Products</td>
+                    <td>Automatic stock update for each validated sale</td>
+                </tr>
+                <tr>
+                    <td>Customers</td>
+                    <td>Update of customer history, balance due, discounts</td>
+                </tr>
+                <tr>
+                    <td>Inventory</td>
+                    <td>Automatic reduction of sold quantities</td>
+                </tr>
+                <tr>
+                    <td>Reports</td>
+                    <td>Feeds revenue and margin indicators</td>
+                </tr>
+            </table>
+            
+            <h3 id="access-rights">1.5) Access rights</h3>
+            <table class="component-table">
+                <tr>
+                    <th>User</th>
+                    <th>Recommended access</th>
+                </tr>
+                <tr>
+                    <td>Administrator</td>
+                    <td>All rights (modification, deletion, export)</td>
+                </tr>
+                <tr>
+                    <td>Salesperson</td>
+                    <td>Access to their own sales or all sales depending on permissions</td>
+                </tr>
+                <tr>
+                    <td>Accountant</td>
+                    <td>Read-only access or for accounting export</td>
+                </tr>
+                <tr>
+                    <td>Intern/Guest</td>
+                    <td>Limited or read-only access depending on profile</td>
+                </tr>
+            </table>
+        </section>
+
+        <!-- Section 2) Add a sale -->
+        <section class="section">
+            <h2 id="add-sale">2) Add a sale</h2>
+            
+            <h3 id="function-objective">2.1) Function objective</h3>
+            <p>The Add a sale section allows creating a new commercial transaction with a customer. It constitutes one of the most central functions of Movelys, as it records:</p>
+            <ul>
+                <li>The sale content (products/services),</li>
+                <li>Commercial terms (discounts, taxes, payments),</li>
+                <li>Customer relations (new or existing),</li>
+                <li>And operational impacts (inventory, invoices, reports, etc.).</li>
+            </ul>
+            
+            <h3 id="interface-presentation">2.2) Interface presentation</h3>
+            <p>The interface consists of functional Sections which are:</p>
+            
+            <h4>❖ The General sale information section:</h4>
+            <p>It groups the key administrative elements of a transaction, those that define the <strong>sale framework which are:</strong></p>
+            
+            <h5>1. Customer</h5>
+            <p>This field allows <strong>linking the sale to an existing customer in the database, or adding a new customer if necessary.</strong> This enables:</p>
+            <ul>
+                <li>Tracking their purchase history,</li>
+                <li>Generating personalized invoices,</li>
+                <li>Managing specific commercial terms (discounts, deferred payment, etc.).</li>
+            </ul>
+            <p><strong>Why it's important:</strong> Without customer identification, it's impossible to manage credit, send personalized receipts, or retrieve the sale later.</p>
+            
+            <h5>2. Payment term (or payment deadline)</h5>
+            <p>Optional field to define in <strong>how many days the payment should be made.</strong> Examples:</p>
+            <ul>
+                <li>0 days (cash payment),</li>
+                <li>15 days (Net 15),</li>
+                <li>30 days (Net 30),</li>
+            </ul>
+            <p>This activates credit management and helps the system track customer receivables and reminders.</p>
+            
+            <h5>3. Sale date</h5>
+            <p>This is the date when the transaction is recorded (or supposed to occur). By default, Movelys suggests the current date, but it can be modified for:</p>
+            <ul>
+                <li>A retroactive order,</li>
+                <li>An administrative postponement.</li>
+            </ul>
+            <p>This date is used in accounting, sales reports, and fiscal reports.</p>
+            
+            <h5>4. Billing scheme</h5>
+            <p>Term used to designate the <strong>automatic or manual invoice numbering model.</strong> A billing scheme can be:</p>
+            <ul>
+                <li><strong>Standard (for example: INV-2025-001),</strong></li>
+                <li><strong>Customized (by customer or sale type),</strong></li>
+            </ul>
+            <p>It allows organizing invoices in a uniform and traceable manner.</p>
+            
+            <h5>5. Invoice number</h5>
+            <p>Unique number identifying the sale (or draft) in the system. It can be:</p>
+            <ul>
+                <li><strong>Automatically generated by the system following the scheme,</strong></li>
+                <li>Or manually entered by the user (if authorized).</li>
+            </ul>
+            <p>This number is crucial for archiving, legal invoicing, and accounting tracking.</p>
+            
+            <h5>6. Attach a document</h5>
+            <p>Option to add an attached file to the sale. Examples:</p>
+            <ul>
+                <li>Customer purchase order,</li>
+                <li>Advance payment proof,</li>
+                <li>Specific commercial terms,</li>
+                <li>External invoice or signed quote.</li>
+            </ul>
+            <p>Supported formats are typically: PDF, CSV, DOCX, PNG.</p>
+            <p>Useful to justify a sale or attach any contractual document related to this transaction.</p>
+            
+            <h4>Summary: What is this section for?</h4>
+            <p>The "General Information" section allows to:</p>
+            <ul>
+                <li>Precisely identify the sale and concerned customer,</li>
+                <li>Define the legal and commercial framework of the transaction,</li>
+                <li>Ensure data consistency across the entire Movelys system.</li>
+            </ul>
+            
+            <h4>❖ Product addition section</h4>
+            <p>In this section you can add a product and also search for a product already present in the database to add it to the table</p>
+            
+            <h4>❖ Sale parameters section</h4>
+            <p>It groups fields used to adjust pricing conditions, apply discounts, manage taxation, and insert internal or customer notes about the sale.</p>
+            
+            <h5>1. Discount type</h5>
+            <p>This field defines how the discount is applied to the sale. The most common types are:</p>
+            <ul>
+                <li><strong>Percentage (%): proportional reduction (e.g. 10%)</strong></li>
+                <li><strong>Fixed amount: absolute value reduction (e.g. 5,000 FCFA)</strong></li>
+            </ul>
+            <p>It determines how the discount will be calculated on the total amount or on each item.</p>
+            
+            <h5>2. Discount amount</h5>
+            <p>This field specifies the amount or percentage of discount to apply according to the chosen type. Examples:</p>
+            <ul>
+                <li>If the type is %, entering "10" will apply a 10% reduction on the order.</li>
+                <li>If the type is amount, entering "2000" will deduct 2000 FCFA from the gross total.</li>
+            </ul>
+            <p>Allows offering customer benefits or applying commercial policies (sales, promotions, commercial gestures).</p>
+            
+            <h5>3. Order tax rate (sometimes called 'Order Tax' or 'Order VAT')</h5>
+            <p>This is the tax rate applied to the entire order. It is defined:</p>
+            <ul>
+                <li>Either automatically according to the country or default configuration (e.g. 18%),</li>
+                <li>Or selected manually (if multiple rates are possible depending on products or customers).</li>
+            </ul>
+            <p>This rate is used for automatic VAT calculation or any regulatory tax, and will be included in the invoice.</p>
+            
+            <h5>4. Sale note</h5>
+            <p>Free text field to add textual information to the sale. Usage examples:</p>
+            <ul>
+                <li>Special instruction for delivery or billing,</li>
+                <li>Specific commercial condition,</li>
+                <li>Mention of a verbal agreement or customer commitment,</li>
+                <li>Internal note for colleague follow-up.</li>
+            </ul>
+            <p>This note may appear on the customer ticket, invoice, or remain internal depending on configuration.</p>
+            
+            <h4>Summary: Role of this section</h4>
+            <p>The "Sale Parameters" section is essential to:</p>
+            <ul>
+                <li>Customize pricing conditions,</li>
+                <li>Comply with tax regulations,</li>
+                <li>Facilitate internal or customer communication.</li>
+            </ul>
+            <p>It gives the seller controlled negotiation flexibility while maintaining complete traceability.</p>
+            
+            <h4>❖ Shipping and logistics information section</h4>
+            <p>It groups all elements necessary for order preparation, shipping, delivery, and <strong>physical tracking.</strong> It is activated as soon as a product needs to be physically delivered to the customer.</p>
+            
+            <h5>1. Shipping details</h5>
+            <p>Global field used to:</p>
+            <ul>
+                <li>Briefly describe shipping methods,</li>
+                <li>Indicate a tracking number,</li>
+                <li>Mention a specificity (e.g.: express, grouped, by appointment...).</li>
+            </ul>
+            <p>Serves as a visible summary for the seller or logistics.</p>
+            
+            <h5>2. Delivery address</h5>
+            <p>Exact address where products should be delivered. It can be:</p>
+            <ul>
+                <li>Selected from the customer record (saved address),</li>
+                <li>Entered manually (temporary or different address).</li>
+            </ul>
+            <p>This address is mandatory if delivery is planned. It is used for documents, labels, and zone calculations.</p>
+            
+            <h5>3. Shipping fees</h5>
+            <p>Amount to charge the customer to cover transport or shipping costs. This field can be:</p>
+            <ul>
+                <li>Entered manually,</li>
+                <li>Or calculated automatically by an external module (zones, weight, carrier).</li>
+            </ul>
+            <p>The amount is added to the order's total including tax.</p>
+            
+            <h5>4. Shipping status</h5>
+            <p>Current logistics status of the order. Examples:</p>
+            <ul>
+                <li>Not shipped,</li>
+                <li>Pending delivery,</li>
+                <li>In transit,</li>
+                <li>Delivered,</li>
+                <li>Cancelled.</li>
+            </ul>
+            <p>This status evolves with logistics tracking. It is crucial for customer service, traceability, and reminders.</p>
+            
+            <h5>5. Delivered to</h5>
+            <p>Name of the person receiving the order at the delivery address. This field is useful if the recipient is not the initial customer (e.g.: assistant, receptionist, third-party company).</p>
+            <p>This avoids reception errors or confusion on site.</p>
+            
+            <h5>6. Delivery person</h5>
+            <p>Name or identifier of the person in charge of order delivery. It can be:</p>
+            <ul>
+                <li>An internal employee (logistics),</li>
+                <li>A partner carrier,</li>
+                <li>Or an external company</li>
+            </ul>
+            <p>This field facilitates responsibility tracking and potential claims.</p>
+            
+            <h5>7. Shipping documents</h5>
+            <p>Files related to delivery: delivery note (DN), carrier slip, proof of receipt, etc. Accepted formats: PDF, images, Excel, Word...</p>
+            <p>These documents ensure <strong>delivery proof, complete administrative and legal tracking.</strong></p>
+            
+            <h5>Button: Add additional expenses</h5>
+            <p>This button allows recording <strong>expenses associated with the order but not billed to the customer.</strong> Expense examples:</p>
+            <ul>
+                <li>Packaging costs,</li>
+                <li>Handling,</li>
+                <li>Transport commission,</li>
+                <li>Purchase of shipping-related accessories.</li>
+            </ul>
+            
+            <h5>What is it for?</h5>
+            <ul>
+                <li>To track the real profitability of the order,</li>
+                <li>Allocate these costs in analytical accounting,</li>
+                <li>Manage a journal of logistics expenses per sale.</li>
+            </ul>
+            <p>These expenses don't impact the customer total but enrich <strong>internal</strong> cost reports.</p>
+            
+            <h4>Role of this section</h4>
+            <p>The logistics section enables <strong>complete management of the delivery chain, from address entry to post-delivery tracking.</strong> It is indispensable for any business performing <strong>physical deliveries, as it:</strong></p>
+            <ul>
+                <li>Guarantees traceability,</li>
+                <li>Optimizes logistics costs,</li>
+                <li>Facilitates communication between teams (sales, inventory, transport).</li>
+            </ul>
+            
+            <h4>❖ Payment details section</h4>
+            <p>This section allows recording the <strong>exact financial terms related to a transaction.</strong> It is crucial to ensure <strong>accounting traceability, proper cash flow management, and</strong> the <strong>consistency of financial reports.</strong></p>
+            
+            <h5>1. Quantity</h5>
+            <p>In the context of a payment, this field can have several meanings depending on the form type.</p>
+            <ul>
+                <li>If the payment is linked to several sold items, the quantity corresponds to the number <strong>of invoiced items (often automatic from the products section).</strong></li>
+                <li>In a <strong>staggered payment form, this field can indicate the number of</strong> <strong>partial payments recorded or allowed.</strong></li>
+                <li>In a <strong>partial or multi-mode payment context, it can represent the</strong> <strong>quantity of</strong> <strong>products covered by a deposit.</strong></li>
+            </ul>
+            <p><strong>Purpose:</strong> Ensure the paid amount corresponds to one or several precise product quantities, or payment steps.</p>
+            
+            <h5>2. Payment method</h5>
+            <p>The payment method defines how the customer settles the transaction. The most common options include:</p>
+            <ul>
+                <li><strong>Cash:</strong> Payment in cash.</li>
+                <li><strong>Bank transfer:</strong> Payment made by transfer from a bank account.</li>
+                <li><strong>Credit card:</strong> Payment via electronic payment terminal (POS).</li>
+                <li><strong>Check:</strong> Deferred payment by paper check.</li>
+                <li><strong>Customer credit:</strong> Payment at a later due date (customer debtor account).</li>
+                <li><strong>Mobile payment:</strong> Ex.: Orange Money, Moov Money, MTN Mobile Money...</li>
+            </ul>
+            <p><strong>Purpose:</strong> Allow the company to track financial flows by method, useful for accounting, cash register, audits, and refunds.</p>
+            
+            <h5>3. Payment note</h5>
+            <p>The payment note is a free field intended to enter any additional information <strong>or justification related to the financial transaction.</strong> Examples:</p>
+            <ul>
+                <li>"Deposit paid by transfer, balance expected within 7 days."</li>
+                <li>"Payment by two different people."</li>
+                <li>"Partial payment, discount pending."</li>
+                <li>"Reduced amount following an exceptional commercial discount."</li>
+            </ul>
+            <p><strong>Purpose:</strong> Keep a written record to better explain certain payment operations, avoid disputes, and facilitate accounting verifications.</p>
+            
+            <h5>4. Payment date</h5>
+            <p>This is the effective date when the payment was made or recorded in the system. Two scenarios:</p>
+            <ul>
+                <li>If payment is immediate: this date is often equal to the sale or invoice date.</li>
+                <li>If payment is deferred or staggered: this date is chosen manually and can be future or past (in case of regularization).</li>
+            </ul>
+            <p><strong>Purpose:</strong> This date is used for:</p>
+            <ul>
+                <li>Sales or cash flow reports by period,</li>
+                <li>Establishing payment schedules,</li>
+                <li>Reminders in case of pending payment.</li>
+            </ul>
+            
+            <div class="image-placeholder">
+                <p>Interface Illustration</p>
+                <img src="/image/vente2.png" alt="Description de l'image" width="900" height="600" style="max-width:100%;height:auto;border-radius:8px;" />
+            </div>
+            <h3 id="sale-module-integration">2.3) Integration with Movelys modules</h3>
+            <table class="component-table">
+                <tr>
+                    <th>Related module</th>
+                    <th>Effects</th>
+                </tr>
+                <tr>
+                    <td>Inventory</td>
+                    <td>Automatic deduction of sold products</td>
+                </tr>
+                <tr>
+                    <td>Customers</td>
+                    <td>Update of customer balance and history</td>
+                </tr>
+                <tr>
+                    <td>Reports</td>
+                    <td>Update of sales, margins, and taxes</td>
+                </tr>
+                <tr>
+                    <td>Print/PDF</td>
+                    <td>Generation of invoice compliant with company identity</td>
+                </tr>
+            </table>
+            
+            <h3 id="security-permissions">2.4) Permissions and security</h3>
+            <table class="component-table">
+                <tr>
+                    <th>Role</th>
+                    <th>Access</th>
+                </tr>
+                <tr>
+                    <td>Administrator</td>
+                    <td>Full access (add, modify, delete)</td>
+                </tr>
+                <tr>
+                    <td>Salesperson</td>
+                    <td>Add and track sales</td>
+                </tr>
+                <tr>
+                    <td>Accountant</td>
+                    <td>Payment and amount tracking</td>
+                </tr>
+                <tr>
+                    <td>Guest/Intern</td>
+                    <td>No access or read-only access</td>
+                </tr>
+            </table>
+            
+            <p>Thanks to this fluid interface, the user can conduct sales autonomously while maintaining a high level of control and transparency.</p>
+        </section>
+
+
+        <!-- Section 3) POS list -->
+        <section class="section">
+            <h2 id="pos-list">3) POS list</h2>
+            
+            <h3 id="pos-general-presentation">3.1) General presentation</h3>
+            <p>The <strong>POS List (Point of Sale) section allows users to view, filter, sort, and manage</strong> all <strong>sales made via the POS interface.</strong> This view centralizes cash register transactions made in-store, at the counter, or at any physical point of sale equipped with Movelys.</p>
+            <p>It constitutes an essential tool to:</p>
+            <ul>
+                <li>Perform daily or periodic tracking of cash register sales,</li>
+                <li><strong>Reconcile collected amounts,</strong></li>
+                <li>Verify transactions made by cashiers,</li>
+                <li>And generate accounting reports or prints.</li>
+            </ul>
+            
+            <h3 id="pos-interface-presentation">3.1) Interface presentation</h3>
+            <p>The <strong>POS List appears as an interactive table with numerous control and export tools.</strong></p>
+            
+            <table class="component-table">
+                <tr>
+                    <th>Available tools</th>
+                    <th>Description</th>
+                </tr>
+                <tr>
+                    <td>Export CSV/Excel</td>
+                    <td>To analyze POS sales in a spreadsheet</td>
+                </tr>
+                <tr>
+                    <td>Print</td>
+                    <td>To print the list or individual tickets</td>
+                </tr>
+                <tr>
+                    <td>Customizable columns</td>
+                    <td>Hide or show certain fields</td>
+                </tr>
+                <tr>
+                    <td>Quick search</td>
+                    <td>Filter by customer, reference, date, amount or seller</td>
+                </tr>
+                <tr>
+                    <td>Filters</td>
+                    <td>Very useful for cash register closings</td>
+                </tr>
+                <tr>
+                    <td>Add</td>
+                    <td>Redirects to the Add POS interface</td>
+                </tr>
+            </table>
+            
+            <div class="image-placeholder">
+                <p>Interface Illustration</p>
+                <img src="/image/vente3.png" alt="Description de l'image" width="900" height="600" style="max-width:100%;height:auto;border-radius:8px;" />
+            </div>
+            
+            <h3 id="pos-module-integration">3.2) Integration with other modules</h3>
+            <table class="component-table">
+                <tr>
+                    <th>Related module</th>
+                    <th>Role</th>
+                </tr>
+                <tr>
+                    <td>Products/Inventory</td>
+                    <td>Stock update at the time of POS sale</td>
+                </tr>
+                <tr>
+                    <td>Customers</td>
+                    <td>Sales history if it's a registered customer</td>
+                </tr>
+                <tr>
+                    <td>Reports</td>
+                    <td>Inclusion in sales KPIs, payment rates, etc.</td>
+                </tr>
+                <tr>
+                    <td>Warranty</td>
+                    <td>Possibility to return an item from a POS sale</td>
+                </tr>
+            </table>
+            
+            <h3 id="pos-permissions-roles">3.3) User permissions and roles</h3>
+            <table class="component-table">
+                <tr>
+                    <th>Role</th>
+                    <th>Access to POS List</th>
+                </tr>
+                <tr>
+                    <td>Administrator</td>
+                    <td>All rights</td>
+                </tr>
+                <tr>
+                    <td>Cashier</td>
+                    <td>Access to their own sales, sometimes read-only for others</td>
+                </tr>
+                <tr>
+                    <td>Point of sale manager</td>
+                    <td>Complete tracking, cancellation, editing</td>
+                </tr>
+                <tr>
+                    <td>Accountant</td>
+                    <td>Consultation for reconciliation purposes</td>
+                </tr>
+                <tr>
+                    <td>Guest/Intern</td>
+                    <td>No access allowed</td>
+                </tr>
+            </table>
+        </section>
+
+        <!-- Section 4) Pos -->
+        <section class="section">
+            <h2 id="pos">4) Pos</h2>
+            
+            <h3 id="pos-interface-objective">4.1) Functionality objective & interface</h3>
+            <p>The POS (Point Of Sale) form in Movelys allows quick and complete entry of a <strong>physical in-store sale.</strong> It is designed to optimize the work of cashiers or sellers at a physical point of sale by providing an interface that is:</p>
+            <ul>
+                <li><strong>Intuitive and ergonomic,</strong></li>
+                <li>Capable of handling complex transactions (discounts, deliveries, taxes),</li>
+                <li>And directly integrated with inventory, customer, and cash register management.</li>
+            </ul>
+            <p>The objective is to enable:</p>
+            <ul>
+                <li>Direct sale of in-stock products,</li>
+                <li>Quick payment collection,</li>
+                <li>Generation of customer receipts,</li>
+                <li>Tracking of POS transactions.</li>
+            </ul>
+            
+            <div class="image-placeholder">
+                <p>Interface Illustration</p>
+                <img src="/image/vente4.png" alt="Description de l'image" width="900" height="600" style="max-width:100%;height:auto;border-radius:8px;" />
+            </div>
+            
+            <h3 id="pos-form-functioning">4.2) POS form functioning</h3>
+            
+            <h4>4.2.1. Transaction start</h4>
+            <h5>A. Location selection</h5>
+            <p>A menu at the top of the page displays the current location (e.g., <em>Senteur & Vitalité</em>), which is crucial in a multi-store environment. It indicates where the operation is recorded and affects <strong>inventory movements to this location.</strong></p>
+            
+            <h5>B. Sale date and time</h5>
+            <p>Dynamic display of timestamp to:</p>
+            <ul>
+                <li>Facilitate real-time sales tracking,</li>
+                <li>Precisely date each transaction.</li>
+            </ul>
+            
+            <h4>4.2.2. Customer identification</h4>
+            <p>The system defaults to an anonymous customer ("Walk-in customer"). A (+) button allows manually adding a new customer or selecting an existing one.</p>
+            <p><strong>Advantage:</strong> if a customer is identified, the sale will be linked to their account for better tracking (purchase history, credit, loyalty).</p>
+            
+            <h4>4.2.3. Product addition</h4>
+            <p>The interface offers several ways to add items to the cart:</p>
+            <ul>
+                <li>By entering the name, product code, or barcode scan,</li>
+                <li>Or via direct selection from the visual catalog on the right.</li>
+            </ul>
+            <p>Each added product appears in an interactive table containing:</p>
+            <ul>
+                <li>Product name,</li>
+                <li>Quantity to sell (modifiable),</li>
+                <li>Unit price and subtotal,</li>
+                <li>Delete icon.</li>
+            </ul>
+            <p>Products are automatically decremented from stock upon sale validation.</p>
+            
+            <h4>4.2.4. Total management</h4>
+            <h5>A. Discount</h5>
+            <ul>
+                <li>A global discount can be applied (amount or percentage).</li>
+                <li>Editable via a pen icon.</li>
+            </ul>
+            
+            <h5>B. Order tax (Order Tax)</h5>
+            <ul>
+                <li>Addition of tax (VAT or other) to the entire order.</li>
+                <li>The system can be configured with different tax types depending on location.</li>
+            </ul>
+            
+            <h5>C. Delivery</h5>
+            <ul>
+                <li>Optional cost added to the order if delivery is planned.</li>
+            </ul>
+            <p>Each field is dynamically modifiable, with real-time total update.</p>
+            
+            <h3 id="product-catalog">4.3) Product catalog (Right block)</h3>
+            <p>The display by category and brand allows quick search. Each product displays:</p>
+            <ul>
+                <li>Unit price,</li>
+                <li>Discount type,</li>
+                <li>Discount amount,</li>
+                <li>Description,</li>
+            </ul>
+            <p>A simple click automatically adds the product to the sales cart.</p>
+            
+            <h3 id="payment-finalization">4.3) Payment & finalization</h3>
+            <p>The bottom section of the screen contains all payment methods and actions.</p>
+            
+            <table class="component-table">
+                <tr>
+                    <th>Button</th>
+                    <th>Function</th>
+                </tr>
+                <tr>
+                    <td>Draft</td>
+                    <td>Saves the sale without final validation</td>
+                </tr>
+                <tr>
+                    <td>Quote</td>
+                    <td>Generates a quote (non-contractual)</td>
+                </tr>
+                <tr>
+                    <td>Suspend</td>
+                    <td>Temporarily puts the sale on hold</td>
+                </tr>
+                <tr>
+                    <td>Credit sale</td>
+                    <td>Records a customer debt</td>
+                </tr>
+                <tr>
+                    <td>Multiple payment</td>
+                    <td>Allows splitting payment across several methods</td>
+                </tr>
+                <tr>
+                    <td>Card/Cash</td>
+                    <td>Single payment according to selected type</td>
+                </tr>
+                <tr>
+                    <td>Cancel (red)</td>
+                    <td>Deletes the current transaction</td>
+                </tr>
+                <tr>
+                    <td>Total payable</td>
+                    <td>Displays in real time the amount to collect</td>
+                </tr>
+            </table>
+            
+            <h3 id="additional-features">4.5) Additional features</h3>
+            <table class="component-table">
+                <tr>
+                    <th>Function</th>
+                    <th>Description</th>
+                </tr>
+                <tr>
+                    <td>Expenses button</td>
+                    <td>Quick addition of an expense from the same sales station</td>
+                </tr>
+                <tr>
+                    <td>Recent transactions</td>
+                    <td>Displays previous sales made by the cashier</td>
+                </tr>
+                <tr>
+                    <td>Synchronization/History</td>
+                    <td>Allows consultation and update of past POS sales</td>
+                </tr>
+                <tr>
+                    <td>Settings</td>
+                    <td>POS options configuration (e.g.: taxes, receipt format, etc.)</td>
+                </tr>
+            </table>
+            
+            <h3 id="pos-form-permissions">4.6) User permissions and roles</h3>
+            <table class="component-table">
+                <tr>
+                    <th>Role</th>
+                    <th>POS form rights</th>
+                </tr>
+                <tr>
+                    <td>Administrator</td>
+                    <td>Full access (sale, refund, configuration)</td>
+                </tr>
+                <tr>
+                    <td>Cashier</td>
+                    <td>Access to sales, cart modification, payment collection</td>
+                </tr>
+                <tr>
+                    <td>Store manager</td>
+                    <td>Supervision, cash register closing, deferred validation</td>
+                </tr>
+                <tr>
+                    <td>Intern/Guest</td>
+                    <td>No access</td>
+                </tr>
+            </table>
+        </section>
+
+        <!-- Section 5) Add a draft -->
+        <section class="section">
+            <h2 id="add-draft">5) Add a draft</h2>
+            
+            <h3 id="draft-general-presentation">5.1) General presentation</h3>
+            <p>The "Add a draft" functionality allows users to create a <strong>temporary unfinalized sale</strong>, stored in the system to be completed, validated, or modified later.</p>
+            <p>This module is ideal for managing:</p>
+            <ul>
+                <li><strong>Orders pending validation,</strong></li>
+                <li>Sales <strong>partially paid or to be confirmed,</strong></li>
+                <li>Or order preparations in a multi-step process.</li>
+            </ul>
+            
+            <h3 id="draft-objectives">5.2) Functionality objectives</h3>
+            <ul>
+                <li>Allow <strong>flexibility in managing incomplete sales.</strong></li>
+                <li>Provide a temporary workspace before final confirmation.</li>
+                <li>Help <strong>coordination between sales and accounting teams.</strong></li>
+                <li>Reduce errors by taking time to <strong>verify information before finalization.</strong></li>
+            </ul>
+            
+            <h3 id="draft-interface-presentation">5.3) Interface presentation</h3>
+            <p>The form is identical to a classic sale, except that the <strong>default status is "Draft".</strong> It is divided into 4 sections</p>
+            
+            <h4>❖ The General sale information section:</h4>
+            <p>It groups the key administrative elements of a transaction, those that define the <strong>sale framework which are:</strong></p>
+            
+            <h5>1. Customer</h5>
+            <p>This field allows <strong>linking the sale to an existing customer in the database, or adding a new customer if necessary.</strong> This enables:</p>
+            <ul>
+                <li>Tracking their purchase history,</li>
+                <li>Generating personalized invoices,</li>
+                <li>Managing specific commercial terms (discounts, deferred payment, etc.).</li>
+            </ul>
+            <p><strong>Why it's important:</strong> Without customer identification, it's impossible to manage credit, send personalized receipts, or retrieve the sale later.</p>
+            
+            <h5>2. Payment term (or payment deadline)</h5>
+            <p>Optional field to define in how many days the payment should be made. Examples:</p>
+            <ul>
+                <li>0 days (cash payment),</li>
+                <li>15 days (Net 15),</li>
+                <li>30 days (Net 30),</li>
+            </ul>
+            <p>This activates credit management and helps the system track customer receivables and reminders.</p>
+            
+            <h5>3. Sale date</h5>
+            <p>This is the date when the transaction is recorded (or supposed to occur). By default, Movelys suggests the current date, but it can be modified for:</p>
+            <ul>
+                <li>A retroactive order,</li>
+                <li>An administrative postponement.</li>
+            </ul>
+            <p>This date is used in accounting, sales reports, and fiscal reports.</p>
+            
+            <h5>4. Billing scheme</h5>
+            <p>Term used to designate the <strong>automatic or manual invoice numbering model.</strong> A billing scheme can be:</p>
+            <ul>
+                <li><strong>Standard (for example: INV-2025-001),</strong></li>
+                <li><strong>Customized (by customer or sale type),</strong></li>
+            </ul>
+            <p>It allows organizing invoices in a uniform and traceable manner.</p>
+            
+            <h5>5. Invoice number</h5>
+            <p>Unique number identifying the sale (or draft) in the system. It can be:</p>
+            <ul>
+                <li><strong>Automatically generated by the system following the scheme,</strong></li>
+                <li>Or manually entered by the user (if authorized).</li>
+            </ul>
+            <p>This number is crucial for archiving, legal invoicing, and accounting tracking.</p>
+            
+            <h5>6. Attach a document</h5>
+            <p>Option to add an attached file to the sale. Examples:</p>
+            <ul>
+                <li>Customer purchase order,</li>
+                <li>Advance payment proof,</li>
+                <li>Specific commercial terms,</li>
+                <li>External invoice or signed quote.</li>
+            </ul>
+            <p>Supported formats are typically: PDF, CSV, DOCX, PNG.</p>
+            <p>Useful to justify a sale or attach any contractual document related to this transaction.</p>
+            
+            <h4>Summary: What is this section for?</h4>
+            <p>The "General Information" section allows to:</p>
+            <ul>
+                <li>Precisely identify the sale and concerned customer,</li>
+                <li>Define the legal and commercial framework of the transaction,</li>
+                <li>Ensure data consistency across the entire Movelys system.</li>
+            </ul>
+            
+            <h4>❖ Product addition section</h4>
+            <p>In this section you can add a product and also search for a product already present in the database to add it to the table</p>
+            
+            <h4>❖ Sale parameters section</h4>
+            <p>It groups fields used to adjust pricing conditions, apply discounts, manage taxation, and insert internal or customer notes about the sale.</p>
+            
+            <h5>1. Discount type</h5>
+            <p>This field defines how the discount is applied to the sale. The most common types are:</p>
+            <ul>
+                <li><strong>Percentage (%): proportional reduction (e.g. 10%)</strong></li>
+                <li><strong>Fixed amount: absolute value reduction (e.g. 5,000 FCFA)</strong></li>
+            </ul>
+            <p>It determines how the discount will be calculated on the total amount or on each item.</p>
+            
+            <h5>2. Discount amount</h5>
+            <p>This field specifies the amount or percentage of discount to apply according to the chosen type. Examples:</p>
+            <ul>
+                <li>If the type is %, entering "10" will apply a 10% reduction on the order.</li>
+                <li>If the type is amount, entering "2000" will deduct 2000 FCFA from the gross total.</li>
+            </ul>
+            <p>Allows offering customer benefits or applying commercial policies (sales, promotions, commercial gestures).</p>
+            
+            <h5>3. Order tax rate (sometimes called 'Order Tax' or 'Order VAT')</h5>
+            <p>This is the tax rate applied to the entire order. It is defined:</p>
+            <ul>
+                <li>Either automatically according to the country or default configuration (e.g. 18%),</li>
+                <li>Or selected manually (if multiple rates are possible depending on products or customers).</li>
+            </ul>
+            <p>This rate is used for automatic VAT calculation or any regulatory tax, and will be included in the invoice.</p>
+            
+            <h5>4. Sale note</h5>
+            <p>Free text field to add textual information to the sale. Usage examples:</p>
+            <ul>
+                <li>Special instruction for delivery or billing,</li>
+                <li>Specific commercial condition,</li>
+                <li>Mention of a verbal agreement or customer commitment,</li>
+                <li>Internal note for colleague follow-up.</li>
+            </ul>
+            <p>This note may appear on the <strong>customer ticket, invoice, or remain internal depending on</strong> configuration.</p>
+            
+            <h4>Summary: Role of this section</h4>
+            <p>The "Sale Parameters" section is essential to:</p>
+            <ul>
+                <li>Customize pricing conditions,</li>
+                <li>Comply with tax regulations,</li>
+                <li>Facilitate internal or customer communication.</li>
+            </ul>
+            <p>It gives the seller <strong>controlled negotiation flexibility while maintaining complete traceability.</strong></p>
+            
+            <h4>❖ Shipping and logistics information section</h4>
+            <p>It groups all elements necessary for order preparation, shipping, delivery, and <strong>physical tracking.</strong> It is activated as soon as a product needs to be physically delivered to the customer.</p>
+            
+            <h5>1. Shipping details</h5>
+            <p>Global field used to:</p>
+            <ul>
+                <li>Briefly describe shipping methods,</li>
+                <li>Indicate a tracking number,</li>
+                <li>Mention a specificity (e.g.: express, grouped, by appointment...).</li>
+            </ul>
+            <p>Serves as a visible summary for the seller or logistics.</p>
+            
+            <h5>2. Delivery address</h5>
+            <p>Exact address where products should be delivered. It can be:</p>
+            <ul>
+                <li>Selected from the customer record (saved address),</li>
+                <li>Entered manually (temporary or different address).</li>
+            </ul>
+            <p>This address is mandatory if delivery is planned. It is used for documents, labels, and zone calculations.</p>
+            
+            <h5>3. Shipping fees</h5>
+            <p>Amount to charge the customer to cover transport or shipping costs. This field can be:</p>
+            <ul>
+                <li>Entered manually,</li>
+                <li>Or calculated automatically by an external module (zones, weight, carrier).</li>
+            </ul>
+            <p>The amount is added to the order's total including tax.</p>
+            
+            <h5>4. Shipping status</h5>
+            <p>Current logistics status of the order. Examples:</p>
+            <ul>
+                <li>Not shipped,</li>
+                <li>Pending delivery,</li>
+                <li>In transit,</li>
+                <li>Delivered,</li>
+                <li>Cancelled.</li>
+            </ul>
+            <p>This status evolves with logistics tracking. It is crucial for customer service, traceability, and reminders.</p>
+            
+            <h5>5. Delivered to</h5>
+            <p>Name of the person receiving the order at the delivery address. This field is useful if the recipient is not the initial customer (e.g.: assistant, receptionist, third-party company).</p>
+            <p>This avoids reception errors or confusion on site.</p>
+            
+            <h5>6. Delivery person</h5>
+            <p>Name or identifier of the person in charge of order delivery. It can be:</p>
+            <ul>
+                <li>An internal employee (logistics),</li>
+                <li>A partner carrier,</li>
+                <li>Or an external company</li>
+            </ul>
+            <p>This field facilitates responsibility tracking and potential claims.</p>
+            
+            <h5>7. Shipping documents</h5>
+            <p>Files related to delivery: delivery note (DN), carrier slip, proof of receipt, etc. Accepted formats: PDF, images, Excel, Word...</p>
+            <p>These documents ensure <strong>delivery proof, complete administrative and legal tracking.</strong></p>
+            
+            <h5>Button: Add additional expenses</h5>
+            <p>This button allows recording <strong>expenses associated with the order but not billed to the customer.</strong> Expense examples:</p>
+            <ul>
+                <li>Packaging costs,</li>
+                <li>Handling,</li>
+                <li>Transport commission,</li>
+                <li>Purchase of shipping-related accessories.</li>
+            </ul>
+            
+            <h5>What is it for?</h5>
+            <ul>
+                <li>To track the real profitability of the order,</li>
+                <li>Allocate these costs in analytical accounting,</li>
+                <li>Manage a journal of logistics expenses per sale.</li>
+            </ul>
+            <p>These expenses don't impact the customer total but enrich <strong>internal</strong> cost reports.</p>
+            
+            <h4>Role of this section</h4>
+            <p>The logistics section enables <strong>complete management of the delivery chain, from address entry to post-delivery tracking.</strong> It is indispensable for any business performing <strong>physical deliveries, as it:</strong></p>
+            <ul>
+                <li>Guarantees traceability,</li>
+                <li>Optimizes logistics costs,</li>
+                <li>Facilitates communication between teams (sales, inventory, transport).</li>
+            </ul>
+            
+            <div class="image-placeholder">
+                <p>Interface Illustration</p>
+                <img src="/image/vente5.png" alt="Description de l'image" width="900" height="600" style="max-width:100%;height:auto;border-radius:8px;" />
+            </div>
+            
+            <h3 id="draft-module-integration">5.4) Integration with other modules</h3>
+            <table class="component-table">
+                <tr>
+                    <th>Module</th>
+                    <th>Interaction</th>
+                </tr>
+                <tr>
+                    <td>Products/Inventory</td>
+                    <td>No impact as long as the draft isn't validated</td>
+                </tr>
+                <tr>
+                    <td>Customers</td>
+                    <td>Temporary history visible in customer record</td>
+                </tr>
+                <tr>
+                    <td>Shipping</td>
+                    <td>No shipment created before validation</td>
+                </tr>
+                <tr>
+                    <td>Reports</td>
+                    <td>Not included in statistics until finalized</td>
+                </tr>
+            </table>
+            
+            <h3 id="draft-permissions">5.5) Recommended permissions</h3>
+            <table class="component-table">
+                <tr>
+                    <th>User role</th>
+                    <th>Access</th>
+                </tr>
+                <tr>
+                    <td>Administrator</td>
+                    <td>Creation, editing, deletion</td>
+                </tr>
+                <tr>
+                    <td>Sales manager</td>
+                    <td>Creation and draft tracking</td>
+                </tr>
+                <tr>
+                    <td>Salesperson</td>
+                    <td>Draft creation only</td>
+                </tr>
+                <tr>
+                    <td>Accountant/Customer Service</td>
+                    <td>No access required except read-only</td>
+                </tr>
+                <tr>
+                    <td>Guest/External</td>
+                    <td>Forbidden</td>
+                </tr>
+            </table>
+        </section>
+
+        <!-- Section 6) Drafts list -->
+        <section class="section">
+            <h2 id="drafts-list">6) Drafts list</h2>
+            
+            <h3 id="drafts-section-objective">6.1) Section objective</h3>
+            <p>The <strong>Drafts List is an essential interface that allows to</strong> <strong>centralize, view, manage, and resume all sales recorded as drafts.</strong> It enables users to:</p>
+            <ul>
+                <li>Retrieve a temporarily suspended sale,</li>
+                <li>Modify or finalize an order,</li>
+                <li>Delete an incomplete entry,</li>
+                <li>Generate an invoice from a prepared order.</li>
+            </ul>
+            <p><strong>Important:</strong> draft sales have no accounting or logistics impact until they are finalized.</p>
+            
+            <h3 id="drafts-interface-structure">6.2) Interface structure</h3>
+            <p>The page appears as a dynamic table, accompanied by search, sort, filter, and export tools.</p>
+            
+            <h4>Tools available at the top of the page:</h4>
+            <table class="component-table">
+                <tr>
+                    <th>Function</th>
+                    <th>Description</th>
+                </tr>
+                <tr>
+                    <td>Search bar</td>
+                    <td>Allows filtering drafts by customer, reference, seller, or date</td>
+                </tr>
+                <tr>
+                    <td>Export CSV/Excel/PDF</td>
+                    <td>Generates an exportable file of drafts for external analysis</td>
+                </tr>
+                <tr>
+                    <td>Print</td>
+                    <td>Prints the current list or a selected draft</td>
+                </tr>
+                <tr>
+                    <td>Column visibility</td>
+                    <td>Activates or deactivates display of certain columns</td>
+                </tr>
+                <tr>
+                    <td>Date range filtering</td>
+                    <td>Limits display to drafts from a specific date or period</td>
+                </tr>
+            </table>
+            
+            <h4>Main table columns</h4>
+            <p>As main column We have:</p>
+            <p>The Date, the reference number, customer name, contact number, location, total items, added by and action.</p>
+            
+            <div class="image-placeholder">
+                <p>Interface Illustration</p>
+                <img src="/image/vente6.png" alt="Description de l'image" width="900" height="600" style="max-width:100%;height:auto;border-radius:8px;" />
+            </div>
+            
+            <h3 id="management-rules-permissions">6.3) Management rules and permissions</h3>
+            <table class="component-table">
+                <tr>
+                    <th>Role</th>
+                    <th>Access to Drafts List</th>
+                </tr>
+                <tr>
+                    <td>Administrator</td>
+                    <td>Consultation, modification, deletion of all drafts</td>
+                </tr>
+                <tr>
+                    <td>Cashier/Salesperson</td>
+                    <td>Consultation and editing of their own drafts</td>
+                </tr>
+                <tr>
+                    <td>POS Manager/Store Manager</td>
+                    <td>Full control over all point of sale drafts</td>
+                </tr>
+                <tr>
+                    <td>Intern/Restricted user</td>
+                    <td>Access denied, except controlled read-only</td>
+                </tr>
+            </table>
+        </section>
+
+
+        <!-- Section 7) Add a quote -->
+        <section class="section">
+            <h2 id="add-quote">7) Add a quote</h2>
+            
+            <h3 id="quote-objective">7.1) Functionality objective</h3>
+            <p>The Add a quote functionality allows users to create a formal <strong>commercial proposal for a customer before any sale validation.</strong></p>
+            <p>The quote has several objectives:</p>
+            <ul>
+                <li><strong>Formalize a price offer,</strong></li>
+                <li>Allow the customer to think or negotiate before purchase,</li>
+                <li>Keep a written and numbered record of the proposal,</li>
+                <li>Facilitate direct conversion of the quote to order after validation.</li>
+            </ul>
+            
+            <h3 id="quote-interface-presentation">7.2) Interface presentation</h3>
+            <p>The interface consists of 4 functional sections which are:</p>
+            
+            <h4>❖ The General sale information section:</h4>
+            <p>It groups the key administrative elements of a transaction, those that define the <strong>sale framework which are:</strong></p>
+            
+            <h5>1. Customer</h5>
+            <p>This field allows linking the sale to an existing customer in the database, or adding a <strong>new customer if necessary.</strong> This enables:</p>
+            <ul>
+                <li>Tracking their purchase history,</li>
+                <li>Generating personalized invoices,</li>
+                <li>Managing specific commercial terms (discounts, deferred payment, etc.).</li>
+            </ul>
+            <p><strong>Why it's important:</strong> Without customer identification, it's impossible to manage credit, send personalized receipts, or retrieve the sale later.</p>
+            
+            <h5>2. Payment term (or payment deadline)</h5>
+            <p>Optional field to define in how many days the payment should be made. Examples:</p>
+            <ul>
+                <li>0 days (cash payment),</li>
+                <li>15 days (Net 15),</li>
+                <li>30 days (Net 30),</li>
+            </ul>
+            <p>This activates credit management and helps the system track customer receivables and reminders.</p>
+            
+            <h5>3. Sale date</h5>
+            <p>This is the date when the transaction is recorded (or supposed to occur). By default, Movelys suggests the current date, but it can be modified for:</p>
+            <ul>
+                <li>A retroactive order,</li>
+                <li>An administrative postponement.</li>
+            </ul>
+            <p>This date is used in accounting, sales reports, and fiscal reports.</p>
+            
+            <h5>4. Billing scheme</h5>
+            <p>Term used to designate the <strong>automatic or manual invoice numbering model.</strong> A billing scheme can be:</p>
+            <ul>
+                <li><strong>Standard (for example: INV-2025-001),</strong></li>
+                <li><strong>Customized (by customer or sale type),</strong></li>
+            </ul>
+            <p>It allows organizing invoices in a uniform and traceable manner.</p>
+            
+            <h5>5. Invoice number</h5>
+            <p>Unique number identifying the sale (or draft) in the system. It can be:</p>
+            <ul>
+                <li><strong>Automatically generated by the system following the scheme,</strong></li>
+                <li>Or manually entered by the user (if authorized).</li>
+            </ul>
+            <p>This number is crucial for archiving, legal invoicing, and accounting tracking.</p>
+            
+            <h5>6. Attach a document</h5>
+            <p>Option to add an attached file to the sale. Examples:</p>
+            <ul>
+                <li>Customer purchase order,</li>
+                <li>Advance payment proof,</li>
+                <li>Specific commercial terms,</li>
+                <li>External invoice or signed quote.</li>
+            </ul>
+            <p>Supported formats are typically: PDF, CSV, DOCX, PNG.</p>
+            <p>Useful to justify a sale or attach any contractual document related to this transaction.</p>
+            
+            <h4>Summary: What is this section for?</h4>
+            <p>The "General Information" section allows to:</p>
+            <ul>
+                <li>Precisely identify the sale and concerned customer,</li>
+                <li>Define the legal and commercial framework of the transaction,</li>
+                <li>Ensure data consistency across the entire Movelys system.</li>
+            </ul>
+            
+            <h4>❖ Product addition section</h4>
+            <p>In this section you can add a product and also search for a product already present in the database to add it to the table</p>
+            
+            <h4>❖ Sale parameters section</h4>
+            <p>It groups fields used to adjust pricing conditions, apply discounts, manage taxation, and insert internal or customer notes about the sale.</p>
+            
+            <h5>1. Discount type</h5>
+            <p>This field defines how the discount is applied to the sale. The most common types are:</p>
+            <ul>
+                <li><strong>Percentage (%): proportional reduction (e.g. 10%)</strong></li>
+                <li><strong>Fixed amount: absolute value reduction (e.g. 5,000 FCFA)</strong></li>
+            </ul>
+            <p>It determines how the discount will be calculated on the total amount or on each item.</p>
+            
+            <h5>2. Discount amount</h5>
+            <p>This field specifies the amount or percentage of discount to apply according to the chosen type. Examples:</p>
+            <ul>
+                <li>If the type is %, entering "10" will apply a 10% reduction on the order.</li>
+                <li>If the type is amount, entering "2000" will deduct 2000 FCFA from the gross total.</li>
+            </ul>
+            <p>Allows offering customer benefits or applying commercial policies (sales, promotions, commercial gestures).</p>
+            
+            <h5>3. Order tax rate (sometimes called 'Order Tax' or 'Order VAT')</h5>
+            <p>This is the tax rate applied to the entire order. It is defined:</p>
+            <ul>
+                <li>Either automatically according to the country or default configuration (e.g. 18%),</li>
+                <li>Or selected manually (if multiple rates are possible depending on products or customers).</li>
+            </ul>
+            <p>This rate is used for automatic VAT calculation or any regulatory tax, and will be included in the invoice.</p>
+            
+            <h5>4. Sale note</h5>
+            <p>Free text field to add textual information to the sale. Usage examples:</p>
+            <ul>
+                <li>Special instruction for delivery or billing,</li>
+                <li>Specific commercial condition,</li>
+                <li>Mention of a verbal agreement or customer commitment,</li>
+                <li>Internal note for colleague follow-up.</li>
+            </ul>
+            <p>This note may appear on the customer ticket, invoice, or remain internal depending on configuration.</p>
+            
+            <h4>Summary: Role of this section</h4>
+            <p>The "Sale Parameters" section is essential to:</p>
+            <ul>
+                <li>Customize pricing conditions,</li>
+                <li>Comply with tax regulations,</li>
+                <li>Facilitate internal or customer communication.</li>
+            </ul>
+            <p>It gives the seller controlled negotiation flexibility while maintaining <strong>complete traceability.</strong></p>
+            
+            <h4>❖ Shipping and logistics information section</h4>
+            <p>It groups all elements necessary for order preparation, shipping, delivery, and <strong>physical tracking.</strong> It is activated as soon as a product needs to be physically delivered to the customer.</p>
+            
+            <h5>1. Shipping details</h5>
+            <p>Global field used to:</p>
+            <ul>
+                <li>Briefly describe shipping methods,</li>
+                <li>Indicate a tracking number,</li>
+                <li>Mention a specificity (e.g.: express, grouped, by appointment...).</li>
+            </ul>
+            <p>Serves as a visible summary for the seller or logistics.</p>
+            
+            <h5>2. Delivery address</h5>
+            <p>Exact address where products should be delivered. It can be:</p>
+            <ul>
+                <li>Selected from the customer record (saved address),</li>
+                <li>Entered manually (temporary or different address).</li>
+            </ul>
+            <p>This address is mandatory if delivery is planned. It is used for documents, labels, and zone calculations.</p>
+            
+            <h5>3. Shipping fees</h5>
+            <p>Amount to charge the customer to cover transport or shipping costs. This field can be:</p>
+            <ul>
+                <li>Entered manually,</li>
+                <li>Or calculated automatically by an external module (zones, weight, carrier).</li>
+            </ul>
+            <p>The amount is added to the order's total including tax.</p>
+            
+            <h5>4. Shipping status</h5>
+            <p>Current logistics status of the order. Examples:</p>
+            <ul>
+                <li>Not shipped,</li>
+                <li>Pending delivery,</li>
+                <li>In transit,</li>
+                <li>Delivered,</li>
+                <li>Cancelled.</li>
+            </ul>
+            <p>This status evolves with logistics tracking. It is crucial for customer service, traceability, and reminders.</p>
+            
+            <h5>5. Delivered to</h5>
+            <p>Name of the person receiving the order at the delivery address. This field is useful if the recipient is not the initial customer (e.g.: assistant, receptionist, third-party company).</p>
+            <p>This avoids reception errors or confusion on site.</p>
+            
+            <h5>6. Delivery person</h5>
+            <p>Name or identifier of the person in charge of order delivery. It can be:</p>
+            <ul>
+                <li>An internal employee (logistics),</li>
+                <li>A partner carrier,</li>
+                <li>Or an external company</li>
+            </ul>
+            <p>This field facilitates responsibility tracking and potential claims.</p>
+            
+            <h5>7. Shipping documents</h5>
+            <p>Files related to delivery: delivery note (DN), carrier slip, proof of receipt, etc. Accepted formats: PDF, images, Excel, Word...</p>
+            <p>These documents ensure <strong>delivery proof, complete administrative and legal tracking.</strong></p>
+            
+            <h5>Button: Add additional expenses</h5>
+            <p>This button allows recording <strong>expenses associated with the order but not billed to the customer.</strong> Expense examples:</p>
+            <ul>
+                <li>Packaging costs,</li>
+                <li>Handling,</li>
+                <li>Transport commission,</li>
+                <li>Purchase of shipping-related accessories.</li>
+            </ul>
+            
+            <h5>What is it for?</h5>
+            <ul>
+                <li>To track the real profitability of the order,</li>
+                <li>Allocate these costs in analytical accounting,</li>
+                <li>Manage a journal of logistics expenses per sale.</li>
+            </ul>
+            <p>These expenses don't impact the customer total but enrich <strong>internal</strong> cost reports.</p>
+            
+            <h4>Role of this section</h4>
+            <p>The logistics section enables complete management of the delivery chain, from address entry to post-delivery tracking. It is indispensable for any business performing <strong>physical deliveries, as it:</strong></p>
+            <ul>
+                <li>Guarantees traceability,</li>
+                <li>Optimizes logistics costs,</li>
+                <li>Facilitates communication between teams (sales, inventory, transport).</li>
+            </ul>
+            
+            <div class="image-placeholder">
+                <p>Interface Illustration</p>
+                <img src="/image/vente7.png" alt="Description de l'image" width="900" height="600" style="max-width:100%;height:auto;border-radius:8px;" />
+            </div>
+            
+            <h3 id="quote-tracking-conversion">7.3) Quote tracking and conversion</h3>
+            <p>Once saved, the quote can:</p>
+            <ul>
+                <li>Be <strong>consulted anytime from the quotes list,</strong></li>
+                <li>Be <strong>modified if still pending,</strong></li>
+                <li>Be <strong>converted to order/invoice with one click (without re-entry).</strong></li>
+            </ul>
+            <p>The system keeps a history of all modifications, with an activity log linked to the customer.</p>
+            
+            <h3 id="quote-permissions-roles">7.4) Permissions and roles</h3>
+            <table class="component-table">
+                <tr>
+                    <th>User role</th>
+                    <th>Access to "Add a quote"</th>
+                </tr>
+                <tr>
+                    <td>Administrator</td>
+                    <td>Full access</td>
+                </tr>
+                <tr>
+                    <td>Salesperson</td>
+                    <td>Creation and modification</td>
+                </tr>
+                <tr>
+                    <td>Sales manager</td>
+                    <td>Supervision, validation, conversion</td>
+                </tr>
+                <tr>
+                    <td>Restricted user/Guest</td>
+                    <td>No access</td>
+                </tr>
+            </table>
+        </section>
+
+
+        <!-- Section 8) Quote list -->
+        <section class="section">
+            <h2 id="quote-list">8) Quote list</h2>
+            
+            <h3 id="quote-section-objective">8.1) Section objective</h3>
+            <p>The Quotes List is the central interface where all quotes <strong>(or commercial proposals) created in the system are displayed, tracked, and managed.</strong></p>
+            <p>It allows users to:</p>
+            <ul>
+                <li>Quickly find a quote according to various criteria,</li>
+                <li>Perform actions on each proposal (view, modify, send, delete),</li>
+                <li>Easily transform a quote into a <strong>validated order or sale.</strong></li>
+            </ul>
+            <p>This interface constitutes a <strong>bridge between commercial negotiation and conversion to</strong> <strong>actual sale.</strong></p>
+            
+            <h3 id="quote-interface-structure">8.2) General interface structure</h3>
+            <p>The interface appears as an interactive table, with powerful search, filtering, export, and batch action tools.</p>
+            
+            <h4>Tools available at the top:</h4>
+            <table class="component-table">
+                <tr>
+                    <th>Tool</th>
+                    <th>Function</th>
+                </tr>
+                <tr>
+                    <td>Quick search</td>
+                    <td>By customer name, reference, date, seller...</td>
+                </tr>
+                <tr>
+                    <td>Export CSV/Excel</td>
+                    <td>Generates a spreadsheet file of all listed quotes</td>
+                </tr>
+                <tr>
+                    <td>Print</td>
+                    <td>Allows printing selected quotes or the entire list</td>
+                </tr>
+                <tr>
+                    <td>Visible columns</td>
+                    <td>Activates or deactivates columns per user</td>
+                </tr>
+                <tr>
+                    <td>Date filtering</td>
+                    <td>Displays only quotes from a given period</td>
+                </tr>
+            </table>
+            
+            <h4>Main table columns</h4>
+            <p>As main column We have:</p>
+            <p>The Date, the reference number, customer name, contact number, location, total items, added by and action.</p>
+            
+           <div class="image-placeholder">
+                <p>Interface Illustration</p>
+                <img src="/image/vente8.png" alt="Description de l'image" width="900" height="600" style="max-width:100%;height:auto;border-radius:8px;" />
+            </div>
+            
+            <h3 id="quote-permissions-roles">8.4) User permissions and roles</h3>
+            <table class="component-table">
+                <tr>
+                    <th>Role</th>
+                    <th>Access to Quotes List</th>
+                </tr>
+                <tr>
+                    <td>Administrator</td>
+                    <td>View, modify, delete, convert all quotes</td>
+                </tr>
+                <tr>
+                    <td>Salesperson</td>
+                    <td>View and manage their own quotes</td>
+                </tr>
+                <tr>
+                    <td>Sales manager</td>
+                    <td>Supervision and control of the entire team's quotes</td>
+                </tr>
+                <tr>
+                    <td>Intern/Restricted</td>
+                    <td>No access or read-only (depending on configuration)</td>
+                </tr>
+            </table>
+        </section>
+
+        <!-- Section 9) Sell return list -->
+        <section class="section">
+            <h2 id="sell-return-list">9) Sell return list</h2>
+            
+            <h3 id="return-function-objective">9.1) Functionality objective</h3>
+            <p>The <strong>Sell Return interface allows managing all product return operations</strong> <strong>by customers after an initial sale.</strong></p>
+            <p>Its objectives are to:</p>
+            <ul>
+                <li>Track returned products for refund or exchange,</li>
+                <li>Maintain a structured history of returns linked to each invoice,</li>
+                <li>Facilitate management of credit notes, refunds, or stock adjustments.</li>
+            </ul>
+            <p>The return is always linked to an initial sale and must be handled rigorously to avoid accounting or logistics errors.</p>
+            
+            <h3 id="return-interface-structure">9.2) Interface structure</h3>
+            <p>The interface is divided into two main parts:</p>
+            
+            <h4>A. Advanced filters section (top of page)</h4>
+            <p>This section allows dynamically filtering results displayed in the table according to specific criteria.</p>
+            
+            <table class="component-table">
+                <tr>
+                    <th>Field</th>
+                    <th>Description</th>
+                </tr>
+                <tr>
+                    <td>Business location</td>
+                    <td>Filters returns by site or point of sale (useful for multi-branch companies)</td>
+                </tr>
+                <tr>
+                    <td>Customer</td>
+                    <td>Displays only returns linked to a specific customer</td>
+                </tr>
+                <tr>
+                    <td>Date range</td>
+                    <td>Allows selecting a precise period for recorded returns</td>
+                </tr>
+                <tr>
+                    <td>User</td>
+                    <td>Filters returns processed by a given seller or operator</td>
+                </tr>
+            </table>
+            
+            <p>These filters are essential to analyze returns by period, customer, or agent, and facilitate internal audits or verifications.</p>
+            
+            <h4>B. Returns management table</h4>
+            <p>Displays recorded data for each validated return. Each line represents a unique return linked to a past sale.</p>
+            
+            <h5>Table column details</h5>
+            <table class="component-table">
+                <tr>
+                    <th>Column</th>
+                    <th>Function</th>
+                </tr>
+                <tr>
+                    <td>Date</td>
+                    <td>Return creation date in the system</td>
+                </tr>
+                <tr>
+                    <td>Invoice number</td>
+                    <td>Reference of the initial invoice linked to the return</td>
+                </tr>
+                <tr>
+                    <td>Parent sale</td>
+                    <td>Identifier of the original sale to which the return relates</td>
+                </tr>
+                <tr>
+                    <td>Customer name</td>
+                    <td>Customer who made the return</td>
+                </tr>
+                <tr>
+                    <td>Location</td>
+                    <td>Place (store, agency) where the return was recorded</td>
+                </tr>
+                <tr>
+                    <td>Payment status</td>
+                    <td>Indicates if a refund is due, made, or partial</td>
+                </tr>
+                <tr>
+                    <td>Total amount</td>
+                    <td>Total value of returned products</td>
+                </tr>
+                <tr>
+                    <td>Payment due</td>
+                    <td>Amount still to be refunded to customer (if applicable)</td>
+                </tr>
+                <tr>
+                    <td>Action</td>
+                    <td>Buttons to view, modify, or delete the return (depending on permissions)</td>
+                </tr>
+            </table>
+            
+            <div class="image-placeholder">
+                <p>Interface Illustration</p>
+                <img src="/image/vente9.png" alt="Description de l'image" width="900" height="600" style="max-width:100%;height:auto;border-radius:8px;" />
+            </div>
+            
+            <h3 id="additional-return-functions">9.3) Additional functions</h3>
+            <p>Above the table are several <strong>exploitation tools:</strong></p>
+            
+            <table class="component-table">
+                <tr>
+                    <th>Button</th>
+                    <th>Function</th>
+                </tr>
+                <tr>
+                    <td>Export CSV/Excel</td>
+                    <td>Allows exporting the returns list to spreadsheet format</td>
+                </tr>
+                <tr>
+                    <td>Print</td>
+                    <td>Generates a printable version of the list</td>
+                </tr>
+                <tr>
+                    <td>Column visibility</td>
+                    <td>Choice of table column display per user</td>
+                </tr>
+                <tr>
+                    <td>Export PDF</td>
+                    <td>Generates a PDF document of the current table</td>
+                </tr>
+                <tr>
+                    <td>Search bar</td>
+                    <td>Direct search by number, customer, or keyword</td>
+                </tr>
+            </table>
+            
+            <h3 id="access-control-permissions">9.4) Permissions and access control</h3>
+            <table class="component-table">
+                <tr>
+                    <th>User role</th>
+                    <th>Rights</th>
+                </tr>
+                <tr>
+                    <td>Administrator</td>
+                    <td>View, modify, and delete all returns</td>
+                </tr>
+                <tr>
+                    <td>Cashier/Salesperson</td>
+                    <td>View and create their own returns</td>
+                </tr>
+                <tr>
+                    <td>Sales manager</td>
+                    <td>Global supervision, dispute management</td>
+                </tr>
+                <tr>
+                    <td>Restricted user</td>
+                    <td>No access or read-only</td>
+                </tr>
+            </table>
+        </section>
+
+        <!-- Section 10) Shipping -->
+        <section class="section">
+            <h2 id="shipping">10) Shipping</h2>
+            
+            <h3 id="shipping-general-presentation">10.1) General presentation</h3>
+            <p>The <strong>Shipping</strong> section in Movelys is designed to <strong>track</strong>, <strong>organize and manage all logistics operations</strong> related to product delivery. It constitutes an <strong>essential interface for order preparation, shipping, and tracking teams</strong>, ensuring smooth traceability between the sale and final customer reception.</p>
+            
+            <h3 id="shipping-objectives">10.2) Functionality objectives</h3>
+            <ul>
+                <li>Ensure complete <strong>traceability</strong> of order deliveries.</li>
+                <li>Track the <strong>status of each shipment</strong> (in progress, partial, completed, cancelled).</li>
+                <li>Manage <strong>carriers</strong>, delivery locations, transport documents, etc.</li>
+                <li>Connect shipments to source sales and associated customers.</li>
+            </ul>
+            
+            <h3 id="shipping-interface-presentation">10.3) Interface presentation</h3>
+            <p>The Shipping section is displayed as an interactive table, with classic filtering, search, and export options.</p>
+            
+            <h4>A. Action bar (results management)</h4>
+            <table class="component-table">
+                <tr>
+                    <th>Element</th>
+                    <th>Description</th>
+                </tr>
+                <tr>
+                    <td>Pagination</td>
+                    <td>Display by batch of 10, 25, 50, 100 lines</td>
+                </tr>
+                <tr>
+                    <td>Quick search</td>
+                    <td>Filter by customer, carrier, reference, etc.</td>
+                </tr>
+                <tr>
+                    <td>Export CSV/Excel</td>
+                    <td>Extraction of shipping data</td>
+                </tr>
+                <tr>
+                    <td>Print</td>
+                    <td>Printing of the list or transport documents</td>
+                </tr>
+                <tr>
+                    <td>Column visibility</td>
+                    <td>Hiding or showing customized fields</td>
+                </tr>
+                <tr>
+                    <td>Add a shipment</td>
+                    <td>Link to the form for creating a new delivery</td>
+                </tr>
+            </table>
+            
+            <h4>B. Search filters (advanced filtering)</h4>
+            <p>Allows filtering shipping data according to several criteria:</p>
+            
+            <table class="component-table">
+                <tr>
+                    <th>Field</th>
+                    <th>Description</th>
+                </tr>
+                <tr>
+                    <td>Business location</td>
+                    <td>Filter by company site or agency (ex: Paris, Lyon).</td>
+                </tr>
+                <tr>
+                    <td>Customer</td>
+                    <td>Selection of a specific customer.</td>
+                </tr>
+                <tr>
+                    <td>Date range</td>
+                    <td>Period over which shipments are to be displayed. (Ex: 01/01/2025 - 12/31/2025)</td>
+                </tr>
+                <tr>
+                    <td>User</td>
+                    <td>The user responsible (or operator) for the shipment.</td>
+                </tr>
+                <tr>
+                    <td>Payment status</td>
+                    <td>Filter by payment status (Paid, Unpaid, Partially paid, etc.).</td>
+                </tr>
+                <tr>
+                    <td>Delivery status</td>
+                    <td>Shipment status (Delivered, In transit, Cancelled...).</td>
+                </tr>
+                <tr>
+                    <td>Delivery person</td>
+                    <td>Filter by provider/carrier (ex: DHL, FedEx, internal delivery person).</td>
+                </tr>
+            </table>
+            
+            <h4>C. Results table</h4>
+            <p>A dynamic table listing shipments matching selected filters.</p>
+            
+            <table class="component-table">
+                <tr>
+                    <th>Action</th>
+                    <th>Action buttons (ex: view, modify, delete).</th>
+                </tr>
+                <tr>
+                    <td>Date</td>
+                    <td>Shipment or creation date.</td>
+                </tr>
+                <tr>
+                    <td>Invoice number</td>
+                    <td>Reference associated with the shipment.</td>
+                </tr>
+                <tr>
+                    <td>Customer name</td>
+                    <td>Buyer/customer name.</td>
+                </tr>
+                <tr>
+                    <td>Contact number</td>
+                    <td>Phone number or other contact method.</td>
+                </tr>
+                <tr>
+                    <td>Location</td>
+                    <td>Shipment origin site.</td>
+                </tr>
+                <tr>
+                    <td>Delivery person</td>
+                    <td>Carrier or delivery person name.</td>
+                </tr>
+                <tr>
+                    <td>Shipping status</td>
+                    <td>Current status (pending, shipped, cancelled...).</td>
+                </tr>
+                <tr>
+                    <td>Payment status</td>
+                    <td>Indicates if the invoice has been settled.</td>
+                </tr>
+            </table>
+            
+            <div class="image-placeholder">
+                <p>Interface Illustration</p>
+                <img src="/image/vente10.png" alt="Description de l'image" width="900" height="600" style="max-width:100%;height:auto;border-radius:8px;" />
+            </div>
+            
+            <h3 id="shipping-module-integration">10.4) Integration with other modules</h3>
+            <table class="component-table">
+                <tr>
+                    <th>Related module</th>
+                    <th>Role</th>
+                </tr>
+                <tr>
+                    <td>Sales</td>
+                    <td>Each delivery is linked to a customer order</td>
+                </tr>
+                <tr>
+                    <td>Inventory</td>
+                    <td>Automatic stock output based on shipped products</td>
+                </tr>
+                <tr>
+                    <td>Customers</td>
+                    <td>Delivery history accessible from customer record</td>
+                </tr>
+                <tr>
+                    <td>Reports</td>
+                    <td>Tracking deliveries by period, product, carrier, etc.</td>
+                </tr>
+            </table>
+            
+            <h3 id="shipping-user-permissions">10.5) User permissions</h3>
+            <table class="component-table">
+                <tr>
+                    <th>Profile</th>
+                    <th>Rights</th>
+                </tr>
+                <tr>
+                    <td>Administrator</td>
+                    <td>All rights (creation, modification, deletion)</td>
+                </tr>
+                <tr>
+                    <td>Logistics/Warehouse</td>
+                    <td>Shipment creation and validation</td>
+                </tr>
+                <tr>
+                    <td>Sales/Customer Service</td>
+                    <td>Consultation or reprinting of delivery note</td>
+                </tr>
+                <tr>
+                    <td>Accountant</td>
+                    <td>Read-only or no access</td>
+                </tr>
+                <tr>
+                    <td>Guest/Intern</td>
+                    <td>No access recommended</td>
+                </tr>
+            </table>
+        </section>
+
+        <!-- Section 11) Preferential -->
+        <section class="section">
+            <h2 id="preferential">11) Preferential</h2>
+            
+            <h3 id="preferential-general-presentation">11.1) General presentation</h3>
+            <p>The <strong>Preferential</strong> section of Movelys allows the company to configure <strong>custom commercial conditions for certain customers, customer groups, or products.</strong> It is designed to apply automatic discounts, special prices, or <strong>personalized offers, based on predefined criteria.</strong></p>
+            <p>This module plays a key role in <strong>customer loyalty, commercial campaign management, and pricing negotiation flexibility.</strong></p>
+            
+            <h3 id="preferential-objectives">11.2) Functionality objectives</h3>
+            <ul>
+                <li>Define <strong>specific prices or targeted reductions.</strong></li>
+                <li>Automatically apply preferential terms during sales.</li>
+                <li>Manage promotions, volume discounts, or VIP pricing.</li>
+                <li>Control consistency of commercial practices per customer.</li>
+            </ul>
+            
+            <h3 id="preferential-interface-presentation">11.3) Interface presentation</h3>
+            <p>The interface is organized as a preferential pricing table, containing all manually or automatically configured elements.</p>
+            
+            <h4>Available functions</h4>
+            <h5>A. Action bar (main tools)</h5>
+            <table class="component-table">
+                <tr>
+                    <th>Element</th>
+                    <th>Function</th>
+                </tr>
+                <tr>
+                    <td>"Add" button (top right, blue)</td>
+                    <td>Allows adding a new discount via an entry form</td>
+                </tr>
+                <tr>
+                    <td>Export CSV</td>
+                    <td>Exports the discounts list to .csv format</td>
+                </tr>
+                <tr>
+                    <td>Export Excel</td>
+                    <td>Exports to .xlsx format</td>
+                </tr>
+                <tr>
+                    <td>Print</td>
+                    <td>Prints the visible list</td>
+                </tr>
+                <tr>
+                    <td>Column visibility</td>
+                    <td>Shows/hides table columns</td>
+                </tr>
+                <tr>
+                    <td>Export PDF</td>
+                    <td>Generates a PDF file of visible data</td>
+                </tr>
+                <tr>
+                    <td>Search field</td>
+                    <td>Quick search in the table</td>
+                </tr>
+            </table>
+            
+            <h5>B. Discounts table</h5>
+            <p>The table lists the different discounts defined in the system, each associated with several criteria.</p>
+            
+            <table class="component-table">
+                <tr>
+                    <th>Column</th>
+                    <th>Description</th>
+                </tr>
+                <tr>
+                    <td>Checkbox</td>
+                    <td>Allows multiple selection to deactivate discounts</td>
+                </tr>
+                <tr>
+                    <td>Name</td>
+                    <td>Promotion or discount name</td>
+                </tr>
+                <tr>
+                    <td>Starts at</td>
+                    <td>Discount validity start date</td>
+                </tr>
+                <tr>
+                    <td>Ends at</td>
+                    <td>Validity end date</td>
+                </tr>
+                <tr>
+                    <td>Discount amount</td>
+                    <td>Applied amount or percentage. (Ex: -10%, -5€)</td>
+                </tr>
+                <tr>
+                    <td>Priority</td>
+                    <td>Application priority (useful if multiple discounts apply to a product)</td>
+                </tr>
+                <tr>
+                    <td>Brand</td>
+                    <td>Brand of concerned products</td>
+                </tr>
+                <tr>
+                    <td>Category</td>
+                    <td>Product category targeted by the discount</td>
+                </tr>
+                <tr>
+                    <td>Products</td>
+                    <td>Specific concerned products (if any)</td>
+                </tr>
+                <tr>
+                    <td>Location</td>
+                    <td>Point of sale or agency where the discount applies</td>
+                </tr>
+                <tr>
+                    <td>Action</td>
+                    <td>Action buttons (modify, delete, activate/deactivate)</td>
+                </tr>
+            </table>
+            
+            <h5>C. "Deactivate selection" button</h5>
+            <p>Allows deactivating selected discounts in the table using checkboxes. Very useful for bulk management.</p>
+            
+            <div class="image-placeholder">
+                <p>Interface Illustration</p>
+                <img src="/image/vente11.png" alt="Description de l'image" width="900" height="600" style="max-width:100%;height:auto;border-radius:8px;" />
+            </div>
+            
+            <h3 id="preferential-module-integration">11.4) Integration with other modules</h3>
+            <table class="component-table">
+                <tr>
+                    <th>Module</th>
+                    <th>Interaction</th>
+                </tr>
+                <tr>
+                    <td>Sales</td>
+                    <td>Automatic application of special price or discount</td>
+                </tr>
+                <tr>
+                    <td>Customers</td>
+                    <td>Viewing of preferential terms in customer record</td>
+                </tr>
+                <tr>
+                    <td>Quotes/Drafts</td>
+                    <td>Pre-filling of personalized prices</td>
+                </tr>
+                <tr>
+                    <td>Products</td>
+                    <td>Special price history for analysis</td>
+                </tr>
+                <tr>
+                    <td>Reports</td>
+                    <td>Indicators on granted discounts, adjusted margins, etc.</td>
+                </tr>
+            </table>
+            
+            <h3 id="preferential-permissions-management">11.5) Permissions management</h3>
+            <table class="component-table">
+                <tr>
+                    <th>User role</th>
+                    <th>Recommended access</th>
+                </tr>
+                <tr>
+                    <td>Administrator</td>
+                    <td>Full access (creation, editing, deletion)</td>
+                </tr>
+                <tr>
+                    <td>Sales manager</td>
+                    <td>Creation and modification</td>
+                </tr>
+                <tr>
+                    <td>Salesperson/Standard user</td>
+                    <td>Read-only (depending on configuration)</td>
+                </tr>
+                <tr>
+                    <td>Guest/External</td>
+                    <td>No access authorized</td>
+                </tr>
+            </table>
+        </section>
+
+                <!-- Section 12) Import sales -->
+        <section class="section">
+            <h2 id="import-sales">12) Import sales</h2>
+            
+            <h3 id="import-general-presentation">12.1) General presentation</h3>
+            <p>The <strong>Import Sales</strong> functionality allows users to <strong>bulk load sales data</strong> from an external file (CSV or Excel), rather than entering them manually one by one. It's an essential tool in the following contexts:</p>
+            <ul>
+                <li>Data migration from an old system,</li>
+                <li>Integration of sales from another channel (e-commerce, ERP, etc.),</li>
+                <li>Catch-up of historical entries,</li>
+                <li>Automation of regular processes.</li>
+            </ul>
+            
+            <h3 id="import-objectives">12.2) Objectives</h3>
+            <ul>
+                <li>Save time when entering multiple sales.</li>
+                <li>Avoid <strong>manual errors</strong> of duplication or omission.</li>
+                <li>Ensure <strong>smooth integration</strong> between different data sources.</li>
+                <li>Enable <strong>quick updates to the sales database.</strong></li>
+            </ul>
+            
+            <h3 id="import-interface-steps">12.3) Interface and import steps</h3>
+            <p>The module follows a multi-step guided process, ensuring reliable and well-structured imports.</p>
+            
+            <h4>A. Template download</h4>
+            <ul>
+                <li>Users can download a <strong>CSV or Excel template with the</strong> <strong>expected columns</strong> (reference, customer, date, products, quantities, amounts, payment status, etc.).</li>
+                <li>This template is provided to standardize the format of data to be imported.</li>
+            </ul>
+            
+            <h4>B. File upload</h4>
+            <ul>
+                <li>Once the template is completed, the user selects the file to import.</li>
+                <li>The system verifies data validity: duplicates, incorrect format, missing fields, encoding errors (e.g.: wrong separator).</li>
+            </ul>
+            
+            <h4>C. Import preview</h4>
+            <ul>
+                <li>Before final validation, users can preview <strong>detected sales.</strong></li>
+                <li>Erroneous lines are highlighted with clear error messages for correction.</li>
+            </ul>
+            
+            <h4>D. Final import</h4>
+            <ul>
+                <li>Once the file is validated, sales are integrated into the database, appear in the sales list, and trigger:
+                    <ul>
+                        <li>Stock movements,</li>
+                        <li>Customer updates,</li>
+                        <li>Report generation.</li>
+                    </ul>
+                </li>
+            </ul>
+            
+            <h4>E) Download</h4>
+            <p>Once the import is complete, you can download the file and review it to verify all updates were properly applied.</p>
+            <p>This interface also provides instructions to follow for successful imports.</p>
+            
+           <div class="image-placeholder">
+                <p>Interface Illustration</p>
+                <img src="/image/vente12.png" alt="Description de l'image" width="900" height="600" style="max-width:100%;height:auto;border-radius:8px;" />
+            </div>
+            
+            <h3 id="automatic-integrations">12.4) Automatic integrations</h3>
+            <table class="component-table">
+                <tr>
+                    <th>Affected module</th>
+                    <th>Effects</th>
+                </tr>
+                <tr>
+                    <td>Inventory</td>
+                    <td>Automatic deduction of sold products</td>
+                </tr>
+                <tr>
+                    <td>Customers</td>
+                    <td>Update or creation of customers if they don't exist</td>
+                </tr>
+                <tr>
+                    <td>Accounting</td>
+                    <td>Revenue generation, accounts receivable entries</td>
+                </tr>
+                <tr>
+                    <td>Products</td>
+                    <td>Updated sales statistics</td>
+                </tr>
+                <tr>
+                    <td>Reports</td>
+                    <td>Sales figures integrated into dashboards</td>
+                </tr>
+            </table>
+            
+            <h3 id="recommended-permissions">12.5) Recommended permissions</h3>
+            <table class="component-table">
+                <tr>
+                    <th>User</th>
+                    <th>Access</th>
+                </tr>
+                <tr>
+                    <td>Administrator</td>
+                    <td>Full loading and validation</td>
+                </tr>
+                <tr>
+                    <td>Sales manager</td>
+                    <td>Upload under supervision</td>
+                </tr>
+                <tr>
+                    <td>Standard user</td>
+                    <td>Limited or restricted access</td>
+                </tr>
+                <tr>
+                    <td>Guest/External</td>
+                    <td>No access allowed</td>
+                </tr>
+            </table>
+        </section>
+
+        <!-- Section Conclusion -->
+        <section class="section">
+            <h2 id="conclusion">Conclusion</h2>
+            <p>Movelys' sales management module enables businesses to control their commercial activities with precision, reliability and efficiency. By automating time-consuming tasks, securing data and providing clear visibility of sales performance, Movelys becomes an indispensable ally for business growth, customer loyalty and revenue maximization.</p>
+            <p>By centralizing all sales-related information, Movelys simplifies daily operations for sales teams while providing executives with powerful decision-making tools. Thanks to this module, sales become a smooth, controlled process focused on growth.</p>
+        </section>
+</div>

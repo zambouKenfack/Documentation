@@ -1,0 +1,217 @@
+---
+
+import '../styles/global1.css';
+
+---
+
+    <div class="container">
+
+        <header class="header">
+            <h1>Stock Transfer Management in Movelys</h1>
+        </header>
+        <!-- INTRODUCTION -->
+        <section class="section">
+            <h2 class="subtitle">Introduction</h2>
+            <p class="content">
+                In a company with multiple sites, warehouses, or points of sale, <strong>stock transfer management</strong> is essential to ensure smooth logistics operations and prevent stockouts or overstocking. Movelys' stock transfer module was designed to address these challenges with rigor and efficiency.
+            </p>
+            <p class="content">
+                This module allows users to record, track, and control all product movements <strong>between different physical locations of the company</strong>. Through an intuitive interface, users can initiate a transfer, specify the origin, destination, quantities, and track the transfer status (pending, in progress, completed). Each transfer is logged to ensure <strong>complete traceability</strong> and prevent any loss or confusion.
+            </p>
+            <p class="content">
+                Movelys also provides <strong>real-time synchronization</strong> with global stock, enabling all teams (logistics, sales, procurement) to have an up-to-date view of available quantities at each location. This operational transparency optimizes planning, enhances coordination between sites, and reduces human errors.
+            </p>
+        </section>
+
+        <!-- 1) Stock Transfer List -->
+        <section class="section">
+            <h2 class="subtitle">1) Stock Transfer List</h2>
+            
+            <h3 class="subtitle-2">1.1) Purpose of this Interface</h3>
+            <p class="content">
+                The <strong>Stock Transfers</strong> interface allows users to view, filter, track, and manage all <strong>product transfers from one storage point to another within the same company</strong>.
+            </p>
+            <p class="content">
+                It addresses the following needs:
+            </p>
+            <ul class="list">
+                <li>Logistics mobility (between warehouses, stores, or branches),</li>
+                <li>Traceability of internal flows,</li>
+                <li>Optimization of stock levels by geographical area.</li>
+            </ul>
+
+            <h3 class="subtitle-2">1.2) General Structure of the Interface</h3>
+            <p class="content">
+                The stock transfer interface has a visually appealing design and consists of the following fields:
+            </p>
+            <ul class="list">
+                <li>Date</li>
+                <li>Reference Number</li>
+                <li>Location (From)</li>
+                <li>Location (To)</li>
+                <li>Status</li>
+                <li>Shipping Costs</li>
+                <li>Total Amount</li>
+                <li>Additional Notes</li>
+                <li>Action</li>
+            </ul>
+
+            <p class="content">
+                Available functions include:
+            </p>
+            <table class="component-table">
+                <tr>
+                    <th>Element</th>
+                    <th>Function</th>
+                </tr>
+                <tr>
+                    <td>Search Bar</td>
+                    <td>Allows filtering results by reference, user, location, or date</td>
+                </tr>
+                <tr>
+                    <td>Export CSV/Excel</td>
+                    <td>Exports the current list to spreadsheet format for external analysis</td>
+                </tr>
+                <tr>
+                    <td>Print</td>
+                    <td>Generates a printable version of the list</td>
+                </tr>
+                <tr>
+                    <td>Export PDF</td>
+                    <td>Creates a downloadable PDF file of the transfer list</td>
+                </tr>
+                <tr>
+                    <td>Visible Columns</td>
+                    <td>Allows selection of which table columns to display</td>
+                </tr>
+                <tr>
+                    <td>Add</td>
+                    <td>Action button to create a new stock transfer</td>
+                </tr>
+            </table>
+
+            
+            <div class="image-placeholder">
+                <p>Interface Illustration</p>
+                <img src="/image/transfert1.png" alt="Description de l'image" width="900" height="600" style="max-width:100%;height:auto;border-radius:8px;" />
+            </div>
+
+            <h3 class="subtitle-2">1.3) Permissions and Security</h3>
+            <p class="content">
+                Access to functionalities is determined by user roles defined in the system:
+            </p>
+            <table class="component-table">
+                <tr>
+                    <th>Role</th>
+                    <th>Transfer Rights</th>
+                </tr>
+                <tr>
+                    <td>Administrator</td>
+                    <td>Creation, editing, validation, deletion</td>
+                </tr>
+                <tr>
+                    <td>Logistics Agent</td>
+                    <td>Creation and tracking of transfers</td>
+                </tr>
+                <tr>
+                    <td>Stock Supervisor</td>
+                    <td>Receipt validation</td>
+                </tr>
+                <tr>
+                    <td>Restricted Employee</td>
+                    <td>Read-only or no access</td>
+                </tr>
+            </table>
+        </section>
+
+        <!-- 2) Add a Stock Transfer -->
+        <section class="section">
+            <h2 class="subtitle">2) Add a Stock Transfer</h2>
+
+            <h3 class="subtitle-2">2.1) Purpose of this Interface</h3>
+            <p class="content">
+                The <strong>Add a Stock Transfer</strong> interface allows users to record a <strong>physical movement of products from one storage site to another</strong> (e.g., warehouse → store, branch A → branch B).
+            </p>
+            <p class="content">
+                It is crucial for:
+            </p>
+            <ul class="list">
+                <li>Ensuring complete traceability of internal logistics flows,</li>
+                <li>Maintaining consistent stock levels across different locations,</li>
+                <li>Preventing inventory losses or duplicates.</li>
+            </ul>
+
+            <h3 class="subtitle-2">2.2) General Form Structure</h3>
+            <p class="content">
+                The form is divided into three main functional sections:
+            </p>
+
+            <h4 class="subtitle-3">A. General Transfer Information</h4>
+            <ul class="list">
+                <li>Date</li>
+                <li>Reference Number</li>
+                <li>Status</li>
+                <li>Location (From)</li>
+                <li>Location (To)</li>
+            </ul>
+            <p class="content">
+                This data serves to formally identify the operation and associate it with the correct logistics process.
+            </p>
+
+            <h4 class="subtitle-3">B. Products to Transfer Section</h4>
+            <p class="content">
+                This section allows searching for a product in the database to add it to the transfer products table.
+            </p>
+            <p class="content">
+                Products are added progressively, with verification of available quantities at the source.
+            </p>
+
+            <h4 class="subtitle-3">C. Actions and Finalization</h4>
+            <p class="content">
+                This form allows entering additional information (shipping costs, additional notes) to finalize the transfer.
+            </p>
+
+           <div class="image-placeholder">
+                <p>Interface Illustration</p>
+                <img src="/image/transfert2.png" alt="Description de l'image" width="900" height="600" style="max-width:100%;height:auto;border-radius:8px;" />
+            </div>
+
+            <h3 class="subtitle-2">2.3) Permissions and Access</h3>
+            <p class="content">
+                Access to this functionality depends on the rights assigned to the user's role:
+            </p>
+            <table class="component-table">
+                <tr>
+                    <th>Role</th>
+                    <th>Access</th>
+                </tr>
+                <tr>
+                    <td>Administrator</td>
+                    <td>Full access to all functions</td>
+                </tr>
+                <tr>
+                    <td>Stock Manager</td>
+                    <td>Creation, validation, and tracking</td>
+                </tr>
+                <tr>
+                    <td>Logistics Agent</td>
+                    <td>Transfer creation only</td>
+                </tr>
+                <tr>
+                    <td>Restricted User</td>
+                    <td>No access</td>
+                </tr>
+            </table>
+        </section>
+
+        <!-- CONCLUSION -->
+        <section class="section">
+            <h2 class="subtitle">Conclusion</h2>
+            <p class="content">
+                Movelys' stock transfer module is a <strong>strategic tool for agile and controlled logistics management</strong>. It ensures reliable tracking of internal goods flows, enhances stock data consistency, and improves the company's responsiveness to operational needs.
+            </p>
+            <p class="content">
+                By centralizing information and automating transfer processes, Movelys helps companies <strong>gain accuracy, productivity, and visibility</strong>. It is an ideal solution for any organization looking to optimize multi-site inventory management while ensuring smooth and secure operational continuity.
+            </p>
+        </section>
+    </div>

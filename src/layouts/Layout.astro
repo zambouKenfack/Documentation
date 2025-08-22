@@ -1,0 +1,64 @@
+---
+// src/layouts/Layout.astro
+const { title = 'Movelys', lang = 'fr' } = Astro.props;
+
+// Charger les traductions
+import enTranslations from '../translations/en.json';
+import frTranslations from '../translations/fr.json';
+
+const translations = {
+  en: enTranslations,
+  fr: frTranslations
+};
+
+// Sélectionner la langue actuelle
+const currentLang = lang || 'fr';
+const t = translations[currentLang] || translations.fr;
+---
+
+<!DOCTYPE html>
+<html lang={lang}>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{title}</title>
+    <link rel="stylesheet" href="/styles/global.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+    <slot name="head" />
+  </head>
+  <body>
+    <slot />
+    
+    <footer class="site-footer" style="background-color:#2c3e50; color:#ecf0f1; padding:25px 0; text-align:center; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size:14px; border-top:3px solid #3498db;">
+  <div style="max-width:1000px; margin:0 auto;">
+    <!-- Logo or Name -->
+    <h2 style="margin:0; font-size:18px; font-weight:600; letter-spacing:1px; color:#ffffff;">Movelys Documentation</h2>
+
+    <!-- Separator --><hr style="width:60px; border:1px solid #3498db; margin:12px auto; background:none !important; background-image:none !important; box-shadow:none !important;">
+    
+
+    <!-- Texts dynamiques -->
+    <p style="margin:5px 0;">
+      {t.footer?.copyright.replace('{year}', new Date().getFullYear())}
+    </p>
+    <p style="margin:0; font-size:12px; opacity:0.8;">
+      Designed for simple, seamless, and professional business management.
+    </p>
+    <div style="margin-top:8px;">
+      <a style="color:#3498db; margin:0 10px; text-decoration:none;">
+        {t.footer?.privacy}
+      </a>
+      |
+      <a style="color:#3498db; margin:0 10px; text-decoration:none;">
+        {t.footer?.terms}
+      </a>
+    </div>
+  </div>
+</footer>
+  </body>
+</html>

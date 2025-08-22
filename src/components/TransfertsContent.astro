@@ -1,0 +1,215 @@
+---
+
+import '../styles/global1.css';
+
+---
+
+    <div class="container">
+
+        <header class="header">
+            <h1>Gestion de transfert des stocks dans Movelys</h1>
+        </header>
+        <!-- INTRODUCTION -->
+        <section class="section">
+            <h2 class="subtitle">Introduction</h2>
+            <p class="content">
+                Dans une entreprise disposant de plusieurs sites, entrepôts ou points de vente, la <strong>gestion des transferts de stocks</strong> est essentielle pour assurer la fluidité des opérations logistiques et éviter les ruptures ou les surstocks. Le module de transfert de stocks de Movelys a été conçu pour répondre à ces enjeux avec rigueur et efficacité.
+            </p>
+            <p class="content">
+                Ce module permet d'enregistrer, suivre et contrôler tous les mouvements de produits <strong>entre différents emplacements physiques de l'entreprise</strong>. Grâce à une interface intuitive, les utilisateurs peuvent initier un transfert, spécifier l'origine, la destination, les quantités, et suivre l'état du transfert (en attente, en cours, terminé). Chaque transfert est historisé pour garantir une <strong>traçabilité complète</strong> et éviter toute perte ou confusion.
+            </p>
+            <p class="content">
+                Movelys assure également une <strong>synchronisation en temps réel</strong> avec le stock global, ce qui permet à toutes les équipes (logistique, ventes, achats) d'avoir une vision à jour des quantités disponibles à chaque emplacement. Cette transparence opérationnelle optimise la planification, renforce la coordination entre les sites et réduit les erreurs humaines.
+            </p>
+        </section>
+
+        <!-- 1) Transferts de stock de liste -->
+        <section class="section">
+            <h2 class="subtitle">1) Transferts de stock de liste</h2>
+            
+            <h3 class="subtitle-2">1.1) Objectif de cette interface</h3>
+            <p class="content">
+                L'interface <strong>Transferts de stock</strong> permet de visualiser, filtrer, suivre et gérer tous les <strong>transferts de produits d'un point de stockage vers un autre, au sein d'une même entreprise</strong>.
+            </p>
+            <p class="content">
+                Elle répond aux besoins :
+            </p>
+            <ul class="list">
+                <li>De mobilité logistique (entre entrepôts, magasins, ou succursales),</li>
+                <li>De traçabilité des flux internes,</li>
+                <li>D'optimisation des niveaux de stock par zone géographique.</li>
+            </ul>
+
+            <h3 class="subtitle-2">1.2) Structure générale de l'interface</h3>
+            <p class="content">
+                L'interface transfert stock a un très bon aspect visuel et est constitué des champs suivants :
+            </p>
+            <ul class="list">
+                <li>Date</li>
+                <li>Numéro de référence</li>
+                <li>Emplacement (à partir de)</li>
+                <li>Emplacement (vers)</li>
+                <li>Statut</li>
+                <li>Frais d'expédition</li>
+                <li>Montant total</li>
+                <li>Note supplémentaire</li>
+                <li>Action</li>
+            </ul>
+
+            <p class="content">
+                Comme fonction disponible nous avons :
+            </p>
+            <table class="component-table">
+                <tr>
+                    <th>Élément</th>
+                    <th>Fonction</th>
+                </tr>
+                <tr>
+                    <td>Barre de recherche</td>
+                    <td>Permet de filtrer les résultats par référence, utilisateur, lieu ou date</td>
+                </tr>
+                <tr>
+                    <td>Exporter CSV / Excel</td>
+                    <td>Permet d'exporter la liste actuelle au format tableur pour analyse externe</td>
+                </tr>
+                <tr>
+                    <td>Impression</td>
+                    <td>Génère une version imprimable de la liste</td>
+                </tr>
+                <tr>
+                    <td>Exporter PDF</td>
+                    <td>Crée un fichier PDF téléchargeable de la liste de transferts</td>
+                </tr>
+                <tr>
+                    <td>Colonnes visibles</td>
+                    <td>Permet de choisir quelles colonnes du tableau doivent être affichées</td>
+                </tr>
+                <tr>
+                    <td>Ajouter</td>
+                    <td>Bouton d'action permettant de créer un nouveau transfert de stock</td>
+                </tr>
+            </table>
+
+            
+             <div class="image-placeholder"><p>Illustration de l'interface</p>
+                <img src="/images/transfert1.png" alt="Description de l'image" width="900" height="600" style="max-width:100%;height:auto;border-radius:8px;" />
+                </div>
+            
+
+            <h3 class="subtitle-2">1.3) Permissions et sécurité</h3>
+            <p class="content">
+                L'accès aux fonctionnalités est conditionné par les rôles utilisateurs définis dans le système :
+            </p>
+            <table class="component-table">
+                <tr>
+                    <th>Rôle</th>
+                    <th>Droits sur les transferts</th>
+                </tr>
+                <tr>
+                    <td>Administrateur</td>
+                    <td>Création, édition, validation, suppression</td>
+                </tr>
+                <tr>
+                    <td>Agent logistique</td>
+                    <td>Création et suivi des transferts</td>
+                </tr>
+                <tr>
+                    <td>Superviseur de stock</td>
+                    <td>Validation des réceptions</td>
+                </tr>
+                <tr>
+                    <td>Employé restreint</td>
+                    <td>Lecture seule ou aucun accès</td>
+                </tr>
+            </table>
+        </section>
+
+        <!-- 2) Ajouter un transfert de stock -->
+        <section class="section">
+            <h2 class="subtitle">2) Ajouter un transfert de stock</h2>
+
+            <h3 class="subtitle-2">2.1) Objectif de cette interface</h3>
+            <p class="content">
+                L'interface <strong>Ajouter un transfert de stock</strong> permet aux utilisateurs d'enregistrer un <strong>mouvement physique de produits d'un site de stockage vers un autre</strong> (ex. : entrepôt → magasin, agence A → agence B).
+            </p>
+            <p class="content">
+                Elle est cruciale pour :
+            </p>
+            <ul class="list">
+                <li>Assurer une traçabilité complète des flux logistiques internes,</li>
+                <li>Maintenir un niveau de stock cohérent entre les différents emplacements,</li>
+                <li>Et éviter les pertes ou doublons d'inventaire.</li>
+            </ul>
+
+            <h3 class="subtitle-2">2.2) Structure générale du formulaire</h3>
+            <p class="content">
+                Le formulaire est divisé en trois grandes sections fonctionnelles :
+            </p>
+
+            <h4 class="subtitle-3">A. Informations générales du transfert</h4>
+            <ul class="list">
+                <li>Date</li>
+                <li>Numéro de référence</li>
+                <li>Statut</li>
+                <li>Emplacement (de)</li>
+                <li>Emplacement (a)</li>
+            </ul>
+            <p class="content">
+                Ces données servent à identifier formellement l'opération, et à l'associer au bon circuit logistique.
+            </p>
+
+            <h4 class="subtitle-3">B. Section des produits à transférer</h4>
+            <p class="content">
+                Cette section permet d'effectuer une recherche sur un produit présent dans la base de données enfin de l'ajouter dans la table des produits à transférer.
+            </p>
+            <p class="content">
+                L'ajout des produits se fait progressivement, avec vérification des quantités disponibles à la source.
+            </p>
+
+            <h4 class="subtitle-3">C. Actions et finalisation</h4>
+            <p class="content">
+                Ce formulaire permet de renseigner quelques informations supplémentaire (frais d'expédition, notes supplémentaires) enfin de finaliser le transfert.
+            </p>
+
+           <div class="image-placeholder"><p>Illustration de l'interface</p>
+                <img src="/images/transfert2.png" alt="Description de l'image" width="900" height="600" style="max-width:100%;height:auto;border-radius:8px;" />
+                </div>
+            <h3 class="subtitle-2">2.3) Permissions et accès</h3>
+            <p class="content">
+                L'accès à cette fonctionnalité dépend des droits attribués au rôle de l'utilisateur :
+            </p>
+            <table class="component-table">
+                <tr>
+                    <th>Rôle</th>
+                    <th>Accès</th>
+                </tr>
+                <tr>
+                    <td>Administrateur</td>
+                    <td>Plein accès à toutes les fonctions</td>
+                </tr>
+                <tr>
+                    <td>Responsable stock</td>
+                    <td>Création, validation et suivi</td>
+                </tr>
+                <tr>
+                    <td>Agent logistique</td>
+                    <td>Création de transfert uniquement</td>
+                </tr>
+                <tr>
+                    <td>Utilisateur restreint</td>
+                    <td>Aucun accès</td>
+                </tr>
+            </table>
+        </section>
+
+        <!-- CONCLUSION -->
+        <section class="section">
+            <h2 class="subtitle">Conclusion</h2>
+            <p class="content">
+                Le module de transfert de stocks de Movelys est un <strong>levier stratégique pour une gestion logistique agile et maîtrisée</strong>. Il garantit un suivi fiable des flux internes de marchandises, renforce la cohérence des données de stock et améliore la réactivité de l'entreprise face aux besoins opérationnels.
+            </p>
+            <p class="content">
+                En centralisant les informations et en automatisant les processus de transfert, Movelys permet aux entreprises de <strong>gagner en précision, en productivité et en visibilité</strong>. C'est une solution idéale pour toute structure souhaitant optimiser la gestion de ses inventaires multisites tout en assurant une continuité opérationnelle fluide et sécurisée.
+            </p>
+        </section>
+    </div>

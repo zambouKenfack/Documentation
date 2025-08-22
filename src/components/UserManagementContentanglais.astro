@@ -1,0 +1,517 @@
+---
+import '../styles/global1.css';
+---
+<div class="container">
+    <header class="header">
+        <h1>User Management in Movelys</h1>
+    </header>
+    <section class="section">
+        <h2>Introduction</h2>
+        <p>
+            User management in Movelys allows control over who can access what within the application. It offers a clear system for creating profiles, assigning roles (such as administrator, purchasing agent, accountant, etc.), and defining each user's permissions according to their responsibilities. With this feature, companies can ensure data security, track the activities of each member, and efficiently organize collaborative work. Whether for a small team or a large multi-site structure, Movelys adapts and guarantees controlled access to all management modules.
+        </p>
+    </section>
+    <section class="section">
+        <h2>1. User Management</h2>
+        <article class="article">
+            <h3>1.1 General Overview</h3>
+            <p>
+                The <strong>Users</strong> section of the <strong>Movelys</strong> application is an essential component of system administration. It allows administrators to manage the accounts of users who have access to the platform. This functionality aims to ensure a clear organization of roles, control access to different features of the application, and maintain the security and traceability of users' actions.
+            </p>
+        </article>
+        <article class="article">
+            <h3>1.2 Available Functions</h3>
+            <p>The interface allows for the following actions:</p>
+            <h4>a) Displaying Users</h4>
+            <ul>
+                <li>The administrator views all registered users in a table format.</li>
+                <li>The available columns include:
+                    <ul>
+                        <li><strong>Username</strong> - This is the unique identifier used by a person to log into a system or application.</li>
+                        <li><strong>Full Name</strong> - This is usually composed of the first name and surname.</li>
+                        <li><strong>Role (e.g., Admin)</strong> - This defines the rights or permissions of a user in the system.</li>
+                        <li><strong>Email Address</strong> - This is the email associated with the user.</li>
+                        <li><strong>Available Actions (edit, view, delete)</strong> - These are the operations that can be performed on the user from the interface.</li>
+                    </ul>
+                </li>
+            </ul>
+            <h4>Modifying User Information</h4>
+            <ul>
+                <li>Each row has an "Edit" button that allows modifying the selected user's data.</li>
+                <li>The administrator can update contact information or the assigned role.</li>
+            </ul>
+            <h4>Viewing Details</h4>
+            <ul>
+                <li>The "View" button allows checking detailed information about a user without modifying it.</li>
+                <li>This may include connection history, access rights, or recent activities (depending on configuration).</li>
+            </ul>
+            <h4>Deleting a User</h4>
+            <ul>
+                <li>The prominently displayed "Delete" button allows removing a user from the system.</li>
+                <li>A confirmation window is usually displayed to prevent accidental deletions.</li>
+            </ul>
+            <div class="image-placeholder">
+                <p>Interface Illustration</p>
+                <img src="/image/user1.png" alt="Description de l'image" width="900" height="600" style="max-width:100%;height:auto;border-radius:8px;" />
+            </div>
+            <h4>b) Adding a New User</h4>
+            <ul>
+                <li>A "Add" button (at the top right) allows registering a new user in the system, and when this button is clicked, you find:</li>
+                <li>A form to enter the identifiers of a new user, namely:
+                    <ul>
+                        <li><strong>Prefix</strong> - This is a polite form or title placed before the first name/surname (e.g., Mr., Ms., Dr.).</li>
+                        <li><strong>First Name</strong> - This is the personal name given to a person at birth, used to identify them individually.</li>
+                        <li><strong>Last Name</strong> - This is the family name, also called the surname, which is the identifier inherited from the family.</li>
+                        <li><strong>Email Address</strong> - Also called the email address, this is an address used to send and receive digital messages.</li>
+                    </ul>
+                </li>
+            </ul>
+            <h4>Form to Define Roles and Permissions</h4>
+            <ul>
+                <li><strong>Username</strong> - This is the unique identifier chosen to access a system.</li>
+                <li><strong>Password</strong> - This is a secret code used to secure access to the account.</li>
+                <li><strong>Confirm Password</strong> - This field requires retyping the same password to ensure there are no typing errors.</li>
+                <li><strong>Roles</strong> - This field allows defining the user’s access level in the system.</li>
+                <li><strong>Access Locations</strong> - These are the physical or logical locations where the user is allowed to log in or intervene.</li>
+            </ul>
+            <h4>Form to Define Sales</h4>
+            <ul>
+                <li><strong>Sales Commission Percentage (%)</strong> - This percentage represents the share of sales that a seller receives as commission.</li>
+                <li><strong>Maximum Sales Discount Percentage</strong> - This percentage indicates the maximum reduction that a seller is allowed to grant a customer on a sale.</li>
+            </ul>
+            <h4>Form for Additional Information</h4>
+            <ul>
+                <li><strong>Date of Birth</strong> - This represents the date on which a person was born.</li>
+                <li><strong>Gender</strong> - This represents the sex or gender identity of the person.</li>
+                <li><strong>Family Status</strong> - This represents the marital or family status of the person.</li>
+                <li><strong>Blood Type</strong> - This represents the type of blood of the person, important in medical contexts.</li>
+                <li><strong>Mobile Phone Number</strong> - This represents the primary mobile phone number of the user.</li>
+                <li><strong>Other Phone Number</strong> - This represents another phone number for the user.</li>
+                <li><strong>Family Contact Number</strong> - This represents the phone number of a relative to contact in case of emergency.</li>
+                <li><strong>Facebook Link</strong> - This represents the link to the user's Facebook profile.</li>
+                <li><strong>Twitter Link</strong> - This represents the link to the user's Twitter profile.</li>
+                <li><strong>Social Media 2</strong> - This can be used to add a link to another social network.</li>
+                <li><strong>Custom Fields 1, 2, 3, 4</strong> - These are free fields defined by the organization to record other specific information.</li>
+                <li><strong>Guardian's Name</strong> - This represents the name of a legal representative, used for minors or persons under guardianship.</li>
+                <li><strong>Type of Identification Document</strong> - This represents the type of identification document presented.</li>
+                <li><strong>Identification Document Number</strong> - This represents the number inscribed on the provided identification document.</li>
+                <li><strong>Permanent Address</strong> - This represents the official and fixed residence address (legal domicile).</li>
+                <li><strong>Current Address</strong> - This represents the place where the person currently lives, if different from the permanent address.</li>
+            </ul>
+            <h4>Form for Banking Information</h4>
+            <ul>
+                <li><strong>Account Holder's Name</strong> - This represents the name of the person or entity to whom the bank account belongs.</li>
+                <li><strong>Account Number</strong> - This represents the unique number assigned to the bank account by the bank.</li>
+                <li><strong>Bank Name</strong> - This represents the official name of the banking institution where the account is opened.</li>
+                <li><strong>Bank Identification Code</strong> - This is the code that allows identifying the bank in a standardized way, often in international transactions.</li>
+                <li><strong>Branch</strong> - This is the branch or agency of the bank where the account was opened.</li>
+                <li><strong>Tax Identification Number</strong> - This is the unique tax number assigned to an individual or business for identification with tax authorities.</li>
+            </ul>
+            <div class="image-placeholder">
+                <p>Interface Illustration</p>
+                <img src="/image/user2.png" alt="Description de l'image" width="900" height="600" style="max-width:100%;height:auto;border-radius:8px;" />
+            </div>
+        </article>
+        <article class="article">
+            <h3>1.3 Advanced Table Management Features</h3>
+            <p>The table interface offers several export and management tools:</p>
+            <ul>
+                <li><strong>Export CSV / Excel / PDF</strong>: allows generating reports on users in the desired format.</li>
+                <li><strong>Direct Printing</strong>: a print button is available to produce a paper version of the list.</li>
+                <li><strong>Column Visibility</strong>: allows hiding or displaying certain columns according to preferences.</li>
+                <li><strong>Dynamic Search</strong>: a quick search field facilitates locating a specific user.</li>
+                <li><strong>Pagination & Number of Entries Per Page</strong>: the user can navigate between pages and choose how many records to display per page (e.g., 10, 25, 50, etc.).</li>
+            </ul>
+        </article>
+        <article class="article">
+            <h3>1.4 Roles</h3>
+            <p>Each user has a role, which defines their permissions within the application.</p>
+            <p>Roles can be used to:</p>
+            <ul>
+                <li>Restrict or grant access to certain sections of the application</li>
+                <li>Manage the visibility of sensitive features (e.g., finance, human resources, statistics)</li>
+                <li>Apply specific security policies</li>
+            </ul>
+        </article>
+        <article class="article">
+            <h3>1.5 Security & Traceability</h3>
+            <p>User management is generally associated with:</p>
+            <ul>
+                <li>Strong password policies</li>
+                <li>Logging of logins and critical actions</li>
+                <li>Role-based restrictions (RBAC: Role-Based Access Control)</li>
+                <li>Alerts in case of unusual activity (if integrated)</li>
+            </ul>
+        </article>
+        <article class="article">
+            <h3>1.6 Use Cases</h3>
+            <table class="component-table">
+                <thead>
+                    <tr>
+                        <th>Use Case</th>
+                        <th>Action</th>
+                        <th>Expected Result</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Add a new employee</td>
+                        <td>Click on "Add", fill in the form</td>
+                        <td>A new user account is created</td>
+                    </tr>
+                    <tr>
+                        <td>Modify a user's rights</td>
+                        <td>Click on "Edit", change the role</td>
+                        <td>The user has new access after saving</td>
+                    </tr>
+                    <tr>
+                        <td>Export the list of users</td>
+                        <td>Click on "Export CSV"</td>
+                        <td>A CSV file is generated with all users</td>
+                    </tr>
+                    <tr>
+                        <td>Delete an inactive user</td>
+                        <td>Click on "Delete", confirm</td>
+                        <td>The account is removed from the database</td>
+                    </tr>
+                </tbody>
+            </table>
+        </article>
+        <article class="article">
+            <h3>1.7 Importance of this Feature</h3>
+            <p>
+                This section ensures centralized and controlled user management in Movelys. It is essential for:
+            </p>
+            <ul>
+                <li>Maintaining clear governance of the platform</li>
+                <li>Defining precise responsibilities among team members</li>
+                <li>Securing sensitive company data</li>
+                <li>Complying with privacy standards (e.g., GDPR)</li>
+            </ul>
+        </article>
+    </section>
+    <section class="section">
+        <h2>2. Role Management</h2>
+        <article class="article">
+            <h3>2.1 General Overview</h3>
+            <p>
+                Role management in the <strong>Movelys</strong> application is a fundamental component of the access control system. It allows defining user profiles according to their responsibilities and level of authorization within the organization. Each role conditions access to the different functionalities of the platform, thus ensuring optimal security and better organization of processes.
+            </p>
+        </article>
+        <article class="article">
+            <h3>2.2 Objectives of Role Management</h3>
+            <ul>
+                <li>Structure access rights to different parts of the system.</li>
+                <li>Delegate functions and responsibilities according to the user's position.</li>
+                <li>Enhance security and prevent unauthorized manipulations.</li>
+                <li>Simplify the management of permissions: a modified role affects all users attached to it.</li>
+            </ul>
+        </article>
+        <article class="article">
+            <h3>2.3 Available Features</h3>
+            <h4>a) Displaying Existing Roles</h4>
+            <ul>
+                <li>A table lists all roles registered in the system.</li>
+                <li>For each role, two actions are available: Edit and Delete.</li>
+            </ul>
+            <div class="image-placeholder">
+                <p>Interface Illustration</p>
+                <img src="/image/user3.png" alt="Description de l'image" width="900" height="600" style="max-width:100%;height:auto;border-radius:8px;" />
+            </div>
+            <h4>b) Adding a New Role</h4>
+            <ul>
+                <li>The "Add" button, located at the top right, allows creating a new custom role.</li>
+                <li>The addition form allows specifying:
+                    <ul>
+                        <li>The name of the role (e.g., HR Manager, Manager, Technician)</li>
+                        <li>Permissions (according to advanced configuration)</li>
+                    </ul>
+                </li>
+            </ul>
+            <h4>c) Modifying an Existing Role</h4>
+            <ul>
+                <li>The "Edit" option allows modifying the name or parameters of a role.</li>
+                <li>Useful in case of internal organizational changes or adding new responsibilities to a position.</li>
+            </ul>
+            <h4>d) Deleting a Role</h4>
+            <ul>
+                <li>The "Delete" button allows removing an outdated role.</li>
+                <li>A confirmation window is usually displayed to prevent accidental deletion.</li>
+            </ul>
+        </article>
+        <article class="article">
+            <h3>2.4 Examples of Roles in Movelys</h3>
+            <p>
+                According to the image provided above, two roles are present in the system:
+            </p>
+            <ul>
+                <li><strong>Admin</strong>: a role with all administrative and supervisory rights.</li>
+                <li><strong>Cashier</strong>: likely restricted to managing sales, cash, or payments.</li>
+            </ul>
+            <p>
+                These roles can be adapted according to the structure of the company using Movelys.
+            </p>
+        </article>
+        <article class="article">
+            <h3>2.5 Additional Management Tools</h3>
+            <ul>
+                <li><strong>Quick Search</strong>: a search bar allows easily finding a specific role.</li>
+                <li><strong>Pagination & Display</strong>: roles can be viewed per page, with the number of displayed items customizable (e.g., 10, 25, etc.).</li>
+            </ul>
+        </article>
+        <article class="article">
+            <h3>2.6 Use Cases</h3>
+            <table class="component-table">
+                <thead>
+                    <tr>
+                        <th>Use Case</th>
+                        <th>Action</th>
+                        <th>Expected Result</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Create a new role "Sales"</td>
+                        <td>Click on "Add", enter the name</td>
+                        <td>A new role appears in the list</td>
+                    </tr>
+                    <tr>
+                        <td>Modify the name of the role "Cashier"</td>
+                        <td>Click on "Edit", change the name</td>
+                        <td>The role is updated in the system</td>
+                    </tr>
+                    <tr>
+                        <td>Delete an obsolete role</td>
+                        <td>Click on "Delete", confirm</td>
+                        <td>The role is removed and is no longer available</td>
+                    </tr>
+                    <tr>
+                        <td>Search for a specific role</td>
+                        <td>Use the "Search" field</td>
+                        <td>The system filters the results in real-time</td>
+                    </tr>
+                </tbody>
+            </table>
+        </article>
+        <article class="article">
+            <h3>2.7 Integration with User Management</h3>
+            <p>
+                Each <strong>user of Movelys is associated with a</strong> <strong>role. This linkage allows:</strong>
+            </p>
+            <ul>
+                <li>Automating the management of rights according to function</li>
+                <li>Standardizing user profiles</li>
+                <li>Simplifying system maintenance, avoiding individual permission management</li>
+            </ul>
+            <p>
+                For example:
+            </p>
+            <p>
+                If the "Cashier" role has access only to sales and cash modules, all users assigned to this role will automatically be restricted to these sections.
+            </p>
+        </article>
+        <article class="article">
+            <h3>2.8 Importance of this Feature</h3>
+            <p>
+                Role management is a pillar of security and organization in Movelys. It allows:
+            </p>
+            <ul>
+                <li>Protecting sensitive data</li>
+                <li>Defining clear hierarchical levels</li>
+                <li>Efficiently managing access during an employee's arrival or departure</li>
+                <li>Easily adapting the application to different business models</li>
+            </ul>
+        </article>
+    </section>
+</div>
+<section class="section">
+    <h2>3. Sales Agents</h2>
+    <article class="article">
+        <h3>3.1 General Overview</h3>
+        <p>
+            The <strong>"Sales Agents" section of the</strong> <strong>Movelys application is designed to manage agents or sales representatives who are paid on commission. It allows for organizing, tracking, and controlling information related to these external or internal partners, while ensuring transparency in the calculation and management of commissions.
+        </p>
+    </article>
+    <article class="article">
+        <h3>3.2 Objectives of the Feature</h3>
+        <ul>
+            <li>Centralize information related to sales agents.</li>
+            <li>Track the performance and contacts of sales agents.</li>
+            <li>Define a specific commission percentage for each individual.</li>
+            <li>Provide advanced export and visualization tools.</li>
+            <li>Facilitate HR and commercial management related to external sales.</li>
+        </ul>
+    </article>
+    <article class="article">
+        <h3>3.3 Components of the Interface</h3>
+        <p>
+            The sales agent management interface consists of a structured table with the following fields:
+        </p>
+        <table class="component-table">
+            <thead>
+                <tr>
+                    <th>Field</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Name</td>
+                    <td>The name of the agent (person or entity)</td>
+                </tr>
+                <tr>
+                    <td>Email Address</td>
+                    <td>The email address for direct communication</td>
+                </tr>
+                <tr>
+                    <td>Contact Number</td>
+                    <td>Mobile or landline phone number</td>
+                </tr>
+                <tr>
+                    <td>Address</td>
+                    <td>Place of residence or registered office</td>
+                </tr>
+                <tr>
+                    <td>Sales Commission Percentage (%)</td>
+                    <td>Rate of remuneration per sale made</td>
+                </tr>
+                <tr>
+                    <td>Action</td>
+                    <td>Edit and delete buttons for each record</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>
+            Each row represents a sales agent, and the data can be modified or deleted individually.
+        </p>
+        <div class="image-placeholder">
+                <p>Interface Illustration</p>
+                <img src="/image/user4.png" alt="Description de l'image" width="900" height="600" style="max-width:100%;height:auto;border-radius:8px;" />
+            </div>
+    </article>
+    <article class="article">
+        <h3>3.4 Available Actions</h3>
+        <h4>a) Adding a Sales Agent</h4>
+        <ul>
+            <li>A clearly visible "Add" button at the top right allows registering a new agent.</li>
+            <li>The form includes:
+                <ul>
+                    <li>Prefix</li>
+                    <li>First Name</li>
+                    <li>Last Name</li>
+                    <li>Email</li>
+                    <li>Contact Number</li>
+                    <li>Address</li>
+                    <li>Sales Commission Percentage (%)</li>
+                </ul>
+            </li>
+            <li>After validation, the record is automatically integrated into the table.</li>
+        </ul>
+        <h4>b) Modifying a Sales Agent</h4>
+        <ul>
+            <li>The "Edit" button (usually with a pencil icon) allows modifying the information of an existing agent.</li>
+            <li>Useful in case of changes to contact details or commission percentage.</li>
+        </ul>
+        <h4>c) Deletion</h4>
+        <ul>
+            <li>The "Delete" button, in red, permanently removes the record after confirmation.</li>
+        </ul>
+    </article>
+    <article class="article">
+        <h3>3.5 Table Management Tools</h3>
+        <p>
+            The interface provides several interactive and professional tools for data manipulation:
+        </p>
+        <table class="component-table">
+            <thead>
+                <tr>
+                    <th>Feature</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Number of Entries Per Page</td>
+                    <td>Allows the user to choose how many items to display (e.g., 10, 25, 50, 100)</td>
+                </tr>
+                <tr>
+                    <td>Dynamic Search</td>
+                    <td>A search bar filters the data in real-time</td>
+                </tr>
+                <tr>
+                    <td>Export CSV / Excel</td>
+                    <td>Generates downloadable files containing the current data</td>
+                </tr>
+                <tr>
+                    <td>Print</td>
+                    <td>Produces a printable version of the table</td>
+                </tr>
+                <tr>
+                    <td>Column Visibility</td>
+                    <td>Allows showing/hiding certain columns for better readability</td>
+                </tr>
+            </tbody>
+        </table>
+    </article>
+    <article class="article">
+        <h3>3.6 Use Cases</h3>
+        <table class="component-table">
+            <thead>
+                <tr>
+                    <th>Use Case</th>
+                    <th>Action</th>
+                    <th>Expected Result</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Add a new representative</td>
+                    <td>Click on "Add", fill in the fields</td>
+                    <td>The agent is visible in the list</td>
+                </tr>
+                <tr>
+                    <td>Modify a commission percentage</td>
+                    <td>Click on "Edit", update the relevant field</td>
+                    <td>The new percentage is applied</td>
+                </tr>
+                <tr>
+                    <td>Delete an inactive contact</td>
+                    <td>Click on "Delete", confirm</td>
+                    <td>The agent is removed from the table</td>
+                </tr>
+                <tr>
+                    <td>Export the data</td>
+                    <td>Click on "Export CSV" or "Excel"</td>
+                    <td>A file is generated for external use</td>
+                </tr>
+                <tr>
+                    <td>Search by name</td>
+                    <td>Use the search bar</td>
+                    <td>The table filters automatically</td>
+                </tr>
+            </tbody>
+        </table>
+    </article>
+    <article class="article">
+        <h3>3.7 Importance of this Feature</h3>
+        <p>
+            The <strong>Sales Agents section plays a strategic role in commercial management and partner relations. It allows for:
+        </p>
+        <ul>
+            <li>A <strong>transparent management of commissions and payments due.</strong></li>
+            <li>A centralization of personal and contractual data.</li>
+            <li>Time savings for commercial and accounting managers.</li>
+            <li>Traceability of external partners involved in sales.</li>
+        </ul>
+        <p>
+            This feature is particularly useful for companies collaborating with independent representatives or field sales agents.
+        </p>
+    </article>
+</section>
+<section class="section">
+    <h2>Conclusion</h2>
+    <p>
+        User management is essential for ensuring a safe and organized use of Movelys. It allows the company to provide each collaborator with the access they need while protecting sensitive information. By centralizing roles and permissions, Movelys enhances security, improves productivity, and supports good governance of all internal operations.
+    </p>
+</section>
+</div>
