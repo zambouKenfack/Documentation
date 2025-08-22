@@ -33,13 +33,15 @@ import '../styles/global1.css';
 
             <article class="article">
                 <h3>1.2) Structure de l'interface</h3>
-                <p>L'interface se compose de deux sections :</p>
+                <p>L’interface se compose de plusieurs éléments distincts, organisés de manière intuitive pour 
+                     fluide et elle est divise en deux sections :</p>
                 <ul>
                     <li>Section des filtres</li>
                     <li>Section tableau des produits</li>
                 </ul>
 
                 <h4>1.2.1) Section des filtres</h4>
+                <p>La section supérieure permet d’affiner la recherche de produits via les filtres suivants : </p>
                 <table class="component-table">
                     <thead>
                         <tr>
@@ -80,6 +82,8 @@ import '../styles/global1.css';
                 </table>
 
                 <h4>1.2.2) Section tableau des produits</h4>
+                <p>Dans cette section on retrouve la liste de tous les produits sous forme de tableau, les colonnes 
+                ponibles sont : </p>
                 <table class="component-table">
                     <thead>
                         <tr>
@@ -142,8 +146,18 @@ import '../styles/global1.css';
                         </tr>
                     </tbody>
                 </table>
-
+                <p>En haut de ce tableau on retrouve deux onglets d’affichages : </p>
+                <ul>
+                    <li>Tous les produits : Affiche la liste complète des produits avec toutes leurs données commerciales. </li>
+                    <li> Rapport de stock : Accède à un rapport synthétique du stock. </li>
+                </ul>
+                <p>On retrouve également deux boutons d’action : </p>
+                <ul>
+                    <li>Ajouter : qui permet d’ajouter un produit dans la liste via un formulaire fournir </li>
+                    <li> Télécharger Excel : qui permet de Télécharger la liste des produits existants au format Excel. </li>
+                </ul>
                 <h4>1.2.2.1) Menu "Actions"</h4>
+                <p>Quand on clique sur le bouton "Actions", les options suivantes apparaissent : </p>
                 <table class="component-table">
                     <thead>
                         <tr>
@@ -185,7 +199,7 @@ import '../styles/global1.css';
             </article>
 
             <article class="article">
-                <h3>1.3) Boutons d'action</h3>
+                <h3>1.3) Boutons d’action en bas du tableau </h3>
                 <table class="component-table">
                     <thead>
                         <tr>
@@ -217,11 +231,11 @@ import '../styles/global1.css';
             <article class="article">
                 <h3>1.4) Fonctionnalités disponibles</h3>
                 <ul>
-                    <li>Export CSV/Excel/PDF</li>
-                    <li>Impression directe</li>
-                    <li>Visibilité des colonnes</li>
-                    <li>Recherche dynamique</li>
-                    <li>Pagination et nombre d'entrées par page</li>
+                    <li>Export CSV/Excel/PDF : permet de générer des rapports sur les utilisateurs au format souhaité. </li>
+                    <li>Impression directe: un bouton d’impression est disponible pour produire une version papier de la liste. </li>
+                    <li>Visibilité des colonnes: permet de masquer ou d’afficher certaines colonnes selon les préférences. </li>
+                    <li>Recherche dynamique un champ de recherche rapide facilite la localisation d’un utilisateur spécifique. </li>
+                    <li>Pagination et nombre d'entrées par page : l'utilisateur peut naviguer entre les pages et choisir combien d’enregistrements afficher par page (par exemple : 10, 25, 50, etc.). </li>
                 </ul>
                 <div class="image-placeholder"><p>Illustration de l'interface</p>
                 <img src="/images/produit1.png" alt="Description de l'image" width="900" height="600" style="max-width:100%;height:auto;border-radius:8px;" />
@@ -232,20 +246,21 @@ import '../styles/global1.css';
             <article class="article">
                 <h3>1.5) Intégration avec les autres modules</h3>
                 <ul>
-                    <li>Achats</li>
-                    <li>Ventes</li>
-                    <li>Stocks</li>
-                    <li>Statistiques</li>
+                    <li>Achats : chaque produit peut être rattaché à une commande fournisseur. </li>
+                    <li>Ventes : les produits alimentent les devis, commandes et factures. </li>
+                    <li>Stocks : la quantité est mise à jour automatiquement après chaque mouvement. </li>
+                    <li>Statistiques : les rapports analytiques utilisent les données produites pour déterminer les performances. </li>
                 </ul>
+
             </article>
 
             <article class="article">
                 <h3>1.6) Avantages</h3>
                 <ul>
-                    <li>Centralisation</li>
-                    <li>Gain de temps</li>
-                    <li>Contrôle</li>
-                    <li>Productivité</li>
+                    <li>Centralisation : tous les produits visibles dans un seul espace. </li>
+                    <li>Gain de temps : modification, ajout ou suppression rapide. </li>
+                    <li>Contrôle : tri, filtres, actions groupées, export. </li>
+                    <li>Productivité : outil essentiel pour gérer un grand nombre de références </li>
                 </ul>
             </article>
         </section>
@@ -256,11 +271,13 @@ import '../styles/global1.css';
 
             <article class="article">
                 <h3>2.1) Fonction générale</h3>
-                <p>Permet de créer un nouveau produit avec toutes les informations essentielles.</p>
+                <p>La fonctionnalité "Gestion de l’ajout d’un produit" est une étape clé dans la gestion du stock et du catalogue commercial de l’entreprise.Elle permet de créer un nouveau produit dans le système en renseignant toutes les informations essentielles à son identification, sa commercialisation, sa gestion logistique et sa facturation.Cette interface assure que chaque produit soit enregistré de manière complète, structurée et sans erreur, afin de garantir une cohérence dans tous les modules de Movelys (ventes, achats, stocks, étiquettes, statistiques...).</p>
             </article>
 
             <article class="article">
+           
                 <h3>2.2) Description de l'interface</h3>
+                <p>L’ajout d’un produit se fait via une fenêtre modale déclenchée par le bouton "Ajouter"depuis la page principale des produits.Le formulaire est structuré verticalement, divisé en plusieurs sections de saisie, avec des champs bien étiquetés, permettant une saisie rapide et précise.</p>
                 <table class="component-table">
                     <thead>
                         <tr>
@@ -350,17 +367,29 @@ import '../styles/global1.css';
             <article class="article">
                 <h3>2.3) Fonctionnalités intégrées</h3>
                 <h4>2.3.1. Enregistrement intelligent</h4>
-                <p>Ajout immédiat à la base après validation</p>
-                
+                <p>Une fois tous les champs remplis, l’utilisateur clique sur "Enregistrer" : </p>
+                <ul>
+                    <li>Le produit est ajouté immédiatement à la base. </li>
+                    <li>Il apparaît automatiquement dans la liste des produits, prêt à être vendu ou étiqueté. </li>
+                </ul>
+
                 <h4>2.3.2. Vérification automatique</h4>
-                <p>Contrôle des champs obligatoires et détection de doublons</p>
+               <ul>
+                    <li>Les champs obligatoires non remplis affichent un message d’erreur clair. </li>
+                    <li>Les doublons de SKU ou de code-barres peuvent être bloqués pour éviter les erreurs d’identification. </li>
+                </ul>
                 
                 <h4>2.3.3. Télécharger l'image</h4>
-                <p>Glisser-déposer ou téléverser une image</p>
+                <ul>
+                    <li> Permet de glisser-déposer ou de téléverser une image (ex. : photo du produit, logo de marque). </li>
+                    <li>image peut être utilisée dans les impressions, les fiches ou les interfaces e-commerce.</li>
+                </ul>
             </article>
 
             <article class="article">
                 <h3>2.4) Intégration avec les autres modules</h3>
+                <p>L’ajout d’un produit alimente automatiquement les modules suivants : </p>
+
                 <table class="component-table">
                     <thead>
                         <tr>
@@ -395,6 +424,7 @@ import '../styles/global1.css';
 
             <article class="article">
                 <h3>2.5) Sécurité et droits d'accès</h3>
+                <p> L’accès à ce formulaire peut être restreint selon les rôles d’utilisateur configurés dans Movelys </p>
                 <table class="component-table">
                     <thead>
                         <tr>
@@ -426,13 +456,14 @@ import '../styles/global1.css';
             <article class="article">
                 <h3>2.6) Avantages</h3>
                 <ul>
-                    <li>Simplicité d'utilisation</li>
-                    <li>Interaction directe</li>
-                    <li>Connexion fluide</li>
-                    <li>Réduction des erreurs</li>
+                    <li>Simplicité d’utilisation : tous les champs sont regroupés dans une seule fenêtre. </li>
+                    <li>Interaction directe : mise à jour immédiate du catalogue après validation. </li>
+                    <li>Connexion fluide avec les autres modules sans opération supplémentaire. </li>
+                    <li>Réduction des erreurs : validations intégrées, détection de doublons, sécurité des saisies. </li>
                 </ul>
             </article>
         </section>
+       
 
         <!-- Section 3: Gestion de la mise à jour du prix -->
         <section class="section">
@@ -440,13 +471,17 @@ import '../styles/global1.css';
 
             <article class="article">
                 <h3>3.1) Fonction générale</h3>
-                <p>Permet de modifier rapidement les prix de vente des produits existants.</p>
+                <p>La Fonction "Gestion de la mise à jour du prix" de Movelys permet de modifier rapidement et efficacement les prix de vente des produits existants, sans avoir à éditer chaque fiche produit individuellement.Cette fonctionnalité est indispensable pour les entreprises qui gèrent de nombreux produits et souhaitent effectuer des révisions tarifaires en masse à la suite d’événements comme : </p>
+                <ul>
+                    <li>Une augmentation des coûts fournisseurs, </li>
+                    <li> Un changement stratégique de prix, </li>
+                    <li>Des soldes, promotions, ou remises saisonnières. </li>
+                </ul>
             </article>
 
             <article class="article">
                 <h3>3.2) Description de l'interface</h3>
-                <p>Bouton "prix des produits à l'exportation" pour extraire tous les prix dans un fichier Excel.</p>
-                <p>Après modification, import du fichier via bouton "envoyer".</p>
+                <p>L’interface mise à jour des prix esttrès attrayante et présente certaines fonctionnalitéstels que :Un bouton “ prix des produits à l’exportation” elle permet d’extraite tous les prix des différents produits présent dans la base de données, et ce fichier est généralementsous fichier Excel enfin de modifier les prix (augmentation,réduction, etc.…) Après avoir apporté des modifications vous pouvez maintenant importer le fichier et le soumettre via le bouton envoyer.Sans toutefois oublier cette interface montre aussi des instructions à suivre qui nous explique également comme procède. </p>
                 <div class="image-placeholder"><p>Illustration de l'interface</p>
                 <img src="/images/produit3.png" alt="Description de l'image" width="900" height="600" style="max-width:100%;height:auto;border-radius:8px;" />
                 </div>
@@ -454,6 +489,7 @@ import '../styles/global1.css';
 
             <article class="article">
                 <h3>3.3) Intégration avec les autres modules</h3>
+                <p> Lorsque le prix d’un produit est mis à jour ici, il est automatiquement synchronisé dans les modules suivants : </p>
                 <table class="component-table">
                     <thead>
                         <tr>
@@ -488,6 +524,7 @@ import '../styles/global1.css';
 
             <article class="article">
                 <h3>3.4) Sécurité et gestion des accès</h3>
+                <p> La modification des prix peut être restreinte à certains rôles utilisateurs, afin d’éviter toute manipulation accidentelle ou malveillante. </p>
                 <table class="component-table">
                     <thead>
                         <tr>
@@ -514,6 +551,7 @@ import '../styles/global1.css';
                         </tr>
                     </tbody>
                 </table>
+                <p>Les actions sont souvent journalisées pour assurer la traçabilité (qui a modifié quoi, quand, et à quel montant) </p>
             </article>
 
             <article class="article">
@@ -557,16 +595,37 @@ import '../styles/global1.css';
             <h2>4) Gestion des impressions des étiquettes</h2>
             <article class="article">
                 <h3>4.1) Fonction générale</h3>
-                <p>Générer, configurer et imprimer des étiquettes produits.</p>
+                <p>La Fonction “ Gestion des impressions des étiquettes “ de Movelys est conçue pour permettre aux utilisateurs de générer, configurer et imprimer des étiquettes produites contenant des informations essentielles comme le nom, le code-barres, le prix de vente et l’unité de mesure.Cette fonctionnalité est essentielle pour les entreprises qui : </p>
+                <ul>
+                    <li>Vendent des produits physiques en point de vente, </li>
+                    <li> Gèrent des stocks en magasin ou en entrepôt, </li>
+                    <li>Ou doivent étiqueter des produits pour la logistique, l’inventaire ou la vente. </li>
+                </ul>
             </article>
 
             <article class="article">
                 <h3>4.2) Description de l'interface</h3>
-                <p>Deux sections principales :</p>
-                <ul>
-                    <li>Ajouter des produits pour générer des étiquettes</li>
-                    <li>Informations à afficher sur les étiquettes</li>
-                </ul>
+                <p>L’interface se présente sous la forme d’un tableau interactif contenant deux sections qui sont :</p>
+            
+            <ul>
+                <li><strong>La section ajouter des produits pour générer des étiquettes :</strong><br>
+                Dans cette section nous disposons d’une barre de recherche qui nous permet de rechercher 
+                et d’ajouter un produit afin de générer les étiquettes du produit en question.</li>
+                
+                <li><strong>La section informations à afficher dans les étiquettes :</strong><br>
+                Dans cette section nous retrouvons les informations nécessaires qui doivent être
+                affichées sur les différentes étiquettes.</li>
+            </ul>
+            
+            <p>Ces informations sont :</p>
+            <ul>
+                <li>Nom du produit</li>
+                <li>Variation du produit (recommandée)</li>
+                <li>Prix du produit</li>
+                <li>Affichage du prix</li>
+                <li>Nom de l'entreprise</li>
+                <li>Date d'emballage</li>
+            </ul>
                 <div class="image-placeholder"><p>Illustration de l'interface</p>
                 <img src="/images/produit1.png" alt="Description de l'image" width="900" height="600" style="max-width:100%;height:auto;border-radius:8px;" />
                 </div>
@@ -574,11 +633,21 @@ import '../styles/global1.css';
 
             <article class="article">
                 <h3>4.3) Lancement de l'impression</h3>
-                <p>Bouton "Aperçu" puis impression via imprimante standard.</p>
+            <p>Une fois la sélection effectuée :</p>
+            <ul>
+                <li>L'utilisateur clique sur le bouton "Aperçu".</li>
+                <li>Une fenêtre de prévisualisation peut s'ouvrir, montrant le rendu des étiquettes.</li>
+                <li>L'impression se fait via :
+                <ul>
+                    <li>Une imprimante standard (avec feuilles A4)</li>
+                </ul>
+                </li>
+            </ul>
             </article>
 
             <article class="article">
                 <h3>4.4) Intégration avec les autres modules</h3>
+                <p>L’impression d’étiquettes est directement liée aux modules suivants : </p>
                 <table class="component-table">
                     <thead>
                         <tr>
@@ -609,6 +678,7 @@ import '../styles/global1.css';
 
             <article class="article">
                 <h3>4.5) Gestion des permissions</h3>
+                <p>La possibilité d’imprimer des étiquettes peut être contrôlée par rôle utilisateur, pour éviter des impressions abusives ou incorrectes. </p>
                 <table class="component-table">
                     <thead>
                         <tr>
@@ -678,12 +748,12 @@ import '../styles/global1.css';
 
             <article class="article">
                 <h3>5.1) Fonction générale</h3>
-                <p>Gérer les différentes déclinaisons d'un produit (tailles, couleurs, modèles...).</p>
+                <p>La fonction “ Gestion des variations “ permet à l’entreprise de gérer les différentes déclinaisons d’un produit de base, appelées variantes ou attributs combinés. Cela s’applique aux produits disponibles en plusieurs formes : tailles, couleurs, modèles, poids, emballages, etc.Ce module est indispensable pour les secteurs comme le prêt-à-porter, l’électronique, les cosmétiques, les boissons ou tout domaine où un même produit existe sous plusieurs formes distinctes. </p>
             </article>
 
             <article class="article">
                 <h3>5.2) Description de l'interface</h3>
-                <p>Champs : variations, valeurs et action. Bouton "Ajouter" pour créer des variations.</p>
+                <p>L’interface permet de transformer un produit simple en produit à variations en lui assignant des attributs personnalisés. Elle constituer de trois champs qui sont : variations, valeurs et action . Elle comporte également un bouton ajouter pour permettre d’ajouter une variation. Lorsqu’on clique sur ce bouton elle ouvre une fenêtre et nous propose les champs à remplir qui sont : le nom de la variation et ajouter des valeurs de variations. </p>
                 <div class="image-placeholder"><p>Illustration de l'interface</p>
                 <img src="/images/produit5.png" alt="Description de l'image" width="900" height="600" style="max-width:100%;height:auto;border-radius:8px;" />
                 </div>
@@ -692,11 +762,11 @@ import '../styles/global1.css';
             <article class="article">
                 <h3>5.3) Fonctionnalités principales</h3>
                 <ul>
-                    <li>Export CSV/Excel/PDF</li>
-                    <li>Impression directe</li>
-                    <li>Visibilité des colonnes</li>
-                    <li>Recherche dynamique</li>
-                    <li>Pagination</li>
+                    <li>Export CSV/Excel/PDF : permet de générer des rapports sur les utilisateurs au format souhaité. </li>
+                    <li>Impression directe: un bouton d’impression est disponible pour produire une version papier de la liste. </li>
+                    <li>Visibilité des colonnes: permet de masquer ou d’afficher certaines colonnes selon les préférences. </li>
+                    <li>Recherche dynamique un champ de recherche rapide facilite la localisation d’un utilisateur spécifique. </li>
+                    <li>Pagination et nombre d'entrées par page : l'utilisateur peut naviguer entre les pages et choisir combien d’enregistrements afficher par page (par exemple : 10, 25, 50, etc.). </li>
                 </ul>
             </article>
 
@@ -798,17 +868,47 @@ import '../styles/global1.css';
 
             <article class="article">
                 <h3>6.1) Fonction générale</h3>
-                <p>Importer en masse des produits à partir d'un fichier externe.</p>
+                <p>La section "Gestion des importations des produits" est un outil central pour les entreprises 
+                disposant d'un large catalogue.</p>
+                <p>Elle permet d'importer en masse des produits dans le système à partir d'un fichier externe
+                (CSV ou Excel), au lieu de les enregistrer un par un.</p>
+                <p>Cette fonctionnalité est cruciale pour :</p>
+                <ul>
+                    <li>La mise en route initiale de la plateforme,</li>
+                    <li>L'ajout groupé de nouveaux articles,</li>
+                    <li>La migration depuis un ancien système,</li>
+                    <li>La mise à jour massive d'informations produit (stock, prix, SKU...).</li>
+                </ul>
+                
             </article>
 
             <article class="article">
                 <h3>6.2) Description de l'interface</h3>
-                <p>3 zones fonctionnelles :</p>
-                <ol>
-                    <li>Téléchargement du modèle</li>
-                    <li>Remplissage en ligne</li>
-                    <li>Importation du fichier</li>
-                </ol>
+              
+                    <p>L'interface est simple et divisée en 3 zones fonctionnelles :</p>
+                    <ol>
+                        <li><strong>Téléchargement du modèle :</strong>
+                        <ul>
+                            <li>Un bouton permet à l'utilisateur de télécharger un modèle vierge au format CSV ou Excel.</li>
+                            <li>Ce modèle contient les en-têtes de colonnes obligatoires</li>
+                        </ul>
+                        </li>
+                        <li><strong>Remplissage en ligne :</strong>
+                        <ul>
+                            <li>Lorsque l'utilisateur clique sur télécharger le fichier modèle elle s'ouvre sur le navigateur.</li>
+                            <li>Il complète chaque ligne avec les informations produites à importer (jusqu'à plusieurs centaines).</li>
+                        </ul>
+                        </li>
+                        <li><strong>Importation du fichier :</strong>
+                        <ul>
+                            <li>L'utilisateur charge le fichier complété via un bouton "Importer".</li>
+                            <li>Une étape de prévisualisation affiche un résumé des données à intégrer.</li>
+                            <li>Le système valide les colonnes et signale les erreurs éventuelles avant finalisation.</li>
+                        </ul>
+                        </li>
+                    </ol>
+                    <p>Cette interface montre aussi des instructions à suivre pour pouvoir importer les produits.</p>
+                    
                 <div class="image-placeholder"><p>Illustration de l'interface</p>
                 <img src="/images/produit6.png" alt="Description de l'image" width="900" height="600" style="max-width:100%;height:auto;border-radius:8px;" />
                 </div>
@@ -817,10 +917,25 @@ import '../styles/global1.css';
             <article class="article">
                 <h3>6.3) Fonctionnalités techniques</h3>
                 <h4>6.3.1) Vérification automatique</h4>
-                <p>Contrôle des champs obligatoires et formats</p>
+                <p>Avant validation, le système :</p>
+                <ul>
+                    <li>Vérifie que les champs obligatoires sont présents,</li>
+                    <li>Détecte les erreurs (valeurs manquantes, doublons de SKU, formats invalides),</li>
+                    <li>Vérifie si les colonnes du fichier CSV sont dans l'ordre croissant</li>
+                </ul>
+                <p>Cette interface montre aussi des instructions à suivre pour pouvoir importer les produits.</p>
+                
                 
                 <h4>6.3.2) Importation en lot</h4>
-                <p>Création ou mise à jour des produits</p>
+                <div style="flex: 1; min-width: 300px;">
+                    
+                    <p>Une fois validé, le fichier peut être importé :</p>
+                    <ul>
+                        <li>En créant chaque produit dans la base de données,</li>
+                        <li>En mettant à jour les produits existants (si option activée, selon SKU),</li>
+                        <li>Avec une notification de succès indiquant le nombre de produits importés.</li>
+                    </ul>
+                  
             </article>
 
             <article class="article">
@@ -920,16 +1035,41 @@ import '../styles/global1.css';
 
             <article class="article">
                 <h3>7.1) Fonction générale</h3>
-                <p>Enregistrer l'état initial des stocks lors de la mise en service.</p>
+                    <p>La fonctionnalité "Importation du stock d'ouverture" permet à une entreprise d'enregistrer 
+                    dans Movelys l'état initial de ses stocks au moment de la mise en service de l'application ou 
+                    lors d'un réajustement complet de l'inventaire.</p>
+                    <p>Cette étape est indispensable pour une gestion cohérente du stock dans les modules suivants :</p>
+                    <ul>
+                        <li>Ventes</li>
+                        <li>Achats</li>
+                        <li>Réapprovisionnement</li>
+                        <li>Statistiques d'inventaire</li>
+                    </ul>
+                    
+
             </article>
 
             <article class="article">
                 <h3>7.2) Description de l'interface</h3>
-                <p>Deux sections :</p>
+                
+                <p>L'interface se compose de deux sections fonctionnelles principales visibles :</p>
                 <ol>
-                    <li>Téléchargement du modèle</li>
-                    <li>Importation du fichier rempli</li>
+                    <li><strong>Téléchargement du modèle d'importation</strong>
+                    <ul>
+                        <li>Un bouton permet de télécharger un modèle de fichier CSV ou Excel 
+                        préformaté, comprenant les colonnes obligatoires à remplir.</li>
+                    </ul>
+                    </li>
+                    <li><strong>Importation du fichier rempli</strong>
+                    <ul>
+                        <li>Une fois le fichier complété, l'utilisateur le sélectionne et le charge via 
+                        l'interface.</li>
+                        <li>Le système effectue une vérification automatique, affiche les éventuelles 
+                        erreurs, puis propose de valider ou corriger avant l'importation finale.</li>
+                    </ul>
+                    </li>
                 </ol>
+                
                 <div class="image-placeholder"><p>Illustration de l'interface</p>
                 <img src="/images/produit7.png" alt="Description de l'image" width="900" height="600" style="max-width:100%;height:auto;border-radius:8px;" />
                 </div>
@@ -938,10 +1078,31 @@ import '../styles/global1.css';
             <article class="article">
                 <h3>7.3) Fonctionnement technique</h3>
                 <h4>7.3.1. Étape de vérification</h4>
-                <p>Validation de chaque ligne et contrôle des cohérences</p>
+        
+                <p>Lors de l'importation, le système valide chaque ligne :</p>
+                <ul>
+                    <li>Vérifie si le produit/SKU existe déjà dans la base.</li>
+                    <li>Contrôle la cohérence des quantités et formats numériques.</li>
+                    <li>Signale toute incohérence ou erreur bloquante (ex. : produit inexistant, 
+                    champ vide…).</li>
+                </ul>
+                
                 
                 <h4>7.3.2. Importation effective</h4>
-                <p>Quantités saisies deviennent le stock initial</p>
+                
+                <ul>
+                    <li>Après validation, les quantités saisies deviennent le stock initial enregistré dans le 
+                    système.</li>
+                    <li>Ces quantités sont immédiatement disponibles pour :
+                    <ul>
+                        <li>La facturation,</li>
+                        <li>Les mouvements de stock,</li>
+                        <li>Les alertes de rupture,</li>
+                        <li>Les statistiques.</li>
+                    </ul>
+                    </li>
+                </ul>
+               
             </article>
 
             <article class="article">
@@ -1080,11 +1241,11 @@ import '../styles/global1.css';
             <article class="article">
                 <h3>8.3) Fonctionnalités</h3>
                 <ul>
-                    <li>Export CSV/Excel/PDF</li>
-                    <li>Impression directe</li>
-                    <li>Visibilité des colonnes</li>
-                    <li>Recherche dynamique</li>
-                    <li>Pagination</li>
+                    <li>Export CSV/Excel/PDF : permet de générer des rapports sur les utilisateurs au format souhaité. </li>
+                    <li>Impression directe: un bouton d’impression est disponible pour produire une version papier de la liste. </li>
+                    <li>Visibilité des colonnes: permet de masquer ou d’afficher certaines colonnes selon les préférences. </li>
+                    <li>Recherche dynamique un champ de recherche rapide facilite la localisation d’un utilisateur spécifique. </li>
+                    <li>Pagination et nombre d'entrées par page : l'utilisateur peut naviguer entre les pages et choisir combien d’enregistrements afficher par page (par exemple : 10, 25, 50, etc.). </li>
                 </ul>
             </article>
 
@@ -1155,12 +1316,37 @@ import '../styles/global1.css';
 
             <article class="article">
                 <h3>9.1) Fonction générale</h3>
-                <p>Définir et gérer les unités de mesure utilisées pour les produits.</p>
+                    <p>La fonctionnalité "Gestion des unités" permet de définir, personnaliser et gérer les unités 
+                    de mesure utilisées pour les produits dans l'ensemble du système Movelys.</p>
+                    <p>Elle est essentielle pour standardiser :</p>
+                    <ul>
+                        <li>La quantification des produits (pièce, kg, litre, mètre, etc.),</li>
+                        <li>La présentation dans les documents commerciaux (factures, bons de commande, 
+                        devis...),</li>
+                        <li>Et garantir la cohérence dans les opérations de vente, d'achat, et de stock.</li>
+                    </ul>
+                    
             </article>
 
             <article class="article">
                 <h3>9.2) Description de l'interface</h3>
-                <p>Tableau listant les unités avec champs : Nom, Nom abrégé, Autoriser les décimaux, Action.</p>
+                           
+                <p>L'interface de gestion des unités se présente comme un tableau simple et intuitif, listant 
+                toutes les unités déjà créées. Elle est constituée des champs suivants :</p>
+                <ul>
+                    <li>Nom</li>
+                    <li>Nom abrégé</li>
+                    <li>Autoriser les décimaux</li>
+                    <li>Action</li>
+                </ul>
+                <p>Un bouton « Ajouter » permet de créer une nouvelle unité manuellement et elle est constituée
+                des champs suivants :</p>
+                <ul>
+                    <li>Nom</li>
+                    <li>Nom abrégé</li>
+                    <li>Autoriser les décimales</li>
+                </ul>
+                
                 <div class="image-placeholder"><p>Illustration de l'interface</p>
                 <img src="/images/produit9.png" alt="Description de l'image" width="900" height="600" style="max-width:100%;height:auto;border-radius:8px;" />
                 </div>
@@ -1168,12 +1354,12 @@ import '../styles/global1.css';
 
             <article class="article">
                 <h3>9.3) Fonctionnalités principales</h3>
-                <ul>
-                    <li>Export CSV/Excel/PDF</li>
-                    <li>Impression directe</li>
-                    <li>Visibilité des colonnes</li>
-                    <li>Recherche dynamique</li>
-                    <li>Pagination</li>
+               <ul>
+                    <li>Export CSV/Excel/PDF : permet de générer des rapports sur les utilisateurs au format souhaité. </li>
+                    <li>Impression directe: un bouton d’impression est disponible pour produire une version papier de la liste. </li>
+                    <li>Visibilité des colonnes: permet de masquer ou d’afficher certaines colonnes selon les préférences. </li>
+                    <li>Recherche dynamique un champ de recherche rapide facilite la localisation d’un utilisateur spécifique. </li>
+                    <li>Pagination et nombre d'entrées par page : l'utilisateur peut naviguer entre les pages et choisir combien d’enregistrements afficher par page (par exemple : 10, 25, 50, etc.). </li>
                 </ul>
             </article>
 
@@ -1316,12 +1502,38 @@ import '../styles/global1.css';
 
             <article class="article">
                 <h3>10.1) Fonction générale</h3>
-                <p>Structurer et classer les produits en groupes logiques.</p>
+                
+                    <p>La section "Gestion des catégories" permet de structurer et classer les produits en 
+                    groupes logiques, appelés catégories, selon leur nature, leur fonction ou leur secteur 
+                    d'activité.</p>
+                    <p>Elle joue un rôle clé dans la navigation, la recherche, les statistiques et la configuration 
+                    commerciale.</p>
+                    <p>Exemples courants de catégories :</p>
+                    <ul>
+                        <li>Alimentation, Boissons, Électronique, Vêtements, Fournitures de bureau, etc.</li>
+                    </ul>
+                    <p>Grâce à ce système, les entreprises utilisant Movelys peuvent :</p>
+                    <ul>
+                        <li>Segmenter leur catalogue,</li>
+                        <li>Appliquer des règles ou des filtres par catégorie,</li>
+                        <li>Faciliter la gestion et l'analyse de leurs ventes et de leur stock.</li>
+                    </ul>
+                  
+
             </article>
 
             <article class="article">
                 <h3>10.2) Description de l'interface</h3>
-                <p>Tableau hiérarchique avec champs : Catégorie, Code, Description, Action.</p>
+                    <p>L'interface de gestion des catégories se présente sous la forme d'un tableau hiérarchique,
+                    affichant les catégories existantes. Elle est constituée des champs suivants :</p>
+                    <ul>
+                        <li>Catégorie</li>
+                        <li>Code de la catégorie</li>
+                        <li>Description</li>
+                        <li>Action</li>
+                    </ul>
+                    <p>Un bouton « Ajouter une catégorie » permet d'en créer une nouvelle à tout moment.</p>
+                    
                <div class="image-placeholder"><p>Illustration de l'interface</p>
                 <img src="/images/produit10.png" alt="Description de l'image" width="900" height="600" style="max-width:100%;height:auto;border-radius:8px;" />
                 </div>
@@ -1330,11 +1542,11 @@ import '../styles/global1.css';
             <article class="article">
                 <h3>10.3) Fonctionnalités</h3>
                 <ul>
-                    <li>Export CSV/Excel/PDF</li>
-                    <li>Impression directe</li>
-                    <li>Visibilité des colonnes</li>
-                    <li>Recherche dynamique</li>
-                    <li>Pagination</li>
+                    <li>Export CSV/Excel/PDF : permet de générer des rapports sur les utilisateurs au format souhaité. </li>
+                    <li>Impression directe: un bouton d’impression est disponible pour produire une version papier de la liste. </li>
+                    <li>Visibilité des colonnes: permet de masquer ou d’afficher certaines colonnes selon les préférences. </li>
+                    <li>Recherche dynamique un champ de recherche rapide facilite la localisation d’un utilisateur spécifique. </li>
+                    <li>Pagination et nombre d'entrées par page : l'utilisateur peut naviguer entre les pages et choisir combien d’enregistrements afficher par page (par exemple : 10, 25, 50, etc.). </li>
                 </ul>
             </article>
 
@@ -1477,12 +1689,31 @@ import '../styles/global1.css';
 
             <article class="article">
                 <h3>11.1) Fonction générale</h3>
-                <p>Enregistrer et associer des marques commerciales aux produits.</p>
+                
+                    <p>La fonctionnalité "Gestion des marques" dans Movelys permet d'enregistrer, organiser et 
+                    associer des marques commerciales aux différents produits du catalogue.</p>
+                    <p>Elle est conçue pour offrir un référencement clair, une meilleure segmentation des articles, 
+                    ainsi qu'une valeur ajoutée marketing dans les rapports et les interfaces utilisateur.</p>
+                    <p>Cette fonction est indispensable pour les entreprises travaillant avec :</p>
+                    <ul>
+                        <li>Des fournisseurs ou fabricants externes,</li>
+                        <li>Plusieurs lignes de produits sous différentes marques,</li>
+                        <li>Des gammes importées ou localisées.</li>
+                    </ul>
+                   
             </article>
 
             <article class="article">
                 <h3>11.2) Description de l'interface</h3>
-                <p>Tableau avec champs : Marque, Note, Action. Bouton "Ajouter une marque".</p>
+            <p>L'interface se présente sous forme de tableau de gestion des marques avec les champs 
+            suivants :</p>
+            <ul>
+                <li>Marque</li>
+                <li>Note</li>
+                <li>Action</li>
+            </ul>
+            <p>Un bouton « Ajouter une marque » permet de créer rapidement une nouvelle entrée.</p>
+            
                 <div class="image-placeholder"><p>Illustration de l'interface</p>
                 <img src="/images/produit11.png" alt="Description de l'image" width="900" height="600" style="max-width:100%;height:auto;border-radius:8px;" />
                 </div>
@@ -1491,10 +1722,11 @@ import '../styles/global1.css';
             <article class="article">
                 <h3>11.3) Fonctionnalités principales</h3>
                 <ul>
-                    <li>Export CSV/Excel/PDF</li>
-                    <li>Impression directe</li>
-                    <li>Visibilité des colonnes</li>
-                    <li>Recherche dynamique</li>
+                    <li>Export CSV/Excel/PDF : permet de générer des rapports sur les utilisateurs au format souhaité. </li>
+                    <li>Impression directe: un bouton d’impression est disponible pour produire une version papier de la liste. </li>
+                    <li>Visibilité des colonnes: permet de masquer ou d’afficher certaines colonnes selon les préférences. </li>
+                    <li>Recherche dynamique un champ de recherche rapide facilite la localisation d’un utilisateur spécifique. </li>
+                    <li>Pagination et nombre d'entrées par page : l'utilisateur peut naviguer entre les pages et choisir combien d’enregistrements afficher par page (par exemple : 10, 25, 50, etc.). </li>
                 </ul>
             </article>
 
@@ -1607,12 +1839,37 @@ import '../styles/global1.css';
 
             <article class="article">
                 <h3>12.1) Fonction générale</h3>
-                <p>Configurer et affecter des durées de garantie aux produits.</p>
+                           
+                <p>La section "Gestion des garanties" permet à une entreprise de configurer, gérer et 
+                affecter des durées de garantie à ses produits ou services.</p>
+                <p>Elle est particulièrement utile pour les secteurs où les produits sont couverts par un 
+                engagement de réparation, de remplacement ou de remboursement pendant une période 
+                déterminée.</p>
+                <p>Cela permet :</p>
+                <ul>
+                    <li>D'assurer une traçabilité contractuelle,</li>
+                    <li>De faciliter les retours ou réclamations,</li>
+                    <li>D'informer précisément le client au moment de la vente,</li>
+                    <li>Et de renforcer la transparence et la relation de confiance avec les clients.</li>
+                </ul>
+               
+
             </article>
 
             <article class="article">
                 <h3>12.2) Description de l'interface</h3>
-                <p>Liste structurée avec champs : Nom, Description, Durée, Action.</p>
+                           
+                <p>L'interface de gestion des garanties se présente comme une liste structurée contenant toutes 
+                les garanties disponibles dans le système. Elle est composée des champs suivants :</p>
+                <ul>
+                    <li>Nom</li>
+                    <li>Description</li>
+                    <li>Durée</li>
+                    <li>Action</li>
+                </ul>
+                <p>Un bouton « Ajouter » permet de créer une nouvelle garantie personnalisée.</p>
+                
+
                 <div class="image-placeholder"><p>Illustration de l'interface</p>
                 <img src="/images/produit12.png" alt="Description de l'image" width="900" height="600" style="max-width:100%;height:auto;border-radius:8px;" />
                 </div>
@@ -1621,10 +1878,11 @@ import '../styles/global1.css';
             <article class="article">
                 <h3>12.3) Fonctionnalités</h3>
                 <ul>
-                    <li>Export CSV/Excel/PDF</li>
-                    <li>Impression directe</li>
-                    <li>Visibilité des colonnes</li>
-                    <li>Recherche dynamique</li>
+                    <li>Export CSV/Excel/PDF : permet de générer des rapports sur les utilisateurs au format souhaité. </li>
+                    <li>Impression directe: un bouton d’impression est disponible pour produire une version papier de la liste. </li>
+                    <li>Visibilité des colonnes: permet de masquer ou d’afficher certaines colonnes selon les préférences. </li>
+                    <li>Recherche dynamique un champ de recherche rapide facilite la localisation d’un utilisateur spécifique. </li>
+                    <li>Pagination et nombre d'entrées par page : l'utilisateur peut naviguer entre les pages et choisir combien d’enregistrements afficher par page (par exemple : 10, 25, 50, etc.). </li>
                 </ul>
             </article>
 

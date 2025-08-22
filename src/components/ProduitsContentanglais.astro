@@ -33,13 +33,14 @@ import '../styles/global1.css';
 
         <article class="article">
             <h3>1.2) Interface Structure</h3>
-            <p>The interface consists of two sections:</p>
+            <p>The interface is made up of several distinct elements, organized intuitively for smooth navigation, and it is divided into two sections.</p>
             <ul>
                 <li>Filter section</li>
                 <li>Product table section</li>
             </ul>
 
             <h4>1.2.1) Filter Section</h4>
+            <p>The upper section allows users to refine product searches using the following filters:</p>
             <table class="component-table">
                 <thead>
                     <tr>
@@ -80,6 +81,7 @@ import '../styles/global1.css';
             </table>
 
             <h4>1.2.2) Product Table Section</h4>
+            <p>In this section, the list of all products is displayed in a table format, with the following columns available: </p>
             <table class="component-table">
                 <thead>
                     <tr>
@@ -142,8 +144,19 @@ import '../styles/global1.css';
                     </tr>
                 </tbody>
             </table>
+            <p>At the top of this table, there are two display tabs:</p>
+            <ul> 
+             <li>All Products: Displays the complete list of products with all their commercial data. </li> 
+             <li>Stock Report: Accesses a summary report of the stock. </li> 
+            </ul> 
+            <p>There are also two action buttons:</p>
+             <ul> 
+             <li>Add: Allows adding a product to the list via a provided form. </li> 
+             <li>Download Excel: Allows downloading the list of existing products in Excel format. </li> 
+            </ul>
 
             <h4>1.2.2.1) "Actions" Menu</h4>
+            <p>When clicking on the ‘Actions’ button, the following options appear: </p>
             <table class="component-table">
                 <thead>
                     <tr>
@@ -185,7 +198,7 @@ import '../styles/global1.css';
         </article>
 
         <article class="article">
-            <h3>1.3) Action Buttons</h3>
+            <h3>1.3) Action buttons at the bottom of the table </h3>
             <table class="component-table">
                 <thead>
                     <tr>
@@ -216,13 +229,13 @@ import '../styles/global1.css';
 
         <article class="article">
             <h3>1.4) Available Features</h3>
-            <ul>
-                <li>Export CSV/Excel/PDF</li>
-                <li>Direct Printing</li>
-                <li>Column Visibility</li>
-                <li>Dynamic Search</li>
-                <li>Pagination and number of entries per page</li>
-            </ul>
+            <ul> 
+               <li>Export CSV/Excel/PDF: allows generating user reports in the desired format. </li>
+               <li>Direct Printing: a print button is available to produce a hard copy of the list. </li>
+               <li>Column Visibility: allows hiding or showing certain columns according to preferences. </li>
+               <li>Dynamic Search: a quick search field makes it easy to locate a specific user. </li>
+               <li>Pagination and Entries per Page: the user can navigate between pages and choose how many records to display per page (for example: 10, 25, 50, etc.). </li>
+             </ul>
             <div class="image-placeholder">
                 <p>Interface Illustration</p>
                 <img src="/image/produit1.png" alt="Description de l'image" width="900" height="600" style="max-width:100%;height:auto;border-radius:8px;" />
@@ -232,23 +245,24 @@ import '../styles/global1.css';
         <article class="article">
             <h3>1.5) Integration with Other Modules</h3>
             <ul>
-                <li>Purchases</li>
-                <li>Sales</li>
-                <li>Stocks</li>
-                <li>Statistics</li>
+                <li>Purchases: each product can be linked to a supplier order. </li>
+                <li>Sales: products are used in quotes, orders, and invoices. </li>
+                <li>Stock: quantities are updated automatically after each movement. </li>
+                <li>Statistics: analytical reports use the data to determine performance. </li>
             </ul>
         </article>
-
+       
         <article class="article">
             <h3>1.6) Benefits</h3>
             <ul>
-                <li>Centralization</li>
-                <li>Time Savings</li>
-                <li>Control</li>
-                <li>Productivity</li>
+                <li>Centralization: all products are visible in a single space. </li>
+                <li>Time-saving: quick modification, addition, or deletion. </li>
+                <li>Control: sorting, filters, batch actions, export. </li>
+                <li>Productivity: an essential tool for managing a large number of items. </li>
             </ul>
         </article>
     </section>
+    
 </div>
 <!-- Section 2: Managing Product Addition -->
 <section class="section">
@@ -256,11 +270,12 @@ import '../styles/global1.css';
 
     <article class="article">
         <h3>2.1) General Function</h3>
-        <p>Allows the creation of a new product with all essential information.</p>
+        <p>The “Product Addition Management” feature is a key step in managing the company’s stock and commercial catalog.It allows the creation of a new product in the system by entering all essential information for its identification, marketing, logistical management, and invoicing.This interface ensures that each product is recorded in a complete, structured, and error-free manner, guaranteeing consistency across all Movelys modules (sales, purchases, stock, labels, statistics, etc.). </p>
     </article>
 
     <article class="article">
         <h3>2.2) Interface Description</h3>
+        <p> Adding a product is done via a modal window triggered by the “Add” button on the main products page.The form is structured vertically, divided into multiple input sections, with clearly labeled fields, allowing for quick and accurate data entry. </p>
         <table class="component-table">
             <thead>
                 <tr>
@@ -351,17 +366,28 @@ import '../styles/global1.css';
     <article class="article">
         <h3>2.3) Integrated Features</h3>
         <h4>2.3.1. Smart Registration</h4>
-        <p>Immediate addition to the database after validation.</p>
+       <p>Once all fields are filled, the user clicks “Save”: </p>
+        <ul>
+          <li>The product is immediately added to the database. </li>
+          <li>It automatically appears in the product list, ready to be sold or labeled. </li>
+        </ul>
         
         <h4>2.3.2. Automatic Verification</h4>
-        <p>Control of required fields and detection of duplicates.</p>
+        <ul>
+           <li>Mandatory fields left empty display a clear error message. </li>
+           <li>SKU or barcode duplicates can be blocked to prevent identification errors. </li>
+        </ul>
         
         <h4>2.3.3. Upload Image</h4>
-        <p>Drag-and-drop or upload an image.</p>
+        <ul>
+           <li>Allows drag-and-drop or uploading an image (e.g., product photo, brand logo). </li>
+           <li>The image can be used in printouts, product sheets, or e-commerce interfaces. </li>
+        </ul>
     </article>
 
     <article class="article">
         <h3>2.4) Integration with Other Modules</h3>
+        <p>Adding a product automatically updates the following modules: </p>
         <table class="component-table">
             <thead>
                 <tr>
@@ -396,6 +422,7 @@ import '../styles/global1.css';
 
     <article class="article">
         <h3>2.5) Security and Access Rights</h3>
+        <p>Access to this form can be restricted based on the user roles configured in Movelys. </p>
         <table class="component-table">
             <thead>
                 <tr>
@@ -427,10 +454,10 @@ import '../styles/global1.css';
     <article class="article">
         <h3>2.6) Benefits</h3>
         <ul>
-            <li>Ease of use</li>
-            <li>Direct interaction</li>
-            <li>Smooth connection</li>
-            <li>Reduction of errors</li>
+            <li>Ease of Use: all fields are grouped within a single window. </li>
+            <li>Direct Interaction: immediate catalog update upon validation. </li>
+            <li>Smooth Integration: works seamlessly with other modules without additional operations. </li>
+            <li>Error Reduction: built-in validations, duplicate detection, and secure data entry. </li>
         </ul>
     </article>
 </section>
@@ -441,13 +468,17 @@ import '../styles/global1.css';
 
     <article class="article">
         <h3>3.1) General Function</h3>
-        <p>Allows for quickly modifying the selling prices of existing products.</p>
+        <p>The “Price Update Management” feature in Movelys allows rapid and efficient modification of product selling prices without editing each product individually.This feature is essential for companies managing many products and needing mass price adjustments due to: </p>
+        <ul>
+          <li>Supplier cost increases, </li>
+          <li> Strategic price changes, </li>
+          <li>Sales, promotions, or seasonal discounts. </li>
+        </ul>
     </article>
 
     <article class="article">
         <h3>3.2) Interface Description</h3>
-        <p>"Export Product Prices" button to extract all prices into an Excel file.</p>
-        <p>After modification, import the file via the "send" button.</p>
+        <p>The price update interface is intuitive and includes features such as: “Export Product Prices” Button: extracts all product prices into an Excel file for bulk modification (increase, decrease, etc.).Import Changes: after editing, the file can be uploaded and submitted via the “Send” button. structions are displayed to guide the user through the process. </p>
          <div class="image-placeholder">
                 <p>Interface Illustration</p>
                 <img src="/image/produit3.png" alt="Description de l'image" width="900" height="600" style="max-width:100%;height:auto;border-radius:8px;" />
@@ -456,6 +487,7 @@ import '../styles/global1.css';
 
     <article class="article">
         <h3>3.3) Integration with Other Modules</h3>
+        <p>When a product price is updated, it automatically synchronizes with: </p>
         <table class="component-table">
             <thead>
                 <tr>
@@ -490,6 +522,7 @@ import '../styles/global1.css';
 
     <article class="article">
         <h3>3.4) Security and Access Management</h3>
+        <p> Price modifications can be restricted based on user roles to prevent accidental or malicious changes: </p>
         <table class="component-table">
             <thead>
                 <tr>
@@ -516,6 +549,7 @@ import '../styles/global1.css';
                 </tr>
             </tbody>
         </table>
+        <p>Actions are often logged for traceability (who modified what, when, and to which amount). </p>
     </article>
 
     <article class="article">
@@ -558,16 +592,40 @@ import '../styles/global1.css';
     <h2>4) Label Printing Management</h2>
     <article class="article">
         <h3>4.1) General Function</h3>
-        <p>Generate, configure, and print product labels.</p>
+        <p>The “Label Printing Management” feature enables users to generate, configure, and print product labels containing essential information such as name, barcode, selling price, and unit of measure.Essential for companies that: </p>
+                <ul>
+                    <li> Sell physical products at retail, </li>
+                    <li> Manage warehouse or store stock, </li>
+                    <li> Need labeling for logistics, inventory, or sales. </li>
+                </ul>
     </article>
 
     <article class="article">
         <h3>4.2) Interface Description</h3>
-        <p>Two main sections:</p>
-        <ul>
-            <li>Add products to generate labels</li>
-            <li>Information to display on labels</li>
-        </ul>
+       
+            <p>The interface is presented as an interactive table containing two sections which are:</p>
+            
+            <ul>
+                <li><strong>The "Add products to generate labels" section:</strong><br>
+                This section features a search bar that allows us to search for 
+                and add a product in order to generate the labels for that specific product.</li>
+                
+                <li><strong>The "Information to display on the labels" section:</strong><br>
+                In this section, we find the necessary information that must be
+                displayed on the various labels.</li>
+            </ul>
+            
+            <p>This information includes:</p>
+            <ul>
+                <li>Product name</li>
+                <li>Product variation (recommended)</li>
+                <li>Product price</li>
+                <li>Price display</li>
+                <li>Company name</li>
+                <li>Packaging date</li>
+            </ul>
+        
+            
         <div class="image-placeholder">
                 <p>Interface Illustration</p>
                 <img src="/image/produit4.png" alt="Description de l'image" width="900" height="600" style="max-width:100%;height:auto;border-radius:8px;" />
@@ -576,11 +634,21 @@ import '../styles/global1.css';
 
     <article class="article">
         <h3>4.3) Launching the Print</h3>
-        <p>"Preview" button followed by printing via standard printer.</p>
+                <p>Once the selection is made:</p>
+                <ul>
+                    <li>The user clicks on the "Preview" button.</li>
+                    <li>A preview window may open, showing the rendering of the labels.</li>
+                    <li>Printing is done via:
+                    <ul>
+                        <li>A standard printer (with A4 sheets)</li>
+                    </ul>
+                    </li>
+                </ul>
     </article>
 
     <article class="article">
         <h3>4.4) Integration with Other Modules</h3>
+        <p>Label printing is directly linked to the following modules: </p>
         <table class="component-table">
             <thead>
                 <tr>
@@ -611,6 +679,7 @@ import '../styles/global1.css';
 
     <article class="article">
         <h3>4.5) Access Management</h3>
+        <p>The ability to print labels can be controlled by user role to prevent excessive or incorrect printing. </p>
         <table class="component-table">
             <thead>
                 <tr>
@@ -679,12 +748,12 @@ import '../styles/global1.css';
 
     <article class="article">
         <h3>5.1) General Function</h3>
-        <p>Manage the different variations of a product (sizes, colors, models, etc.).</p>
+        <p>The “Variations Management” function allows a company to manage the different versions of a base product, called variants or combined attributes.This applies to products available in multiple forms: sizes, colors, models, weights, packaging, etc.This module is essential for industries such as fashion, electronics, cosmetics, beverages, or any sector where the same product exists in several distinct forms. </p>
     </article>
 
     <article class="article">
         <h3>5.2) Interface Description</h3>
-        <p>Fields: variations, values, and action. "Add" button to create variations.</p>
+        <p>The interface allows a simple product to be transformed into a variant product by assigning it custom attributes. It consists of three fields: Variations, Values, and Action. It also includes an Add button to create a new variation. When this button is clicked, a window opens prompting the user to fill in the fields: variation name and add variation values. </p>
          <div class="image-placeholder">
                 <p>Interface Illustration</p>
                 <img src="/image/produit5.png" alt="Description de l'image" width="900" height="600" style="max-width:100%;height:auto;border-radius:8px;" />
@@ -693,12 +762,12 @@ import '../styles/global1.css';
 
     <article class="article">
         <h3>5.3) Main Features</h3>
-        <ul>
-            <li>Export CSV/Excel/PDF</li>
-            <li>Direct Printing</li>
-            <li>Column Visibility</li>
-            <li>Dynamic Search</li>
-            <li>Pagination</li>
+        <ul> 
+               <li>Export CSV/Excel/PDF: allows generating user reports in the desired format. </li>
+               <li>Direct Printing: a print button is available to produce a hard copy of the list. </li>
+               <li>Column Visibility: allows hiding or showing certain columns according to preferences. </li>
+               <li>Dynamic Search: a quick search field makes it easy to locate a specific user. </li>
+               <li>Pagination and Entries per Page: the user can navigate between pages and choose how many records to display per page (for example: 10, 25, 50, etc.). </li>
         </ul>
     </article>
 
@@ -799,17 +868,46 @@ import '../styles/global1.css';
 
     <article class="article">
         <h3>6.1) General Function</h3>
-        <p>Bulk import products from an external file.</p>
+            <p>The "Product Import Management" section is a central tool for companies 
+            with a large catalog.</p>
+            <p>It allows bulk import of products into the system from an external file
+            (CSV or Excel), instead of registering them one by one.</p>
+            <p>This functionality is crucial for:</p>
+            <ul>
+                <li>Initial platform setup,</li>
+                <li>Bulk addition of new items,</li>
+                <li>Migration from an old system,</li>
+                <li>Mass update of product information (stock, price, SKU...).</li>
+            </ul>
+            
     </article>
 
     <article class="article">
         <h3>6.2) Interface Description</h3>
-        <p>3 functional areas:</p>
-        <ol>
-            <li>Download the template</li>
-            <li>Online filling</li>
-            <li>File import</li>
-        </ol>
+            <p>The interface is simple and divided into 3 functional areas:</p>
+            <ol>
+                <li><strong>Template Download:</strong>
+                <ul>
+                    <li>A button allows the user to download a blank template in CSV or Excel format.</li>
+                    <li>This template contains the mandatory column headers</li>
+                </ul>
+                </li>
+                <li><strong>Online Completion:</strong>
+                <ul>
+                    <li>When the user clicks to download the template file, it opens in the browser.</li>
+                    <li>They complete each row with the product information to import (up to several hundred).</li>
+                </ul>
+                </li>
+                <li><strong>File Import:</strong>
+                <ul>
+                    <li>The user uploads the completed file via an "Import" button.</li>
+                    <li>A preview step displays a summary of the data to be integrated.</li>
+                    <li>The system validates the columns and reports any errors before finalization.</li>
+                </ul>
+                </li>
+            </ol>
+            <p>This interface also shows instructions to follow to be able to import products.</p>
+            
          <div class="image-placeholder">
                 <p>Interface Illustration</p>
                 <img src="/image/produit6.png" alt="Description de l'image" width="900" height="600" style="max-width:100%;height:auto;border-radius:8px;" />
@@ -819,10 +917,26 @@ import '../styles/global1.css';
     <article class="article">
         <h3>6.3) Technical Features</h3>
         <h4>6.3.1) Automatic Verification</h4>
-        <p>Control of required fields and formats</p>
+       <div style="flex: 1; min-width: 300px;">
+            
+            <p>Before validation, the system:</p>
+            <ul>
+                <li>Checks that mandatory fields are present,</li>
+                <li>Detects errors (missing values, duplicate SKUs, invalid formats),</li>
+                <li>Verifies if the CSV file columns are in ascending order</li>
+            </ul>
+            <p>This interface also shows instructions to follow to be able to import products.</p>
+           
         
         <h4>6.3.2) Batch Import</h4>
-        <p>Create or update products</p>
+            <div class="import-process">
+            <p>Once validated, the file can be imported:</p>
+            <ul>
+                <li>By creating each product in the database,</li>
+                <li>By updating existing products (if option enabled, based on SKU),</li>
+                <li>With a success notification indicating the number of imported products.</li>
+            </ul>
+            
     </article>
 
     <article class="article">
@@ -922,16 +1036,41 @@ import '../styles/global1.css';
 
     <article class="article">
         <h3>7.1) General Function</h3>
-        <p>Record the initial state of stocks upon commissioning.</p>
+                   
+                <p>The "Opening Stock Import" functionality allows a company to record 
+                in Movelys the initial state of its stock at the time of the application's commissioning or 
+                during a complete inventory readjustment.</p>
+                <p>This step is essential for consistent stock management in the following modules:</p>
+                <ul>
+                    <li>Sales</li>
+                    <li>Purchases</li>
+                    <li>Replenishment</li>
+                    <li>Inventory Statistics</li>
+                </ul>
+                
     </article>
 
     <article class="article">
         <h3>7.2) Interface Description</h3>
-        <p>Two sections:</p>
-        <ol>
-            <li>Download the template</li>
-            <li>Import the filled file</li>
-        </ol>
+                <p>The interface consists of two main functional sections:</p>
+                <ol>
+                    <li><strong>Import Template Download</strong>
+                    <ul>
+                        <li>A button allows downloading a preformatted CSV or Excel file template,
+                        containing the mandatory columns to be filled.</li>
+                    </ul>
+                    </li>
+                    <li><strong>Import of Completed File</strong>
+                    <ul>
+                        <li>Once the file is completed, the user selects and uploads it through
+                        the interface.</li>
+                        <li>The system performs an automatic verification, displays any potential
+                        errors, and then offers to validate or correct before final import.</li>
+                    </ul>
+                    </li>
+                </ol>
+                
+
          <div class="image-placeholder">
                 <p>Interface Illustration</p>
                 <img src="/image/produit7.png" alt="Description de l'image" width="900" height="600" style="max-width:100%;height:auto;border-radius:8px;" />
@@ -941,10 +1080,30 @@ import '../styles/global1.css';
     <article class="article">
         <h3>7.3) Technical Functioning</h3>
         <h4>7.3.1. Verification Step</h4>
-        <p>Validation of each line and consistency checks</p>
+                <p>During import, the system validates each line:</p>
+                <ul>
+                    <li>Checks if the product/SKU already exists in the database.</li>
+                    <li>Controls the consistency of quantities and numeric formats.</li>
+                    <li>Reports any inconsistency or blocking error (e.g.: non-existent product, 
+                    empty field…).</li>
+                </ul>
+                
         
         <h4>7.3.2. Effective Import</h4>
-        <p>Entered quantities become the initial stock</p>
+            <ul>
+                <li>After validation, the entered quantities become the initial stock recorded in the 
+                system.</li>
+                <li>These quantities are immediately available for:
+                <ul>
+                    <li>Billing,</li>
+                    <li>Stock movements,</li>
+                    <li>Out-of-stock alerts,</li>
+                    <li>Statistics.</li>
+                </ul>
+                </li>
+            </ul>
+            
+
     </article>
 
     <article class="article">
@@ -1062,13 +1221,13 @@ import '../styles/global1.css';
 
     <article class="article">
         <h3>8.3) Features</h3>
-        <ul>
-            <li>Export CSV/Excel/PDF</li>
-            <li>Direct Printing</li>
-            <li>Column Visibility</li>
-            <li>Dynamic Search</li>
-            <li>Pagination</li>
-        </ul>
+        <ul> 
+               <li>Export CSV/Excel/PDF: allows generating user reports in the desired format. </li>
+               <li>Direct Printing: a print button is available to produce a hard copy of the list. </li>
+               <li>Column Visibility: allows hiding or showing certain columns according to preferences. </li>
+               <li>Dynamic Search: a quick search field makes it easy to locate a specific user. </li>
+               <li>Pagination and Entries per Page: the user can navigate between pages and choose how many records to display per page (for example: 10, 25, 50, etc.). </li>
+       </ul>
     </article>
 
     <article class="article">
@@ -1138,12 +1297,40 @@ import '../styles/global1.css';
 
     <article class="article">
         <h3>9.1) General Function</h3>
-        <p>Define and manage units of measure used for products.</p>
+    
+                <p>The "Units Management" functionality allows to define, customize and manage the measurement 
+                units used for products throughout the Movelys system.</p>
+                <p>It is essential to standardize:</p>
+                <ul>
+                    <li>Product quantification (piece, kg, liter, meter, etc.),</li>
+                    <li>Presentation in commercial documents (invoices, purchase orders, 
+                    quotes...),</li>
+                    <li>And ensure consistency in sales, purchasing, and stock operations.</li>
+                </ul>
+                
+                
     </article>
 
     <article class="article">
         <h3>9.2) Interface Description</h3>
-        <p>Hierarchical table with fields: Name, Abbreviation, Allow Decimals, Action.</p>
+                   
+                <p>The unit management interface appears as a simple and intuitive table, listing 
+                all units already created. It consists of the following fields:</p>
+                <ul>
+                    <li>Name</li>
+                    <li>Abbreviated name</li>
+                    <li>Allow decimals</li>
+                    <li>Action</li>
+                </ul>
+                <p>An "Add" button allows you to create a new unit manually and it consists of
+                the following fields:</p>
+                <ul>
+                    <li>Name</li>
+                    <li>Abbreviated name</li>
+                    <li>Allow decimals</li>
+                </ul>
+                
+
          <div class="image-placeholder">
                 <p>Interface Illustration</p>
                 <img src="/image/produit9.png" alt="Description de l'image" width="900" height="600" style="max-width:100%;height:auto;border-radius:8px;" />
@@ -1152,13 +1339,13 @@ import '../styles/global1.css';
 
     <article class="article">
         <h3>9.3) Main Features</h3>
-        <ul>
-            <li>Export CSV/Excel/PDF</li>
-            <li>Direct Printing</li>
-            <li>Column Visibility</li>
-            <li>Dynamic Search</li>
-            <li>Pagination</li>
-        </ul>
+        <ul> 
+               <li>Export CSV/Excel/PDF: allows generating user reports in the desired format. </li>
+               <li>Direct Printing: a print button is available to produce a hard copy of the list. </li>
+               <li>Column Visibility: allows hiding or showing certain columns according to preferences. </li>
+               <li>Dynamic Search: a quick search field makes it easy to locate a specific user. </li>
+               <li>Pagination and Entries per Page: the user can navigate between pages and choose how many records to display per page (for example: 10, 25, 50, etc.). </li>
+       </ul>
     </article>
 
     <article class="article">
@@ -1299,12 +1486,38 @@ import '../styles/global1.css';
 
     <article class="article">
         <h3>10.1) General Function</h3>
-        <p>Structure and classify products into logical groups.</p>
+        
+                <p>The "Category Management" section allows structuring and classifying products into 
+                logical groups, called categories, based on their nature, function, or business 
+                sector.</p>
+                <p>It plays a key role in navigation, search, statistics, and commercial 
+                configuration.</p>
+                <p>Common examples of categories:</p>
+                <ul>
+                    <li>Food, Beverages, Electronics, Clothing, Office supplies, etc.</li>
+                </ul>
+                <p>Thanks to this system, companies using Movelys can:</p>
+                <ul>
+                    <li>Segment their catalog,</li>
+                    <li>Apply rules or filters by category,</li>
+                    <li>Facilitate the management and analysis of their sales and stock.</li>
+                </ul>
+                
     </article>
 
     <article class="article">
         <h3>10.2) Interface Description</h3>
-        <p>Hierarchical table with fields: Category, Code, Description, Action.</p>
+                
+            <p>The category management interface appears as a hierarchical table,
+            displaying existing categories. It consists of the following fields:</p>
+            <ul>
+                <li>Category</li>
+                <li>Category Code</li>
+                <li>Description</li>
+                <li>Action</li>
+            </ul>
+            <p>An "Add a category" button allows you to create a new one at any time.</p>
+            
          <div class="image-placeholder">
                 <p>Interface Illustration</p>
                 <img src="/image/produit10.png" alt="Description de l'image" width="900" height="600" style="max-width:100%;height:auto;border-radius:8px;" />
@@ -1313,13 +1526,13 @@ import '../styles/global1.css';
 
     <article class="article">
         <h3>10.3) Features</h3>
-        <ul>
-            <li>Export CSV/Excel/PDF</li>
-            <li>Direct Printing</li>
-            <li>Column Visibility</li>
-            <li>Dynamic Search</li>
-            <li>Pagination</li>
-        </ul>
+        <ul> 
+               <li>Export CSV/Excel/PDF: allows generating user reports in the desired format. </li>
+               <li>Direct Printing: a print button is available to produce a hard copy of the list. </li>
+               <li>Column Visibility: allows hiding or showing certain columns according to preferences. </li>
+               <li>Dynamic Search: a quick search field makes it easy to locate a specific user. </li>
+               <li>Pagination and Entries per Page: the user can navigate between pages and choose how many records to display per page (for example: 10, 25, 50, etc.). </li>
+       </ul>
     </article>
 
     <article class="article">
@@ -1461,26 +1674,47 @@ import '../styles/global1.css';
 
     <article class="article">
         <h3>11.1) General Function</h3>
-        <p>Record and associate brands with products.</p>
+       
+                <p>The "Brand Management" functionality in Movelys allows you to register, organize and 
+                associate commercial brands with the various products in the catalog.</p>
+                <p>It is designed to provide clear referencing, better item segmentation, 
+                as well as added marketing value in reports and user interfaces.</p>
+                <p>This function is essential for companies working with:</p>
+                <ul>
+                    <li>External suppliers or manufacturers,</li>
+                    <li>Multiple product lines under different brands,</li>
+                    <li>Imported or localized ranges.</li>
+                </ul>
+                
     </article>
 
     <article class="article">
         <h3>11.2) Interface Description</h3>
-        <p>Table with fields: Brand, Note, Action. "Add a Brand" button.</p>
-         <div class="image-placeholder">
-                <p>Interface Illustration</p>
+                    
+                <p>The interface appears as a brand management table with the following 
+                fields:</p>
+                <ul>
+                    <li>Brand</li>
+                    <li>Note</li>
+                    <li>Action</li>
+                </ul>
+                <p>An "Add a brand" button allows you to quickly create a new entry.</p>
+                
+                <div class="image-placeholder">
+                            <p>Interface Illustration</p>
                 <img src="/image/produit11.png" alt="Description de l'image" width="900" height="600" style="max-width:100%;height:auto;border-radius:8px;" />
             </div>
     </article>
 
     <article class="article">
         <h3>11.3) Main Features</h3>
-        <ul>
-            <li>Export CSV/Excel/PDF</li>
-            <li>Direct Printing</li>
-            <li>Column Visibility</li>
-            <li>Dynamic Search</li>
-        </ul>
+        <ul> 
+               <li>Export CSV/Excel/PDF: allows generating user reports in the desired format. </li>
+               <li>Direct Printing: a print button is available to produce a hard copy of the list. </li>
+               <li>Column Visibility: allows hiding or showing certain columns according to preferences. </li>
+               <li>Dynamic Search: a quick search field makes it easy to locate a specific user. </li>
+               <li>Pagination and Entries per Page: the user can navigate between pages and choose how many records to display per page (for example: 10, 25, 50, etc.). </li>
+       </ul>
     </article>
 
     <article class="article">
@@ -1592,12 +1826,35 @@ import '../styles/global1.css';
 
     <article class="article">
         <h3>12.1) General Function</h3>
-        <p>Configure and assign warranty periods to products.</p>
+                
+                <p>The "Warranty Management" section allows a company to configure, manage and 
+                assign warranty periods to its products or services.</p>
+                <p>It is particularly useful for sectors where products are covered by a 
+                repair, replacement or refund commitment for a determined period.</p>
+                <p>This allows:</p>
+                <ul>
+                    <li>Ensuring contractual traceability,</li>
+                    <li>Facilitating returns or claims,</li>
+                    <li>Informing the customer precisely at the time of sale,</li>
+                    <li>And strengthening transparency and trust relationship with customers.</li>
+                </ul>
+                
     </article>
 
     <article class="article">
         <h3>12.2) Interface Description</h3>
-        <p>Structured list with fields: Name, Description, Duration, Action.</p>
+                    
+                <p>The warranty management interface appears as a structured list containing all 
+                warranties available in the system. It consists of the following fields:</p>
+                <ul>
+                    <li>Name</li>
+                    <li>Description</li>
+                    <li>Duration</li>
+                    <li>Action</li>
+                </ul>
+                <p>An "Add" button allows you to create a new custom warranty.</p>
+               
+
         <div class="image-placeholder">
                 <p>Interface Illustration</p>
                 <img src="/image/produit12.png" alt="Description de l'image" width="900" height="600" style="max-width:100%;height:auto;border-radius:8px;" />
@@ -1606,12 +1863,13 @@ import '../styles/global1.css';
 
     <article class="article">
         <h3>12.3) Features</h3>
-        <ul>
-            <li>Export CSV/Excel/PDF</li>
-            <li>Direct Printing</li>
-            <li>Column Visibility</li>
-            <li>Dynamic Search</li>
-        </ul>
+        <ul> 
+               <li>Export CSV/Excel/PDF: allows generating user reports in the desired format. </li>
+               <li>Direct Printing: a print button is available to produce a hard copy of the list. </li>
+               <li>Column Visibility: allows hiding or showing certain columns according to preferences. </li>
+               <li>Dynamic Search: a quick search field makes it easy to locate a specific user. </li>
+               <li>Pagination and Entries per Page: the user can navigate between pages and choose how many records to display per page (for example: 10, 25, 50, etc.). </li>
+       </ul>
     </article>
 
     <article class="article">
